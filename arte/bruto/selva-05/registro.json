@@ -1,0 +1,88 @@
+{
+  "cena": "selva-05",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a jungle waterfall with a turquoise pool with 5 characters: Meowl (round fluffy half cat half owl with huge eyes) splashing in a pool; Brr Brr Patapim (tree trunk with a mossy head, a long nose and huge bare feet) standing under the waterfall; Trippa Troppa (green fish head on a chubby brown bear body) playing a guitar; Cappuccino Assassino (striped coffee cup with a black ninja mask, little arms and legs in sneakers, holding two spoons, no knives) playing with a ball; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) juggling. Around them: big mossy rocks, a rainbow over the water, tropical flowers, a toucan, butterflies, frogs, floating leaves, a rubber ring, palm trees, ferns and a little stone bridge. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "4118b499-da95-4e56-9be1-9778898bec81",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "meowl": [
+      100,
+      555,
+      370,
+      280
+    ],
+    "patapim": [
+      565,
+      315,
+      240,
+      445
+    ],
+    "trippa-troppa": [
+      935,
+      345,
+      275,
+      325
+    ],
+    "cappuccino-assassino": [
+      925,
+      710,
+      280,
+      270
+    ],
+    "girafa-celestre": [
+      1265,
+      345,
+      325,
+      490
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "470d7d7c-e048-4c67-8597-c5613dce2301",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the fluffy owl splashing in the water on the left. 2) Put a small yellow hat on the head of the giraffe with the watermelon body on the right. 3) Make the black body of the toucan on the branch at the top left blue. 4) Make the orange and purple rubber ring floating in the water at the bottom center solid green. 5) Make the orange frog on the mossy rock at the bottom left blue. 6) Make the pink butterfly at the top center, left of the waterfall, yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco vermelho na cabeca do Meowl",
+        "chapeu amarelo de fita vermelha na cabeca da Girafa Celestre (pequeno, ~5% da largura)",
+        "corpo preto do tucano (alto, esquerda) -> azul",
+        "boia laranja e roxa (baixo, centro-esquerda) -> verde lisa",
+        "sapo laranja na pedra (baixo, esquerda) -> azul",
+        "borboleta rosa (alto, esquerda da cachoeira) -> amarela; efeito colateral: a borboleta azul logo abaixo tambem ficou amarela"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "7016f7e3-4f2c-4eb7-bbcd-17db8689f50c",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the tree trunk character with the long nose standing under the waterfall. 2) Put a small red bow tie on the neck of the brown bear with the green fish head. 3) Make the striped beach ball floating in the water in the center solid red. 4) Make the pink water lily flower at the bottom center yellow. 5) Make the green frog sitting on the lily pad at the bottom right blue. 6) Put a small blue bird sitting on top of the stone bridge at the top right. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Brr Brr Patapim",
+        "gravata borboleta vermelha no pescoco da Trippa Troppa (pequena, ~3% da largura; o violao ficou igual)",
+        "bola de praia listrada na agua (centro) -> vermelha lisa",
+        "flor de lotus rosa (baixo, centro) -> amarela; efeito colateral: a folha de vitoria-regia a esquerda dela tambem ficou amarela",
+        "sapo verde na folha (baixo, direita) -> azul",
+        "passarinho azul novo em cima da ponte de pedra (alto, direita); pequeno, ~4% da largura"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 tinha o Patapim de cara de tronco sem musgo na cabeca e o Cappuccino Assassino com bandana amarrada; a 3 tinha o Patapim de nariz verde de passaro e o urso-peixe de macacao; a 4 tinha a xicara do Cappuccino Assassino lisa com bandana de ninja e o Patapim com o rosto meio coberto pela agua. Escolhida a 1: os 5 fieis (Meowl coruja-gato fofa de olhos enormes espirrando agua; Brr Brr Patapim tronco de cabeca de musgo, nariz comprido e pes enormes debaixo da cachoeira; Trippa Troppa cabeca de peixe verde em corpo de urso marrom tocando violao numa pedra; Cappuccino Assassino xicara listrada de mascara preta de ninja, tenis e duas colherinhas, sem faca; Girafa Celestre corpo de melancia com cabeca de girafa e botas marrons fazendo malabares com frutas e bolas). Cachoeira cheia: arco-iris, tucano, borboletas, flores tropicais, sapos, vitorias-regias, lotus, boia, bola de praia, pedras com musgo, palmeiras e ponte de pedra. E cachoeira na selva (agua rasa a vista), nao fundo do mar. Sem texto, sem logo, sem arma (so colherinhas), sem bebida alem do proprio personagem-xicara de cafe. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram."
+}

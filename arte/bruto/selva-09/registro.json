@@ -1,0 +1,88 @@
+{
+  "cena": "selva-09",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a rainy but bright jungle clearing with 5 characters: Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) jumping in a puddle; Frigo Camelo (camel with a white fridge body, brown boots) holding a big leaf as an umbrella; Strawberry Elephant (pink strawberry elephant with green leaves) waving hello; Bananita Dolphinita (gray dolphin inside a peeled banana skin) taking a photo; Chef Crabracadabra (red crab with a chef hat and a star magic wand) eating an ice cream. Around them: big puddles, raindrops, colorful umbrellas, frogs, snails, mushrooms, giant leaves, rubber boots, a rainbow, birds sheltering under leaves and a small wooden hut. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "03e30a08-a425-4ad6-95e8-140344d15a0b",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "ecco-cavallo": [
+      298,
+      302,
+      410,
+      500
+    ],
+    "frigo-camelo": [
+      685,
+      320,
+      305,
+      425
+    ],
+    "strawberry-elephant": [
+      975,
+      285,
+      350,
+      410
+    ],
+    "bananita": [
+      1322,
+      358,
+      195,
+      352
+    ],
+    "crabracadabra": [
+      1058,
+      742,
+      412,
+      345
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "319ef4d3-5af2-4f14-96be-ca5904d64e51",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw hat on the head of the brown horse in the red piano. 2) Put black sunglasses on the pink strawberry elephant. 3) Make the pink polka dot umbrella at the top, left of center, green. 4) Make the yellow rain boots in the bottom left corner red. 5) Make the green frog sitting on the lily pad at the bottom center blue. 6) Make the blue bird on the branch in the top left corner red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de palha amarelo na cabeca do Ecco Cavallo Virtuoso (protagonista)",
+        "oculos escuros pretos no Strawberry Elephant",
+        "guarda-chuva rosa de bolinhas (alto, esquerda do centro) -> verde de bolinhas",
+        "galochas amarelas do canto inferior esquerdo -> vermelhas (as florzinhas brancas continuam)",
+        "sapo verde na vitoria-regia (baixo, centro) -> azul; o sapo da esquerda ficou verde",
+        "passarinho azul no galho do canto superior esquerdo -> vermelho; o amarelo ao lado ficou igual"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "296ab037-dbfc-4487-96bb-7c1a57dd2ef3",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the camel with the white fridge body. 2) Put a small pink bow on the head of the gray dolphin in the banana. 3) Make the purple umbrella with yellow stars at the top right orange. 4) Make the blue snail at the bottom center yellow. 5) Make the red mushroom with white dots on the far left edge, at mid height, blue. 6) Make the green mossy roof of the small wooden hut on the left red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Frigo Camelo",
+        "laco rosa na cabeca da Bananita Dolphinita",
+        "guarda-chuva roxo de estrelas amarelas (alto, direita) -> laranja de estrelas amarelas",
+        "caracol azul (baixo, centro) -> amarelo; o caracol roxo da esquerda ficou igual",
+        "cogumelo vermelho de bolinhas da borda esquerda (meia altura) -> azul de bolinhas brancas; os outros cogumelos ficaram vermelhos",
+        "telhado de musgo verde da cabana de madeira (esquerda) -> vermelho"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 tinha o cavalo sentado ao piano (nao feito dele); a 3 tinha o cavalo saindo de uma caixa vermelha sem teclas e o caranguejo de chapeu de chef normal; a 4 tinha o cavalo atras do piano. Escolhida a 1: os 5 fieis (Ecco Cavallo cabeca de cavalo num corpo de piano de cauda vermelho com teclas e pernas, pulando na poca e espirrando agua; Frigo Camelo camelo de corpo de geladeira branca, botas marrons, com uma folha grande de guarda-chuva; Strawberry Elephant elefante rosa de morango com folhas; Bananita Dolphinita golfinho cinza numa casca de banana descascada fotografando com camera vermelha; Chef Crabracadabra caranguejo vermelho de avental, touca de chef, varinha de estrela e sorvete). Estranho: o Grok pos um chapeu de cogumelo vermelho de bolinhas por cima da touca de chef do caranguejo (a touca branca aparece por baixo). A geladeira tem imas redondos e um bilhetinho sem letras. Clareira na chuva cheia: arco-iris, cabana de madeira, passarinhos debaixo da folha, tres guarda-chuvas no ar, pocas com vitorias-regias, sapos, caracois, cogumelos, galochas e flores. Sem texto, sem logo, sem arma, sem bebida. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram, sem efeito colateral visivel."
+}

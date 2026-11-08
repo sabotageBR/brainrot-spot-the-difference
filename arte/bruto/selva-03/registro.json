@@ -1,0 +1,88 @@
+{
+  "cena": "selva-03",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a jungle explorer's wooden cabin with 5 characters: Gattino Bananino (orange kitten inside a peeled banana) reading a map by a lamp; Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) looking through binoculars; Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) laughing; U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) carrying a basket; Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) playing a guitar. Around them: maps on the walls without text, a compass, backpacks, a hammock, lanterns, butterfly frames, a globe, ropes, a kettle, potted plants and a window with jungle leaves. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "5ae280ce-a818-4e76-bf54-e3dc9d27b118",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "gattino-bananino": [
+      110,
+      440,
+      370,
+      515
+    ],
+    "chimpanzini": [
+      425,
+      455,
+      315,
+      485
+    ],
+    "lirili": [
+      800,
+      470,
+      315,
+      475
+    ],
+    "u-din-din": [
+      1120,
+      565,
+      330,
+      510
+    ],
+    "bombardiro": [
+      945,
+      135,
+      530,
+      365
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "c1829752-a4d1-4747-b6b3-b60630a1bc12",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the orange kitten reading the map on the left. 2) Put a small yellow hat on the head of the green chimpanzee looking through binoculars. 3) Make the orange butterfly in the small frame on the left, below the maps, blue. 4) Make the green backpack on the floor at the bottom left red. 5) Make the wooden crate with a star on the floor at the bottom center blue. 6) Make the yellow brass kettle on the right side blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco vermelho na cabeca do Gattino Bananino",
+        "chapeu amarelo de explorador na cabeca do Chimpanzini Bananini",
+        "borboleta laranja do quadrinho da esquerda (abaixo dos mapas) -> azul; a borboleta roxa do quadro do alto-centro ficou igual",
+        "mochila verde no chao (baixo, esquerda) -> vermelha",
+        "caixote de madeira com estrela (baixo, centro) -> azul (a estrela continua dourada)",
+        "chaleira dourada da direita -> azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "14ac704b-8efa-4c4d-93fe-52e55df9eb82",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue striped shorts of the muscular orange fruit on the right red. 2) Put black sunglasses on the gray elephant with the cactus body. 3) Make the striped hammock hanging at the top right blue. 4) Make the round compass hanging on the wall at the far left red. 5) Make the red patterned rug on the floor at the bottom center blue. 6) Make the gray lantern standing on the floor at the bottom left of center red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "short listrado azul do U Din Din Din Dun -> vermelho listrado",
+        "oculos escuros pretos no Lirili Larila",
+        "rede listrada pendurada (alto, direita) -> azul",
+        "bussola redonda na parede (extrema esquerda) -> vermelha",
+        "tapete vermelho estampado (baixo, centro) -> azul",
+        "lampiao cinza no chao (baixo, esquerda do centro) -> vermelho; o lampiao aceso da esquerda e o da parede ficaram iguais"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 era boa, mas tinha bilhetinhos na parede com rabiscos parecendo letra e um potinho de vidro azul na estante; a 3 tinha o Bombardiro como crocodilo inteiro deitado em cima do aviao (nao cabeca no corpo de aviao) e dois barris de madeira; a 4 tinha dois crocodilos no aviao, uma garrafa de vidro verde no chao e areas brancas sem desenho. Escolhida a 1: os 5 fieis (Gattino Bananino gatinho laranja numa banana descascada lendo mapa ao lado de um lampiao; Chimpanzini Bananini chimpanze verde de cara rosa saindo da banana com binoculo; Lirili Larila elefante cinza de corpo de cacto, flor na cabeca, sandalias rosa, com o despertador ao lado; U Din Din Din Dun laranja musculosa de folha, short e tenis carregando cesto de frutas; Bombardiro Crocodilo cabeca de crocodilo de capacete de aviador num aviao verde de helice tocando violao e soltando confete por uma portinhola). Cabana cheia: mapas sem texto, bussola, quadros de borboleta, rede, cordas, lampioes, globo, chaleira, mochila, plantas, caixote com estrela, cesto, tapete e janela para a selva. Sem texto (o despertador tem numerais, aceito), sem logo, sem arma, sem bebida. Pontos fracos: um raio amarelo pintado no leme do aviao (enfeite, nao marca); na estante do alto-centro ha um pote de vidro com tampa e um pote de barro com alca (despensa, ~4% da largura, nao parece bebida). As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram, sem efeito colateral visivel. A interface travou uma vez (clique sem resposta por 30 s) e voltou sozinha."
+}

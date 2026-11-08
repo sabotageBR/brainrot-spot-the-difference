@@ -1,0 +1,114 @@
+{
+  "cena": "vila-10",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a huge village drum parade festival with 7 characters: Rhino Toasterino (rhino with a silver toaster body and toast popping out) leading the parade with his drum; Tralalero Tralala (blue shark on three legs, plain blue sneakers) marching and whistling steam; Gattino Bananino (orange kitten inside a peeled banana) riding a decorated cart; Piccione Macchina (pigeon with a small red car body) dancing behind them; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) dancing; Frulli Frulla (small bird with huge round goggles and a long beak) laughing; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) carrying a basket. Around them: big decorated drums, giant paper lanterns, flags without text, flower garlands, a dragon puppet, balloons, food stalls, houses with decorations, confetti and cheering villagers. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "0f27cc0b-271d-44c2-a56d-c6b204f8702c",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "rhino-toasterino": [
+      490,
+      415,
+      420,
+      655
+    ],
+    "tralalero": [
+      75,
+      550,
+      370,
+      360
+    ],
+    "gattino-bananino": [
+      345,
+      360,
+      275,
+      370
+    ],
+    "piccione-macchina": [
+      890,
+      440,
+      290,
+      375
+    ],
+    "trenostruzzo": [
+      1170,
+      270,
+      370,
+      440
+    ],
+    "frulli-frulla": [
+      975,
+      815,
+      270,
+      300
+    ],
+    "tortuginni": [
+      1225,
+      645,
+      370,
+      425
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "5b9f727d-2647-4aba-a54b-05f98ee813d4",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the head of the blue shark walking on the left. 2) Make the purple scarf of the small brown bird with goggles at the bottom center red. 3) Make the big orange paper lantern in the top left corner blue. 4) Make the green balloon at the top of the balloon bunch at the top right pink. 5) Make the flowered drum in the bottom left corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho com estrela na cabeca do Tralalero Tralala",
+        "lenco roxo do Frulli Frulla -> vermelho",
+        "lanterna de papel laranja grande do canto superior esquerdo -> azul",
+        "NAO FEITO: o balao verde do cacho (alto, direita) continuou verde; em vez dele, a lanterna roxa do canto superior direito ficou rosa",
+        "tambor florido do canto inferior esquerdo -> azul; efeito colateral: o tambor do canto inferior direito tambem ficou azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "4b0a340a-a7b3-4aec-82b4-14a228e6f89f",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange kitten sitting in the banana on the left. 2) Put a small yellow straw hat on the head of the green turtle with the dragon fruit shell on the right. 3) Make the yellow paper lantern at the top, right of center, green. 4) Make the orange and white striped awning on the far left blue and white. 5) Make the big flowered drum on the far left, at middle height, behind the shark, green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Gattino Bananino",
+        "chapeu de palha amarelo na cabeca do Tortuginni Dragonfruitini",
+        "lanterna de papel amarela do alto, a direita do centro -> verde",
+        "toldo listrado laranja e branco da extrema esquerda -> azul e branco",
+        "NAO FEITO como pedido: o tambor florido da esquerda (meia altura, atras do tubarao) continuou vermelho; em vez dele, o tambor grande do Rhino Toasterino (centro) ficou verde (~18% da largura)"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "90c6da93-9cb5-495c-8f80-79de68414b99",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the gray rhino with the toaster body in the center. 2) Make the red toy car under the pigeon blue. 3) Put a small red baseball cap on the head of the ostrich with the white train body on the right. 4) Make the pink paper lantern at the top, left of center, green. 5) Make the big pink flower at the bottom left, just right of the drum in the corner, yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Rhino Toasterino (protagonista)",
+        "carrinho vermelho do Piccione Macchina -> azul (o pombo ficou igual)",
+        "bone vermelho na cabeca do Trenostruzzo Turbo 3000",
+        "lanterna de papel rosa do alto, a esquerda do centro -> verde; efeito colateral: a lanterna laranja logo abaixo dela sumiu (no lugar, casas e bandeirinhas do fundo)",
+        "flor rosa grande do canto inferior esquerdo (ao lado do tambor) -> amarela"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Cena de chefe (7 personagens, 3 edicoes x 5). Rodada 1: a 1 tinha um 'swoosh' de marca no tenis do Tralalero (logo); a 3 tinha uma faixa branca curva parecida com 'swoosh' no tenis do Tralalero e fendas em forma de cruz na torradeira do rinoceronte; a 4 tinha o avestruz ao lado do trem (nao feito dele) e o pombo em cima do carro. Escolhida a 2, com 6 dos 7 fieis: Rhino Toasterino rinoceronte de cabeca-torradeira prateada com torrada saltando e corpo de robo, tocando um tambor grande florido; Tralalero Tralala tubarao azul de 2 pernas e tenis azuis lisos soprando fumacinha; Gattino Bananino gatinho laranja numa banana descascada sobre uma carroca enfeitada; Trenostruzzo Turbo 3000 avestruz com corpo de trem-bala branco; Frulli Frulla passarinho marrom de oculos redondos grandes e bico comprido, rindo, com lenco roxo; Tortuginni Dragonfruitini tartaruga de casco de pitaia rosa carregando cesto de frutas. Ponto fraco: o Piccione Macchina e um pombo EM PE em cima de um carrinho vermelho (nao feito dele), mas se le como pombo + carro. Desfile cheio: lanternas de papel lisas (laranja, rosa, amarela, roxa), bandeirinhas sem texto, dragao azul de desfile, baloes, tambores enfeitados em carrocas, toldos listrados, casas com flores, multidao aplaudindo, confete no chao todo, flores e tambores nos cantos de baixo. Sem texto, sem logo, sem arma, sem bebida. Ha 1 tubarao (o Tralalero). As 3 edicoes mantiveram o enquadramento e os 7 personagens; 13 das 15 mudancas aconteceram como pedido (o balao virou a lanterna roxa vizinha; o tambor da esquerda virou o tambor do rinoceronte)."
+}

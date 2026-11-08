@@ -1,0 +1,88 @@
+{
+  "cena": "cafe-05",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a colorful Italian gelato shop with 5 characters: Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) spinning while holding a giant ice cream cone; Boneca Ambalabu (green frog head on a black tire with two human legs) scooping gelato behind the counter; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing a guitar; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) playing with a ball; Burbaloni Luliloli (brown capybara inside half a coconut) juggling. Around them: a long counter with many tubs of gelato of every color, stacks of cones, jars of sprinkles and candies, a plain menu board with only pictures, ceiling fans, round stools, a striped awning, balloons and a dog waiting at the door. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "6b155dc0-e352-4a08-9449-1f13ba1ff1d6",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "girafa-celestre": [
+      155,
+      240,
+      390,
+      650
+    ],
+    "boneca-ambalabu": [
+      785,
+      262,
+      245,
+      290
+    ],
+    "bobrito": [
+      375,
+      648,
+      495,
+      465
+    ],
+    "orangutini": [
+      876,
+      548,
+      285,
+      445
+    ],
+    "burbaloni": [
+      1078,
+      768,
+      370,
+      425
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "964bd10b-cb84-43c8-963a-11aecd143165",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the brown boots of the giraffe with the watermelon body red. 2) Make the pink sneakers of the green frog standing on the counter blue. 3) Put a small red party hat on the head of the capybara in the coconut at the bottom right. 4) Make the orange balloon on the far left of the balloon bunch at the top left blue. 5) Make the left pink balloon of the balloon bunch at the top right yellow. 6) Make the red seat of the stool in the bottom right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "botas marrons da Girafa Celestre -> vermelhas",
+        "tenis rosa da Boneca Ambalabu (sapo no balcao) -> azuis",
+        "chapeu de festa vermelho de bolinhas amarelas na cabeca do Burbaloni Luliloli (pequeno, ~3,5% da largura)",
+        "balao laranja da esquerda do cacho do alto a esquerda -> azul; efeito colateral: o balao roxo do mesmo cacho virou rosa",
+        "balao rosa da esquerda do cacho do alto a direita -> amarelo; efeito colateral: o cacho inteiro mudou (o azul de cima virou amarelo-alaranjado e o rosa da direita virou roxo)",
+        "assento vermelho do banquinho do canto inferior direito -> azul; efeito colateral: os assentos dos dois banquinhos de baixo na esquerda tambem ficaram azuis (o de cima continua vermelho)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "be26e5af-a462-4bb0-a4bb-bf422e7373f0",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the brown acoustic guitar of the beaver in the striped suit blue. 2) Make the purple, yellow and green beach ball held by the orangutan solid red. 3) Put a small blue party hat on the brown and white dog at the door on the far left. 4) Make the gray cash register on the back counter, to the left of the frog, red. 5) Make the pink flower pot with pink flowers on the counter, left of the stacks of cones, blue. 6) Make only the waffle cone of the giant ice cream held by the giraffe pink. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "violao marrom do Bobrito Bandito -> azul",
+        "bola de praia roxa, amarela e verde do Orangutini Ananassini -> vermelha lisa",
+        "chapeu de festa azul de bolinhas amarelas no cachorro da porta (extrema esquerda); pequeno",
+        "maquina cinza do balcao do fundo, a esquerda do sapo -> caixa registradora vermelha maior; efeito colateral: os dois potes de doces na frente dela sumiram e a bandeja rosa de sorvete ao lado do sapo ficou azul",
+        "vaso rosa com flores rosa no balcao (a esquerda das pilhas de casquinhas) -> azul",
+        "casquinha de waffle do sorvete gigante da Girafa Celestre -> rosa (so a casquinha; as bolas continuam iguais)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: as 4 tinham os 5 personagens; a diferenca foi o chao. A 2 tinha o canto inferior direito de chao quase vazio (ladrilho triangular e um tapete); a 3 e a 4 tinham quase metade de baixo so de ladrilhos. Escolhida a 1: os 5 fieis (Girafa Celestre corpo de melancia redondo com cabeca e pernas de girafa, botas marrons, girando com um sorvete gigante; Boneca Ambalabu sapo verde dentro de um pneu preto, de tenis rosa, servindo sorvete em cima do balcao (o corpo e de sapo, nao so a cabeca, como nas outras 3); Bobrito Bandito castor de terno listrado e chapeu tocando violao, sem arma; Orangutini Ananassini orangotango com corpo de abacaxi e folhas na cabeca com bola de praia; Burbaloni Luliloli capivara em meio coco fazendo malabarismo). Loja cheia: balcao de gelato com muitas cubas e palitos, quadro de sorvetes so com figuras, potes de doces, pilhas de casquinhas, toldo listrado, ventiladores, luminarias, baloes, banquinhos, vasos de plantas e o cachorro na porta. Sem texto, sem logo, sem arma, sem alcool. O painel 'Segmentos' marcou 'B' como Texto: e o listrado do chapeu do castor contra o balcao, nao letra. A aba travou (renderer sem resposta) depois de abrir a imagem e depois de cada edicao; recarregar a pagina do post e esperar resolveu, sem gastar pedido; o download da v2 foi pelo botao Baixar acionado via script porque o clique travava. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram, com varios efeitos colaterais nos baloes e banquinhos da v1."
+}

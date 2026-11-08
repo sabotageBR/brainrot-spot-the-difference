@@ -1,0 +1,88 @@
+{
+  "cena": "selva-01",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a dense tropical jungle with giant leaves with 5 characters: Bombombini Gusini (white goose jet plane) stomping happily with his huge feet; Uvanito Pecorarito (sheep made of purple grapes) swinging on a vine; Perochello Lemonchello (yellow parrot with a lemon body) eating an ice cream; Tractoro Dinosauro (green dinosaur tractor with big wheels) dancing; Chicleteira Bicicleteira (red gumball machine with eyes riding a bicycle) laughing. Around them: parrots, toucans, butterflies, hanging vines, giant flowers, frogs, snails, mushrooms, a little waterfall, fallen logs, beetles and ferns. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "c94e074e-8097-413e-9b29-e4c404ecf376",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "bombombini": [
+      265,
+      450,
+      440,
+      385
+    ],
+    "uvanito": [
+      460,
+      155,
+      220,
+      265
+    ],
+    "perochello": [
+      810,
+      210,
+      285,
+      235
+    ],
+    "tractoro": [
+      735,
+      435,
+      430,
+      485
+    ],
+    "chicleteira": [
+      1140,
+      370,
+      295,
+      485
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "ebe666c8-a957-4cee-aacb-b65b5637b0ec",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the white goose airplane on the left. 2) Put a small red bow on the head of the purple grape sheep swinging on the vine. 3) Put a small blue cap on the head of the yellow parrot eating ice cream. 4) Make the black body of the big toucan sitting on the branch in the top right corner blue. 5) Make the big red mushroom with white dots in the bottom left corner blue with white dots. 6) Make the brown shell of the snail on the right, below the pink bicycle, pink. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Bombombini Gusini",
+        "laco vermelho na cabeca do Uvanito Pecorarito",
+        "bone azul (aba para tras) na cabeca do Perochello Lemonchello",
+        "corpo preto do tucano grande (canto superior direito) -> azul; o tucano pequeno perto da maquina de chiclete ficou preto",
+        "cogumelo grande vermelho de bolinhas (canto inferior esquerdo) -> azul de bolinhas brancas; efeito colateral: o cogumelo pequeno vermelho logo ao lado tambem ficou azul",
+        "concha marrom do caracol da direita (abaixo da bicicleta) -> rosa"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a6e70369-a20c-48da-8bf7-a141bd7a4946",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw hat on the head of the green dinosaur tractor in the center. 2) Put a small blue party hat on top of the red gumball machine riding the bicycle on the right. 3) Make the red macaw flying with open wings at the top left green. 4) Make the blue beetle on the log at the bottom center red. 5) Make the orange butterfly at the top center, above the waterfall, blue. 6) Make the big pink hibiscus flower on the far left yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de palha amarelo na cabeca do Tractoro Dinosauro",
+        "chapeu de festa azul (pompom laranja) no topo do Chicleteira Bicicleteira (pequeno, ~6% da largura)",
+        "arara vermelha voando de asas abertas (alto, esquerda) -> verde; a arara pousada abaixo ficou vermelha",
+        "besouro azul no tronco (baixo, centro) -> vermelho; efeito colateral: o besouro verde do mesmo tronco (esquerda) tambem ficou vermelho",
+        "borboleta laranja acima da cachoeira (alto, centro) -> azul",
+        "hibisco grande rosa da extrema esquerda -> amarelo"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: na 2, na 3 e na 4 o dinossauro aparece montado/sentado num trator (ao lado do objeto, nao feito dele); a 3 tinha besouros de chifre grande e o papagaio sem sorvete visivel. Escolhida a 1: os 5 fieis (Bombombini Gusini ganso branco com corpo de jato, cupula de cabine e asas, pisando forte com pes enormes; Uvanito Pecorarito ovelha de corpo de uvas roxas pendurada no cipo; Perochello Lemonchello papagaio amarelo tomando sorvete de casquinha; Tractoro Dinosauro dinossauro verde cujo corpo e um trator com rodas grandes e escapamento; Chicleteira Bicicleteira maquina de chiclete vermelha com olhos pedalando bicicleta rosa com cestinha). Selva cheia: araras, tucanos, borboletas laranja e roxas, cipos, hibiscos, cachoeira, troncos caidos, besouros, sapos, caracois, cogumelos vermelhos e roxos. Sem texto, sem logo, sem arma, sem bebida (o sorvete e de casquinha). As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram. Nota de interface: ao voltar para A pela miniatura da esquerda, a caixa de edicao vem preenchida com o prompt original; foi limpa antes de digitar a 2a edicao."
+}

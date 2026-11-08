@@ -1,0 +1,68 @@
+{
+  "cena": "praia",
+  "estilo": "e1",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Geração: modo 'Imagem', opção 'Qualidade 2.0' (a outra é 'Velocidade'), ×4 imagens, proporção 4:3 'Apresentação'. Edições: caixa 'Descreva sua edição' na página da imagem A (proporção 'Automático'); a UI não mostra nome de modelo.",
+  "data": "2026-11-07",
+  "prompt": "a sunny tropical beach: Tralalero Tralala, a blue shark standing on three muscular legs wearing blue sneakers, dancing on the sand; Trippi Troppi, a creature with an orange cat head and a pink shrimp body, building a sandcastle; Bananita Dolphinita, a dolphin wearing a yellow banana peel, jumping out of the turquoise sea; a striped beach umbrella, beach balls, buckets and shovels, seashells, starfish, little crabs, palm trees with coconuts, sailboats, seagulls, fluffy clouds and an ice cream cart, wide establishing shot, busy detailed scene with many small distinct objects spread across the whole picture, every area of the image has something to look at, no large empty areas, everything in sharp focus with no blur and no depth of field, characters medium size and fully visible, 4:3, no text, no letters, no numbers, no watermark, no logo, no signature, 3D animated movie style render, glossy toy-like characters with big expressive eyes, soft bright studio lighting, vibrant saturated colors, smooth clean shapes, high detail",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "2886dd75-645f-4ee4-a8f7-37e9dd69ff3d",
+    "escolhida_de": "4ª de 4 imagens da rodada 1"
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "4a92c4e1-f4bf-4c7d-a2be-59613aaf1d45",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The blue shark's blue sneakers become bright red sneakers. 2) The sailboat on the right with the yellow sail gets a red sail instead. 3) The large red, white and blue beach ball at the lower left edge becomes a green and white beach ball. 4) The blue bucket in the bottom-right corner becomes an orange bucket. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tênis do Tralalero azul -> vermelho",
+        "vela vermelha: foi o veleiro da ESQUERDA (vela branca) que ficou com vela vermelha; o da direita continua amarelo",
+        "bola grande do canto inferior esquerdo -> verde e branca (a bola amarela/azul logo abaixo TAMBÉM virou verde e branca, não pedido)",
+        "balde azul do canto inferior direito -> laranja",
+        "EXTRA não pedido: balde amarelo do centro-baixo virou vermelho"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "bc3849dc-f8e3-47a5-ba62-cd52d9664735",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a pair of black sunglasses on the banana dolphin's eyes. 2) The red-and-white striped beach umbrella on the right gets a red-and-white polka dot pattern instead of stripes. 3) The small beach ball on the left edge, next to the shark's tail, becomes a yellow rubber duck of the same size. 4) The green toy shovel at the bottom center becomes a purple toy shovel. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "óculos escuros pretos na Bananita Dolphinita (golfinho e respingo levemente redesenhados)",
+        "guarda-sol listrado vermelho/branco -> bolinhas vermelhas/brancas (o toldo do carrinho de sorvete TAMBÉM virou bolinhas, não pedido)",
+        "bolinha de praia da borda esquerda -> patinho de borracha amarelo",
+        "pá verde do centro-baixo -> pá roxa"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "25342aad-3ff8-406c-81ec-54e25a2538a9",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw sun hat on the orange cat's head. 2) Add one small red kite flying in the blue sky at the top center, between the seagulls. 3) The pink-and-white beach ball on the right side becomes an orange-and-white beach ball. 4) Remove the single purple starfish lying on the sand at the bottom left. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapéu de palha amarelo no Trippi Troppi",
+        "pipa vermelha pequena no céu, centro-topo",
+        "bola rosa e branca da direita -> laranja e branca",
+        "estrela-do-mar roxa do canto inferior esquerdo removida"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visível (cantos conferidos em tamanho real). Metadado EXIF em todos os arquivos: ImageDescription='Signature: <base64>' (assinatura de proveniência) e Artist=<id da imagem no Grok>; remover EXIF no pipeline.",
+  "notas": "Geração ~25 s (4 imagens); edições <10 s cada; nenhum aviso de limite. As 4 candidatas eram boas, sem logo nos tênis; escolhida a 4 pelo Trippi Troppi mais fiel (cabeça de gato + corpo de camarão com cauda e patas), Bananita dentro da casca, carrinho de sorvete, guarda-sol e muitos objetos espalhados. Tralalero com 2 pernas (de novo). Há uma figurinha minúscula na água (centro-esquerda, ~x590 y525) que parece um banhista/boia. O estilo 3D tem leve suavidade nos objetos do primeiro plano dos cantos inferiores (bolas), mas sem desfoque forte. Edições: todas mantêm enquadramento; v1 teve 2 extras não pedidos (2ª bola e balde amarelo) e trocou o veleiro errado; v2 aplicou bolinhas também no toldo do carrinho; v3 perfeita (diferença média 6,8/255, a mais limpa até agora). Na v3 troquei o alvo do lado direito (toldo do carrinho -> bola rosa) porque a v2 já tinha alterado o toldo."
+}

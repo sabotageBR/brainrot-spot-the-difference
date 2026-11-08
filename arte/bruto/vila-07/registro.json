@@ -1,0 +1,89 @@
+{
+  "cena": "vila-07",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a lively village evening market lit by hundreds of colorful lanterns, bright and colorful with 5 characters: Frigo Camelo (camel with a white fridge body, brown boots) drumming in the middle of the crowd; Rhino Toasterino (rhino with a silver toaster body and toast popping out) selling hot tea at a stall; Bombombini Gusini (white goose jet plane) eating a skewer; Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) jumping with joy; Meowl (round fluffy half cat half owl with huge eyes) waving hello. Around them: food stalls with skewers, noodle bowls and fruit, paper lanterns of many colors, string lights, toys, balloons, baskets, a spinning wheel game and happy visitors. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "be8aa2b1-9110-4fc2-90bc-4b99f1c4ac2b",
+    "escolhida_de": "3a de 4 da rodada 1"
+  },
+  "caixas": {
+    "frigo-camelo": [
+      540,
+      185,
+      395,
+      740
+    ],
+    "rhino-toasterino": [
+      50,
+      305,
+      385,
+      285
+    ],
+    "bombombini": [
+      335,
+      715,
+      470,
+      450
+    ],
+    "golubiro": [
+      928,
+      355,
+      375,
+      435
+    ],
+    "meowl": [
+      1030,
+      740,
+      455,
+      395
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "75abc281-5c47-4e07-8cd6-d1887b5c253d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the brown boots of the camel with the white fridge body red. 2) Put a small yellow party hat on the head of the gray rhino on the toaster at the left. 3) Make the red paper lantern in the top left corner green. 4) Make the purple headscarf of the woman cooking noodles on the right green. 5) Make the purple balloon in the top right corner pink. 6) Make the black cooking pot with a lid on the left, below the rhino's stall, red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "botas marrons do Frigo Camelo (protagonista) -> vermelhas",
+        "chapeu de festa amarelo na cabeca do Rhino Toasterino",
+        "lanterna de papel vermelha do canto superior esquerdo -> verde",
+        "lenco roxo da mulher que cozinha macarrao (direita) -> verde; a blusa roxa dela tambem ficou verde",
+        "balao roxo do canto superior direito -> rosa",
+        "NAO FEITO como pedido: a panela preta com tampa (esquerda, abaixo da banca do rinoceronte) continuou preta; em vez dela, apareceu uma panela vermelha grande com tampa em cima do caixote de paes ao lado (centro-esquerda, ~375-525 x 520-660), cobrindo os paes e a tigela cinza da ponta do balcao",
+        "efeito colateral: a lanterna verde do canto superior direito (~1390,0) ficou rosa"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "58d14b7b-4c7f-4d59-a9a0-973cc27a4ead",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue pilot helmet of the white goose eating a skewer red. 2) Make the beige trench coat of the pigeon with sunglasses green. 3) Make the green scarf of the brown owl at the bottom right red. 4) Make the blue teapot on the counter at the left red. 5) Make the big yellow paper lantern at the top, left of center, blue. 6) Make the gray metal kettle in the bottom left corner red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "capacete de piloto azul do Bombombini Gusini -> vermelho",
+        "sobretudo bege do Shpioniro Golubiro -> verde",
+        "lenco verde da Meowl -> vermelho (virou um cachecol mais comprido)",
+        "bule azul no balcao da esquerda -> vermelho; efeito colateral: as duas xicaras azuis ao lado tambem ficaram vermelhas",
+        "lanterna de papel amarela grande (alto, esquerda do centro) -> azul",
+        "chaleira cinza de metal do canto inferior esquerdo -> vermelha"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha o rinoceronte comum ao lado da torradeira (nao feito dela) e um pote de mel ambar; a 2 tinha uma placa com 'RHINO TOASTERINO' escrito (texto); a 4 tinha o rinoceronte de avental ao lado da torradeira e potes de vidro com liquido ambar na banca. Escolhida a 3: os 5 reconheciveis (Frigo Camelo camelo de corpo de geladeira branca com botas marrons tocando tambor; Rhino Toasterino cabeca de rinoceronte presa a uma torradeira prateada com torrada saltando, na banca com bule azul e xicaras de cha; Bombombini Gusini ganso branco de capacete de piloto e asas retas de aviao comendo espetinho; Shpioniro Golubiro pombo de sobretudo bege e oculos escuros pulando; Meowl coruja-gato fofa de olhos enormes acenando com a pata, com lenco verde). Mercado noturno cheio: lanternas de papel lisas de varias cores, luzinhas, toldos listrados, roda da sorte, baloes, bonecos, cestos de frutas e bolas, espetinhos, tigela de macarrao, pote de conserva, multidao ao fundo. Sem texto, sem logo, sem arma; as bebidas sao so cha em xicaras azuis (sem alcool). Na lateral da torradeira ha uma plaqueta quadrada com um risco abstrato (nao e letra). O Bombombini e mais ganso que aviao (so as asas lembram aviao). As duas edicoes mantiveram o enquadramento e os 5 personagens; 11 das 12 mudancas aconteceram como pedido (a panela caiu em outro objeto). Operacao: depois da 2a edicao a aba ficou travada (sem resposta por varios minutos); o resultado ja estava pronto e foi baixado abrindo o post numa aba nova, sem novo pedido ao Grok."
+}

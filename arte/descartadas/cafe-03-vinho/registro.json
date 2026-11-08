@@ -1,0 +1,88 @@
+{
+  "cena": "cafe-03",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a busy Italian restaurant dining room with 5 characters: Brr Brr Patapim (tree trunk with a mossy head, a long nose and huge bare feet) carrying plates of spaghetti; Chicleteira Bicicleteira (red gumball machine with eyes riding a bicycle) eating a huge meatball; Tartaruga Cisterna (turtle with a silver tank truck shell) laughing; Pot Hotspot (skinny friendly cartoon skeleton with a phone) carrying a basket; Talpa di Fero (mole with a drill helmet) playing a guitar. Around them: tables with checkered tablecloths, plates of pasta, bread baskets, candles in bottles, hanging grapevines, framed paintings without text, a pizza oven in the back, a waiter tray, a violin player and potted lemon trees. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "07518bdb-7461-4e71-b2ea-08f26f1ac49e",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "patapim": [
+      372,
+      195,
+      395,
+      742
+    ],
+    "chicleteira": [
+      100,
+      395,
+      290,
+      505
+    ],
+    "tartaruga-cisterna": [
+      720,
+      365,
+      370,
+      570
+    ],
+    "pot-hotspot": [
+      995,
+      375,
+      285,
+      660
+    ],
+    "talpa-di-fero": [
+      1200,
+      595,
+      400,
+      505
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "7008d119-52b1-44a8-b31a-88521f6ba9fb",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue bicycle ridden by the red gumball machine green. 2) Make the colorful flowered shirt of the skeleton plain blue. 3) Make the lemons on the small lemon tree at the far top left orange. 4) Make the woven bread basket on the table at the bottom left blue. 5) Make the black vest of the violin player at the top right red. 6) Make the white plate of pasta on the table at the bottom right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "bicicleta azul da Chicleteira Bicicleteira -> verde",
+        "camisa florida do Pot Hotspot -> camisa polo azul lisa",
+        "limoes do limoeiro pequeno do canto superior esquerdo -> laranjas (frutas pequenas, mudanca discreta)",
+        "cesto de paes de vime na mesa (esquerda-baixo) -> azul",
+        "colete preto do violinista (alto, direita) -> vermelho",
+        "prato branco de massa na mesa (direita-baixo) -> azul; efeito colateral: a massa do prato virou espaguete com molho"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "73f8fa1c-681d-4772-b7b9-48f2cb2f6e8e",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a white chef hat on the mossy head of the tree trunk character carrying the spaghetti. 2) Make the gray miner helmet of the mole playing the guitar yellow. 3) Put a small pink bow on the head of the laughing green turtle. 4) Make the red brick dome of the pizza oven at the back gray. 5) Make the green bottle with the lit candle at the bottom left blue. 6) Make the white plate of gnocchi at the bottom center red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de chef branco na cabeca de musgo do Brr Brr Patapim",
+        "capacete de mineiro cinza da Talpa di Fero -> amarelo",
+        "laco rosa pequeno na cabeca da Tartaruga Cisterna",
+        "cupula de tijolos vermelhos do forno de pizza (fundo, centro) -> cinza",
+        "garrafa verde com a vela acesa (esquerda-baixo) -> azul",
+        "prato branco de nhoque (centro-baixo) -> vermelho"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 tinha o esqueleto sentado sem carregar a cesta e a toupeira de capacete conico; a 3 tinha o Patapim com copa de arvore (sem cabeca de musgo) e muito chao de pedra vazio no centro; a 4 tinha os papeis trocados (o esqueleto tocando violao e a toupeira tocando violino). Escolhida a 1: os 5 fieis (Brr Brr Patapim tronco com cabeca de musgo, nariz comprido e pes enormes levando 2 pratos de espaguete; Chicleteira Bicicleteira maquina de chiclete vermelha numa bicicleta azul comendo uma almondega; Tartaruga Cisterna rindo com o tanque prateado nas costas; Pot Hotspot esqueleto de camisa florida com celular e cesta de paes; Talpa di Fero toupeira de capacete de mineiro com broca tocando violao). Restaurante cheio: toalhas xadrez, pratos de massa, cestas de pao, parreiras com uvas, quadros de paisagem sem texto, forno de pizza, garcom, violinista, limoeiros e clientes ao fundo. Sem texto, sem logo, sem arma. ATENCAO: ha garrafas de vinho e 3 tacas de vinho tinto nas mesas (as 4 candidatas tinham garrafas; o roteiro pede 'candles in bottles'), vale o dono conferir se serve para a Poki. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram."
+}

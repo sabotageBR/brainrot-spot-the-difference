@@ -1,0 +1,67 @@
+{
+  "cena": "cafe",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Geração: modo 'Imagem', opção 'Qualidade 2.0' (a outra é 'Velocidade'), ×4 imagens, proporção 4:3 'Apresentação'. Edições: caixa 'Descreva sua edição' na página da imagem A (proporção 'Automático'); a UI não mostra nome de modelo.",
+  "data": "2026-11-07",
+  "prompt": "a cozy Italian café interior: Ballerina Cappuccina, a ballerina in a pink tutu whose head is a cappuccino cup with foam, dancing on a table; Cappuccino Assassino, a small ninja in a black suit whose head is a cappuccino cup, holding two coffee spoons, sneaking behind the counter; Espressona Signora, an elegant old lady whose head is an espresso cup, sitting at a table with a newspaper without writing; a counter with croissants, cakes and donuts, a shiny coffee machine, cups and saucers, hanging lamps, potted plants, framed pictures of coffee beans, a checkered floor, windows with a street view and a cat sleeping on a chair, wide establishing shot, busy detailed scene with many small distinct objects spread across the whole picture, every area of the image has something to look at, no large empty areas, everything in sharp focus with no blur and no depth of field, characters medium size and fully visible, 4:3, no text, no letters, no numbers, no watermark, no logo, no signature, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "4ffb4b7b-f824-4719-a89a-4f8e03d107a6",
+    "escolhida_de": "3ª de 4 imagens da rodada 1"
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b82656cf-fdc8-46fa-bca5-a1efa9f34d0c",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The pink bow on the ballerina's cup head becomes a bright blue bow. 2) The framed picture of a coffee cup on the right wall becomes a framed picture of a red apple. 3) The orange-and-white cat sleeping on the green chair on the left becomes a grey cat. 4) The blue vase with pink flowers in the bottom-right corner becomes a yellow vase. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laço da Ballerina Cappuccina rosa -> azul (a fita rosa solta junto ao rosto também ficou azul)",
+        "quadro da xícara de café (parede direita) -> quadro de maçã vermelha",
+        "gato laranja e branco dormindo na cadeira verde -> gato cinza",
+        "vaso azul com flores rosa no canto inferior direito -> vaso amarelo"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "6d513f32-38c0-4b26-af25-6b7904a70f27",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The ninja's black suit and black mask become dark blue. 2) The middle hanging lamp at the top (the one above the glass pastry case) gets a green lampshade instead of a cream one. 3) The small white coffee cup on the little round side table next to the sleeping cat on the left becomes a small glass of orange juice. 4) Remove the single round woven straw mat lying on the floor at the bottom center. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "roupa e máscara do Cappuccino Assassino preto -> azul-escuro",
+        "cúpula verde: ficaram verdes DUAS luminárias (a da esquerda e a do meio), não só a do meio",
+        "xícara branca na mesinha ao lado do gato -> copo de suco de laranja",
+        "tapete redondo de palha no chão (centro-baixo) removido"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "53171332-8f03-4e17-9de2-e771a2046849",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The old lady's purple dress and purple shawl become green. 2) The pink-and-white striped awning of the shop seen through the window on the left becomes a green-and-white striped awning. 3) The small green succulent in the terracotta pot on the ballerina's table becomes a yellow sunflower in the same pot. 4) The leafy green plant in the terracotta pot in the bottom-left corner becomes a small round cactus in the same pot. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "vestido e xale da Espressona Signora roxo -> verde",
+        "toldo listrado rosa/branco da loja vista pela janela -> verde/branco",
+        "suculenta no vaso da mesa da bailarina -> girassol amarelo",
+        "planta folhosa no vaso do canto inferior esquerdo -> cacto redondo"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visível (cantos conferidos em tamanho real). Metadado EXIF em todos os arquivos: ImageDescription='Signature: <base64>' (assinatura de proveniência) e Artist=<id da imagem no Grok>; remover EXIF no pipeline.",
+  "notas": "Geração ~25 s (4 imagens); edições <10 s cada; nenhum aviso de limite. Candidatas: 1) ninja na frente do balcão, bom; 2) chão xadrez com área grande vazia embaixo; 4) ninja segurando FACAS em vez de colheres (violência, descartada); 3) escolhida: a mais cheia de detalhe, ninja com 2 colheres atrás/ao lado do balcão, gato na cadeira, jornal só com linhas (sem letras legíveis), lousa só com flores. Todas as 4 mudanças pedidas aconteceram nas 3 edições; único extra: v2 pintou duas luminárias de verde. Edição re-renderiza a imagem inteira sem deslocar o enquadramento (diferença média 11-16/255 contra A, mais alta no v2, sobretudo no xadrez do chão). No canto superior esquerdo (prédio visto pela janela) há um rabisco pequeno parecido com um 'S', mas não é texto legível."
+}

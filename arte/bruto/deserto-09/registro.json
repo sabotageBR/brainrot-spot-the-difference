@@ -1,0 +1,88 @@
+{
+  "cena": "deserto-09",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a natural history museum hall with 5 characters: Uvanito Pecorarito (sheep made of purple grapes) looking at a huge dinosaur skeleton; Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) holding a magnifying glass; Meowl (round fluffy half cat half owl with huge eyes) waving hello; Strawberry Elephant (pink strawberry elephant with green leaves) taking a photo; Glorbo Fruttodrillo (crocodile with a watermelon body) eating an ice cream. Around them: a big friendly dinosaur skeleton, fossils in glass cases, rocks with shells, a mammoth statue, a magnifying glass, benches, ropes on posts, plants, skylights and visitors. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "af05edf4-cbaa-4581-8639-07cc34aec57d",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "uvanito": [
+      120,
+      580,
+      287,
+      351
+    ],
+    "golubiro": [
+      387,
+      580,
+      287,
+      387
+    ],
+    "meowl": [
+      664,
+      600,
+      276,
+      347
+    ],
+    "strawberry-elephant": [
+      940,
+      507,
+      320,
+      413
+    ],
+    "glorbo": [
+      1077,
+      747,
+      509,
+      360
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "e720cff8-2524-45fe-9ef4-c712dbdba43a",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the purple grape sheep on the left. 2) Put a small blue bow tie on the neck of the brown owl in the center. 3) Make the blue whale skeleton model on the upper left orange. 4) Make the white tusks of the mammoth statue on the right pink. 5) Make the gold frame of the big magnifying glass standing in the bottom left corner red. 6) Put a small yellow rubber duck on top of the glass display case at the bottom center. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco vermelho na cabeca da ovelha de uvas (Uvanito Pecorarito)",
+        "gravata borboleta azul no pescoco da coruja (Meowl)",
+        "modelo de esqueleto de baleia azul (alto, esquerda) -> laranja",
+        "presas brancas do mamute (direita) -> rosa; efeito colateral: a ponta da cauda do esqueleto do dinossauro, logo acima, tambem ficou rosa",
+        "aro dourado da lupa grande do canto inferior esquerdo -> vermelho",
+        "patinho de borracha amarelo em cima da vitrine de baixo, no centro"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "6c5fc76d-f525-4b40-8c27-6d6d1e399ce3",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the beige trench coat of the pigeon spy blue. 2) Put a small blue cap on the head of the green crocodile with the watermelon body. 3) Put a small red party hat on top of the dinosaur skeleton's skull. 4) Make the fish skeleton fossil in the glass case on the left blue. 5) Make the big ammonite fossil in the glass case on the right purple. 6) Make the green cushion of the wooden bench in the center background, under the dinosaur, red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "sobretudo bege do pombo espiao (Shpioniro Golubiro) -> azul",
+        "bone azul na cabeca do crocodilo de melancia (Glorbo Fruttodrillo)",
+        "FEITO DIFERENTE: em vez do chapeu de festa no cranio, o Grok pos um bichinho cinza redondo (tipo foca) com chapeu de festa vermelho de bolinhas sentado nas costas do esqueleto, atras do pescoco (alto, centro, ~x 870-960, y 30-140)",
+        "peixe fossil na vitrine da esquerda -> azul",
+        "amonite grande na vitrine da direita -> roxo",
+        "almofada verde do banco de madeira do fundo (centro, sob o dinossauro) -> vermelha; o banco todo ficou vermelho, o banco da direita ficou igual"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha a coruja sem nada de gato e o chao de baixo vazio; a 2 tinha a Meowl de orelhas de gato, mas o Glorbo so com uma fatia de melancia nas costas e o chao do centro-baixo vazio; a 3 tinha a coruja sem nada de gato e o chao da esquerda-baixo vazio. Escolhida a 4: os 5 reconheciveis (Uvanito ovelha de cachos de uva roxa com folhas; Shpioniro Golubiro pombo de sobretudo bege, chapeu xadrez, oculos escuros e lupa; Meowl coruja redonda e fofa de olhos enormes acenando com almofadinha rosa de gato na pata (as orelhas sao tufos de coruja); Strawberry Elephant elefante rosa de morango com folhas fotografando; Glorbo crocodilo de corpo de melancia tomando sorvete). Salao com cupula de vidro, esqueleto de T-rex, mamute, esqueleto de baleia, peixe fossil, vitrines com amonites e pedras, lupa gigante, bancos, cordas em postes dourados, plantas e visitantes. Detalhe espalhado pela tela toda. Sem texto, sem logo, sem arma, sem bebida."
+}

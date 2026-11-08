@@ -1,0 +1,88 @@
+{
+  "cena": "selva-07",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside an ancient jungle temple hall lit by torches with 5 characters: Vulpegatto (half fox half cat sitting in a coconut shell) exploring with a lantern; Tralalero Tralala (blue shark on three legs, plain blue sneakers) peeking from behind a pillar; Burbaloni Luliloli (brown capybara inside half a coconut) juggling; Cocofanto Elefanto (small brown elephant with a coconut head) jumping with joy; Espressona Signora (old lady in a flowered dress with an espresso cup head) waving hello. Around them: carved stone pillars, stone animal heads, steps, vines hanging inside, gold coins, an explorer backpack, a rope, colorful gems, torches on the walls, a hidden doorway and butterflies. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "e8238d16-898a-4dde-acb5-b5b1d49f9f3f",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "vulpegatto": [
+      55,
+      540,
+      370,
+      395
+    ],
+    "tralalero": [
+      330,
+      338,
+      372,
+      368
+    ],
+    "burbaloni": [
+      648,
+      610,
+      330,
+      345
+    ],
+    "cocofanto": [
+      955,
+      440,
+      250,
+      345
+    ],
+    "espressona": [
+      1188,
+      552,
+      310,
+      560
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "78c32f89-c005-4f45-b835-79697da5e2cb",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the blue shark. 2) Put a small red party hat on the head of the brown elephant with the coconut head. 3) Make the orange butterfly at the top left, above the shark, green. 4) Make the stone animal head on the left wall, between the two torches, green. 5) Make the green backpack at the bottom left red. 6) Make the pile of gold coins on the floor at the bottom right of center, below the elephant, silver. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Tralalero Tralala",
+        "chapeu de festa vermelho na cabeca do Cocofanto Elefanto",
+        "borboleta laranja do alto, acima do tubarao -> verde; as borboletas azul e rosa ficaram iguais",
+        "cabeca de pedra de bicho na parede da esquerda (entre as duas tochas) -> verde; a cabeca de pedra da direita ficou igual",
+        "mochila verde de explorador (canto inferior esquerdo) -> vermelha (a bussola continua dourada)",
+        "pilha de moedas de ouro no chao (direita do centro, abaixo do elefante) -> prateada; efeito colateral: todas as moedas da cena ficaram prateadas (as soltas no chao, as da esquerda-baixo e as do tesouro na escada)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b21b20e8-0822-410d-af9c-da0335ec6b7f",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw hat on the head of the orange fox sitting in the coconut shell on the left. 2) Put black sunglasses on the brown capybara in the coconut in the center. 3) Make the purple flowered dress of the old lady with the coffee cup head green, keeping the flowers. 4) Make the flame of the torch at the far left edge blue. 5) Make the pink lily flower on the floor at the bottom, left of the old lady, yellow. 6) Put a small green parrot sitting on top of the stone animal head on the right wall. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de palha amarelo na cabeca do Vulpegatto (esquerda)",
+        "oculos escuros pretos no Burbaloni Luliloli; efeito colateral: o sorriso de dentes virou boca fechada",
+        "vestido roxo florido da Espressona Signora -> verde florido (as flores continuam)",
+        "chama da tocha da extrema esquerda -> azul; efeito colateral: a chama da segunda tocha da esquerda (a direita da cabeca de pedra) tambem ficou azul",
+        "lirio rosa no chao (baixo, a esquerda da senhora) -> amarelo; a flor rosa do canto inferior esquerdo ficou igual",
+        "periquito verde novo pousado no alto da cabeca de pedra da parede da direita"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha o simbolo da Nike nos tenis do tubarao (recusada) e um elefante peludo comum; a 3 tinha o elefante cinza com um coco de rosto equilibrado na cabeca (dois rostos) e o tubarao escondido atras do pilar; a 4 tinha o elefante com uma touca de fibra de coco e o chao mais vazio. Escolhida a 2: os 5 fieis (Vulpegatto raposa-gato laranja sentada numa casca de coco com lampiao aceso; Tralalero tubarao azul de tenis azuis lisos, sem logo, com 2 pernas como sempre; Burbaloni capivara marrom dentro de meio coco fazendo malabares com bolinhas; Cocofanto elefante marrom de cabeca de coco pulando; Espressona Signora senhora de vestido roxo florido com cabeca de xicara de cafe, segurando uma xicrinha de cafe e acenando). Salao de templo com pilares entalhados, duas cabecas de bicho de pedra, quatro tochas, cipos, portal escuro com escada e tesouro de moedas e joias, borboletas, mochila de explorador com bussola, corda, moedas e joias espalhadas e flores. Sem texto, sem logo, sem arma, sem bebida alem das xicaras de cafe. O chao do centro-baixo tem algumas moedas mas e mais vazio que o resto. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram. A aba travou uns 60 s depois da 2a edicao (so esperar)."
+}

@@ -1,0 +1,89 @@
+{
+  "cena": "praia-07",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a lighthouse keeper's cozy round room with 5 characters: Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) polishing the big brass lamp; Rhino Toasterino (rhino with a silver toaster body and toast popping out) reading a map at the table; Bombombini Gusini (white goose jet plane) juggling; Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) jumping with joy; Meowl (round fluffy half cat half owl with huge eyes) waving hello. Around them: a spiral staircase, a big brass lamp, round windows, a ship wheel on the wall, coiled ropes, lanterns, a telescope, a globe, a kettle on a stove, a sleeping cat, books without titles and a model ship. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "6830dd1d-a457-4a62-898e-d881c86d77ff",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "chimpanzini": [
+      430,
+      175,
+      330,
+      390
+    ],
+    "rhino-toasterino": [
+      285,
+      585,
+      455,
+      340
+    ],
+    "bombombini": [
+      990,
+      90,
+      330,
+      345
+    ],
+    "golubiro": [
+      1055,
+      420,
+      355,
+      350
+    ],
+    "meowl": [
+      800,
+      635,
+      335,
+      300
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a10bd0ee-b729-437c-9dd7-4e57bbda64a2",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red cap on the head of the green chimpanzee in the banana. 2) Make the beige trench coat of the pigeon with sunglasses green. 3) Make the brass kettle on the black stove at the left blue. 4) Make the red mug with a heart on the table yellow. 5) Make the white sails of the model ship on the right red. 6) Make the brass lantern hanging in the top right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "bone vermelho na cabeca do Chimpanzini Bananini",
+        "sobretudo bege do Shpioniro Golubiro -> verde",
+        "chaleira dourada no fogao preto (esquerda) -> azul",
+        "caneca vermelha com coracao na mesa -> amarela (o coracao continua)",
+        "velas brancas do navio em miniatura (direita) -> vermelhas",
+        "lanterna dourada pendurada no canto superior direito -> azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "725a87cf-b12a-41ce-982e-5a205a7cd3bb",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round red glasses on the brown owl in the center. 2) Put a small yellow party hat on the head of the gray rhino. 3) Make the blue oceans of the globe at the bottom right purple. 4) Make the blue cushion under the sleeping cat at the bottom left red. 5) Make the brass dome on top of the big lamp in the center red. 6) Make the red book on top of the stack of books next to the owl blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos redondos vermelhos na Meowl",
+        "chapeu de festa amarelo na cabeca do Rhino Toasterino",
+        "oceanos azuis do globo (canto inferior direito) -> roxos",
+        "almofada azul sob o gato dormindo (canto inferior esquerdo) -> vermelha",
+        "farol grande do centro: pediu-se so a cupula, mas a lampada INTEIRA (cupula, lanterna e pedestal) ficou vermelha; diferenca grande, ~325 px de largura",
+        "livro vermelho no topo da pilha ao lado da coruja -> azul",
+        "efeito colateral pequeno: bussola na mesa levemente redesenhada"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha o ganso sem aviao (so oculos de aviador) e o rinoceronte so usando uma torradeira; a 2 tinha chao vazio no centro-baixo; a 3 tinha o rinoceronte com a torradeira de mochila. Escolhida a 4: os 5 personagens reconheciveis (Chimpanzini na banana polindo a lampada em cima de uma escadinha, Rhino Toasterino com corpo de torradeira e torradas saltando lendo o mapa na mesa, Bombombini ganso-aviao fazendo malabares, Golubiro de sobretudo e oculos escuros pulando, Meowl redonda e fofa de olhos enormes acenando, mais coruja que gato). Sala redonda de pedra com escada em caracol, lampada de latao, escotilhas, timao, cordas, lanternas, luneta, globo, chaleira no fogao, gato dormindo, livros sem titulo e navio em miniatura. Sem texto (a caneca tem um coracao), sem logo, sem arma. As duas edicoes mantiveram o enquadramento e os personagens."
+}

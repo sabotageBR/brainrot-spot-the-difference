@@ -1,0 +1,88 @@
+{
+  "cena": "deserto-08",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a retro roadside diner in the desert with 5 characters: Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) serving toast to customers; Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) keeping milkshakes cold; Frigo Camelo (camel with a white fridge body, brown boots) jumping with joy; Rhino Toasterino (rhino with a silver toaster body and toast popping out) waving hello; Bombombini Gusini (white goose jet plane) taking a photo. Around them: a diner counter with stools, plates of pancakes and eggs, milkshakes, a jukebox, a neon cactus shape without letters, an old car outside, a gas pump, cacti, a cat on the counter and plants. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "9093dbc1-1a96-4dbb-aa8e-183ca5840d85",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "tortuginni": [
+      80,
+      317,
+      360,
+      343
+    ],
+    "cacto-hipopotamo": [
+      653,
+      357,
+      353,
+      643
+    ],
+    "frigo-camelo": [
+      967,
+      487,
+      300,
+      507
+    ],
+    "rhino-toasterino": [
+      1240,
+      587,
+      327,
+      387
+    ],
+    "bombombini": [
+      1000,
+      27,
+      393,
+      273
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a9054a23-b103-420c-977d-d6c7647b05e5",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Replace the blue cross-shaped handle on the white fridge body of the camel with a plain straight vertical blue bar handle. 2) Put round black sunglasses on the green turtle with the pink dragon fruit shell. 3) Put a small yellow cap on the head of the gray rhino with the toaster body. 4) Make the pink neon cactus sign on the diner wall blue. 5) Make the red gas pump on the right, behind the blue car, purple. 6) Make the pink flowers in the big terracotta pot at the bottom left yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "puxador azul em forma de cruz na porta da geladeira (corpo do Frigo Camelo) -> barra vertical reta azul (correcao do simbolo; diferenca pequena, ~2% da largura)",
+        "oculos escuros redondos pretos na tartaruga de casco de pitaya (Tortuginni Dragonfruitini)",
+        "bone amarelo na cabeca do rinoceronte torradeira (Rhino Toasterino)",
+        "letreiro neon de cacto rosa na parede do diner -> azul",
+        "bomba de gasolina vermelha (direita, atras do carro azul) -> roxa",
+        "flores rosa do vaso de terracota grande (esquerda-baixo) -> amarelas"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "82eaa180-276c-441e-befb-d0f02f2b79b2",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the teal t-shirt of the gray hippo orange. 2) Make the red scarf of the white goose on the airplane green. 3) Make the gray striped cat sleeping on the counter, next to the small potted plant, orange. 4) Make the blue flower pot with the spiky plant at the bottom right yellow. 5) Put a pink flower on top of the tall cactus in the top right corner. 6) Add a small blue lizard on the sand at the bottom center, below the ice bucket. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "camiseta verde-agua do hipopotamo (Il Cacto Hipopotamo) -> laranja",
+        "lenco vermelho do ganso no aviao (Bombombini Gusini) -> verde",
+        "gato cinza listrado dormindo no balcao (ao lado do vasinho) -> laranja; efeito colateral: o gato cinza dormindo no banquinho da esquerda tambem ficou laranja",
+        "vaso azul com a planta espinhosa (direita-baixo) -> amarelo; efeito colateral: a planta dentro dele tambem ficou amarelada",
+        "flor rosa no topo do cacto alto do canto superior direito",
+        "lagartixa azul pequena na areia (baixo-centro, abaixo do balde de gelo)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: nas 4 o ganso aparece montado num aviao (nao e o aviao). A 2 tinha prateleiras de potes/garrafas na janela do diner, uma plaquinha na jukebox que parece texto e o chao de baixo vazio; a 3 era a mais cheia, mas tinha uma garrafa de vidro vazia no chao, um frasco de mostarda no balcao, alavanca em cruz na torradeira e placa no carro; a 4 tinha garrafas coloridas na prateleira, garrafa-vaso com flores e cruz na lateral da torradeira. Escolhida a 1: os 5 reconheciveis (Tortuginni tartaruga verde de casco de pitaya rosa, chapeu de chef, servindo torrada; Il Cacto Hipopotamo cinza com cacto nas costas, sandalias, segurando milkshakes num balde de gelo; Frigo Camelo de corpo de geladeira branca e botas marrons pulando; Rhino Toasterino de corpo de torradeira prateada com torrada saltando, acenando; Bombombini Gusini ganso branco de oculos de aviador fotografando, montado num jato branco). Diner com toldo, janela oval, balcao com panquecas, ovos e gatos, banquetas vermelhas, tapete, jukebox sem texto, neon de cacto sem letras, bomba de gasolina com estrela de 5 pontas e mostrador sem numeros legiveis, carro antigo com torradas no teto, cactos, vasos e barrilzinho de madeira. Sem texto, sem logo, sem arma, sem garrafa nem bebida de adulto (so milkshakes rosa). O unico item ambiguo era o puxador da geladeira em forma de cruz: corrigido como 1a mudanca de v1 (agora e uma barra reta em v1; em A e v2 continua em cruz, pois o estudio monta B a partir de A). Ceu e areia do centro-baixo um pouco vazios. Diferenca media A->v1 ~16/255 (redesenho um pouco mais forte que o normal, sem deslocamento)."
+}

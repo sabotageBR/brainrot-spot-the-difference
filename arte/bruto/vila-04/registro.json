@@ -1,0 +1,89 @@
+{
+  "cena": "vila-04",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a busy covered village market hall with 5 characters: Crocodilo Fromagioso (crocodile made of yellow cheese with holes) selling fruit from a stall; U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) carrying a basket of fish; Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) carrying a basket; La Vaca Saturno Saturnita (planet Saturn with a cow face and two big human feet) playing a guitar; Ballerina Cappuccina (ballerina in a pink tutu with a cappuccino cup head) playing with a ball. Around them: stalls with fruit, vegetables, spices and flowers, woven baskets, conical hats, scales, hanging lanterns, wooden crates, chickens in a basket, umbrellas and a ceiling of palm leaves. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "a95ee679-9aac-4fe8-b827-d18090dccda3",
+    "escolhida_de": "3a de 4 da rodada 1"
+  },
+  "caixas": {
+    "crocodilo-fromagioso": [
+      0,
+      255,
+      435,
+      450
+    ],
+    "u-din-din": [
+      440,
+      330,
+      365,
+      570
+    ],
+    "bombardiro": [
+      650,
+      15,
+      485,
+      405
+    ],
+    "saturnita": [
+      1060,
+      260,
+      525,
+      440
+    ],
+    "ballerina": [
+      870,
+      625,
+      525,
+      515
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "abc58906-1436-46dc-93f8-085d97115ab1",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the yellow cheese crocodile on the left. 2) Make the red sneakers of the muscular orange fruit character in the center blue. 3) Make the pink ball held by the cappuccino ballerina yellow. 4) Make the glowing lantern hanging in the top left corner green. 5) Make the orange pumpkin at the bottom left of center purple. 6) Make the brown hen on the far right of the chicken basket at the bottom right black. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Crocodilo Fromagioso (esquerda)",
+        "tenis vermelhos do U Din Din Din Dun (centro) -> azuis",
+        "bola rosa da Ballerina Cappuccina -> amarela",
+        "lanterna do canto superior esquerdo -> verde; efeito colateral: mais 3 lanternas ficaram verdes (as duas a esquerda do centro, no alto, e a do canto superior direito); as duas a direita do centro ficaram laranja",
+        "abobora laranja (baixo, esquerda do centro) -> roxa",
+        "galinha marrom da direita no cesto (direita-baixo) -> preta; as duas brancas ficaram iguais",
+        "efeito colateral: redesenho mais forte que o normal nos contornos (peixes do cesto, cestos, tigelas de tempero), sem deslocamento (diferenca media 8 em 255)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "74dfa2f1-79ca-4822-b304-d11cda24e047",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the cow head of the Saturn planet character playing the guitar on the right. 2) Put round aviator goggles on the head of the green crocodile in the red airplane at the top center. 3) Make the pink tutu of the cappuccino ballerina light blue. 4) Make the big green cabbage on the left of the tomatoes, at the bottom center, purple. 5) Make the purple umbrella in the top right corner green. 6) Make the red spice in the bowl at the bottom left, under the garlic, purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho com bolinhas na cabeca da La Vaca Saturno Saturnita",
+        "touca de aviador marrom com oculos redondos na cabeca do Bombardiro Crocodilo",
+        "tutu rosa da Ballerina Cappuccina -> azul-claro; efeito colateral: as sapatilhas tambem ficaram azuis",
+        "repolho verde grande a esquerda dos tomates (baixo, centro) -> roxo",
+        "guarda-sol roxo do canto superior direito -> verde",
+        "tempero vermelho na tigela sob o alho (baixo, esquerda) -> roxo"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 era boa, mas tinha uma balanca de mostrador pendurada na borda esquerda e o U Din Din de cara brava; a 2 era boa (Bombardiro de aviao prateado), mas a Saturnita tinha patas de vaca e havia uma balanca de mostrador a esquerda; a 4 tinha o Fromagioso de manchas laranja (pouco queijo) e a Saturnita de cascos. Escolhida a 3: os 5 fieis (Crocodilo Fromagioso amarelo de queijo com furos e lenco vermelho, atras da banca de frutas; U Din Din Din Dun laranja musculoso com folha, luvas brancas, short azul e tenis vermelhos carregando cesto de peixes; Bombardiro Crocodilo cabeca de crocodilo num aviao vermelho de helice com rotor, cesto de confeitos e confete caindo; La Vaca Saturno Saturnita planeta com anel, cara de vaca, chifres e dois pes humanos grandes, tocando violao; Ballerina Cappuccina xicara de cappuccino de tutu rosa com bola rosa). Mercado coberto de palha cheio: lanternas de metal, guarda-sois listrados, multidao pequena de chapeu conico ao fundo, bancas de frutas, legumes, temperos em tigelas, alhos, flores, cesto de galinhas, balanca de pratos. Ha uma balanca pequena de mostrador a direita (perto do pe da Saturnita, ~60 px), sem numeros (so riscos). Sem texto, sem logo, sem arma, sem alcool. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram."
+}

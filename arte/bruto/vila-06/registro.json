@@ -1,0 +1,88 @@
+{
+  "cena": "vila-06",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a bright green bamboo forest with 5 characters: Tigrulli Grapefrutunni (tiger with a round pink grapefruit body) crossing a rope bridge; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) climbing a bamboo stalk; Trippi Troppi (orange cat head on a pink shrimp body) playing with a ball; Cocofanto Elefanto (small brown elephant with a coconut head) juggling; Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) jumping with joy. Around them: tall bamboo stalks, a rope bridge, paper lanterns, butterflies, frogs, a small stream with stones, mushrooms, ferns, birds, a stone lantern and a little tea house. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "5f167222-d02c-436a-8b53-61909645aaa1",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "tigrulli": [
+      330,
+      180,
+      355,
+      335
+    ],
+    "girafa-celestre": [
+      905,
+      70,
+      300,
+      480
+    ],
+    "trippi-troppi": [
+      320,
+      695,
+      255,
+      345
+    ],
+    "cocofanto": [
+      640,
+      670,
+      320,
+      320
+    ],
+    "cacto-hipopotamo": [
+      1022,
+      512,
+      425,
+      505
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b68911b0-b17e-4fd9-a859-faa76d498f04",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the tiger with the pink grapefruit body on the rope bridge. 2) Make the brown boots of the giraffe with the watermelon body red. 3) Make the lower red paper lantern on the far left, below the blue bird, blue. 4) Make the red tiled roof of the little tea house at the top right blue. 5) Make the biggest red mushroom with white spots at the bottom right, below the hippo, purple. 6) Make the pink butterfly on the far left, at middle height, yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Tigrulli Grapefrutunni (protagonista, na ponte)",
+        "botas marrons da Girafa Celestre -> vermelhas (as 4 botas)",
+        "lanterna de papel vermelha de baixo, na extrema esquerda -> azul (a de cima continuou vermelha)",
+        "telhado de telhas da casa de cha (alto, direita) -> azul",
+        "cogumelo grande vermelho de bolinhas (direita-baixo) -> roxo; efeito colateral: o cogumelo pequeno colado a direita dele tambem ficou roxo",
+        "borboleta rosa da extrema esquerda, a meia altura -> amarela (a borboleta rosa de cima continuou rosa)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "59574fb4-69b0-4cab-a4a1-483722c1cd12",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the coconut head of the brown elephant juggling in the center. 2) Put a small red baseball cap on the head of the gray hippo with the cactus on its back on the right. 3) Make the multicolored ball held by the orange cat on the left solid red. 4) Make the gray stone lantern on the right, beside the stairs of the tea house, red. 5) Make the blue bird perched on the branch in the top left corner red. 6) Make the green frog sitting on the rock at the bottom center-left, in front of the stream, orange. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho de bolinhas na cabeca de coco do Cocofanto Elefanto (pequeno, ~5% da largura)",
+        "bone vermelho na cabeca do Il Cacto Hipopotamo (com um emblema branco abstrato, sem letra)",
+        "bola colorida do Trippi Troppi -> vermelha lisa",
+        "lanterna de pedra cinza (direita, ao lado da escada da casa de cha) -> vermelha",
+        "passaro azul no galho do canto superior esquerdo -> vermelho",
+        "sapo verde na pedra (centro-esquerda, embaixo, na frente do riacho) -> laranja; os outros sapos continuaram verdes"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha o Cocofanto como elefante comum (sem cabeca de coco) e a girafa segurando a melancia; a 3 tinha o hipopotamo quase sem cacto; a 4 era boa, mas o Cocofanto tambem era elefante comum. Escolhida a 2: os 5 fieis (Tigrulli Grapefrutunni tigre de corpo redondo de toranja rosa com folhinha cruzando a ponte de corda; Girafa Celestre corpo de melancia com cabeca e pernas de girafa e botas marrons subindo no bambu; Trippi Troppi gato laranja de corpo de camarao rosa com bola colorida; Cocofanto Elefanto elefante marrom de cabeca de coco com broto fazendo malabares com cocos; Il Cacto Hipopotamo hipopotamo cinza com cacto florido nas costas e sandalias, pulando). Floresta de bambu cheia: lanternas de papel vermelhas lisas (sem letras), passaros, borboletas, ponte de corda, riacho com pedras, sapos, cogumelos de bolinhas, samambaias, flores, lanterna de pedra e casa de cha de janela redonda. Sem texto, sem logo, sem arma, sem bebida. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram. A segmentacao do Grok listou um item 'O' (provavelmente a janela redonda da casa de cha; nao ha letra visivel)."
+}

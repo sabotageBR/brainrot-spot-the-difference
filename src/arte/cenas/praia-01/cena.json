@@ -1,0 +1,93 @@
+{
+ "id": "praia-01",
+ "mundo": 1,
+ "k": 1,
+ "prot": "tralalero",
+ "tam": [
+  1024,
+  768
+ ],
+ "imagem": "a.webp",
+ "erros": [
+  {
+   "id": "d1",
+   "elipse": {
+    "cx": 382,
+    "cy": 537,
+    "rx": 102,
+    "ry": 56
+   },
+   "remendo": {
+    "arq": "d1.webp",
+    "x": 283,
+    "y": 479,
+    "w": 198,
+    "h": 115
+   },
+   "vis": 1
+  },
+  {
+   "id": "d2",
+   "elipse": {
+    "cx": 115,
+    "cy": 288,
+    "rx": 132,
+    "ry": 70
+   },
+   "remendo": {
+    "arq": "d2.webp",
+    "x": 0,
+    "y": 218,
+    "w": 241,
+    "h": 140
+   },
+   "vis": 1
+  },
+  {
+   "id": "d3",
+   "elipse": {
+    "cx": 672,
+    "cy": 413,
+    "rx": 67,
+    "ry": 41
+   },
+   "remendo": {
+    "arq": "d3.webp",
+    "x": 605,
+    "y": 369,
+    "w": 134,
+    "h": 87
+   },
+   "vis": 0.86
+  }
+ ],
+ "personagens": [
+  {
+   "id": "tralalero",
+   "caixa": {
+    "x": 205,
+    "y": 246,
+    "w": 285,
+    "h": 345
+   }
+  },
+  {
+   "id": "trippi-troppi",
+   "caixa": {
+    "x": 595,
+    "y": 384,
+    "w": 205,
+    "h": 205
+   }
+  },
+  {
+   "id": "bananita",
+   "caixa": {
+    "x": 688,
+    "y": 145,
+    "w": 152,
+    "h": 240
+   }
+  }
+ ]
+}

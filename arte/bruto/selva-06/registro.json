@@ -1,0 +1,88 @@
+{
+  "cena": "selva-06",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a jungle fruit smoothie shop with 5 characters: Glorbo Fruttodrillo (crocodile with a watermelon body) blending juice behind the counter; Boneca Ambalabu (green frog head on a black tire with two human legs) drinking from a coconut; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing with a ball; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) juggling; Trippi Troppi (orange cat head on a pink shrimp body) jumping with joy. Around them: a bamboo counter, blenders, plastic cups of bright pink, green and orange smoothies with straws, piles of mangoes, pineapples and coconuts, hanging fruit nets, stools, string lights, a parrot and big leaves on the walls. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "6a73411e-c7b4-42b4-af41-52e5086b867c",
+    "escolhida_de": "3a de 4 da rodada 1"
+  },
+  "caixas": {
+    "glorbo": [
+      125,
+      275,
+      345,
+      390
+    ],
+    "boneca-ambalabu": [
+      460,
+      420,
+      295,
+      490
+    ],
+    "bobrito": [
+      735,
+      395,
+      258,
+      485
+    ],
+    "orangutini": [
+      888,
+      200,
+      427,
+      440
+    ],
+    "trippi-troppi": [
+      1212,
+      392,
+      315,
+      472
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "9abc7d4b-ab2b-431a-85b1-8de5bcc5c293",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange orangutan with the pineapple body. 2) Put a small blue bow on the head of the orange cat with the pink shrimp body on the right. 3) Make the red parrot on the perch in the top left corner blue. 4) Make the pink smoothie cup on the floor at the bottom center, the leftmost of the three big cups, purple. 5) Make the wooden stool on the left, in front of the counter, red. 6) Make the oranges in the big hanging net in the top right corner red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Orangutini Ananassini",
+        "laco azul na cabeca do Trippi Troppi (gato-camarao, direita)",
+        "arara vermelha no poleiro (canto superior esquerdo) -> azul",
+        "copo de smoothie rosa no chao (baixo, centro, o da esquerda) -> roxo; efeito colateral: os outros dois copos grandes (verde e laranja) tambem ficaram roxos",
+        "banquinho de madeira da esquerda (na frente do balcao) -> vermelho; o banquinho da direita ficou igual",
+        "laranjas da rede grande do canto superior direito -> vermelhas; efeito colateral: as laranjas da rede do alto-centro (acima do orangotango) e as duas frutas laranja no ar do malabarismo tambem ficaram vermelhas"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "9a959950-8b06-474d-a607-da6f24631716",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the black fedora hat of the beaver in the striped suit red. 2) Put black sunglasses on the green crocodile with the watermelon body on the left. 3) Make the woven basket with coconuts and bananas hanging at the top left, right of the parrot, blue. 4) Make the stack of pink plastic cups on the top shelf, above the frog, blue. 5) Make the red and yellow mango at the very bottom of the fruit pile in the bottom left, next to the coconuts, solid purple. 6) Make the big pineapple at the front left of the wooden crate in the bottom right red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu fedora preto do Bobrito Bandito -> vermelho; efeito colateral: as listras bege do terno ficaram amarelas",
+        "oculos escuros pretos no Glorbo Fruttodrillo",
+        "cesto de palha com cocos e bananas pendurado (alto, esquerda) -> azul",
+        "pilha de copos rosa na prateleira de cima -> azul; efeito colateral: a pilha de copos verdes ao lado e o pote verde da mesma prateleira tambem ficaram azuis",
+        "manga vermelha e amarela de baixo da pilha de frutas (canto inferior esquerdo) -> roxa",
+        "abacaxi grande da frente do caixote (direita-baixo) -> vermelho; efeito colateral: os tres abacaxis do caixote ficaram vermelhos"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: as 4 traziam os 5 personagens; a 2 tinha o castor escondido atras do balcao (so meio corpo); a 1 e a 4 eram boas, mas com menos coisa no primeiro plano. Escolhida a 3: os 5 fieis (Glorbo crocodilo de corpo de melancia com faixa na testa, batendo smoothie no liquidificador atras do balcao; Boneca Ambalabu cabeca de sapo numa boia de pneu preto com pernas humanas e tenis rosa, bebendo de um coco com canudo; Bobrito Bandito castor de terno listrado e fedora com bola de praia, sem arma; Orangutini orangotango de corpo de abacaxi com folhas na cabeca fazendo malabares com frutas; Trippi Troppi cabeca de gato laranja em corpo de camarao rosa pulando). Loja cheia: arara, cesto e redes de frutas pendurados, prateleiras com copos plasticos empilhados e potes tampados de smoothie verde, laranja e vermelho, luzinhas, banquinhos, mangas, abacaxis, cocos, caixote e folhas grandes; no primeiro plano, tres copos plasticos opacos com tampa de domo e canudo (rosa, verde, laranja). Sem texto, sem logo, sem arma, sem bebida que lembre alcool (os potes sao de vidro tampado com smoothie opaco; o pote ambar cortado na borda esquerda, ao lado do liquidificador, e tampado, de mel ou geleia). As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram."
+}

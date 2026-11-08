@@ -1,0 +1,88 @@
+{
+  "cena": "praia-03",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a bright underwater coral reef with 5 characters: Bananita Dolphinita (gray dolphin inside a peeled banana skin) swimming in the middle; Trulimero Trulicina (silver fish with a cat face and four human legs) walking on the sand of the sea floor; Tralalero Tralala (blue shark on three legs, plain blue sneakers) laughing; Trippi Troppi (orange cat head on a pink shrimp body) carrying a basket; Los Tralaleritos (three small blue sharks on legs with colored sneakers) peeking from behind something. Around them: colorful corals, sea anemones, seahorses, jellyfish, schools of small striped fish, a treasure chest with pearls, an old anchor, a sunken rowing boat, starfish, sea shells, bubbles and swaying seaweed. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "4d6e453c-ea0c-45c0-a48e-cf924337a03d",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "bananita": [
+      515,
+      262,
+      435,
+      365
+    ],
+    "trulimero": [
+      255,
+      500,
+      330,
+      300
+    ],
+    "tralalero": [
+      990,
+      410,
+      465,
+      350
+    ],
+    "trippi-troppi": [
+      765,
+      672,
+      280,
+      325
+    ],
+    "tralaleritos": [
+      1200,
+      690,
+      300,
+      360
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "d2e2ab02-e2a0-4295-ad30-f295a475562e",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue sneakers of the big blue shark on the right red. 2) Put a small red cap on the head of the gray cat-fish walking on the left. 3) Make the leftmost pink jellyfish in the top-left corner green. 4) Make the brown anchor on the right gold. 5) Make the big orange starfish at the bottom center blue. 6) Remove the yellow seahorse on the upper left. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tenis do Tralalero (tubarao grande a direita) azul -> vermelho",
+        "bone vermelho no Trulimero (gato-peixe cinza a esquerda)",
+        "agua-viva rosa mais a esquerda, canto superior esquerdo -> verde",
+        "ancora marrom da direita -> dourada",
+        "estrela-do-mar laranja grande embaixo no centro -> azul",
+        "cavalo-marinho amarelo do alto a esquerda removido"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "1559e5fa-c6cc-4eca-9d23-c79e3c40f05b",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the gray dolphin in the banana skin. 2) Put a small yellow crown on the head of the orange cat carrying the basket. 3) Make the green sneakers of the small shark at the front of the sunken boat purple. 4) Make the orange seahorse at the top center purple. 5) Make the wooden treasure chest on the bottom left red. 6) Make the big white spiral shell in the bottom-right corner orange. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos na Bananita (golfinho no meio)",
+        "coroa amarela no Trippi Troppi (gato com a cesta)",
+        "tenis dos Tralaleritos -> roxos; EFEITO COLATERAL: mudou os tenis de TODOS os tubaroezinhos do barco (eram amarelo, rosa, verde, verde), nao so o da frente",
+        "cavalo-marinho laranja do alto no centro -> roxo",
+        "bau do tesouro de madeira embaixo a esquerda -> vermelho",
+        "concha espiral branca grande do canto inferior direito -> laranja"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "As 4 candidatas tinham os 5 personagens; escolhida a 4 (personagens espalhados pela tela, detalhe em toda parte, sem texto nem logo). Os Tralaleritos sairam como 4 tubaroezinhos (nao 3) dentro do barco afundado; Tralalero com 2 pernas; Trulimero e um gato cinza com corpo e cauda de peixe e 2 pernas de tenis laranja. Pedidos ao Grok nesta cena: 1 geracao + 2 edicoes. Sem aviso de limite. Caixas em px de a.jpg (1600x1200), [x,y,w,h], estimadas olhando a.jpg."
+}

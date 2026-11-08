@@ -1,0 +1,88 @@
+{
+  "cena": "vila-08",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a village toy workshop with 5 characters: Strawberry Elephant (pink strawberry elephant with green leaves) painting a wooden puppet; Glorbo Fruttodrillo (crocodile with a watermelon body) playing with a spinning top; Vulpegatto (half fox half cat sitting in a coconut shell) jumping with joy; Dragon Cannelloni (friendly dragon made of cannelloni pasta) waving hello; Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) taking a photo. Around them: shelves of wooden toys, puppets on strings, spinning tops, painted masks, kites, paint pots and brushes, wood shavings, a workbench with tools, a rocking horse and hanging lanterns. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "b3c96104-275a-4292-a062-ce6d10cc842a",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "strawberry-elephant": [
+      40,
+      190,
+      445,
+      610
+    ],
+    "glorbo": [
+      525,
+      625,
+      405,
+      385
+    ],
+    "vulpegatto": [
+      825,
+      360,
+      335,
+      420
+    ],
+    "dragon-cannelloni": [
+      1160,
+      305,
+      435,
+      490
+    ],
+    "ecco-cavallo": [
+      975,
+      680,
+      510,
+      515
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "e22fbe92-8f0b-4abc-b9c0-ef784e66e392",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the pink strawberry elephant on the left. 2) Put a small red party hat on the head of the fox sitting in the coconut shell in the center. 3) Make the green paper lantern hanging at the top left purple. 4) Make the teal rocking horse at the bottom left orange. 5) Make the small yellow spinning top on the floor at the bottom center red. 6) Make the blue mask on the wall in the top right corner green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Strawberry Elephant (protagonista); efeito colateral: o boneco de madeira que ele pinta tambem ganhou oculos escuros",
+        "chapeu de festa vermelho com estrela na cabeca do Vulpegatto",
+        "lanterna de papel verde do alto a esquerda -> roxa",
+        "cavalinho de balanco verde-azulado (esquerda-baixo) -> laranja (~19% da largura)",
+        "piao amarelo pequeno no chao (centro-baixo) -> vermelho; os outros pioes ficaram iguais",
+        "mascara azul da parede (canto superior direito) -> verde"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "97eadf87-e3c8-405d-8315-d6c2981276a8",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw hat on the head of the brown horse in the red piano at the bottom right. 2) Put black sunglasses on the green crocodile with the watermelon body in the center. 3) Put a small green party hat on the head of the yellow pasta dragon on the right. 4) Make the orange paper lantern hanging at the top center pink. 5) Make the multicolored kite at the top right solid yellow. 6) Make the purple cup holding the paintbrushes at the far left red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de palha amarelo na cabeca do Ecco Cavallo Virtuoso",
+        "oculos escuros pretos no Glorbo Fruttodrillo",
+        "chapeu de festa verde com bolinhas na cabeca do Dragon Cannelloni",
+        "lanterna de papel laranja do alto, no centro -> rosa",
+        "pipa colorida do alto a direita -> amarela lisa",
+        "copo roxo dos pinceis (extrema esquerda) -> vermelho; os pinceis ficaram iguais"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha o cavalo sentado atras do piano (pouco piano) e era mais escura; a 3 tinha martelo, formoes e um painel de ferramentas na bancada e na parede (laminas); a 4 tinha formoes na bancada e o dragao amarelo pouco parecido com canelone. Escolhida a 2: os 5 fieis (Strawberry Elephant elefante rosa de morango com pintinhas e coroa de folhas pintando um boneco de madeira; Glorbo Fruttodrillo crocodilo de corpo de melancia girando um piao; Vulpegatto raposa-gato acenando dentro de uma casca de coco; Dragon Cannelloni dragao amarelo feito de tubos de canelone com asas, acenando; Ecco Cavallo Virtuoso cavalo marrom saindo de um pianinho de cauda vermelho, com camera). Oficina cheia: bandeirinhas lisas, lanternas de papel (verde, laranja, azul), marionetes penduradas, pipa, duas mascaras tribais na parede (vermelha e azul, de cara seria, sem texto), prateleiras de brinquedos de madeira, potes de tinta, pinceis, cavalinho de balanco verde-azulado, pioes e lascas de madeira no chao todo. Sem texto, sem logo, sem arma, sem lamina, sem bebida. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram. Operacao: abrir o post de A direto pela URL deixou a aba ocupada ~2 min antes de responder; depois da 2a edicao, mais ~40 s."
+}

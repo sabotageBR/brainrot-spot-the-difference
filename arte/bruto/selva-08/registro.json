@@ -1,0 +1,88 @@
+{
+  "cena": "selva-08",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a panda nursery greenhouse with 5 characters: Dragon Cannelloni (friendly dragon made of cannelloni pasta) munching bamboo; Crocodilo Fromagioso (crocodile made of yellow cheese with holes) playing a bamboo flute; Ta Ta Ta Ta Sahur (brown teapot with big eyes, thin arms and legs) jumping with joy; Tigrrullini Watermellini (tiger with a round watermelon body) waving hello; Tigrulli Grapefrutunni (tiger with a round pink grapefruit body) taking a photo. Around them: baby pandas, bamboo in pots, cushions, a little slide, bottles of milk, toy balls, glass walls with green plants, watering cans, a hammock and butterflies. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "70d76615-5169-443f-83bb-b37602cef4e9",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "dragon-cannelloni": [
+      145,
+      198,
+      440,
+      527
+    ],
+    "crocodilo-fromagioso": [
+      540,
+      358,
+      362,
+      356
+    ],
+    "ta-ta-sahur": [
+      708,
+      152,
+      322,
+      238
+    ],
+    "tigrrullini": [
+      962,
+      245,
+      295,
+      368
+    ],
+    "tigrulli": [
+      1255,
+      222,
+      305,
+      372
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a7e4f042-a1c6-4d97-8dc0-370bdc18ce8b",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange dragon made of pasta tubes on the left. 2) Put a small red bow on the lid of the brown teapot jumping at the top center. 3) Make the orange butterfly in the top left corner green. 4) Make the big green watering can in the bottom left corner orange. 5) Make the yellow star cushion on the floor in the center, below the crocodile, blue. 6) Make the blue bucket on the floor at the right, below the shelf, red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Dragon Cannelloni (protagonista, esquerda)",
+        "laco vermelho na tampa do Ta Ta Ta Ta Sahur (bule voando, alto-centro)",
+        "borboleta laranja do canto superior esquerdo -> verde",
+        "regador verde grande do canto inferior esquerdo -> laranja; o regador rosa da frente ficou igual",
+        "almofada amarela de estrela no chao (centro, abaixo do crocodilo) -> azul",
+        "balde azul no chao (direita, abaixo da prateleira) -> vermelho"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "766804b7-caa3-40de-beaf-fd3703860325",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange tiger with the watermelon body. 2) Put a small yellow party hat on the head of the pink tiger holding the camera on the right. 3) Make the pink flower-shaped cushion on the floor in the center, right of the crocodile, yellow. 4) Make the blue butterfly at the top right, above the watermelon tiger, yellow. 5) Make the pink flower pot in the bottom right corner purple. 6) Make the striped beach ball on the floor at the bottom center, left of the baby bottles, solid green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Tigrrullini Watermellini",
+        "chapeu de festa amarelo na cabeca do Tigrulli Grapefrutunni (tigre rosa da camera)",
+        "almofada rosa em forma de flor no chao (centro, a direita do crocodilo) -> amarela",
+        "borboleta azul do alto a direita (acima do tigre-melancia) -> amarela",
+        "vaso rosa do canto inferior direito -> roxo; efeito colateral pequeno: a florzinha rosa do vaso tambem ficou roxa",
+        "bola de praia listrada no chao (baixo, centro, a esquerda das mamadeiras) -> verde lisa; as outras bolas ficaram iguais"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 e a 3 tinham o dragao laranja comum (sem tubos de canelone); a 4 tinha os 5 fieis, mas duas garrafinhas de vidro com rolha (conteudo rosa e azul) no alto da estante e frascos tampados embaixo, que podiam ler como bebida: recusada pelo cuidado com alcool. Escolhida a 1: Dragon Cannelloni laranja de corpo feito de tubos de canelone mastigando bambu; Crocodilo Fromagioso de queijo amarelo com furos tocando flauta de bambu; Ta Ta Ta Ta Sahur bule marrom de olhos grandes pulando no ar; Tigrrullini tigre de corpo de melancia acenando; o Tigrulli Grapefrutunni saiu como um tigre rosa de corpo redondo rosa, sem gomos de toranja, fotografando (o menos reconhecivel dos 5). Estufa cheia: bambus em vasos, filhotes de panda nas almofadas, escorregador azul, rede roxa, bolas de praia, regadores, cesto, tres mamadeiras de plastico com bico (leite branco, sem numeros), estrela de brinquedo, vasos coloridos, estante com baldes e borboletas. Sem texto, sem logo, sem arma, sem bebida que lembre alcool. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram."
+}

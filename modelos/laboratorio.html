@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratório · Brainrot 7 Erros</title>
+<link rel="preload" href="../src/ui/fontes/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:"Fredoka";font-weight:700;src:url("../src/ui/fontes/fredoka-latin-700-normal.woff2") format("woff2")}
+  @font-face{font-family:"Fredoka";font-weight:600;src:url("../src/ui/fontes/fredoka-latin-600-normal.woff2") format("woff2")}
+  :root{--tinta:#221c30;--suave:#6b6380;--fundo:#f4f1fa;--cartao:#fff;--marca:#ff2d6f;--roxo:#5b3df5;--borda:#e4dff0}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tinta);background:var(--fundo)}
+  h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;margin:0}
+  header{padding:28px 20px 18px;background:linear-gradient(135deg,#2ec4f1,#8a6cf0 60%,#ff2d6f);color:#fff}
+  header h1{font-size:32px}
+  header p{margin:6px 0 0;max-width:820px;opacity:.95}
+  main{max-width:1280px;margin:0 auto;padding:18px 16px 60px}
+  section{margin:22px 0}
+  section>h2{font-size:22px;margin-bottom:4px}
+  .sub{color:var(--suave);margin:0 0 12px}
+  .estilos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .estilo{background:var(--cartao);border-radius:18px;padding:10px;box-shadow:0 2px 10px rgba(30,10,60,.08)}
+  .estilo h3{font-size:18px}
+  .estilo .duas{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+  .estilo img,.vazio{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;background:#e9e5f2}
+  .vazio{display:grid;place-items:center;color:var(--suave);font-size:13px;text-align:center;padding:6px}
+  .grade{display:grid;grid-template-columns:240px repeat(3,minmax(0,1fr));gap:10px;align-items:stretch}
+  .cab{font-family:"Fredoka",sans-serif;font-weight:700;font-size:17px;align-self:end;padding:0 4px}
+  .modelo{background:var(--cartao);border-radius:18px;padding:12px;box-shadow:0 2px 10px rgba(30,10,60,.08)}
+  .modelo h3{font-size:19px}
+  .modelo p{margin:4px 0 8px;font-size:13.5px;color:var(--suave)}
+  .chips{display:flex;flex-wrap:wrap;gap:4px}
+  .chip{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:#efeaf9}
+  .celula{background:var(--cartao);border-radius:18px;padding:8px;box-shadow:0 2px 10px rgba(30,10,60,.08);display:flex;flex-direction:column;gap:8px;border:3px solid transparent;scroll-margin-top:20px}
+  .celula.escolhida{border-color:var(--marca)}
+  .celula:target{border-color:var(--roxo)}
+  .celula img{width:100%;aspect-ratio:1031/580;object-fit:cover;border-radius:10px;cursor:zoom-in;background:#e9e5f2;display:block}
+  .botoes{display:flex;gap:6px;flex-wrap:wrap}
+  .botoes a,.botoes button{flex:1;min-width:70px;text-align:center;font:600 13.5px system-ui,sans-serif;padding:8px 6px;border-radius:10px;border:0;cursor:pointer;text-decoration:none;color:#fff;background:var(--tinta)}
+  .botoes .jogar{background:var(--marca)}
+  .botoes .escolher{background:#efeaf9;color:var(--tinta)}
+  .celula.escolhida .escolher{background:var(--marca);color:#fff}
+  .tabela{width:100%;border-collapse:collapse;background:var(--cartao);border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,10,60,.08)}
+  .tabela th,.tabela td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--borda);font-size:14px}
+  .tabela th{background:#efeaf9;font-family:"Fredoka",sans-serif}
+  .reco{background:var(--cartao);border-left:6px solid var(--marca);border-radius:14px;padding:14px 16px;box-shadow:0 2px 10px rgba(30,10,60,.08)}
+  .reco h3{font-size:19px;margin-bottom:4px}
+  #decisao{position:sticky;bottom:0;background:var(--tinta);color:#fff;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;z-index:5}
+  #decisao input{flex:1;min-width:200px;font:inherit;padding:7px 10px;border-radius:8px;border:0}
+  #decisao button{font:600 14px system-ui;padding:8px 14px;border-radius:10px;border:0;background:var(--marca);color:#fff;cursor:pointer}
+  #caixa{position:fixed;inset:0;background:rgba(14,10,30,.85);display:none;place-items:center;z-index:10;padding:20px}
+  #caixa.aberta{display:grid}
+  #caixa .fotos{display:flex;gap:12px;align-items:center;justify-content:center;max-width:100%;max-height:100%}
+  #caixa img{max-height:86vh;max-width:62vw;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+  #caixa img.retrato{max-width:22vw}
+  @media (max-width:900px){.grade{grid-template-columns:1fr}.cab{display:none}.estilos{grid-template-columns:1fr}#caixa .fotos{flex-direction:column}#caixa img,#caixa img.retrato{max-width:92vw;max-height:40vh}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Brainrot 7 Erros · Laboratório</h1>
+  <p><b>Decidido em 2026-11-08: M2 · Coleção zen + E2 · Cartoon 2D.</b> Esta página ficou como registro: os modelos que não foram escolhidos saíram do código, e o jogo completo está em <a href="../index.html">index.html</a>.</p>
+  <p>Quatro modelos de jogo, cada um em três estilos de arte. Todos são jogáveis, com as cenas reais geradas no Grok Imagine. Jogue as células, compare os prints e marque <b>Escolher</b> na combinação que vai virar o jogo completo (100+ cenas).</p>
+</header>
+<main>
+  <section>
+    <h2>Estilos de arte</h2>
+    <p class="sub">As mesmas duas cenas (Praia do Tralalero e Café da Ballerina Cappuccina), com o prompt de composição igual e só o bloco de estilo trocado.</p>
+    <div class="estilos" id="estilos"></div>
+  </section>
+
+  <section>
+    <h2>Modelos × estilos</h2>
+    <p class="sub">Clique no print para ver paisagem, celular em pé e o fim da cena. <b>Jogar</b> abre o jogo do zero (sem save), com o botão de voltar para cá.</p>
+    <div class="grade" id="grade"></div>
+  </section>
+
+  <section>
+    <h2>O que muda entre os modelos</h2>
+    <table class="tabela">
+      <tr><th>Modelo</th><th>A favor</th><th>Contra</th></tr>
+      <tr><td><b>M1 · Clássico</b><br>90 s, 3 vidas, dica</td><td>Todo mundo entende na hora; é o formato do único concorrente na Poki (Spot the Differences, 4,3★ com 111 mil votos). Tensão de relógio.</td><td>É o concorrente com outra pele: a revisão da Poki cobra originalidade na categoria. A derrota corta a sessão justo no público mais novo.</td></tr>
+      <tr><td><b>M2 · Coleção zen</b><br>sem tempo, figurinha, brainrot dourado</td><td>Sem derrota, o jogador não sai frustrado; o álbum de figurinhas casa com a cultura brainrot (colecionar é o motor do Steal a Brainrot); o dourado escondido dá uma segunda caça em cada cena; o mapa de mundos mostra o caminho para 100.</td><td>Sem tempo, falta tensão; quem gosta de desafio pode achar fácil (a estrela por erros compensa em parte).</td></tr>
+      <tr><td><b>M3 · Rush</b><br>40 s, +5 s por acerto, combo × pontos</td><td>Adrenalina e "só mais uma" pelo recorde; a maratona passa o tempo de cena em cena, e cada sessão vira uma corrida.</td><td>Pune quem é lento; o celular pequeno com pinça perde para o mouse; a sessão termina na derrota.</td></tr>
+      <tr><td><b>M4 · Pisca + lupa</b><br>uma imagem só, lupa de raio-X</td><td>A novidade do formato: a imagem ocupa a tela toda do celular em pé, e a lupa mostra B por dentro de A. Ninguém na Poki faz assim.</td><td>Perde o "lado a lado" que o público procura no gênero; a lupa pede aprendizado.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <div class="reco">
+      <h3>Minha recomendação: M2 (Coleção zen) + o pisca do M4 como poder, no estilo E2</h3>
+      <p>Para reter, o M2 é o que mais rende. Ele não tem derrota, termina cada cena com uma recompensa (a figurinha do brainrot com o canto do nome) e esconde um dourado que faz o jogador revirar a cena de novo. O álbum de 40+ brainrots é o "colecionar todos" que segura o jogador por 100 cenas. O cronômetro do M3 pode entrar depois como <b>desafio diário</b>, para quem quer tensão, sem tirar o zen do caminho principal.</p>
+      <p id="recoEstilo">No estilo, recomendo o <b>E2 (cartoon de contorno)</b>. Ele foi o mais fiel ao que foi pedido ao Grok: o estúdio detectou 24 candidatas para 24 mudanças pedidas. A visibilidade média dos 7 erros escolhidos ficou em 0,82, a mesma do E1. Também é o único sem desfoque: o E1 tem desfoque de profundidade no primeiro plano mesmo pedindo foco total, e o Grok aplicou várias mudanças em objetos parecidos que não foram pedidos (28 candidatas para 25 pedidas). O <b>E1</b> é a segunda opção: é o mais "premium" e o mais parecido com os memes, e fica melhor na thumb da Poki. O <b>E3 (massinha)</b> é o mais charmoso, mas teve a menor visibilidade (0,75), e no café a bailarina saiu sem rosto. Os estilos ficaram próximos nos números, então aqui pesa o gosto.</p>
+    </div>
+  </section>
+</main>
+<div id="decisao">
+  <span id="escolhaTxt">Nada escolhido ainda.</span>
+  <input id="nota" placeholder="Nota opcional (o que mudar, o que juntar de outro modelo...)">
+  <button id="bGravar">Gravar escolha</button>
+  <span id="gravado"></span>
+</div>
+<div id="caixa"><div class="fotos"></div></div>
+<script type="module">
+  // Laboratorio congelado (Etapa 1): o dono escolheu M2 + E2 em 2026-11-08 e as cenas de
+  // estilo sairam do jogo. As bases ficaram em modelos/estilos/; os prints, em modelos/prints/.
+  const CENAS = ['praia', 'cafe'].flatMap((c) => ['e1', 'e2', 'e3'].map((e) => ({ id: `${c}-${e}`, cena: c, estilo: e })));
+
+  const ESTILOS = [
+    { id: 'e1', nome: 'E1 · 3D de brinquedo', desc: 'render brilhante, o visual dos memes originais' },
+    { id: 'e2', nome: 'E2 · Cartoon 2D', desc: 'contorno grosso e cor chapada, o clássico do jornal' },
+    { id: 'e3', nome: 'E3 · Massinha', desc: 'claymation, fofo e diferente de tudo na Poki' },
+  ];
+  const MODELOS = [
+    { id: 'm1', nome: 'M1 · Clássico', desc: 'Lado a lado, 90 s, 3 vidas. Errar custa vida.', chips: ['⏱ 90 s', '♥ 3 vidas', '💡 1 + 🎬', '🎬 continuar +30 s'] },
+    { id: 'm2', nome: 'M2 · Coleção zen', desc: 'Sem tempo nem derrota. Figurinha no fim, brainrot dourado escondido, mapa de mundos.', chips: ['sem derrota', '🃏 figurinha', '✨ dourado', '👁 pisca 1 + 🎬', '🗺 mapa'] },
+    { id: 'm3', nome: 'M3 · Rush', desc: 'Cronômetro curto, +5 s por acerto, −3 s por erro, combo multiplica. Maratona de cenas.', chips: ['⏱ 40 s', '+5 s / −3 s', '× combo', '🏆 recorde'] },
+    { id: 'm4', nome: 'M4 · Pisca + lupa', desc: 'Uma imagem só. No celular em pé ela ocupa a tela toda e você arrasta para os lados. A lupa de raio-X mostra a outra imagem por dentro; segurar o pisca troca as duas.', chips: ['🔍 lupa', '👁 pisca livre', '📱 tela cheia em pé', '⏱ conta para cima'] },
+  ];
+  const temEstilo = (e) => CENAS.some((c) => c.estilo === e);
+  const cena = (c, e) => CENAS.find((x) => x.cena === c && x.estilo === e);
+
+  // estilos (com o que o estudio mediu: mudancas pedidas ao Grok x candidatas detectadas)
+  let origem = {};
+  try { origem = await (await fetch('../arte/origem.json')).json(); } catch { origem = {}; }
+  const medida = (e) => {
+    const regs = ['praia', 'cafe'].map((c) => origem[`${c}-${e}`]).filter(Boolean);
+    if (!regs.length) return '';
+    const ped = regs.reduce((n, r) => n + ((r.estudio && r.estudio.pedidas) || 0), 0);
+    const cand = regs.reduce((n, r) => n + ((r.estudio && r.estudio.candidatas) || 0), 0);
+    const vis = regs.flatMap((r) => ((r.estudio && r.estudio.remendos) || []).map((x) => x.vis));
+    const media = vis.length ? (vis.reduce((a, b) => a + b, 0) / vis.length).toFixed(2) : '–';
+    return `<div class="sub" style="margin:6px 0 0;font-size:13px">${regs.length} cena(s): ${cand} candidatas detectadas para ${ped} mudanças pedidas · visibilidade média dos 7 escolhidos: <b>${media}</b></div>`;
+  };
+  document.getElementById('estilos').innerHTML = ESTILOS.map((e) => {
+    const fotos = ['praia', 'cafe'].map((c) => {
+      const x = cena(c, e.id);
+      return x ? `<img src="estilos/${x.id}.webp" alt="${x.id}" loading="lazy">` : `<div class="vazio">${c}: ainda gerando no Grok</div>`;
+    }).join('');
+    return `<div class="estilo"><h3>${e.nome}</h3><div class="sub" style="margin:0">${e.desc}</div><div class="duas">${fotos}</div>${medida(e.id)}</div>`;
+  }).join('');
+
+  // grade
+  let escolha = null;
+  try { escolha = JSON.parse(localStorage.getItem('lab.escolha') || 'null'); } catch { escolha = null; }
+  const grade = document.getElementById('grade');
+  let html = '<div></div>' + ESTILOS.map((e) => `<div class="cab">${e.nome}</div>`).join('');
+  for (const m of MODELOS) {
+    html += `<div class="modelo"><h3>${m.nome}</h3><p>${m.desc}</p><div class="chips">${m.chips.map((c) => `<span class="chip">${c}</span>`).join('')}</div></div>`;
+    for (const e of ESTILOS) {
+      const id = `${m.id}-${e.id}`;
+      const tem = temEstilo(e.id);
+      html += `<div class="celula" id="${id}" data-m="${m.id}" data-e="${e.id}">
+        ${tem ? `<img src="prints/${id}-paisagem.png" alt="${id}" data-id="${id}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'vazio',textContent:'print ainda não gerado'}))">` : '<div class="vazio">estilo ainda gerando no Grok</div>'}
+        <div class="botoes">
+          <button class="escolher" data-m="${m.id}" data-e="${e.id}">Escolher</button>
+        </div></div>`;
+    }
+  }
+  grade.innerHTML = html;
+
+  function marcar() {
+    document.querySelectorAll('.celula').forEach((c) => c.classList.toggle('escolhida', !!escolha && c.dataset.m === escolha.modelo && c.dataset.e === escolha.estilo));
+    document.getElementById('escolhaTxt').innerHTML = escolha ? `Escolhido: <b>${MODELOS.find((m) => m.id === escolha.modelo).nome}</b> + <b>${ESTILOS.find((e) => e.id === escolha.estilo).nome}</b>` : 'Nada escolhido ainda.';
+  }
+  grade.addEventListener('click', (ev) => {
+    const b = ev.target.closest('.escolher');
+    if (b) {
+      escolha = { modelo: b.dataset.m, estilo: b.dataset.e };
+      try { localStorage.setItem('lab.escolha', JSON.stringify(escolha)); } catch { /* ignora */ }
+      marcar();
+      return;
+    }
+    const img = ev.target.closest('img[data-id]');
+    if (img) abrir(img.dataset.id);
+  });
+  marcar();
+
+  document.getElementById('bGravar').onclick = async () => {
+    const out = document.getElementById('gravado');
+    if (!escolha) { out.textContent = 'escolha uma célula primeiro'; return; }
+    try {
+      const r = await fetch('/__decisao', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...escolha, nota: document.getElementById('nota').value }) });
+      const j = await r.json();
+      out.textContent = j.ok ? '✔ gravado em docs/decisao.md' : `erro: ${j.erro}`;
+    } catch { out.textContent = 'abra pelo npm run servir para gravar'; }
+  };
+
+  // caixa de prints
+  const caixa = document.getElementById('caixa');
+  function abrir(id) {
+    caixa.querySelector('.fotos').innerHTML = `<img src="prints/${id}-paisagem.png"><img class="retrato" src="prints/${id}-retrato.png"><img src="prints/${id}-fim.png">`;
+    caixa.classList.add('aberta');
+  }
+  caixa.onclick = () => caixa.classList.remove('aberta');
+  addEventListener('keydown', (e) => { if (e.key === 'Escape') caixa.classList.remove('aberta'); });
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "cena": "cafe",
+  "estilo": "e3",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Geração: modo 'Imagem', opção 'Qualidade 2.0' (a outra é 'Velocidade'), ×4 imagens, proporção 4:3 'Apresentação'. Edições: caixa 'Descreva sua edição' na página da imagem A (proporção 'Automático'); a UI não mostra nome de modelo.",
+  "data": "2026-11-07",
+  "prompt": "a cozy Italian café interior: Ballerina Cappuccina, a ballerina in a pink tutu whose head is a cappuccino cup with foam, dancing on a table; Cappuccino Assassino, a small ninja in a black suit whose head is a cappuccino cup, holding two coffee spoons, sneaking behind the counter; Espressona Signora, an elegant old lady whose head is an espresso cup, sitting at a table with a newspaper without writing; a counter with croissants, cakes and donuts, a shiny coffee machine, cups and saucers, hanging lamps, potted plants, framed pictures of coffee beans, a checkered floor, windows with a street view and a cat sleeping on a chair, wide establishing shot, busy detailed scene with many small distinct objects spread across the whole picture, every area of the image has something to look at, no large empty areas, everything in sharp focus with no blur and no depth of field, characters medium size and fully visible, 4:3, no text, no letters, no numbers, no watermark, no logo, no signature, claymation style, every character and prop made of colorful modeling clay with soft clay texture and tiny fingerprints, miniature stop-motion set, soft warm lighting",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "f06f838c-a34c-423b-85c6-bdcfdc0d459a",
+    "escolhida_de": "2ª de 4 imagens da rodada 1"
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "c32f6fc0-80d8-4e7a-92c3-21d317c517fc",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The ballerina's pink tutu and pink dress become yellow. 2) The black hanging lamp in the middle at the top becomes a red lamp. 3) The orange-and-white cat sleeping on the green chair on the left becomes a grey cat. 4) The blue vase with white daisies at the bottom right becomes a red vase. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tutu e collant da Ballerina Cappuccina rosa -> amarelo",
+        "luminária preta do meio (topo) -> vermelha",
+        "gato laranja e branco na cadeira verde -> gato cinza",
+        "vaso azul com margaridas (canto inferior direito) -> vaso vermelho"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "450bb408-cb26-48e0-b803-334a44f9f143",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The ninja's black suit becomes dark green (keep his cup head the same). 2) The pink-and-white checkered tablecloth on the small table at the far left becomes a blue-and-white checkered tablecloth. 3) The purple ball of yarn on the floor at the bottom center becomes a red ball of yarn. 4) The framed picture of coffee beans at the top right, above the coffee machine, becomes a framed picture of a red heart. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "roupa do Cappuccino Assassino preta -> verde-escura",
+        "toalha xadrez rosa/branca da mesinha da esquerda -> azul/branca",
+        "novelo de lã roxo no chão (centro-baixo) -> vermelho",
+        "quadro de grãos de café no alto à direita -> quadro de coração vermelho"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "1f3d4dc1-0e54-4c84-8dd7-1aba198841f1",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The old lady's cream-colored shawl becomes a light blue shawl. 2) The green woven rug on the floor at the bottom left becomes a red woven rug. 3) The croissant on the plate on the small table at the far left becomes a pink frosted donut. 4) The basket of colorful fruit on the floor at the bottom right becomes a basket of bread rolls. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "xale creme da Espressona Signora -> azul-claro",
+        "tapete verde do chão (inferior esquerdo) -> vermelho",
+        "croissant do prato da mesinha da esquerda -> donut com cobertura rosa",
+        "cesta de frutas coloridas (inferior direito) -> cesta de pãezinhos"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visível (cantos conferidos em tamanho real). Metadado EXIF em todos os arquivos: ImageDescription='Signature: <base64>' (assinatura de proveniência) e Artist=<id da imagem no Grok>; remover EXIF no pipeline.",
+  "notas": "Geração ~25 s (4 imagens); edições <10 s cada; nenhum aviso de limite. Candidatas: 1, 3 e 4 com o ninja segurando FACAS (descartadas por violência); escolhida a 2, a única com 2 colheres. Na escolhida a Ballerina tem a cabeça-xícara SEM rosto (só a espuma), a Espressona tem óculos e coque grisalho; o ninja está na frente do balcão (não atrás); o 'jornal' é um livro aberto com rabiscos ilegíveis (sem letras). Leve desfoque de profundidade nos cantos inferiores (vaso azul, pé de cadeira), típico do estilo maquete. Todas as 12 mudanças pedidas aconteceram, sem extras visíveis; diferença média 7,9-10,4/255 contra A, enquadramento idêntico."
+}

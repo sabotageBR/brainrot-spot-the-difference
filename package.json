@@ -1,0 +1,14 @@
+{
+  "name": "brainrot-spot-the-difference",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Jogo dos 7 erros com tema brainrot para a Poki (HTML + JavaScript puro).",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "servir": "node tools/servir.mjs",
+    "sdkcheck": "node tools/sdkcheck.mjs",
+    "prints": "node tools/prints.mjs",
+    "poki": "node --test test/*.test.js && node tools/empacotar.mjs && node tools/sdkcheck.mjs dist/"
+  }
+}

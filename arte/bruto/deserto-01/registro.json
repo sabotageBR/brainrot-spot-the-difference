@@ -1,0 +1,88 @@
+{
+  "cena": "deserto-01",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a sunny desert oasis with 5 characters: Tractoro Dinosauro (green dinosaur tractor with big wheels) checking his pocket watch by the water; Chicleteira Bicicleteira (red gumball machine with eyes riding a bicycle) drinking from the pond; Tartaruga Cisterna (turtle with a silver tank truck shell) eating an ice cream; Pot Hotspot (skinny friendly cartoon skeleton with a phone) dancing; Talpa di Fero (mole with a drill helmet) laughing. Around them: palm trees with dates, a blue pond, colorful tents, rugs, clay jars, lanterns, camels, lizards, flowers, sand dunes and a hot air balloon in the sky. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "980e6260-2e4c-4978-bbff-77dec9c0179f",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "tractoro": [
+      20,
+      470,
+      490,
+      440
+    ],
+    "chicleteira": [
+      512,
+      400,
+      272,
+      410
+    ],
+    "tartaruga-cisterna": [
+      705,
+      780,
+      425,
+      335
+    ],
+    "pot-hotspot": [
+      1100,
+      285,
+      380,
+      565
+    ],
+    "talpa-di-fero": [
+      1170,
+      800,
+      285,
+      315
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "6ee6d74b-73f9-4402-ac5c-49e38e92fe28",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the green dinosaur driving the tractor on the left. 2) Make the purple turban of the dancing skeleton on the right red. 3) Make the striped hot air balloon in the sky at the top right solid blue. 4) Make the orange lizard sitting on the rock at the bottom left bright blue. 5) Make the brass lantern standing on the right side, next to the clay jar, red. 6) Make the red patterned rug on the ground at the bottom left, between the orange lizard and the turtle, green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no dinossauro do Tractoro Dinosauro",
+        "turbante roxo do Pot Hotspot -> vermelho; efeito colateral: o lenco roxo do pescoco tambem ficou vermelho",
+        "balao listrado do ceu (alto, direita) -> azul liso",
+        "lagarto laranja na pedra (esquerda-baixo) -> azul",
+        "lanterna de latao em pe a direita (ao lado do jarro) -> vermelha",
+        "tapete vermelho do chao (esquerda-baixo, entre o lagarto e a tartaruga) -> verde; o tapete sob o esqueleto ficou igual"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "1da814f9-21dc-4e20-bc2b-dda332e0c218",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw hat on top of the red gumball machine riding the bicycle. 2) Put black sunglasses on the turtle eating ice cream at the bottom center. 3) Put a small red scarf around the neck of the laughing mole at the bottom right. 4) Make the purple and yellow striped tent at the top left solid green. 5) Add a small yellow rubber duck floating in the middle of the blue pond. 6) Make the big yellow flower in the bottom right corner purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de palha amarelo (fita preta) em cima da Chicleteira Bicicleteira",
+        "oculos escuros pretos na Tartaruga Cisterna",
+        "lenco vermelho no pescoco do Talpa di Fero",
+        "tenda listrada roxa e amarela (alto, esquerda) -> verde; efeito colateral: a tenda vizinha, azul-turquesa e laranja, ficou toda laranja",
+        "patinho de borracha amarelo boiando no meio do lago",
+        "flor amarela grande do canto inferior direito -> roxa"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1 (as nao escolhidas foram vistas so em miniatura ou zoom rapido): nas 4 o Tractoro saiu como dinossauro dirigindo um trator (nao feito de trator); na 2 a tartaruga estava sentada num caminhao-tanque; na 3 o dinossauro estava em pe ao lado de um trator amarelo e a toupeira tinha capacete de mineiro sem broca; a 1 tinha o dinossauro montado num trator pequeno. Escolhida a 4: o dinossauro verde sentado na cabine de um trator verde, com a cauda saindo por tras (o mais proximo de 'dinossauro-trator'), relogio de bolso na mao; Chicleteira (maquina de chiclete vermelha com olhos) numa bicicleta roxa bebendo do lago com canudo; Tartaruga Cisterna com um tanque prateado com rodas no lugar do casco, tomando sorvete; Pot Hotspot esqueleto de turbante roxo com pena dancando com celular; Talpa di Fero toupeira de capacete com broca e lanterna rindo. Oasis com tendas, bandeirinhas sem letras, camelos, jarros, lanternas, tapetes, lagartos, flores e balao. Sem texto, sem logo, sem arma, sem bebida. A segunda edicao deixou a aba ocupada por cerca de 3 min antes de mostrar o resultado. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram."
+}

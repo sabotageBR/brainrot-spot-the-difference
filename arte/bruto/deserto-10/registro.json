@@ -1,0 +1,114 @@
+{
+  "cena": "deserto-10",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a big desert festival with a fun race with 7 characters: Perochello Lemonchello (yellow parrot with a lemon body) starting a race with his watch; Vulpegatto (half fox half cat sitting in a coconut shell) racing; Dragon Cannelloni (friendly dragon made of cannelloni pasta) racing with toast flying; Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) cheering in the crowd; Bambini Crossini (baby deer with a croissant body) dancing; Pandaccini Bananini (panda sitting in a peeled banana) laughing; Gattino Bananino (orange kitten inside a peeled banana) carrying a basket. Around them: colorful tents, flags without text, balloons, a race track in the sand, food stalls, lanterns, drums, a hot air balloon, palm trees and confetti. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "e78c26ba-5b3e-49ea-9174-c4e140c69502",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "perochello": [
+      73,
+      647,
+      407,
+      487
+    ],
+    "vulpegatto": [
+      467,
+      533,
+      240,
+      293
+    ],
+    "dragon-cannelloni": [
+      713,
+      453,
+      367,
+      323
+    ],
+    "ecco-cavallo": [
+      1047,
+      376,
+      307,
+      364
+    ],
+    "bambini-crossini": [
+      1087,
+      687,
+      220,
+      347
+    ],
+    "pandaccini": [
+      793,
+      807,
+      327,
+      307
+    ],
+    "gattino-bananino": [
+      1313,
+      653,
+      260,
+      353
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "873a4cb9-ce50-44cc-8296-42d9e422cf23",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round black sunglasses on the green and yellow parrot at the bottom left. 2) Put a small yellow straw hat on the brown horse in the red piano cart. 3) Make the purple lantern hanging at the far left blue. 4) Make the orange balloon at the top center, left of the palm tree, green. 5) Make the wooden barrel with vegetables on the far right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros redondos pretos no papagaio-limao (Perochello Lemonchello)",
+        "chapeu de palha amarelo no cavalo do carrinho-piano vermelho (Ecco Cavallo Virtuoso)",
+        "lanterna roxa pendurada na extrema esquerda -> azul",
+        "balao laranja do alto, no centro (a esquerda da palmeira) -> verde",
+        "barril de madeira com verduras (extrema direita) -> azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "88ac5322-6060-449a-b1dc-d276b86603c4",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red cap on the fox in the coconut cart. 2) Put a small pink bow on the head of the baby deer with the croissant body. 3) Make the pink cloth hanging under the big tent on the left yellow. 4) Make the small wooden bongo drum standing in front of the bakery stall on the right red. 5) Make the purple and yellow striped tent at the top center green and yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "bone vermelho na raposa do carrinho de coco (Vulpegatto)",
+        "laco rosa na cabeca do cervo de croissant (Bambini Crossini)",
+        "pano rosa pendurado sob a tenda grande da esquerda -> amarelo; efeito colateral: os panos verde-agua e roxo ao lado tambem ficaram amarelos",
+        "tambor de madeira (bongo) em frente a barraca de paes, a direita -> vermelho; efeito colateral: o barril com verduras ao lado tambem ficou vermelho (o mesmo barril mudado para azul em v1)",
+        "tenda listrada roxa e amarela do alto, no centro -> verde e amarela; efeito colateral: a tenda listrada rosa e branca a esquerda dela tambem virou verde e amarela"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a0ee83ed-5d5d-44a3-bb70-e2b37b1c5962",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the panda sitting in the banana. 2) Put a small blue cap on the orange kitten in the banana carrying the basket. 3) Put a small white chef hat on the yellow pasta dragon. 4) Make the rainbow striped hot air balloon at the top right solid red. 5) Put a small red and white beach ball on the sand at the bottom center, left of the panda. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho no panda da banana (Pandaccini Bananini)",
+        "bone azul no gatinho da banana com a cesta (Gattino Bananino)",
+        "touca de chef branca no dragao de canelone (Dragon Cannelloni)",
+        "balao de ar quente listrado de arco-iris (alto, direita) -> vermelho liso",
+        "bola de praia vermelha e branca na areia (baixo-centro, a esquerda do panda)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Cena de chefe (7 personagens, 3 edicoes x 5). Rodada 1: a 1 tinha o cavalo ao lado do piano (nao feito dele) e um dragao laranja comum; a 3 tinha o dragao laranja comum de asas (nao de massa) e o gatinho com a cesta no chao; a 4 tinha o cavalo atras do piano. Escolhida a 2: os 7 reconheciveis (Perochello papagaio verde de corpo amarelo com textura de limao, lenco vermelho e dois relogios; Vulpegatto raposa num carrinho de casca de coco; Dragon Cannelloni dragao amarelo feito de tubos de canelone com molho, torradas voando; Ecco Cavallo cavalo de gravata roxa saindo de um piano vermelho sobre rodas; Bambini Crossini cervo de corpo de croissant dancando; Pandaccini panda numa banana descascada rindo; Gattino Bananino gatinho laranja numa banana com cesta de laranjas). Festival com tendas listradas, bandeirinhas sem texto, baloes, balao de ar quente, palmeiras, lanternas, barraca de frutas, barraca de paes, arquibancada de bichinhos, tambores, linha de chegada xadrez e confete no chao todo. Sem texto, sem logo, sem arma, sem bebida (perto da barraca de paes ha um baldinho amarelo e uma jarrinha marrom, pequenos). O chao de areia do centro-baixo e mais aberto, mas coberto de confete."
+}

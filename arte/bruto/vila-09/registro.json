@@ -1,0 +1,95 @@
+{
+  "cena": "vila-09",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a village music room full of instruments with 5 characters: Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) playing a big drum; Bananita Dolphinita (gray dolphin inside a peeled banana skin) blowing a bamboo flute; Chef Crabracadabra (red crab with a chef hat and a star magic wand) waving hello; Bambini Crossini (baby deer with a croissant body) taking a photo; Pandaccini Bananini (panda sitting in a peeled banana) eating an ice cream. Around them: drums of every size, gongs, bamboo flutes, xylophones, a ukulele, music stands, colorful cushions, hanging lanterns, a window with palm trees and a sleepy dog. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "6d95b139-256b-49cd-9b12-5ee843cbcd73",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "cacto-hipopotamo": [
+      105,
+      320,
+      340,
+      560
+    ],
+    "bananita": [
+      425,
+      370,
+      265,
+      370
+    ],
+    "crabracadabra": [
+      690,
+      370,
+      340,
+      380
+    ],
+    "bambini-crossini": [
+      1052,
+      410,
+      222,
+      350
+    ],
+    "pandaccini": [
+      1200,
+      590,
+      315,
+      445
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "772c9e02-6619-4c60-b5ff-865f8863cb67",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the gray hippo with the cactus on its back playing the big drum on the left. 2) Make the white chef hat of the red crab in the center blue. 3) Make the yellow star-shaped lantern at the top left pink. 4) Make the blue vase in the bottom left corner red. 5) Make the orange cushion on the far right green. 6) Make the blue lantern hanging at the top right, beside the window, orange. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Il Cacto Hipopotamo (protagonista, esquerda)",
+        "touca de chef branca do Chef Crabracadabra -> azul",
+        "lanterna amarela em forma de estrela (alto, esquerda) -> rosa",
+        "vaso azul do canto inferior esquerdo -> vermelho",
+        "almofada laranja da extrema direita -> verde",
+        "lanterna azul pendurada ao lado da janela (alto, direita) -> laranja"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "f88ad14c-7203-476a-8f2a-6c7a3f9e119d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the head of the panda sitting in the banana at the bottom right. 2) Put black sunglasses on the gray dolphin in the banana playing the flute. 3) Make the black camera held by the deer with the croissant body red. 4) Make the green lantern hanging at the top center red. 5) Make the pink round cushion on the floor at the bottom center blue. 6) Make the brown ukulele hanging on the wall at the top right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho com bolinhas na cabeca do Pandaccini Bananini",
+        "oculos escuros pretos na Bananita Dolphinita",
+        "NAO FEITO: a camera do Bambini Crossini continuou preta; MAS efeito colateral grande: o cervo inteiro ficou vermelho (pelo e corpo de croissant). A mancha passa de 15% da largura e encosta no ukulele: provavelmente o estudio nao usa",
+        "lanterna verde do alto, no centro -> vermelha",
+        "almofada rosa redonda no chao (centro-baixo) -> azul",
+        "ukulele marrom pendurado na parede (alto, direita) -> azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 tinha o Bambini Crossini como cervo comum de gorro e cachecol (sem croissant) e garrafinhas nas prateleiras; a 3 tinha o cervo dentro de uma boia de croissant (ao lado do objeto) e cabacas/garrafas na estante; a 4 tinha o hipopotamo com um cactinho na cabeca (nao nas costas). Escolhida a 1: os 5 fieis (Il Cacto Hipopotamo hipopotamo cinza com cacto florido nas costas e sandalias tocando um tambor grande; Bananita Dolphinita golfinho cinza dentro de uma banana descascada tocando flauta de bambu; Chef Crabracadabra caranguejo vermelho de touca e dolma de chef com varinha de estrela, acenando; Bambini Crossini cervo filhote de corpo de croissant fotografando; Pandaccini Bananini panda sentado numa banana descascada tomando sorvete). Sala de musica cheia: gongo, tambores de todos os tamanhos, flautas de bambu, xilofone colorido, ukulele, estantes de partitura com livros em branco, almofadas coloridas, lanternas (estrela, roxa, verde, rosa, azul), janela com coqueiros e cachorro dormindo numa almofada azul. Sem texto, sem logo, sem arma, sem bebida. As duas edicoes mantiveram o enquadramento e os 5 personagens; 11 das 12 mudancas aconteceram, mas a da camera recoloriu o Bambini Crossini inteiro de vermelho no v2 (personagem presente, so trocou de cor; nao refeito, para nao gastar cota). Licao repetida: recolorir objeto pequeno segurado por um personagem pode recolorir o personagem todo (como o violao do Blueberrini em vila-05).",
+  "evitar": [
+    [
+      1141,
+      570
+    ]
+  ],
+  "nota_evitar": "Claude, 2026-11-08: o v2 deixou o Bambini Crossini inteiro vermelho (efeito colateral da camera); o estudio nao usa essa mancha."
+}

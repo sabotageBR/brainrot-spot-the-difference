@@ -1,0 +1,116 @@
+{
+  "cena": "cafe-10",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a grand coffee festival in a big decorated hall with 7 characters: Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) dancing on a giant cake; Chef Crabracadabra (red crab with a chef hat and a star magic wand) juggling coffee cups; Bambini Crossini (baby deer with a croissant body) judging a coffee contest; Pandaccini Bananini (panda sitting in a peeled banana) making a fountain of hot chocolate with magic; Gattino Bananino (orange kitten inside a peeled banana) dancing; Piccione Macchina (pigeon with a small red car body) laughing; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) carrying a basket. Around them: long tables with cakes and pastries, many coffee machines, towers of cups, garlands of flags without text, balloons, chandeliers, a band with violins, coffee bean sacks, flower arrangements and confetti. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "1b99ccbb-5323-440a-8d56-85d23a7681ec",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "orangutini": [
+      525,
+      160,
+      295,
+      360
+    ],
+    "crabracadabra": [
+      215,
+      370,
+      295,
+      310
+    ],
+    "bambini-crossini": [
+      665,
+      595,
+      240,
+      300
+    ],
+    "pandaccini": [
+      815,
+      305,
+      320,
+      335
+    ],
+    "gattino-bananino": [
+      1100,
+      430,
+      200,
+      275
+    ],
+    "piccione-macchina": [
+      860,
+      675,
+      365,
+      385
+    ],
+    "trenostruzzo": [
+      1265,
+      165,
+      335,
+      470
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "5a4a644e-cf60-4fc5-b12f-e8e9d8d998bc",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange orangutan in the pineapple costume dancing on the big cake. 2) Make the red car of the gray pigeon at the bottom center blue. 3) Make the yellow balloon in the balloon bunch at the top left green. 4) Make only the right one of the two burlap coffee bean sacks at the bottom left blue. 5) Make the silver espresso machine on the right table, just below the orange kitten, red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Orangutini Ananassini (orangotango de abacaxi dancando no bolo)",
+        "carro vermelho do Piccione Macchina (pombo no carro, centro-baixo) -> azul",
+        "NAO FEITO como pedido: o balao amarelo do cacho do alto a esquerda continua amarelo; efeito colateral: o cacho foi redesenhado com as cores trocadas de lugar (o azul da direita virou verde, o roxo de baixo virou azul, o rosa mudou de posicao)",
+        "saco de juta de graos de cafe da direita (esquerda-baixo) -> azul; o da esquerda ficou igual",
+        "maquina de espresso prateada da mesa da direita (logo abaixo do gatinho) -> vermelha"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b8a40399-48ca-45ba-a579-240ea033f129",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the white apron of the red crab chef on the left blue. 2) Put a small red bow on the head of the orange kitten in the banana on the right. 3) Make the brown woven basket of coffee beans carried by the ostrich on the right red. 4) Make the blue flower vase in the bottom left corner yellow. 5) Make the red balloon at the top of the balloon bunch in the top right corner green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "avental branco do Chef Crabracadabra (esquerda) -> azul",
+        "laco vermelho na cabeca do Gattino Bananino (gatinho na banana, direita)",
+        "cesto de palha com graos de cafe do Trenostruzzo Turbo 3000 (avestruz, direita) -> vermelho",
+        "vaso azul de flores do canto inferior esquerdo -> amarelo",
+        "balao vermelho do alto do cacho do canto superior direito -> verde; efeito colateral: o balao amarelo do meio tambem ficou verde e o verde de baixo virou vermelho",
+        "efeito colateral pequeno: tortas e doces do canto inferior esquerdo levemente redesenhados (cerejas mexidas)"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "57d444bf-9fe2-419c-98a0-223dbceebb18",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small golden crown on the head of the panda sitting in the banana. 2) Make the brown clipboard held by the baby deer in the croissant at the bottom center red. 3) Make the brown suit of the cat playing the violin on the far left green. 4) Make the pink frosting of the cupcakes on the white tray at the bottom right blue. 5) Make the big golden chandelier at the top center silver. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "coroa dourada (com pedra vermelha) na cabeca do Pandaccini Bananini (panda na banana)",
+        "prancheta marrom do Bambini Crossini (cervo no croissant, centro-baixo) -> vermelha",
+        "terno marrom do gato violinista da extrema esquerda -> verde",
+        "cobertura dos 3 cupcakes da bandeja branca (direita-baixo) -> azul (os 3, inclusive o de creme branco)",
+        "lustre dourado grande do alto, centro -> prateado; efeito colateral: os lustres da esquerda e da direita tambem ficaram prateados",
+        "efeito colateral pequeno: doces das mesas de baixo levemente redesenhados (cerejas e coberturas mexidas)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Cena de chefe (7 personagens, 3 edicoes x 5). Rodada 1: a 1 tinha o cervo comum de colete (sem croissant); a 2 tinha o avestruz em pe em cima do trem e o cervo so de capuz de croissant; a 3 tinha o cervo comum de gorro e o avestruz na frente do trem. Escolhida a 4: Orangutini Ananassini orangotango com corpo de abacaxi e folhas na cabeca dancando sobre um bolo gigante; Chef Crabracadabra caranguejo vermelho de touca, avental e varinha de estrela fazendo malabarismo com xicaras de cafe; Bambini Crossini cervo sentado dentro de um croissant, de chapeu de croissant, com prancheta julgando cafe; Pandaccini Bananini panda numa banana descascada ao lado de uma fonte de chocolate; Gattino Bananino gatinho laranja numa banana dancando; Piccione Macchina pombo cinza dentro de um carrinho vermelho (o carro e o corpo dele, como nas outras 3); Trenostruzzo Turbo 3000 avestruz de corpo cinza com partes metalicas de trem e um cesto de graos, com um trem-bala branco e azul logo atras (o menos fiel dos 7: le-se como avestruz diante do trem). Salao de festa cheio: lustres, bandeirinhas sem texto, baloes nos dois cantos de cima, banda de bichos (gato, coelho e outro de cartola) com violinos e violoncelo, maquinas de cafe, cafeteiras, torres de xicaras, sacos de graos, flores, mesas de bolos, tortas, rosquinhas e cupcakes, confete no chao todo. Sem texto (a prancheta mostra so o verso), sem logo, sem arma. ALCOOL: nada de taca, garrafa ou cerveja; as canecas marrons que voam tem espuma de cappuccino com desenho de latte art (ceramica opaca, nao copo de vidro) e as jarras de vidro da direita tem cafe escuro junto as maquinas de cafe; ha uma jarra de agua azul-clara no canto inferior direito. As 3 edicoes mantiveram o enquadramento e os 7 personagens; 14 das 15 mudancas aconteceram (o balao amarelo do v1 nao mudou, mas o cacho foi reembaralhado)."
+}

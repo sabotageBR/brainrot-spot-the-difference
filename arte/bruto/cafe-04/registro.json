@@ -1,0 +1,88 @@
+{
+  "cena": "cafe-04",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a coffee roasting factory with 5 characters: Cappuccino Assassino (striped coffee cup with a black ninja mask, little arms and legs in sneakers, holding two spoons, no knives) pouring coffee beans into a machine; Tralalero Tralala (blue shark on three legs, plain blue sneakers) sniffing a cup of coffee; Trulimero Trulicina (orange fish body with a cat head and four cat legs) carrying a basket; Blueberrini Octopusini (cute round purple blueberry octopus with big eyes) playing a guitar; Trippa Troppa (green fish head on a chubby brown bear body) playing with a ball. Around them: big shiny roasting machines, burlap sacks of beans, conveyor belts, pipes and gauges, scales, stacked cups, wooden barrels, a forklift, hanging lamps and a cat on a sack. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "f0982beb-3846-45d6-90df-682973c1cad4",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "cappuccino-assassino": [
+      185,
+      270,
+      315,
+      330
+    ],
+    "tralalero": [
+      938,
+      258,
+      290,
+      360
+    ],
+    "trulimero": [
+      238,
+      655,
+      450,
+      412
+    ],
+    "blueberrini": [
+      690,
+      558,
+      435,
+      368
+    ],
+    "trippa-troppa": [
+      1110,
+      650,
+      350,
+      405
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "94e2f698-21bc-4ab1-9254-6902b357a0e3",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the black ninja mask of the striped coffee cup character red. 2) Make the blue sneakers of the shark yellow. 3) Make the yellow forklift at the top right red. 4) Make the stack of orange paper cups at the bottom center blue. 5) Make the gray sleeping cat on the sack at the left orange. 6) Make the leftmost of the three hanging lamps, at the top center, green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "mascara ninja preta do Cappuccino Assassino -> vermelha",
+        "tenis azuis do Tralalero Tralala -> amarelos",
+        "empilhadeira amarela (alto, direita) -> vermelha",
+        "pilha de copos de papel laranja (centro-baixo) -> azul",
+        "gato cinza dormindo no saco (esquerda) -> laranja",
+        "luminaria pendurada da esquerda (alto, centro) -> verde; efeito colateral: a luminaria do meio tambem ficou verde, e um trecho do cano de cobre logo acima delas tambem"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "5d028dd0-fdc7-4ef6-bdc5-fda0d6cff8df",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue guitar of the purple octopus red. 2) Put a small yellow party hat on the green fish head of the brown bear on the right. 3) Make the wicker basket of beans carried by the orange fish with the cat head blue. 4) Make the wooden barrel on the far left, next to the sleeping cat, blue. 5) Make the steel bucket in the bottom right corner red. 6) Make the large round silver tank in the back at the top center, between the first two hanging lamps, green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "violao azul do Blueberrini Octopusini -> vermelho",
+        "chapeu de festa amarelo na cabeca de peixe da Trippa Troppa",
+        "cesto de vime com graos da Trulimero Trulicina -> azul",
+        "NAO FEITO: o barril de madeira da extrema esquerda continua marrom; no lugar, os dois sacos de juta da esquerda (o do gato dormindo e o de baixo) ficaram azuis, e as listras do gato ganharam um tom azulado",
+        "balde de aco do canto inferior direito -> vermelho; efeito colateral: o barril que segura o balde tambem ficou vermelho",
+        "tanque prateado redondo do fundo (alto, centro) -> verde; efeito colateral: os canos de cobre em volta dele tambem ficaram verdes"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha um 'swoosh' branco nos tenis azuis do Tralalero (logo); a 3 tinha o Cappuccino Assassino como um ninja de corpo humano com uma xicara na cabeca; a 4 tinha etiquetas de texto legivel com os nomes dos personagens. Escolhida a 2: os 5 fieis (Cappuccino Assassino xicara listrada com mascara ninja, luvas, tenis preto e branco e duas colheres, sem faca, junto ao torrador com graos caindo; Tralalero tubarao azul de tenis azuis lisos cheirando uma xicara, com 2 pernas como sempre; Trulimero Trulicina corpo de peixe laranja com cabeca de gato e 4 patas carregando um cesto; Blueberrini Octopusini polvo roxo redondo com coroa de mirtilo tocando violao azul; Trippa Troppa cabeca de peixe verde em corpo de urso marrom com uma bola). Fabrica cheia: torrador grande, funil, esteiras, canos de cobre, manometros, tanques, empilhadeira amarela, barris, sacos de graos, balanca, copos empilhados, luminarias e gato dormindo num saco. Tenis conferidos de perto: lisos, sem logo. Sem texto, sem arma. As duas edicoes mantiveram o enquadramento e os personagens; 11 das 12 mudancas aconteceram."
+}

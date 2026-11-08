@@ -1,0 +1,88 @@
+{
+  "cena": "vila-03",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a warm village kitchen with 5 characters: Los Tralaleritos (three small blue sharks on legs with colored sneakers) pouring tea into cups; Talpa di Fero (mole with a drill helmet) carrying a basket of rice; Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) laughing; Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) carrying a basket; Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) playing a guitar. Around them: clay pots on a stove, steaming rice baskets, strings of chili peppers, coconuts, bunches of bananas, spice jars, a wooden table with bowls, hanging pans, a window with plants, a sleeping cat and chickens at the door. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "0395ce43-cfa4-4990-ab2f-e3fc0e7736fe",
+    "escolhida_de": "3a de 4 da rodada 1"
+  },
+  "caixas": {
+    "tralaleritos": [
+      100,
+      575,
+      800,
+      370
+    ],
+    "talpa-di-fero": [
+      560,
+      220,
+      245,
+      450
+    ],
+    "tung-tung": [
+      815,
+      90,
+      350,
+      815
+    ],
+    "chimpanzini": [
+      1000,
+      330,
+      295,
+      570
+    ],
+    "lirili": [
+      1280,
+      380,
+      320,
+      665
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "82a23ee2-9089-49a6-aa21-bc77808b6a79",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Replace the numbers on the face of the alarm clock at the bottom right with simple black dots. 2) Put a small red bow tie on the tall wooden log character holding the bat in the center. 3) Make the green sneakers of the rightmost blue shark purple. 4) Make the orange and white sleeping cat at the bottom left gray and white. 5) Make the blue patterned pot on the top shelf at the top left green. 6) Make the striped watermelon in the basket at the top right yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "NAO FEITO: os numeros do despertador (direita-baixo) continuam; pedido para tirar os numeros legiveis de A (ver notas). Efeito: o ponteiro dos minutos sumiu (so um ponteiro em pe), e a diferenca no relogio e so essa",
+        "gravata borboleta vermelha no Tung Tung Tung Sahur (tronco com o taco, centro)",
+        "tenis verdes do tubarao da direita (Los Tralaleritos) -> roxos; os dos outros dois ficaram iguais",
+        "gato laranja e branco dormindo (esquerda-baixo) -> cinza e branco",
+        "pote azul estampado da prateleira de cima (alto, esquerda) -> verde",
+        "melancia listrada no cesto (alto, direita) -> listras amarelas e verdes (mudanca parcial, mais clara)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "67365c27-f4b9-436a-b680-51d6a76914ab",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the green chimpanzee in the peeled banana on the right of center. 2) Make the silver drill helmet of the brown mole holding the rice basket red. 3) Make the brown guitar played by the cactus elephant on the right blue. 4) Make only the white chicken standing at the open door on the left black. 5) Make the black frying pan hanging on the wall at the top right red. 6) Make the black cooking pot on the stove at the left blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Chimpanzini Bananini (macaco verde na banana)",
+        "capacete-broca prateado da Talpa di Fero -> capacete vermelho; efeito colateral: virou capacete de obra arredondado, sem a ponta de broca",
+        "violao marrom do Lirili Larila (direita) -> azul",
+        "galinha branca na porta aberta (esquerda) -> preta; a galinha marrom ficou igual",
+        "frigideira preta pendurada na parede (alto, direita) -> vermelha; a de cobre ficou igual",
+        "panela preta no fogao (esquerda) -> azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "ATENCAO: o despertador do Lirili (direita-baixo, ~150 px de largura em A) tem os numeros do mostrador legiveis (1 a 12) em A, e as 4 candidatas tinham despertador com numeros (o atributo 'next to an alarm clock' do Lirili; a praia-08 aceitou o mesmo). Nao foi gasta rodada nova (o mesmo prompt traria o mesmo relogio); a 1a mudanca do v1 pediu pontos no lugar dos numeros, mas o Grok nao fez. Sugestao para o roteiro: 'next to an alarm clock without numbers' no Lirili. Rodada 1: a 1 era boa e muito cheia, mas tinha o relogio grande com numeros bem legiveis e um potinho ambar de vidro na prateleira; a 2 tinha um personagem a mais (dinossauro verde de crista vermelha comendo banana) e 'zzz' (letras) sobre o gato; a 4 tinha a Talpa parecendo urso/lontra, potes de vidro amarelos e laranja nas prateleiras e relogio grande com numeros. Escolhida a 3: os 5 fieis (Los Tralaleritos, tres tubaroes azuis de tenis vermelho, amarelo e verde servindo cha de bules de barro em xicaras floridas; Talpa di Fero toupeira com capacete-broca prateado e cesto de arroz; Tung Tung Tung Sahur tronco alto rindo com o taco de madeira; Chimpanzini Bananini chimpanze verde de cara rosa saindo da banana descascada com cesto de bananas; Lirili Larila elefante de corpo de cacto, oculos redondos, sandalias roxas, tocando violao, com o despertador ao lado). Cozinha: pimentas e alhos pendurados, potes de barro, fogao de barro com panela fumegando, porta aberta para a vila com duas galinhas, janela com plantas, frigideiras, bananas, cocos e melancia, mesa com tigelas de temperos, gato dormindo, tapete vermelho, cacto no vaso azul. Sem logo, sem arma, sem alcool (so cha nas xicaras de porcelana; nenhum vidro com bebida). Ponto fraco: piso de lajotas liso no centro-baixo, entre o tapete e o relogio (~30% da largura). As duas edicoes mantiveram o enquadramento e os 5 personagens; 11 das 12 mudancas aconteceram."
+}

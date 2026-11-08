@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>thumb</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+  // Thumb da Poki: a imagem do Grok (?src=) recortada em quadrado (cobre, centralizada) no tamanho ?s=.
+  // Sem texto e sem moldura: a Poki pede um objeto principal so, sem colagem.
+  const q = new URLSearchParams(location.search);
+  const s = parseInt(q.get('s') || '628', 10);
+  const c = document.getElementById('c');
+  c.width = s;
+  c.height = s;
+  const g = c.getContext('2d');
+  const img = new Image();
+  img.onload = () => {
+    const k = Math.max(s / img.width, s / img.height);
+    const w = img.width * k;
+    const h = img.height * k;
+    g.imageSmoothingQuality = 'high';
+    g.drawImage(img, (s - w) / 2, (s - h) / 2, w, h);
+    document.title = 'OK';
+  };
+  img.onerror = () => { document.title = 'ERRO'; };
+  img.src = q.get('src') || '';
+</script>
+</body>
+</html>

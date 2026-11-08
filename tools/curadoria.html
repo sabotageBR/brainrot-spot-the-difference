@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curadoria das cenas</title>
+<style>
+  :root{--tinta:#2A2238;--fundo:#f4f1fa;--cartao:#fff;--marca:#ff2d6f;--ok:#1f9d63;--refazer:#e8574f}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tinta);background:var(--fundo)}
+  header{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 16px;background:#fff;box-shadow:0 2px 10px rgba(30,10,60,.08)}
+  header h1{margin:0;font-size:20px;flex:1;min-width:200px}
+  header select,header label{font-size:15px}
+  .resumo{font-size:14px;opacity:.8}
+  main{padding:16px;display:grid;gap:14px;max-width:1200px;margin:0 auto}
+  .cena{background:var(--cartao);border-radius:16px;padding:12px;box-shadow:0 2px 10px rgba(30,10,60,.08);border-left:6px solid var(--c,#ccc)}
+  .cena.aprovada{outline:3px solid var(--ok)}
+  .cena.refazer{outline:3px solid var(--refazer)}
+  .topo{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+  .topo b{font-size:18px}
+  .chip{display:inline-block;padding:2px 9px;border-radius:999px;background:#ece8f4;font-size:13px}
+  .chip.jogo{background:#d9f5e8}
+  .chip.grok{background:#fff1c9}
+  .chip.chefe{background:var(--tinta);color:#ffc21a}
+  .elenco{margin:6px 0;font-size:14px}
+  .elenco .prot{font-weight:700;color:var(--marca)}
+  img{width:100%;border-radius:10px;display:block;background:#e9e5f2}
+  .vazio{padding:28px;text-align:center;border-radius:10px;background:#efecf5;color:#8a83a0;font-size:14px}
+  .acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}
+  .acoes button,.acoes a{border:0;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;color:#fff;background:var(--tinta)}
+  .acoes .aprovar{background:var(--ok)}
+  .acoes .refazer{background:var(--refazer)}
+  .acoes input{flex:1;min-width:180px;padding:8px 10px;border-radius:10px;border:1px solid #d8d3e4;font-size:14px}
+  .acoes .salvo{font-size:13px;opacity:.75}
+</style>
+</head>
+<body>
+<header>
+  <h1>Curadoria das cenas</h1>
+  <label>Mundo <select id="filtro"></select></label>
+  <label><input type="checkbox" id="soProntas" checked> só com arte</label>
+  <span class="resumo" id="resumo"></span>
+</header>
+<main id="lista"></main>
+<script type="module">
+  // Pagina do dono: as 100 cenas do roteiro na ordem de jogo, com o elenco, a folha A | B do
+  // estudio (os erros numerados) e a aprovacao (POST /__curadoria -> arte/curadoria.json).
+  import { CENAS_ROTEIRO } from '../arte/roteiro.js';
+  import { CENAS } from '../src/arte/cenas/manifesto.js';
+  import { MUNDOS, brainrot } from '../src/jogo/catalogo.js';
+
+  const noJogo = new Set(CENAS.map((c) => c.id));
+  let bruto = new Set();
+  const doRoteiro = new Set(CENAS_ROTEIRO.map((c) => c.id));
+  try { bruto = new Set((await (await fetch('/__bruto')).json()).map((x) => x.id).filter((id) => doRoteiro.has(id))); } catch { /* sem servidor */ }
+  let cur = {};
+  try { cur = await (await fetch('../arte/curadoria.json', { cache: 'no-store' })).json(); } catch { cur = {}; }
+
+  const filtro = document.getElementById('filtro');
+  filtro.innerHTML = '<option value="0">todos</option>' + MUNDOS.map((m) => `<option value="${m.n}">${m.n}. ${m.nome.pt}</option>`).join('');
+  const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  function desenhar() {
+    const m = Number(filtro.value);
+    const so = document.getElementById('soProntas').checked;
+    const lista = CENAS_ROTEIRO.filter((c) => (!m || c.mundo === m) && (!so || noJogo.has(c.id) || bruto.has(c.id)));
+    const aprov = Object.values(cur).filter((x) => x.status === 'aprovada').length;
+    document.getElementById('resumo').textContent = `${noJogo.size} no jogo · ${bruto.size} com arte do Grok · ${aprov} aprovadas · ${CENAS_ROTEIRO.length} no roteiro`;
+    document.getElementById('lista').innerHTML = lista.map((c) => {
+      const mu = MUNDOS[c.mundo - 1];
+      const st = cur[c.id] || {};
+      const estado = noJogo.has(c.id) ? '<span class="chip jogo">no jogo</span>' : bruto.has(c.id) ? '<span class="chip grok">arte do Grok, falta o estúdio</span>' : '<span class="chip">sem arte</span>';
+      const elenco = c.gente.map(([g], i) => `<span class="${i ? '' : 'prot'}">${esc((brainrot(g) || { nome: g }).nome)}</span>`).join(' · ');
+      const folha = noJogo.has(c.id) ? `<img loading="lazy" src="../docs/cenas/${c.id}.png?v=${Date.now()}" alt="${c.id}">` : '<div class="vazio">a folha A | B aparece quando a cena passa pelo estúdio</div>';
+      return `<section class="cena ${st.status || ''}" style="--c:${mu.cor}" data-id="${c.id}">
+        <div class="topo"><b>Fase ${(c.mundo - 1) * 10 + c.k}</b><span class="chip">${esc(mu.nome.pt)} · ${c.id}</span>${c.k === 10 ? '<span class="chip chefe">chefe</span>' : ''}${estado}</div>
+        <div class="elenco">${elenco}</div>
+        <div class="elenco" style="opacity:.7">${esc(c.lugar)}</div>
+        ${folha}
+        <div class="acoes">
+          ${noJogo.has(c.id) ? `<a href="../index.html?cena=${c.id}&novo" target="_blank">▶ jogar</a>` : ''}
+          <button class="aprovar">✔ aprovar</button><button class="refazer">↻ refazer</button>
+          <input placeholder="nota (o que mudar)" value="${esc(st.nota || '')}">
+          <span class="salvo">${st.status ? `${st.status} em ${esc(st.data || '')}` : ''}</span>
+        </div></section>`;
+    }).join('') || '<div class="vazio">nenhuma cena com arte neste filtro</div>';
+  }
+  document.getElementById('lista').addEventListener('click', async (ev) => {
+    const b = ev.target.closest('button');
+    if (!b) return;
+    const sec = b.closest('.cena');
+    const id = sec.dataset.id;
+    const status = b.classList.contains('aprovar') ? 'aprovada' : 'refazer';
+    const nota = sec.querySelector('input').value;
+    try {
+      const r = await (await fetch('/__curadoria', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id, status, nota }) })).json();
+      if (!r.ok) throw new Error(r.erro);
+      cur[id] = { status, nota, data: 'agora' };
+      desenhar();
+    } catch (e) {
+      sec.querySelector('.salvo').textContent = `erro: ${e.message} (abra pelo npm run servir)`;
+    }
+  });
+  filtro.onchange = desenhar;
+  document.getElementById('soProntas').onchange = desenhar;
+  desenhar();
+</script>
+</body>
+</html>

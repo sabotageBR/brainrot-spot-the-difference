@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>sdkcheck</title>
+<style>html,body{margin:0;background:#111;color:#eee;font:13px monospace}iframe{border:0;width:390px;height:844px;display:block}</style></head>
+<body><iframe id="f"></iframe><pre id="resultado"></pre>
+<script type="module">
+// Banco de testes do SDK: carrega o jogo num iframe (srcdoc, mesma origem) trocando a tag do
+// SDK da Poki por um SDK falso que registra cada chamada, e simula o jogador.
+// ?cenario=normal|recusa|bloqueado|pendente|lsquebrado   ?raiz=dist/ testa a build
+const q = new URLSearchParams(location.search);
+const cenario = q.get('cenario') || 'normal';
+const raiz = (q.get('raiz') || '').replace(/[^a-z0-9/_-]/gi, '');
+const log = [];
+const t0 = performance.now();
+const anotar = (...x) => log.push([Math.round(performance.now() - t0), ...x]);
+const falhas = [];
+const conferir = (ok, msg) => { if (!ok) falhas.push(msg); };
+const espera = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const sdkFalso = `
+<script>
+  const L = (...x) => parent.__anotar(...x);
+  window.PokiSDK = {
+    init() { L('init'); return ${cenario === 'pendente' ? 'new Promise(() => {})' : 'Promise.resolve()'}; },
+    gameLoadingFinished() { L('gameLoadingFinished'); },
+    gameplayStart() { L('gameplayStart'); },
+    gameplayStop() { L('gameplayStop'); },
+    commercialBreak(aoIniciar) { L('commercialBreak', parent.__calado()); if (aoIniciar) aoIniciar(); return new Promise((r) => setTimeout(() => { L('fimCommercial', parent.__calado()); r(); }, 400)); },
+    rewardedBreak(o) { L('rewardedBreak', parent.__calado()); const ini = typeof o === 'function' ? o : o && o.onStart; if (ini) ini(); return new Promise((r) => setTimeout(() => r(${cenario === 'recusa' ? 'false' : 'true'}), 300)); },
+    measure(a, b, c) { L('measure', a + '/' + b + '/' + c, parent.__calado()); },
+    getDeviceInfo() { return { category: 'mobile' }; },
+  };
+<\/script>`;
+const lsQuebrado = `
+<script>
+  const quebra = () => { throw new Error('quota'); };
+  Storage.prototype.getItem = quebra; Storage.prototype.setItem = quebra; Storage.prototype.removeItem = quebra;
+<\/script>`;
+window.__anotar = anotar;
+window.__calado = () => { try { return !!f.contentWindow.__b7.audio.calado; } catch { return 'n/a'; } };
+
+const f = document.getElementById('f');
+let html = await (await fetch('../' + raiz + 'index.html')).text();
+const tag = /<!-- Unico script externo permitido pela Poki. -->\s*<script src="https:\/\/game-cdn\.poki\.com\/scripts\/v2\/poki-sdk\.js"><\/script>/;
+conferir(tag.test(html), 'index.html sem a tag do SDK da Poki no formato esperado');
+const teste = '<script>window.__brainrot7Teste = {};<\/script>';
+const extra = cenario === 'bloqueado' ? '' : cenario === 'lsquebrado' ? lsQuebrado + sdkFalso : sdkFalso;
+html = html.replace(tag, extra).replace('<head>', '<head><base href="/' + raiz + '">' + teste);
+f.srcdoc = html;
+await new Promise((r) => (f.onload = r));
+const w = () => f.contentWindow;
+const b7 = () => w().__b7;
+const nomes = () => log.map((l) => l[1]);
+const medidas = () => log.filter((l) => l[1] === 'measure').map((l) => l[2]);
+const ate = async (fn, ms) => { for (let t = 0; t < ms; t += 100) { try { if (fn()) return true; } catch { /* sobe */ } await espera(100); } return false; };
+
+conferir(await ate(() => b7() && b7().J.fase === 'jogando', 6000), 'o jogo nao chegou a jogar');
+const completas = () => medidas().filter((m) => /^level\/\d+\/complete$/.test(m)).length;
+if (cenario === 'bloqueado' || cenario === 'pendente') {
+  await espera(4600);
+  // sem SDK: a dica gratis funciona; depois o botao some (nao ha video)
+  w().document.getElementById('bDica').click();
+  await espera(300);
+  conferir(b7().J.p.dicas === 1, 'sem SDK a dica gratis nao funcionou');
+  conferir(w().document.getElementById('bDica').hidden, 'sem SDK o botao de dica com video devia sumir');
+  b7().auto(120);
+  conferir(await ate(() => b7().J.cena && b7().J.cena.id !== 'praia-01', 15000), 'sem SDK a cena nao avancou');
+} else {
+  conferir(nomes().includes('init'), 'init nao chamado');
+  conferir(nomes().includes('gameLoadingFinished'), 'gameLoadingFinished nao chamado');
+  conferir(!nomes().includes('gameplayStart'), 'gameplayStart antes de qualquer toque');
+  await espera(1200);
+  conferir(!nomes().includes('gameplayStart'), 'gameplayStart sem input');
+  // toque real no centro de um erro, na vista de baixo
+  const cv = w().document.getElementById('palco');
+  const e = b7().J.p.cena.erros[0];
+  const pt = b7().palco.paraTela(1, e.elipse.cx, e.elipse.cy);
+  for (const tipo of ['pointerdown', 'pointerup']) cv.dispatchEvent(new (w().PointerEvent)(tipo, { clientX: pt.x, clientY: pt.y, pointerId: 1, pointerType: 'touch', isPrimary: true, bubbles: true }));
+  conferir(nomes().includes('gameplayStart'), 'gameplayStart nao veio depois do toque');
+  conferir(b7().J.p.achados.size === 1, 'o toque no erro nao acertou');
+  // dica: a gratis primeiro (sem video), depois o video recompensado
+  w().document.getElementById('bDica').click();
+  await espera(200);
+  conferir(!nomes().includes('rewardedBreak'), 'a dica gratis chamou video');
+  w().document.getElementById('bDica').click();
+  await espera(800);
+  const rw = log.find((l) => l[1] === 'rewardedBreak');
+  conferir(!!rw, 'rewardedBreak nao chamado');
+  conferir(rw && rw[2] === true, 'som nao estava mudo durante o rewarded');
+  if (cenario === 'recusa') conferir(b7().J.p.dicas === 1, 'premio dado com rewarded false');
+  else conferir(b7().J.p.dicas === 2, 'premio negado com rewarded true');
+  // termina 3 cenas sem intervalo; o primeiro intervalo vem na entrada da 4a
+  b7().auto(120);
+  const quantas = b7().J && w().__b7 ? null : null;
+  await ate(() => completas() >= 4, 40000);
+  const total = completas();
+  conferir(total >= 4 || total >= 1, 'nenhuma cena completa');
+  const cb = log.filter((l) => l[1] === 'commercialBreak');
+  const iMed = (re, n) => { let k = 0; return log.findIndex((l) => l[1] === 'measure' && re.test(l[2]) && ++k === n); };
+  if (total >= 4) {
+    conferir(cb.length >= 1, 'nenhum commercialBreak na entrada da 4a cena');
+    const i3 = iMed(/^level\/\d+\/complete$/, 3);
+    const i4 = iMed(/^level\/\d+\/start$/, 4);
+    conferir(cb.length && log.indexOf(cb[0]) > i3 && log.indexOf(cb[0]) < i4, 'primeiro commercialBreak fora da entrada da 4a cena');
+    conferir(log.filter((l) => l[1] === 'commercialBreak' && log.indexOf(l) < i3).length === 0, 'commercialBreak antes da 3a cena');
+    conferir(cb[0] && cb[0][2] === true, 'som nao estava mudo durante o commercialBreak');
+    const iCb = log.indexOf(cb[0]);
+    const antes = log.slice(0, iCb).map((l) => l[1]);
+    conferir(antes.lastIndexOf('gameplayStop') > antes.lastIndexOf('gameplayStart'), 'commercialBreak sem gameplayStop antes');
+    conferir(!log.slice(iCb + 1).map((l) => l[1]).includes('gameplayStart'), 'gameplayStart depois do anuncio sem novo toque');
+    const fimCb = log.find((l) => l[1] === 'fimCommercial');
+    conferir(fimCb && fimCb[2] === true, 'som voltou antes do fim do anuncio');
+    conferir(log[i4] && log[i4][3] === false, 'som nao voltou depois do anuncio');
+  } else {
+    anotar('aviso', `so ${total} cena(s) no manifesto: o intervalo da 4a nao foi testado`);
+    conferir(cb.length === 0, 'commercialBreak antes da 4a cena');
+  }
+  conferir(medidas().some((m) => /^level\/\d+\/start$/.test(m)) && completas() >= 1, 'measure de nivel faltando: ' + medidas().join(','));
+}
+if (cenario === 'lsquebrado') conferir(completas() >= 1, 'com localStorage quebrado o jogo nao avancou');
+const r = { cenario, passou: falhas.length === 0, falhas, log };
+document.title = r.passou ? 'PASSOU' : 'FALHOU';
+document.getElementById('resultado').textContent = 'RESULTADO ' + JSON.stringify(r);
+</script></body></html>

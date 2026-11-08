@@ -1,0 +1,89 @@
+{
+  "cena": "cafe-08",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "the backstage of a ballet theater with 5 characters: Boneca Ambalabu (green frog head on a black tire with two human legs) practicing in front of a big mirror; Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) sewing a costume; Meowl (round fluffy half cat half owl with huge eyes) jumping with joy; Strawberry Elephant (pink strawberry elephant with green leaves) waving hello; Glorbo Fruttodrillo (crocodile with a watermelon body) taking a photo. Around them: racks of colorful costumes, mirrors with light bulbs, flower bouquets, ballet shoes with ribbons, a sewing machine, hat boxes, a red curtain, spotlights, music stands, a piano and a sleepy dog on a cushion. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "4820bb45-a656-449c-b526-1d10b2c4f4fb",
+    "escolhida_de": "3a de 4 da rodada 1"
+  },
+  "caixas": {
+    "boneca-ambalabu": [
+      280,
+      95,
+      280,
+      415
+    ],
+    "golubiro": [
+      250,
+      530,
+      315,
+      520
+    ],
+    "meowl": [
+      550,
+      445,
+      395,
+      305
+    ],
+    "strawberry-elephant": [
+      895,
+      245,
+      380,
+      595
+    ],
+    "glorbo": [
+      1205,
+      405,
+      370,
+      470
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "e8f058f0-5520-4cbb-a72e-9ef834891ac1",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small golden crown on the head of the green frog ballerina dancing in front of the mirror. 2) Make the green shoes of the crocodile with the watermelon body red. 3) Make the yellow dress hanging at the right end of the costume rack in the top left corner green. 4) Make the blue vase of flowers on the wooden trunk at the top center, left of the pink elephant, red. 5) Make the purple cushion under the sleeping dog at the bottom right orange. 6) Make the yellow flower pot in the bottom left corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "coroa dourada pequena na cabeca da Boneca Ambalabu (sapo de pneu diante do espelho)",
+        "sapatos verdes do Glorbo Fruttodrillo -> vermelhos",
+        "vestido amarelo da ponta direita da arara (canto superior esquerdo) -> verde; os outros vestidos ficaram iguais",
+        "vaso azul de flores sobre o bau de madeira (alto, centro, a esquerda do elefante) -> vermelho",
+        "almofada roxa do cachorro dormindo (direita-baixo) -> laranja",
+        "vaso amarelo de flores do canto inferior esquerdo -> azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "33862408-2904-49ae-a3f9-4d4f6958f4c1",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow tie on the neck of the brown owl jumping in the middle. 2) Make the black hat of the pigeon wearing sunglasses at the sewing table red. 3) Put black sunglasses on the pink strawberry elephant. 4) Make the black sewing machine on the table at the left white. 5) Make only the right one of the two black spotlights at the top right yellow. 6) Make only the leftmost pink ballet shoe on the floor at the bottom center light blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "gravata borboleta vermelha no pescoco do Meowl (coruja pulando no meio)",
+        "chapeu preto do Shpioniro Golubiro -> vermelho",
+        "oculos escuros pretos no Strawberry Elephant",
+        "maquina de costura preta (esquerda, sobre a mesa) -> branca",
+        "NAO FEITO: o refletor da direita continua preto; efeito colateral: os fachos de luz dos dois refletores ficaram mais amarelos",
+        "sapatilha rosa da esquerda no chao (centro-baixo) -> azul-clara; pediu-se uma, mudou o par da esquerda (2 sapatilhas)",
+        "efeito colateral: as sapatilhas de ponta da Boneca Ambalabu (diante do espelho) tambem ficaram azul-claras (nao pedido)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha a Boneca Ambalabu duplicada (dois sapos bailarinos de coroa, sem pneu claro); a 2 tinha o sapo so de tutu preto (sem pneu) e o Glorbo como tartaruga de casco de melancia; a 4 tinha uma tesoura grande no chao, livro aberto em primeiro plano e o pneu pouco claro. Escolhida a 3: os 5 fieis (Boneca Ambalabu sapo verde com um pneu preto na cintura como tutu e pernas humanas de meia rosa e sapatilhas, ensaiando diante do espelho de camarim; Shpioniro Golubiro pombo de chapeu, oculos escuros e sobretudo bege costurando um vestido azul; Meowl coruja fofa de olhos enormes pulando (pouco de gato: le-se como coruja); Strawberry Elephant elefante rosa de pintas de morango com folhas na cabeca, de tutu, acenando; Glorbo Fruttodrillo crocodilo de corpo de melancia fotografando). Camarim cheio: arara de vestidos, espelho de lampadas, caixas de chapeu, flores, maquiagem, maquina de costura, carreteis, alfineteiro, sapatilhas com fitas, cortina vermelha, refletores, piano, estantes de partitura e cachorro dormindo na almofada. Sem texto (partituras so com pautas), sem logo, sem arma, sem alcool: na penteadeira so ha frascos de maquiagem e esmalte coloridos (nenhum copo, nada ambar). Ha uma tesourinha de costura sobre a mesa (~3% da largura), objeto de costura, nao arma. O chao do centro-baixo tem algumas tabuas livres, mas pouco. As duas edicoes mantiveram o enquadramento e os personagens; 11 das 12 mudancas aconteceram."
+}

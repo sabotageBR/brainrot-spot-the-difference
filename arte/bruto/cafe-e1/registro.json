@@ -1,0 +1,72 @@
+{
+  "cena": "cafe",
+  "estilo": "e1",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Geração: modo 'Imagem', opção 'Qualidade 2.0' (a outra é 'Velocidade'), ×4 imagens, proporção 4:3 'Apresentação'. Edições: caixa 'Descreva sua edição' na página da imagem A (proporção 'Automático'); a UI não mostra nome de modelo.",
+  "data": "2026-11-07",
+  "prompt": "a cozy Italian café interior: Ballerina Cappuccina, a ballerina in a pink tutu whose head is a cappuccino cup with foam, dancing on a table; Cappuccino Assassino, a small ninja in a black suit whose head is a cappuccino cup, holding two coffee spoons, sneaking behind the counter; Espressona Signora, an elegant old lady whose head is an espresso cup, sitting at a table with a newspaper without writing; a counter with croissants, cakes and donuts, a shiny coffee machine, cups and saucers, hanging lamps, potted plants, framed pictures of coffee beans, a checkered floor, windows with a street view and a cat sleeping on a chair, wide establishing shot, busy detailed scene with many small distinct objects spread across the whole picture, every area of the image has something to look at, no large empty areas, everything in sharp focus with no blur and no depth of field, characters medium size and fully visible, 4:3, no text, no letters, no numbers, no watermark, no logo, no signature, 3D animated movie style render, glossy toy-like characters with big expressive eyes, soft bright studio lighting, vibrant saturated colors, smooth clean shapes, high detail",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "b30faed0-fcd1-4888-9b26-949506689651",
+    "escolhida_de": "2ª de 4 imagens da rodada 1"
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "09a9ea6c-8836-4004-ac1f-04bddc22255e",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The ballerina's pink tutu and pink dress become light blue. 2) The pink hanging lamp on the left becomes a turquoise blue lamp. 3) The orange cat sleeping on the green armchair on the left becomes a black-and-white cat. 4) The purple handbag on the floor in the bottom-right corner becomes a red handbag. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tutu e collant da Ballerina Cappuccina rosa -> azul-claro",
+        "luminária rosa da esquerda -> azul-turquesa",
+        "gato laranja na poltrona verde -> gato preto e branco",
+        "bolsa roxa no chão (canto inferior direito) -> vermelha"
+      ],
+      "tentativas": 2,
+      "tentativa_descartada": {
+        "grok_id": "c868df54-5237-4bf0-a143-1037e0ed7d45",
+        "motivo": "o Grok abriu uma tela de teste A/B ('Qual imagem você prefere manter?') com 2 resultados; escolhi um e as 4 mudanças estavam certas, mas o arquivo saiu com 1152x864 em vez de 1600x1200. Refiz o mesmo pedido a partir de A e veio normal (1600x1200). Cópia da descartada no scratchpad da sessão."
+      }
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "530e9700-18c4-486b-b1c2-57cc606f2ba7",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The ninja's black suit becomes dark red (keep his cup head the same). 2) The large framed picture of a coffee cup at the top, between the green lamp and the yellow lamp, becomes a framed picture of a croissant. 3) The small blue-and-white coffee cup on the round table at the left edge becomes a red coffee cup. 4) The slice of layered cake on the plate on the front table at the bottom becomes a pink frosted donut. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "roupa e máscara do Cappuccino Assassino preto -> vermelho-escuro",
+        "quadro grande da xícara (entre a luminária verde e a amarela) -> quadro de croissant",
+        "xícara azul e branca da mesa da borda esquerda -> xícara vermelha",
+        "fatia de bolo da mesa da frente -> donut com cobertura rosa"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "58e74b88-a210-4080-804f-a76b38463491",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) The old lady's purple dress becomes a yellow dress. 2) The pink flowers in the small glass vase on the windowsill on the left become yellow flowers. 3) The red patterned seat cushion of the wooden chair at the bottom left becomes a blue cushion. 4) The plate of croissants on top of the glass pastry case becomes a plate of colorful macarons. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "vestido da Espressona Signora roxo -> amarelo",
+        "flores rosa do vasinho de vidro no peitoril da janela -> amarelas",
+        "almofada da cadeira do canto inferior esquerdo -> azul (EXTRA: a almofada da cadeira atrás da mesa da bailarina e o encosto da cadeira da senhora também ficaram azuis)",
+        "prato de croissants em cima da vitrine -> prato de macarons coloridos"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visível (cantos conferidos em tamanho real). Metadado EXIF em todos os arquivos: ImageDescription='Signature: <base64>' (assinatura de proveniência) e Artist=<id da imagem no Grok>; remover EXIF no pipeline.",
+  "notas": "Geração ~25 s (4 imagens); edições <10 s cada; nenhum aviso de limite. Candidatas: 1) boa mas escura, ninja em cima do balcão; 3) ninja com FACAS (descartada); 4) boa, ninja atrás do balcão; escolhida a 2: mais detalhe espalhado, 3 luminárias de cores diferentes, bolsa roxa, muitos objetos distintos; ninja com 2 colheres (ficou na FRENTE do balcão, não atrás); jornal sem letras. O estilo 3D tem desfoque de profundidade nos objetos do primeiro plano (cadeira do canto inferior direito, pés de mesa embaixo) apesar do prompt pedir 'no depth of field'. Peculiaridade da UI: na 1ª tentativa da v1 apareceu um teste A/B ('Qual imagem você prefere manter?', com botão 'Pular') e o resultado escolhido veio em 1152x864; vale conferir o tamanho de toda edição. Edições mantêm o enquadramento (diferença média ~10/255 contra A)."
+}

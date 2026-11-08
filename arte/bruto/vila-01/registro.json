@@ -1,0 +1,88 @@
+{
+  "cena": "vila-01",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a cozy wooden village house at breakfast time with 5 characters: Burbaloni Luliloli (brown capybara inside half a coconut) eating breakfast at the table; Frulli Frulla (small bird with huge round goggles and a long beak) yawning in a doorway; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) eating an ice cream; Uvanito Pecorarito (sheep made of purple grapes) dancing; Perochello Lemonchello (yellow parrot with a lemon body) laughing. Around them: a low table with rice bowls and fruit, clay pots, woven mats, a window with banana leaves, hanging lanterns, a rooster on the windowsill, baskets, a little shelf with toys, a sleeping cat and flower pots. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "e1217baf-810e-4a1f-9625-672af6e219a2",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "burbaloni": [
+      430,
+      455,
+      330,
+      355
+    ],
+    "frulli-frulla": [
+      885,
+      270,
+      185,
+      312
+    ],
+    "tortuginni": [
+      85,
+      540,
+      285,
+      320
+    ],
+    "uvanito": [
+      955,
+      420,
+      325,
+      450
+    ],
+    "perochello": [
+      1275,
+      505,
+      325,
+      330
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a323224b-20f8-49aa-bfd1-eb11b4201eb0",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red hat on the head of the brown capybara sitting in the coconut at the table. 2) Make the teal scarf of the bird with round goggles in the doorway red. 3) Make the orange paper lantern hanging at the top left of center blue. 4) Make the gray and white sleeping cat at the bottom left orange and white. 5) Make only the red folded blanket on top of the stack on the right yellow. 6) Make the teal clay pot with the green plant at the bottom center red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu vermelho pequeno na cabeca do Burbaloni Luliloli (capivara no coco, mesa)",
+        "cachecol azul-petroleo do Frulli Frulla (passaro de oculos na porta) -> vermelho",
+        "lanterna de papel laranja (alto, a esquerda do centro) -> azul",
+        "gato cinza e branco dormindo (esquerda-baixo) -> laranja e branco",
+        "cobertor vermelho do alto da pilha (direita) -> amarelo; os outros dois ficaram iguais",
+        "vaso azul-petroleo com planta (centro-baixo) -> vermelho"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "18c72b0d-51c6-4813-9c9d-9a808cc1f495",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the green turtle with the dragon fruit shell on the left. 2) Put a small blue bow tie on the yellow parrot on the right. 3) Put a small yellow straw hat on the head of the purple grape sheep dancing in the middle. 4) Make the woven hanging basket with the green plant in the top left corner red. 5) Make only the right one of the two woven baskets hanging on the right wall blue. 6) Make the big patterned clay pot with the pink flowers at the bottom right green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Tortuginni Dragonfruitini (tartaruga de pitaia, esquerda)",
+        "gravata borboleta azul no Perochello Lemonchello (papagaio amarelo, direita)",
+        "chapeu de palha amarelo (fita marrom) na cabeca do Uvanito Pecorarito (ovelha de uvas)",
+        "cesto pendurado com planta do canto superior esquerdo -> vermelho",
+        "cesto de palha da direita na parede da direita -> azul; o da esquerda ficou igual",
+        "vaso grande estampado com flores rosa (direita-baixo) -> verde; efeito colateral: o vaso azul-petroleo do centro-baixo (o mesmo que o v1 deixou vermelho) tambem ficou verde"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha a capivara numa tigela de madeira (pouco coco); a 3 era boa, mas a lanterna rosa da direita tinha um desenho que se le como o numero 8 (dois circulos brancos em forma de 8), entao foi recusada por texto/numero; a 4 tinha uma tartaruga a mais deitada no tapete (casco verde de melancia) e a porta escura no meio. Escolhida a 2: os 5 fieis (Burbaloni Luliloli capivara marrom dentro de meio coco comendo arroz a mesa; Frulli Frulla passaro de oculos redondos e bico comprido, de cachecol, bocejando na porta; Tortuginni Dragonfruitini tartaruga verde de casco de pitaia tomando sorvete sobre um pufe de palha; Uvanito Pecorarito ovelha feita de uvas roxas com folhas e flores, dancando; Perochello Lemonchello papagaio amarelo redondo de limao, com folha na cabeca, rindo). Casa de madeira cheia: janela com folhas de bananeira e galo no parapeito, lanternas de papel laranja e rosa, cestos pendurados, prateleira com bonecos, casinha de passaro e sapo de brinquedo, potes de barro, cobertores dobrados, mesa baixa com tigelas de arroz, frutas (pitaia, laranja, banana, uva), jarra e copinho de barro, tapetes trancados, gato dormindo e vasos de flores. Sem texto, sem logo, sem arma, sem alcool (a jarra e o copo sao de barro opaco; nenhum vidro com bebida). Ponto fraco: o tapete de palha do centro-baixo, sob a mesa, e uma area lisa media (~25% da largura). As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram, com um efeito colateral no vaso azul-petroleo (mudado nas duas edicoes: vermelho no v1 a pedido, verde no v2 sem pedido)."
+}

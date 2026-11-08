@@ -1,0 +1,88 @@
+{
+  "cena": "praia-03",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a beach volleyball match on the sand in the golden afternoon with 5 characters: Blueberrini Octopusini (cute round purple blueberry octopus with big eyes) jumping to hit the volleyball; Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) cheering with pom-poms; La Vaca Saturno Saturnita (planet Saturn with a cow face and two big human feet) laughing; Ballerina Cappuccina (ballerina in a pink tutu with a cappuccino cup head) carrying a basket; Brr Brr Patapim (tree trunk with a mossy head, a long nose and huge bare feet) playing a guitar. Around them: a volleyball net, a striped volleyball, a referee chair, beach towels, sunglasses, coolers, a smoothie stand, palm trees, kites in the sky and beach umbrellas. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "46a87c6a-b037-43fe-ad80-3a8885914f97",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "blueberrini": [
+      365,
+      455,
+      360,
+      385
+    ],
+    "bombardiro": [
+      755,
+      400,
+      410,
+      310
+    ],
+    "saturnita": [
+      1110,
+      268,
+      340,
+      330
+    ],
+    "ballerina": [
+      905,
+      650,
+      355,
+      440
+    ],
+    "patapim": [
+      1255,
+      450,
+      345,
+      665
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "2e038b39-c3bc-41da-be02-66bd2ea42d61",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round black sunglasses on the eyes of the purple octopus. 2) Make the two pink pom-poms held by the crocodile in the airplane yellow. 3) Make the pink kite at the top left green. 4) Make the purple cooler on the sand at the bottom left red. 5) Make the green cooler box on the sand at the bottom center orange. 6) Make the brown ukulele played by the tree trunk character on the right bright red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros redondos pretos no Blueberrini Octopusini",
+        "os dois pompons do Bombardiro Crocodilo rosa -> amarelos",
+        "pipa rosa do alto a esquerda -> verde (rabo de fitas tambem verde)",
+        "caixa termica roxa no canto inferior esquerdo -> vermelha",
+        "caixa termica verde pequena no centro-baixo -> laranja",
+        "ukulele marrom do Brr Brr Patapim -> vermelho"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "98f72687-c719-473d-b162-3669fba761e3",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the pink tutu of the ballerina with the coffee cup head light blue. 2) Put a small straw hat on the head of the cow-faced planet at the top right. 3) Make the blue-and-white volleyball flying at the top center red-and-white. 4) Make the pink starfish on the sand in the bottom-left corner yellow. 5) Make the purple sunglasses lying on the sand at the bottom center orange. 6) Make the pink-and-white striped awning of the drink stand on the left green-and-white. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "roupa da Ballerina Cappuccina rosa -> azul-claro (efeito colateral: corpete e sapatilhas tambem ficaram azuis, nao so o tutu)",
+        "chapeu de palha pequeno na La Vaca Saturno Saturnita, entre os chifres",
+        "bola de volei no ar (alto, centro) azul/branca -> vermelha/branca",
+        "estrela-do-mar rosa no canto inferior esquerdo -> amarela",
+        "oculos roxos na areia (centro-baixo) -> armacao laranja",
+        "toldo listrado rosa/branco da barraca de sucos a esquerda -> verde/branco"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: candidata 1 tinha um polvo extra no ceu; a 2 tinha um personagem-xicara extra; a 3 tinha dois bebes-xicara extras. Escolhida a 4: os 5 personagens fieis (Blueberrini com coroa de mirtilo, Bombardiro no aviao com pompons, Saturnita com pes humanos, Ballerina com cesta, Patapim com nariz comprido, musgo, pes descalcos e ukulele), sem tubarao, sem cena submarina. Ha figurantes humanos de desenho: o juiz na cadeira (alto a esquerda) e uma plateia pequena ao fundo a direita. O centro da areia tem so confete. As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
+}

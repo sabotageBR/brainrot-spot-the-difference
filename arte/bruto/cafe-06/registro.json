@@ -1,0 +1,88 @@
+{
+  "cena": "cafe-06",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "an Italian pizzeria kitchen with 5 characters: Cocofanto Elefanto (small brown elephant with a coconut head) tossing pizza dough in the air; Crocodilo Fromagioso (crocodile made of yellow cheese with holes) sneaking a slice of pizza; Ta Ta Ta Ta Sahur (brown teapot with big eyes, thin arms and legs) playing with a ball; Tigrrullini Watermellini (tiger with a round watermelon body) juggling; Tigrulli Grapefrutunni (tiger with a round pink grapefruit body) jumping with joy. Around them: a brick pizza oven with fire, pizzas on wooden paddles, tomatoes, cheese wheels, basil pots, hanging garlic and peppers, jars of olives, copper pans, stacked plates, a checkered tablecloth and a cat on a shelf. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "3631424d-d803-4f83-bb89-3196540af539",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "cocofanto": [
+      388,
+      218,
+      404,
+      527
+    ],
+    "crocodilo-fromagioso": [
+      763,
+      413,
+      467,
+      410
+    ],
+    "ta-ta-sahur": [
+      115,
+      480,
+      370,
+      345
+    ],
+    "tigrrullini": [
+      1130,
+      273,
+      397,
+      362
+    ],
+    "tigrulli": [
+      1160,
+      638,
+      438,
+      412
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "cb296d03-5e66-4faf-9923-6498c1b79fc5",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the coconut elephant in the center. 2) Put a white chef hat on the head of the yellow cheese crocodile. 3) Make the gray striped cat sleeping on the shelf at the top left orange. 4) Make the string of red chili peppers hanging on the far right edge yellow. 5) Make the brown wicker basket of red tomatoes on the left blue. 6) Make the blue and white bowl in the bottom right corner red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Cocofanto Elefanto",
+        "touca de chef branca na cabeca do Crocodilo Fromagioso",
+        "gato cinza listrado dormindo na prateleira (alto, esquerda) -> laranja",
+        "reco de pimentas vermelhas pendurado na extrema direita -> amarelo",
+        "cesto de vime marrom com tomates (esquerda) -> azul",
+        "tigela azul e branca do canto inferior direito -> vermelha lisa (perdeu o desenho azul)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "5ec17805-9d7d-4ebf-8dcd-7486237e8608",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the lid of the brown teapot character on the left red. 2) Put a small purple party hat on top of the watermelon head of the tiger at the right. 3) Put black sunglasses on the pink grapefruit tiger at the bottom right. 4) Replace the flying pizza dough at the top center with a flying pizza. 5) Make the multicolored beach ball on the floor, below the teapot, solid green. 6) Make the copper pitcher on the checkered table blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tampa do bule do Ta Ta Ta Ta Sahur -> vermelha",
+        "chapeu de festa roxo pequeno no alto da cabeca de melancia do Tigrrullini Watermellini (~4% da largura)",
+        "oculos escuros pretos no Tigrulli Grapefrutunni",
+        "massa de pizza voando (alto, centro) -> pizza pronta voando",
+        "bola de praia colorida no chao (abaixo do bule) -> verde lisa",
+        "jarra de cobre na mesa xadrez -> azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 tinha o elefante sem cabeca de coco (elefante comum de touca de chef) e garrafas de vidro verde na prateleira (parecem de vinho); a 3 tinha os 5 fieis mas uma parede bege lisa grande no meio, atras dos personagens; a 4 tinha os dois tigres perfeitos mas o elefante so peludo, sem coco visivel. Escolhida a 1, a que tem o protagonista mais fiel e a cena mais cheia: Cocofanto Elefanto elefante de coco (cabeca de coco aberta com canudo listrado e corpo de coco) jogando a massa; Crocodilo Fromagioso jacare de queijo amarelo com furos mordendo uma fatia de pizza; Ta Ta Ta Ta Sahur bule marrom de olhos grandes, bracos e pernas finos, com a bola; Tigrrullini Watermellini tigre fazendo malabarismo com melancias pequenas (a melancia ficou como cabeca, nao como corpo); Tigrulli Grapefrutunni tigre de toranja rosa pulando (a toranja e cabeca e corpo juntos). Cozinha cheia: forno a lenha com fogo, pimentas e alhos pendurados, panelas de cobre, gato na prateleira com pano xadrez, potes de azeitona e pimenta, jarra de cobre, pilhas de pratos, pizza na pa, queijo, tomates, manjericao. O canudo no coco e de agua de coco; nenhuma garrafa, taca ou bebida alcoolica. Sem texto, sem logo, sem arma. O painel 'Segmentos' marcou '1' e '100% Natural' como Texto sobre os potes da mesa, mas de perto os potes nao tem rotulo nem letra (leitura falsa). A aba travou (renderer sem resposta) varias vezes ao abrir a imagem e depois das edicoes; recarregar e esperar resolveu, e na v2 foi preciso abrir uma aba nova. Nenhum pedido extra gasto. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram, sem efeito colateral visivel."
+}

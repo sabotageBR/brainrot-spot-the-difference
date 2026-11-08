@@ -1,0 +1,88 @@
+{
+  "cena": "deserto-02",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a covered desert bazaar with brass lamps with 5 characters: Bananita Dolphinita (gray dolphin inside a peeled banana skin) selling colorful fruit; Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) buying a rug; Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) dancing; Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) laughing; U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) carrying a basket. Around them: stalls with colorful rugs, brass lamps, pottery, baskets of spices, hanging fabrics, slippers, a fruit stall, a cat on a crate, striped curtains and lanterns hanging from the ceiling. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "703f9706-7535-4fe0-83ce-5acd8944084f",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "bananita": [
+      80,
+      300,
+      255,
+      270
+    ],
+    "tung-tung": [
+      375,
+      315,
+      240,
+      590
+    ],
+    "chimpanzini": [
+      640,
+      520,
+      330,
+      470
+    ],
+    "lirili": [
+      925,
+      330,
+      375,
+      600
+    ],
+    "u-din-din": [
+      1230,
+      490,
+      365,
+      525
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "2bcad94a-ffd5-45bb-ad64-2c99c56e5a0b",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red fez hat on the gray dolphin in the banana at the fruit stall on the left. 2) Put black sunglasses on the green monkey dancing in the center. 3) Make the teal shorts of the muscular orange fruit character on the right purple. 4) Make the turquoise blue lantern hanging at the top, left of center, red. 5) Make the gray striped cat sitting on the purple crate at the bottom left orange. 6) Make the purple plums in the basket at the bottom center, next to the basket of green beans, bright yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "fez vermelho na cabeca da Bananita Dolphinita",
+        "oculos escuros pretos no Chimpanzini Bananini",
+        "short turquesa do U Din Din Din Dun -> roxo",
+        "lanterna turquesa pendurada (alto, esquerda do centro) -> vermelha; efeito colateral: a lanterna laranja do canto superior esquerdo ficou vermelha tambem",
+        "gato cinza listrado no caixote roxo (esquerda-baixo) -> laranja",
+        "ameixas roxas do cesto do centro-baixo -> vermelhas (nao amarelas, como pedido); efeito colateral: as ameixas roxas dos dois cestos da direita-baixo ficaram amarelas"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "dd1e4ae1-57dd-4c26-8050-3f2d396cd9aa",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw hat on top of the tall wooden log character on the left of center. 2) Put a small red bow tie on the neck of the cactus elephant on the right. 3) Make the red and white striped awning at the top left blue and white. 4) Make the blue patterned rug hanging on the back wall at the top center green. 5) Replace the big golden brass pot at the bottom right corner with a plain blue clay pot of the same size. 6) Make the purple clay jar on the floor at the left, in front of the fruit stall, green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de palha amarelo no Tung Tung Tung Sahur",
+        "gravata borboleta vermelha no pescoco do Lirili Larila",
+        "toldo listrado vermelho e branco (alto, esquerda) -> azul e branco",
+        "tapete azul pendurado na parede do fundo (alto, centro) -> verde",
+        "pote grande de latao gravado do canto inferior direito -> pote de barro azul liso",
+        "NAO FEITO como pedido: o jarro roxo do chao (esquerda) ficou roxo; quem mudou foi o jarro laranja vizinho, que ficou verde, e o jarro turquesa da extrema esquerda, que ficou laranja"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1 (as nao escolhidas foram vistas so em miniatura ou zoom rapido): a 1 tinha o macaco marrom-alaranjado (nao verde) e muito latao nas prateleiras; a 2 tinha os 5 mas muito latao espalhado (risco de narguile), nao foi aberta de perto; a 3 tinha os 5 fieis mas o chao do meio mais vazio. Escolhida a 4: os 5 fieis (Bananita golfinho cinza dentro de uma casca de banana atras da banca de frutas; Tung Tung Tung tronco com bracos e pernas finas mexendo num tapete, com um bastao encostado atras; Chimpanzini macaco verde de cara rosa saindo de uma banana, dancando; Lirili elefante de corpo de cacto com flor, sandalias e o despertador num banquinho ao lado; U Din Din laranja musculosa de short e tenis com um cesto de frutas). Bazar coberto com lanternas coloridas, tapetes na parede, tecidos, pilha de tapetes, chinelos na parede, bules de latao (sem xicaras nem copos), jarros, cestos de especiarias e frutas, gato no caixote. Sem bebida, sem narguile, sem arma, sem logo. Ponto de atencao: o pote grande de latao do canto inferior direito tem um arabesco gravado que lembra escrita (nao legivel); v2 o troca por um pote azul liso, entao o estudio pode escolher essa mudanca. O relogio tem numerais (aceitavel). As duas edicoes mantiveram o enquadramento e os personagens."
+}

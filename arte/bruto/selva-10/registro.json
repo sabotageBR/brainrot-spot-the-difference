@@ -1,0 +1,114 @@
+{
+  "cena": "selva-10",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a jungle carnival party inside a giant striped tent with 7 characters: Bambini Crossini (baby deer with a croissant body) dancing with big steps; Piccione Macchina (pigeon with a small red car body) jumping out of a giant banana; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) playing the drums; Frulli Frulla (small bird with huge round goggles and a long beak) juggling fruit; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) riding a giant leaf; Uvanito Pecorarito (sheep made of purple grapes) waving maracas; Perochello Lemonchello (yellow parrot with a lemon body) cheering. Around them: flower garlands, drums, maracas, fruit towers, lanterns, feather fans, balloons, a giant banana stage, parrots, streamers and confetti. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "826c8cd9-7e5c-41c1-af66-63fd38e10930",
+    "escolhida_de": "3a de 4 da rodada 1"
+  },
+  "caixas": {
+    "bambini-crossini": [
+      203,
+      362,
+      300,
+      470
+    ],
+    "piccione-macchina": [
+      638,
+      222,
+      252,
+      254
+    ],
+    "trenostruzzo": [
+      486,
+      498,
+      505,
+      245
+    ],
+    "frulli-frulla": [
+      948,
+      392,
+      278,
+      280
+    ],
+    "tortuginni": [
+      1158,
+      452,
+      245,
+      280
+    ],
+    "uvanito": [
+      1033,
+      772,
+      340,
+      330
+    ],
+    "perochello": [
+      358,
+      748,
+      275,
+      295
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "ff15b384-b3ed-4900-84f0-a8929cde01e3",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the baby deer with the croissant body on the left. 2) Put a small red party hat on the head of the purple grape sheep at the bottom right. 3) Make the purple balloon on the far left, at mid height, blue. 4) Make the big red feather fan in the bottom left corner blue. 5) Make the round purple paper lantern hanging at the top center green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Bambini Crossini (protagonista, esquerda)",
+        "chapeu de festa vermelho na cabeca do Uvanito Pecorarito",
+        "balao roxo da extrema esquerda (meia altura) -> azul (e maior); efeito colateral: os baloes verde e laranja logo abaixo dele sumiram (viraram folhagem e uma flor)",
+        "leque de penas vermelho do canto inferior esquerdo -> azul",
+        "lanterna de papel roxa do alto-centro -> verde; a lanterna roxa da direita ficou igual"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "4c6bd399-70d1-4405-877d-0c6324dec8f4",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the yellow lemon parrot at the bottom left. 2) Put a small yellow party hat on the head of the turtle with the dragon fruit shell on the right. 3) Make the red parrot on the branch in the top right corner blue. 4) Make the big purple feather fan in the bottom right corner orange. 5) Make the orange paper lantern hanging in the top left corner purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco vermelho na cabeca do Perochello Lemonchello; efeito colateral: a folhinha verde do alto da cabeca sumiu (o laco ficou no lugar dela)",
+        "chapeu de festa amarelo de bolinhas na cabeca do Tortuginni Dragonfruitini",
+        "arara vermelha no galho do canto superior direito -> azul e amarela; a arara da esquerda ficou vermelha",
+        "leque de penas roxo do canto inferior direito -> laranja",
+        "lanterna de papel laranja do canto superior esquerdo -> roxa; efeito colateral: a lanterna laranja do canto superior direito ficou azul"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "365e23ac-d60f-4d96-8512-031715057460",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the ostrich playing the drums in the center. 2) Put a small yellow party hat on the head of the gray pigeon in the red car. 3) Make the big drum in the bottom left corner red. 4) Make the woven basket of fruit at the bottom center, below the red apple, blue. 5) Make the green balloon at the top of the bunch on the far right purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Trenostruzzo Turbo 3000; efeito colateral pequeno: o pescoco do avestruz foi redesenhado (mais creme, menos preto)",
+        "chapeu de festa amarelo na cabeca do Piccione Macchina",
+        "tambor grande do canto inferior esquerdo -> vermelho (o tampo continua creme)",
+        "cesto trancado de frutas (baixo, centro, abaixo da maca vermelha) -> azul; o cesto da esquerda ficou igual",
+        "balao verde do alto do cacho da extrema direita -> roxo; os baloes rosa e laranja ficaram iguais"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Cena de chefe (7 personagens, 3 edicoes x 5). Rodada 1: a 2 tinha o cervo com um croissant na cabeca (corpo de cervo comum) e o avestruz ao lado do trem; a 4 tinha o pombo voando acima do carro (separado) e o avestruz atras da bateria, com o trem no palco; a 1 tinha o avestruz na bateria com o trem atras e o pombo no carro no chao. Escolhida a 3: os 7 reconheciveis (Bambini Crossini cervo de corpo de croissant com gravata borboleta verde dancando; Piccione Macchina pombo cinza dentro de um carrinho vermelho saindo de uma banana gigante; Trenostruzzo avestruz sentado no dorso de um trem-bala branco tocando congas, sem o numero 3000 escrito; Frulli Frulla passaro de oculos redondos e bico comprido fazendo malabares com frutas; Tortuginni tartaruga de casco de pitaya numa folha gigante; Uvanito ovelha de uvas roxas com maracas; Perochello papagaio amarelo de corpo de limao comemorando). O menos fiel e o Trenostruzzo: o corpo de penas do avestruz fica por cima do trem, nao e feito dele. Tenda listrada cheia: lanternas de papel, guirlandas de flores, cortinas, araras, lampioes, baloes, maracas, tambores, congas, leques de penas, torres de frutas e confete no chao todo. Sem texto, sem logo, sem arma, sem bebida. Estranho: o painel de segmentos do Grok rotulou como 'Texto' ('1 2 3 4 5 6 7 8 9 0') uma faixa fina da borda creme e dourada de um tambor; olhando, nao ha numero nem letra. As 3 edicoes mantiveram o enquadramento e os 7 personagens; as 15 mudancas aconteceram, com os efeitos colaterais anotados (os dois baloes que sumiram na v1 sao o maior)."
+}

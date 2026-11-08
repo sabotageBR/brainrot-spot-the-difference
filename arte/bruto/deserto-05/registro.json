@@ -1,0 +1,95 @@
+{
+  "cena": "deserto-05",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a desert canyon with red rock arches with 5 characters: Piccione Macchina (pigeon with a small red car body) toasting bread on a rock; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) resting in the shade; Boneca Ambalabu (green frog head on a black tire with two human legs) playing a guitar; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing with a ball; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) juggling. Around them: stone arches, red rock towers, hot air balloons, eagles, cacti, lizards, a little river, rope bridges, hiking backpacks, a picnic blanket and clouds. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "3f95acbb-1573-4891-a4a2-edf427d038de",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "piccione-macchina": [
+      55,
+      400,
+      265,
+      370
+    ],
+    "girafa-celestre": [
+      450,
+      340,
+      265,
+      365
+    ],
+    "boneca-ambalabu": [
+      615,
+      675,
+      315,
+      320
+    ],
+    "bobrito": [
+      930,
+      590,
+      320,
+      320
+    ],
+    "orangutini": [
+      1200,
+      490,
+      340,
+      435
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b6b6dc57-d2ea-422c-a793-14a18dee341c",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Replace the purple water jug on the ground at the bottom right, next to the yellow backpack, with a big white mug of hot coffee. 2) Put black sunglasses on the gray pigeon in the red car on the left. 3) Put a small red bow tie on the beaver in the striped suit. 4) Make the largest hot air balloon at the top, right of center, solid green. 5) Make the green backpack at the bottom left red. 6) Make the lizard crawling on the edge of the picnic blanket at the bottom left purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "cantil roxo no chao (direita-baixo, ao lado da mochila amarela) -> caneca branca de cafe",
+        "oculos escuros pretos no pombo do Piccione Macchina",
+        "gravata borboleta vermelha no Bobrito Bandito",
+        "balao maior do ceu (alto, direita do centro) -> verde liso",
+        "mochila verde (esquerda-baixo) -> vermelha; efeito colateral: o colchonete azul enrolado ao lado tambem ficou vermelho",
+        "lagarto da borda da toalha de piquenique (esquerda-baixo) -> roxo"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "5a112836-f257-4e22-aa68-4ff2658208c7",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange orangutan with the pineapple body juggling on the right. 2) Put a small red bandana around the neck of the giraffe sitting on the watermelon. 3) Make the purple pants of the frog sitting on the black tire blue. 4) Make the turquoise spotted lizard at the bottom right orange. 5) Make the wicker picnic basket on the blanket at the bottom left red. 6) Make the striped hot air balloon on the left of center, just below the eagle, solid orange. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Orangutini Ananassini",
+        "lenco vermelho de bolinhas no pescoco da Girafa Celestre; efeito colateral grande: a girafa foi redesenhada com corpo inteiro (pernas e botas) sentada em cima da melancia, que desceu e cresceu; a regiao toda mudou (evitar essa candidata no estudio)",
+        "calca roxa do Boneca Ambalabu -> azul (jeans)",
+        "lagarto turquesa de pintas (direita-baixo) -> laranja",
+        "cesta de vime do piquenique (esquerda-baixo) -> vermelha",
+        "balao listrado a esquerda do centro, abaixo da aguia -> laranja liso"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1 (as nao escolhidas foram vistas so em miniatura ou zoom rapido): a 1 tinha a girafa com cabeca e pernas saindo da melancia mas o Bobrito pequeno; a 3 tinha a girafa como cabeca sobre a melancia mas personagens apertados num canto; a 4 tinha o Bobrito de roupa listrada horizontal preta e branca (cara de presidiario). Escolhida a 2: os 5 reconheciveis (Piccione Macchina pombo cinza saindo de um carrinho vermelho tostando pao num garfo comprido junto da fogueira; Girafa Celestre cabeca de girafa sobre uma melancia redonda com pernas de botas marrons, descansando na rocha; Boneca Ambalabu sapo verde com flor sentado num pneu preto, de calca roxa e tenis rosa, tocando violao; Bobrito Bandito castor de terno listrado e chapeu fedora com bola de praia, sem arma; Orangutini orangotango laranja com corpo de abacaxi e folhas na cabeca fazendo malabares com laranjas). Canion com arcos de pedra, torres vermelhas, rio, ponte de corda, baloes, aguias, cactos, lagartos, mochilas, toalha de piquenique com frutas. Sem texto, sem logo, sem arma, sem bebida de adulto: ha um cantil roxo no chao (trocado por caneca de cafe em v1, por precaucao) e uma garrafinha vermelha pequena no bolso da mochila amarela (garrafa de agua de trilha, nao parece alcool). Ponto fraco: a Girafa Celestre e mais 'girafa atras de uma melancia' do que 'corpo de melancia'. As duas edicoes mantiveram o enquadramento e os 5 personagens; nenhuma foi refeita.",
+  "evitar": [
+    [
+      583,
+      523
+    ]
+  ],
+  "nota_evitar": "Claude, 2026-11-08: o v2 redesenhou a Girafa Celestre inteira (efeito colateral do lenco); o estudio nao usa essa mancha."
+}

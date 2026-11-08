@@ -1,0 +1,88 @@
+{
+  "cena": "vila-02",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "green rice terraces in a sunny valley with 5 characters: Ta Ta Ta Ta Sahur (brown teapot with big eyes, thin arms and legs) hopping between the rice paddies; Tractoro Dinosauro (green dinosaur tractor with big wheels) waving from a little hut; Chicleteira Bicicleteira (red gumball machine with eyes riding a bicycle) dancing; Tartaruga Cisterna (turtle with a silver tank truck shell) laughing; Pot Hotspot (skinny friendly cartoon skeleton with a phone) carrying a basket. Around them: farmers' conical hats, ducks in the water, a scarecrow, a water buffalo, a wooden hut, palm trees, bamboo baskets, dragonflies, a little stream with a bridge and fluffy clouds. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "59d33c20-f7d0-4c20-8fcd-765b8e0a5f10",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "ta-ta-sahur": [
+      365,
+      405,
+      305,
+      240
+    ],
+    "tractoro": [
+      1060,
+      160,
+      310,
+      285
+    ],
+    "chicleteira": [
+      770,
+      430,
+      340,
+      390
+    ],
+    "tartaruga-cisterna": [
+      895,
+      765,
+      345,
+      280
+    ],
+    "pot-hotspot": [
+      1220,
+      555,
+      320,
+      465
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "90068bd4-ac4b-49f9-8e43-345ac5222cf1",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the brown teapot character hopping at the left of center. 2) Make the purple bicycle ridden by the red gumball machine in the center orange. 3) Make the black water buffalo at the top left brown. 4) Make the big pink flower in the bottom left corner blue. 5) Make the blue dragonfly flying on the right, above the skeleton, red. 6) Make only the woven basket in the very bottom right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Ta Ta Ta Ta Sahur (bule marrom pulando, esquerda do centro)",
+        "bicicleta roxa da Chicleteira Bicicleteira (centro) -> laranja",
+        "bufalo preto (alto, esquerda) -> marrom",
+        "flor rosa grande do canto inferior esquerdo -> azul",
+        "libelula azul da direita (acima do esqueleto) -> vermelho-acastanhada",
+        "cesto de palha do canto inferior direito -> azul; efeito colateral: o cesto grande vizinho (a esquerda dele) tambem ficou azul; o cesto do esqueleto e o pequeno da borda direita ficaram iguais"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "6d0ee6f5-c524-4a7c-b54e-934b51b0b675",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the green turtle with the silver tank shell. 2) Put a small yellow straw hat on the head of the skeleton holding a phone on the right. 3) Make the green tractor driven by the dinosaur at the top right red, and keep the dinosaur green. 4) Make the blue shirt of the scarecrow at the top left red. 5) Make the wooden bridge over the stream at the bottom left of center red. 6) Add a small yellow kite flying in the blue sky at the top center. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho (bolinhas) na cabeca da Tartaruga Cisterna",
+        "chapeu de palha amarelo com fita vermelha na cabeca do Pot Hotspot (esqueleto); efeito colateral: o esqueleto foi levemente redesenhado (sorriso de boca fechada em vez de dentes a mostra, ossos com pequenas trocas)",
+        "trator verde do Tractoro Dinosauro (alto, direita) -> vermelho; o dinossauro continuou verde",
+        "camisa azul do espantalho (alto, esquerda) -> vermelha (calca tambem avermelhada)",
+        "ponte de madeira sobre o riacho (baixo, esquerda do centro) -> vermelha",
+        "pipa amarela com rabo de lacos acrescentada no ceu (alto, centro)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: nas 4 o Tractoro saiu como dinossauro verde dirigindo um trator verde (nao feito de trator), defeito igual nas 4; a 1 tinha o bule pouco reconhecivel (bola marrom tipo coco com bracos); a 2 tinha o bule pequeno e a tartaruga com casco cinza em cupula (pouco tanque); a 3 tinha o bule pequeno dentro da cabana. Escolhida a 4: Ta Ta Ta Ta Sahur bule marrom de olhos grandes pulando com luvas e tenis brancos; Tractoro (dino verde no trator verde na frente da cabana); Chicleteira maquina de chiclete vermelha de olhos numa bicicleta roxa; Tartaruga Cisterna tartaruga verde com tanque prateado no casco, rindo; Pot Hotspot esqueleto com celular e cesto. Terracos de arroz cheios: espantalho, bufalo, 3 lavradores de chapeu conico colhendo arroz, cabanas de palha, riacho com ponte de madeira, 6 patos, libelulas, cestos, flores rosa e palmeiras. Sem texto, sem logo, sem arma (os lavradores seguram feixes de arroz, nenhuma foice), sem alcool. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram."
+}

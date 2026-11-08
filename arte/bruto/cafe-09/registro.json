@@ -1,0 +1,88 @@
+{
+  "cena": "cafe-09",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a sweet candy shop with 5 characters: Bobrito Bandito (beaver in a striped suit and fedora, no weapons) climbing a shelf to reach a jar; Vulpegatto (half fox half cat sitting in a coconut shell) making lollipops appear with magic; Dragon Cannelloni (friendly dragon made of cannelloni pasta) waving hello; Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) taking a photo; Bananita Dolphinita (gray dolphin inside a peeled banana skin) eating an ice cream. Around them: shelves of glass jars full of candies, giant swirl lollipops, chocolate bars without labels, gumball machines, candy canes, a cotton candy machine, cupcakes, a pink counter, balloons and a little train toy running on a shelf. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "ce790859-ff0c-4215-8991-fb6812886d75",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "bobrito": [
+      155,
+      95,
+      345,
+      460
+    ],
+    "vulpegatto": [
+      195,
+      675,
+      415,
+      450
+    ],
+    "dragon-cannelloni": [
+      540,
+      355,
+      400,
+      620
+    ],
+    "ecco-cavallo": [
+      845,
+      245,
+      460,
+      630
+    ],
+    "bananita": [
+      995,
+      670,
+      390,
+      465
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "36455f46-b7b5-4770-b62f-4d881869cec5",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the beige fedora hat of the beaver climbing the shelf at the top left red. 2) Put black sunglasses on the gray dolphin in the banana at the bottom right. 3) Make the big orange swirl lollipop at the top center, left of the purple one, green. 4) Make the red toy train on the top shelf in the top right corner blue. 5) Make the pink seat cushion of the piano stool in the center blue. 6) Make the big blue and white swirl lollipop on the far left, above the candy canes, purple and white. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu fedora bege do Bobrito Bandito (castor subindo na prateleira, alto a esquerda) -> vermelho",
+        "oculos escuros pretos na Bananita Dolphinita (golfinho na banana, direita-baixo)",
+        "pirulito espiral laranja grande (alto, centro, a esquerda do roxo) -> verde; efeito colateral: o pirulito pequeno azul-esverdeado mais a direita (alto, centro) virou rosa e branco",
+        "trenzinho vermelho na prateleira do canto superior direito -> azul (o trem inteiro)",
+        "almofada rosa do banquinho do piano (centro) -> azul",
+        "pirulito espiral azul e branco grande da extrema esquerda (acima das bengalas) -> roxo e branco; efeito colateral: o pirulito azul, vermelho e branco logo a direita tambem ficou roxo e branco"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "a62cfc19-2316-4f90-b5be-fd7949e221b6",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small green bow on the head of the fox-cat sitting in the coconut shell at the bottom left. 2) Put a small red party hat on the head of the orange dragon in the center. 3) Put a small blue cap on the head of the brown horse at the red piano. 4) Make the pink cotton candy inside the glass dome on the right blue. 5) Make the yellow balloon at the top center, right of the purple balloon, red. 6) Make the big red gumball machine in the bottom right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco verde na cabeca do Vulpegatto (raposa-gato no coco, esquerda-baixo)",
+        "chapeu de festa vermelho na cabeca do Dragon Cannelloni (centro)",
+        "bone azul na cabeca do Ecco Cavallo Virtuoso (cavalo no piano)",
+        "algodao-doce rosa na cupula de vidro (direita) -> azul",
+        "balao amarelo (alto, centro, a direita do roxo) -> vermelho",
+        "maquina de chicletes vermelha grande do canto inferior direito -> azul; efeito colateral: a maquina pequena na frente dela tambem ficou azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: nas 1, 3 e 4 o cavalo estava atras do piano ou sentado ao piano (corpo de cavalo, nao de piano); na 3 o castor usava chapeu de palha e o dragao era pouco de massa. Escolhida a 2: os 5 reconheciveis (Bobrito Bandito castor de terno listrado preto e branco, gravata borboleta e fedora bege, subindo na prateleira de potes; Vulpegatto raposa-gato laranja e cinza sentada numa casca de coco, fazendo um pirulito aparecer com magia rosa; Dragon Cannelloni dragao laranja feito de tubos de canelone com recheio, acenando; Ecco Cavallo Virtuoso cavalo marrom saindo de dentro de um piano de cauda vermelho (o tronco do cavalo sai do corpo do piano, como no praia-10), fotografando com um celular roxo; Bananita Dolphinita golfinho cinza numa banana descascada tomando sorvete). Loja de doces cheia: potes de vidro de balas nas prateleiras, pirulitos espirais, barras de chocolate sem rotulo, baloes, trenzinho vermelho na prateleira alta, maquinas de chicletes, maquina de algodao-doce, cupcakes, balcao rosa, bengalas e doces espalhados no chao. Sem texto, sem logo, sem arma, sem alcool: os copinhos de vidro no balcao (esquerda, perto dos cupcakes) tem jujubas, nao bebida. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram, com efeitos colaterais em pirulitos vizinhos e na maquina de chicletes pequena."
+}

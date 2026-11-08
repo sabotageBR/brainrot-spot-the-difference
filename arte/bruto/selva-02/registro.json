@@ -1,0 +1,88 @@
+{
+  "cena": "selva-02",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a banana packing warehouse with 5 characters: Pandaccini Bananini (panda sitting in a peeled banana) peeking out of a banana crate; Tartaruga Cisterna (turtle with a silver tank truck shell) driving a little cart; Pot Hotspot (skinny friendly cartoon skeleton with a phone) dancing; Talpa di Fero (mole with a drill helmet) laughing; Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) carrying a basket. Around them: stacks of banana crates, hanging banana bunches, conveyor belts, a little forklift, scales, ladders, ropes, a fan on the ceiling, parrots on beams and a big open door to the jungle. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "0dd3d6b8-0e9f-4b6b-bef1-8c08b2eeffb6",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "pandaccini": [
+      30,
+      545,
+      395,
+      345
+    ],
+    "tartaruga-cisterna": [
+      440,
+      720,
+      295,
+      305
+    ],
+    "pot-hotspot": [
+      710,
+      520,
+      285,
+      505
+    ],
+    "talpa-di-fero": [
+      1075,
+      520,
+      175,
+      310
+    ],
+    "tung-tung": [
+      1060,
+      525,
+      425,
+      630
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "230ea0d0-5a46-44cf-b9b8-a8166924d198",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the skeleton dancing in the center. 2) Put a small red bow on the head of the panda sitting in the banana on the left. 3) Put a small green cap on top of the tall wooden log character on the right. 4) Make the red macaw sitting on the beam at the top left green. 5) Make the big gray ceiling fan at the top center orange. 6) Make the blue scale in the bottom left corner red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Pot Hotspot (o cranio ficou levemente redesenhado)",
+        "laco vermelho na cabeca do Pandaccini Bananini",
+        "bone verde no topo do Tung Tung Tung Sahur",
+        "arara vermelha no caibro (alto, esquerda) -> verde; a arara azul e amarela da direita ficou igual",
+        "ventilador grande cinza do teto (alto, centro) -> laranja",
+        "balanca azul do canto inferior esquerdo -> vermelha"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "59325362-0995-4a23-bd76-156f8864def6",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small blue cap on the head of the green turtle with the metal tank at the bottom left. 2) Make the yellow helmet of the laughing mole on the right red. 3) Make the bunch of bananas hanging from the rope in the big doorway at the top right green. 4) Make the single banana lying on the floor at the bottom center red. 5) Make the blue ladder on the left orange. 6) Make the yellow forklift in the background at the center blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "bone azul na cabeca da Tartaruga Cisterna",
+        "capacete amarelo de mineiro da Talpa di Fero -> vermelho (a toupeira ficou com a cor dela)",
+        "cacho de bananas pendurado na porta grande (alto, direita) -> verde; o cacho do alto-centro ficou amarelo",
+        "banana solta no chao (baixo, centro) -> vermelha",
+        "escada azul da esquerda -> laranja",
+        "empilhadeira amarela do fundo (centro) -> azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha o Tung Tung de taco erguido (pose de ataque), um motorista humano na empilhadeira e um piso de concreto vazio embaixo no centro; a 2 era boa (toupeira com britadeira, esqueleto de tenis), mas menos cheia; a 3 tinha um trecho de piso de concreto liso no centro-baixo. Escolhida a 4: os 5 fieis (Pandaccini Bananini panda sentado numa banana descascada dentro de um caixote; Tartaruga Cisterna tartaruga com tanque prateado de caminhao-pipa nas costas numa carretinha; Pot Hotspot esqueleto simpatico tirando selfie com celular e dancando; Talpa di Fero toupeira de capacete de mineiro com lanterna, rindo, ao lado de uma furadeira de bancada; Tung Tung Tung Sahur tronco alto com cesto de bananas e o taco de madeira abaixado). Armazem cheio: cachos pendurados em cordas, pilhas de caixotes, esteiras, empilhadeira, ventilador de teto, escada, araras nos caibros, porta grande para a selva, balanca, balde, rolo de corda, bolinha e frutas no chao de tabuas. Sem texto (o visor da balanca e so um retangulo laranja), sem logo, sem arma (so o taco do Tung Tung, que e do personagem), sem bebida. Ponto fraco: a Talpa di Fero tem capacete de mineiro com lanterna, nao um capacete-broca; a broca e a furadeira ao lado. As duas edicoes mantiveram o enquadramento e os 5 personagens; as 12 mudancas aconteceram, sem efeito colateral visivel."
+}

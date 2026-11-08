@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-poki/
+.tmp/
+*.log
+# Pacote de upload para a Poki (sai do npm run poki).
+*.zip
+# Folhas A | B de conferencia: o estudio regenera (node tools/estudio-auto.mjs).
+docs/cenas/*.png

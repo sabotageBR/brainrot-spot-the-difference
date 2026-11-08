@@ -1,0 +1,88 @@
+{
+  "cena": "selva-04",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a big treehouse living room with 5 characters: Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) relaxing in a hammock; La Vaca Saturno Saturnita (planet Saturn with a cow face and two big human feet) climbing a rope ladder; Ballerina Cappuccina (ballerina in a pink tutu with a cappuccino cup head) carrying a basket; Trulimero Trulicina (orange fish body with a cat head and four cat legs) playing a guitar; Blueberrini Octopusini (cute round purple blueberry octopus with big eyes) playing with a ball. Around them: wooden walls, rope ladders, a hammock, lanterns, a round window with leaves, bunches of fruit, a rope bridge door, cushions, a little fireplace, birds on a branch inside and a telescope. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "4f3fad5c-2b2c-4c21-9a42-8b001c9507b1",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "golubiro": [
+      130,
+      160,
+      465,
+      285
+    ],
+    "saturnita": [
+      1110,
+      165,
+      295,
+      360
+    ],
+    "ballerina": [
+      740,
+      580,
+      370,
+      505
+    ],
+    "trulimero": [
+      110,
+      580,
+      520,
+      495
+    ],
+    "blueberrini": [
+      1080,
+      780,
+      480,
+      385
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "81d0ad90-2deb-4d77-bc74-b2267814093a",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the purple blueberry octopus at the bottom right. 2) Put a small blue hat on the head of the orange cat fish playing the guitar on the left. 3) Make the bunch of purple grapes hanging at the top left corner green. 4) Make the wicker basket full of colorful balls on the ledge at the center blue. 5) Make the blue telescope on the right side red. 6) Make the round wooden bowl full of berries at the bottom center blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco vermelho na cabeca do Blueberrini Octopusini",
+        "chapeuzinho-coco azul na cabeca do Trulimero Trulicina (pequeno, ~5% da largura)",
+        "cacho de uvas roxas do canto superior esquerdo -> verde; efeito colateral: o segundo cacho, logo a direita, tambem ficou verde",
+        "NAO FEITO: o cesto de bolas coloridas no parapeito do centro ficou igual; em vez dele o Grok pintou de azul o cesto que a Ballerina Cappuccina segura (a bailarina ficou com as cores dela)",
+        "luneta azul da direita -> vermelha",
+        "tigela redonda de madeira cheia de frutinhas (baixo, centro) -> azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "991d04b8-5289-42dc-bed4-c8e5c1fb40d7",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the pink tutu of the ballerina with the coffee cup head blue. 2) Put black sunglasses on the Saturn planet cow climbing the rope ladder at the top right. 3) Make the beige trench coat of the pigeon lying in the hammock red. 4) Make the glowing lantern hanging on the far left blue. 5) Make the red and yellow bird sitting on the branch near the top center purple. 6) Make the red cushion on the floor next to the fireplace green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tutu rosa da Ballerina Cappuccina -> azul; efeito colateral: o vestido inteiro e as sapatilhas tambem ficaram azuis (a xicara e o cesto ficaram iguais)",
+        "oculos escuros pretos na La Vaca Saturno Saturnita",
+        "sobretudo bege do Shpioniro Golubiro -> vermelho (a rede listrada ficou igual)",
+        "lampiao aceso pendurado na extrema esquerda -> azul",
+        "passarinho vermelho e amarelo no galho (alto, centro) -> roxo; o passarinho azul ao lado ficou igual",
+        "almofada vermelha no chao ao lado da lareira -> verde"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 2 tinha potes de vidro verde e ambar numa prateleira do alto-esquerdo e livros; a 3 tinha um pote de vidro com conteudo laranja e livros na lareira; a 4 tinha uma garrafa de vidro azul na esquerda. Escolhida a 1, a unica sem vidro, garrafa ou texto: os 5 reconheciveis (Shpioniro Golubiro pombo de sobretudo bege e oculos escuros deitado na rede; La Vaca Saturno Saturnita planeta Saturno com anel e cara de vaca subindo a escada de corda; Ballerina Cappuccina bailarina de tutu rosa com cabeca de xicara de cappuccino carregando cesto; Trulimero Trulicina gato laranja de corpo e rabo de peixe tocando violao; Blueberrini Octopusini polvo roxo de mirtilo com bola de praia). Ponto fraco: a Saturnita tem patas de vaca (cascos), nao pes humanos, como nas 4 opcoes. Casa da arvore cheia: rede, lampioes, janelas, cachos de uva pendurados, passarinhos no galho, cestos de frutas e bolas, porta com ponte de corda, lareira com lenha, luneta, almofadas, tapetes redondos, tigela de frutinhas. Sem texto, sem logo, sem arma, sem bebida. As duas edicoes mantiveram o enquadramento e os 5 personagens; 11 das 12 mudancas aconteceram (o cesto de bolas do parapeito nao; o Grok trocou pelo cesto da bailarina)."
+}

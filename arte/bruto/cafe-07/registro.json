@@ -1,0 +1,90 @@
+{
+  "cena": "cafe-07",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a sunny Italian piazza with a big stone fountain with 5 characters: Espressona Signora (old lady in a flowered dress with an espresso cup head) feeding pigeons on a bench; Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) dancing next to the fountain; Frigo Camelo (camel with a white fridge body, brown boots) juggling; Rhino Toasterino (rhino with a silver toaster body and toast popping out) jumping with joy; Bombombini Gusini (white goose jet plane) waving hello. Around them: a fountain with water jets, pigeons, a flower cart, a balloon seller, café tables, a man playing an accordion, scooters, colorful houses with balconies, potted lemon trees and string lights. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "32012dd2-3393-490b-b8a5-67ba22163450",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "espressona": [
+      100,
+      620,
+      307,
+      427
+    ],
+    "cacto-hipopotamo": [
+      440,
+      415,
+      340,
+      520
+    ],
+    "frigo-camelo": [
+      835,
+      385,
+      275,
+      515
+    ],
+    "rhino-toasterino": [
+      1062,
+      458,
+      312,
+      412
+    ],
+    "bombombini": [
+      982,
+      25,
+      310,
+      205
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "e4546c7b-ac73-47a5-aaa9-811b82ab8f6f",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the green cardigan of the old lady with the coffee cup head red. 2) Make the yellow scarf of the camel with the fridge body blue. 3) Make the red nose of the white goose airplane at the top right yellow. 4) Make the red and white striped awning at the top left blue and white. 5) Make the pink scooter on the right green. 6) Make only the leftmost terracotta flower pot at the bottom center, below the toast slices, blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "casaco verde da Espressona Signora -> vermelho",
+        "cachecol amarelo do Frigo Camelo -> azul",
+        "nariz vermelho do Bombombini Gusini (aviao-ganso, alto a direita) -> amarelo; efeito colateral: as pontas vermelhas das asas, da cauda e da turbina tambem ficaram amarelas",
+        "toldo listrado vermelho e branco (alto, esquerda) -> azul e branco",
+        "lambreta rosa (direita) -> verde-limao",
+        "vaso de terracota da esquerda no centro-baixo (abaixo das torradas) -> azul; efeito colateral: o vaso logo a direita dele tambem ficou azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "caae7737-e7f7-4838-808b-5a4cb15f4470",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the gray rhino with the toaster body. 2) Make the red sandals of the gray hippo with the cactus blue. 3) Make the green handbag of the old lady with the coffee cup head yellow. 4) Make the red accordion played by the man on the left green. 5) Make the blue bicycle at the bottom right red. 6) Make the white cloud at the top center, to the left of the airplane, pink. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Rhino Toasterino",
+        "sandalias vermelhas do Il Cacto Hipopotamo -> azuis",
+        "bolsa verde da Espressona Signora -> amarela",
+        "sanfona vermelha do homem tocando (esquerda) -> verde",
+        "bicicleta azul (canto inferior direito) -> vermelha",
+        "nuvem branca pequena do alto, a esquerda do aviao -> rosa",
+        "efeito colateral: o Il Cacto Hipopotamo tambem ganhou oculos escuros pretos (nao pedido)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 e a 3 tinham o ganso montado em cima de um aviao (ao lado do objeto em vez de ser feito dele), e na 1 o cacto era chapeu do hipopotamo; a 2 tinha o ganso-aviao certo mas um rinoceronte a mais (o sanfoneiro com cara de rinoceronte), fundo de cafe desfocado e canecas ambar parecendo cerveja nas mesas. Escolhida a 4: os 5 fieis (Espressona Signora senhora de vestido florido e cabeca de xicara de cafe, de oculos redondos, dando milho aos pombos no banco; Il Cacto Hipopotamo hipopotamo cinza com um cacto florido nas costas como mochila e sandalias vermelhas, dancando; Frigo Camelo camelo com corpo de geladeira branca, botas marrons e cachecol amarelo, fazendo malabarismo; Rhino Toasterino rinoceronte com corpo de torradeira prateada, torrada saltando e na cabeca, pulando de alegria; Bombombini Gusini ganso com touca de aviador fundido a um aviao branco de nariz vermelho, acenando com as asas). Praca cheia: fonte com jatos, pombos, carrinho de flores, vendedor de baloes, mesa de cafe, sanfoneiro, lambreta rosa, bicicleta, limoeiros, varal de luzinhas, casas com sacadas e vasos de flores. Sem logo, sem arma. ATENCAO ALCOOL: na mesinha branca do cafe atras do sanfoneiro (x~395, y~455 em a.jpg) ha um copinho de bebida amarela/ambar entre duas xicaras, com ~25 px (1,5% da largura); sem espuma nitida, pode ser suco ou limonada, mas pode ser lido como cerveja. Nao ha garrafa nem taca. Aceito por ser minusculo e ambiguo, e porque as outras 3 eram piores; o dono decide se refaz. O painel 'Segmentos' marcou '1234567890' e 'II' como Texto: sao os botoes da sanfona e as macanetas da geladeira, nao letras. Duas pombas e duas torradas soltas no chao (centro-baixo) sao parte da arte. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram, com efeitos colaterais no aviao (todas as pontas vermelhas), nos vasos e no hipopotamo (oculos).",
+  "retoque": "Claude, 2026-11-08: o copo ambar (podia ler como chope) na mesinha atras do acordeonista (~x 425-445, y 465-495 em a.jpg) foi recolorido para suco de laranja em a, v1 e v2 (PIL, matiz 30). Originais em arte/descartadas/cafe-07-copo-original/."
+}

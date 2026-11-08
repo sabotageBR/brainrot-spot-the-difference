@@ -1,0 +1,32 @@
+{
+ "praia-01": {
+  "status": "aprovada",
+  "nota": "",
+  "data": "2026-11-08 06:57"
+ },
+ "cafe-01": {
+  "status": "aprovada",
+  "nota": "aprovada pelo dono no chat",
+  "data": "2026-11-08 06:58"
+ },
+ "praia-02": {
+  "status": "aprovada",
+  "nota": "aprovada pelo dono no chat",
+  "data": "2026-11-08 07:18"
+ },
+ "praia-03": {
+  "status": "aprovada",
+  "nota": "aprovada pelo dono no chat",
+  "data": "2026-11-08 07:18"
+ },
+ "praia-04": {
+  "status": "aprovada",
+  "nota": "aprovada pelo dono no chat",
+  "data": "2026-11-08 07:18"
+ },
+ "praia-05": {
+  "status": "aprovada",
+  "nota": "aprovada pelo dono no chat",
+  "data": "2026-11-08 07:18"
+ }
+}

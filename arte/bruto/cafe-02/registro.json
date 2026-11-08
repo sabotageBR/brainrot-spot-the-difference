@@ -1,0 +1,89 @@
+{
+  "cena": "cafe-02",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a busy pastry kitchen in a bakery with 5 characters: La Vaca Saturno Saturnita (planet Saturn with a cow face and two big human feet) making cookies float with his magic wand; Frulli Frulla (small bird with huge round goggles and a long beak) carrying a tray of cupcakes; Uvanito Pecorarito (sheep made of purple grapes) dancing; Perochello Lemonchello (yellow parrot with a lemon body) laughing; Tractoro Dinosauro (green dinosaur tractor with big wheels) carrying a basket. Around them: ovens, trays of cookies, flour sacks, rolling pins, eggs in a basket, whisks and bowls, a tall wedding cake, jars of sprinkles, hanging pans, a window with flowers and a mouse peeking from a hole. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "37300155-4fb5-41a7-88bf-6574a8e589e3",
+    "escolhida_de": "4a de 4 da rodada 1"
+  },
+  "caixas": {
+    "saturnita": [
+      178,
+      218,
+      470,
+      425
+    ],
+    "frulli-frulla": [
+      425,
+      685,
+      400,
+      395
+    ],
+    "uvanito": [
+      805,
+      628,
+      330,
+      410
+    ],
+    "perochello": [
+      945,
+      355,
+      290,
+      312
+    ],
+    "tractoro": [
+      1120,
+      405,
+      470,
+      530
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "356c8a99-8b86-4165-a13d-bdf161f3636d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the purple bow tie of the Saturn cow green. 2) Make the red scarf of the green dinosaur on the tractor blue. 3) Make the copper frying pan hanging at the far top right, next to the whisk, blue. 4) Make the green bowl with batter and a whisk on the table in the center red. 5) Make the blue bowl of flour on the floor at the far right yellow. 6) Make the leftmost steel cooking pot on the shelf at the top left red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "gravata borboleta roxa da La Vaca Saturno Saturnita -> verde",
+        "lenco vermelho do Tractoro Dinosauro -> azul",
+        "frigideira de cobre pendurada mais a direita (alto, direita, perto do batedor) -> azul; efeito colateral: a frigideira preta da ponta esquerda da mesma fileira tambem ficou azul (a de cobre do meio ficou igual)",
+        "tigela verde com massa e batedor na mesa (centro) -> vermelha",
+        "tigela azul de farinha no chao (extrema direita) -> amarela",
+        "panela de aco da ponta esquerda da prateleira (alto, esquerda) -> vermelha; efeito colateral: a segunda panela, ao lado, tambem ficou vermelha"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "5dcf1ccd-3bb2-44d8-bad4-ed8134e6e087",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue goggles of the bird carrying the tray of cupcakes red. 2) Put a small red bow on the head of the yellow parrot with the lemon body. 3) Put a small golden crown on the head of the purple grape sheep. 4) Make the wicker basket full of eggs at the bottom left blue. 5) Make the gray mouse peeking from the hole on the left white. 6) Make the pink decorations on the tall wedding cake at the right light blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos azuis da Frulli Frulla -> vermelhos",
+        "laco vermelho pequeno na cabeca do Perochello Lemonchello",
+        "coroa dourada na cabeca do Uvanito Pecorarito",
+        "cesto de vime com ovos (esquerda-baixo) -> azul",
+        "ratinho cinza na toca (esquerda) -> branco",
+        "enfeites rosa do bolo de casamento (direita) -> azul-claros",
+        "efeito colateral: o pano roxo no cesto da frente (baixo, ao lado da tigela com ovo quebrado) ficou azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha a Saturnita de capa e chapeu de mago com patas de vaca, o dinossauro dirigindo um trator vermelho e uma marca carimbada no saco de farinha; a 2 e a 3 tinham a Saturnita com pernas de vaca (sem os pes humanos) e o papagaio sem corpo de limao visivel. Escolhida a 4: os 5 fieis (Saturnita planeta Saturno com cara de vaca, gravata roxa, pes humanos grandes e varinha fazendo biscoitos flutuarem; Frulli Frulla passaro de oculos redondos e bico longo com bandeja de cupcakes; Uvanito Pecorarito ovelha de uvas roxas dancando; Perochello Lemonchello papagaio amarelo com rodela de limao na barriga rindo; Tractoro Dinosauro dinossauro verde fundido a um trator verde com cesto de paes). Cozinha cheia: forno com biscoitos, janela com floreira, potes de doces, frigideiras penduradas, bolo de casamento, sacos de farinha, cesto de ovos, rolos de massa, batedores, toca com ratinho. Sem texto, sem logo, sem arma. A aba travou uma vez depois de abrir a imagem (renderer sem resposta); recarregar a pagina do post resolveu, sem gastar pedido. As duas edicoes mantiveram o enquadramento e os personagens; as 12 mudancas aconteceram."
+}

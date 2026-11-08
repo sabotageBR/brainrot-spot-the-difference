@@ -1,0 +1,114 @@
+{
+  "cena": "praia-10",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a giant party inside a huge tiki hall with a bamboo roof with 7 characters: Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) dancing in the center; Crocodilo Fromagioso (crocodile made of yellow cheese with holes) dancing; Tigrulli Grapefrutunni (tiger with a round pink grapefruit body) playing drums; Vulpegatto (half fox half cat sitting in a coconut shell) serving drinks; Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) waving maracas; Bambini Crossini (baby deer with a croissant body) juggling beach balls; Gattino Bananino (orange kitten inside a peeled banana) taking photos. Around them: a stage with speakers, strings of colored lights, balloons, inflatable toys, food tables, tiki masks on the walls, beach balls, a fruit punch bowl, potted palms, confetti and a disco ball. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "0c5e124f-f192-4834-9386-b6a4f0a5dce9",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "bombardiro": [
+      598,
+      252,
+      435,
+      368
+    ],
+    "crocodilo-fromagioso": [
+      270,
+      388,
+      312,
+      305
+    ],
+    "tigrulli": [
+      1068,
+      362,
+      315,
+      305
+    ],
+    "vulpegatto": [
+      10,
+      570,
+      385,
+      345
+    ],
+    "ecco-cavallo": [
+      805,
+      620,
+      405,
+      472
+    ],
+    "bambini-crossini": [
+      470,
+      700,
+      262,
+      400
+    ],
+    "gattino-bananino": [
+      1222,
+      772,
+      282,
+      316
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "2ce8f7f8-120f-4481-9c0d-29b0a6427ab0",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the head of the yellow cheese crocodile on the left. 2) Put a small yellow straw hat on the brown horse playing the red piano at the bottom center. 3) Make the pink inflatable flamingo on the left, behind the yellow duck ring, green. 4) Make the purple balloon in the bunch of balloons at the top left orange. 5) Make the orange tiki mask in the top right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapeu de festa vermelho (com estrela) na cabeca do Crocodilo Fromagioso",
+        "chapeu de palha amarelo na cabeca do Ecco Cavallo Virtuoso",
+        "boia de flamingo rosa (esquerda, atras do patinho) -> verde",
+        "balao roxo do cacho da esquerda (alto) -> laranja",
+        "mascara tiki do canto superior direito -> azul"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "1196f550-76f2-46eb-827e-0c7a6313bc44",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the tiger playing the bongo drums on the right. 2) Put a small blue bow tie on the neck of the baby deer juggling beach balls at the bottom left of center. 3) Make the yellow rubber duck ring on the far left blue. 4) Make the disco ball at the top center gold. 5) Make the blue inflatable dolphin on the right pink. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Tigrulli Grapefrutunni",
+        "gravata borboleta azul no pescoco do Bambini Crossini (pequena, ~5% da largura)",
+        "boia de patinho amarela (extrema esquerda) -> azul; efeito colateral: a boia de flamingo rosa logo atras tambem ficou azul (mesmo objeto mudado em v1, para verde)",
+        "globo de espelhos (alto, centro) -> dourado",
+        "boia de golfinho azul (direita) -> rosa; efeito colateral: a boia verde de crocodilo logo abaixo tambem ficou rosa"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b2021721-dd82-447b-9d11-0db975b10c9d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round aviator goggles on the head of the green crocodile in the airplane in the center. 2) Make the black camera held by the orange kitten in the banana at the bottom right red. 3) Put a small yellow flower crown on the head of the fox sitting in the coconut shell on the left. 4) Make the large black speaker on the right side of the stage white. 5) Make only the beach ball lying on the floor at the bottom left, just right of the fruit table, solid red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "capacete de aviador marrom com oculos azuis na cabeca do Bombardiro Crocodilo (cobre os olhos)",
+        "camera preta do Gattino Bananino -> vermelha; efeito colateral: os oculos pretos do gatinho sumiram (olho a mostra)",
+        "flores amarelas (meia coroa, perto da orelha) na cabeca do Vulpegatto; efeito colateral: o sorriso virou boca aberta",
+        "caixa de som grande preta a direita do palco -> branca",
+        "bola de praia no chao (esquerda-baixo, ao lado da mesa de frutas) -> vermelha lisa; as outras bolas ficaram iguais"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Cena de chefe (7 personagens, 3 edicoes x 5). Rodada 1: a 2 tinha o cavalo sentado ao piano (nao feito de piano), o Bombardiro com aviao verde pouco reconhecivel e um arabesco dourado no piano parecendo letra; a 3 tinha o cervo malhado comum (sem corpo de croissant); a 4 tinha o cavalo atras do piano e o tigre pequeno no canto. Escolhida a 1: os 7 fieis (Bombardiro com cabeca de crocodilo num aviao de helice creme e vermelho; Crocodilo Fromagioso amarelo de queijo com furos; Tigrulli tigre com barriga de toranja rosa tocando bongos; Vulpegatto raposa-gato numa casca de coco servindo drinques; Ecco Cavallo cavalo saindo de um piano de cauda vermelho com maracas; Bambini Crossini cervo de corpo de croissant com bolas; Gattino Bananino gatinho laranja numa banana descascada fotografando). Salao tiki com globo de espelhos, luzinhas, baloes, mascaras tiki, caixas de som, bateria, boias (patinho, flamingo, golfinho, crocodilo), poncheira, mesas de comida e confete no chao todo. Sem texto, sem logo, sem arma. Atras do flamingo ha uma boia azul em forma de 'mm' (inflavel, nao e letra). As 3 edicoes mantiveram o enquadramento e os 7 personagens; as 15 mudancas aconteceram."
+}
