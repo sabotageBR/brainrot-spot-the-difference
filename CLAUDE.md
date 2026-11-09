@@ -18,7 +18,7 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
     - Capa: 4 opções em `marketing/thumb/` (`opcoes.png` lado a lado), cada uma com a estática em 1256 e 628 px e a animada em MP4 (`vitrine.html` compara). **O dono escolheu a opção 1 em 2026-11-09**: ela foi copiada para `distribuicao/brainrot-spot-the-difference/poki/` (`thumb-1256x1256.png`, `thumb-628x628.png` e `thumb-animada-1080x1080.mp4`), junto com o zip da build.
 
 ## Repositório
-- **GitHub:** `sabotageBR/brainrot-spot-the-difference` (privado), branch `main`.
+- **GitHub:** `sabotageBR/brainrot-spot-the-difference` (público), branch `main`.
 - **Ficam fora do git:**
   - `dist/`, `dist-poki/` e o zip, que saem do `npm run poki`;
   - as folhas `docs/cenas/*.png`, que o `node tools/estudio-auto.mjs` regenera.
