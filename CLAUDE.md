@@ -15,7 +15,7 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
   - **Em 2026-11-08 havia 50 de 100 fases prontas**: praia, café, vila, selva e deserto completos. Faltavam céu, espaço, ilha, cidade e castelo.
     - A produção parou em 52% da cota semanal do Grok do dono, que reinicia em 2026-11-12 01:29. Cada fase gasta cerca de 3,2 pedidos, e as 50 restantes levariam a cota a perto de 100%.
     - Instruções fixas do lote: `docs/arte/lote.md`.
-    - Capa: 4 opções em `marketing/thumb/` (`opcoes.png` lado a lado); a escolha é do dono.
+    - Capa: 4 opções em `marketing/thumb/` (`opcoes.png` lado a lado), cada uma com a estática em 1256 e 628 px e a animada em MP4 (`vitrine.html` compara). **O dono escolheu a opção 1 em 2026-11-09**: ela foi copiada para `distribuicao/brainrot-spot-the-difference/poki/` (`thumb-1256x1256.png`, `thumb-628x628.png` e `thumb-animada-1080x1080.mp4`), junto com o zip da build.
 
 ## Repositório
 - **GitHub:** `sabotageBR/brainrot-spot-the-difference` (privado), branch `main`.
@@ -136,6 +136,7 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
 - `node tools/roteiro.mjs <id> | falta [mundo] | retrato <id>`: os prompts e o que falta.
 - `node tools/estudio-auto.mjs [ids]`: processa as cenas sem tela.
 - `node tools/thumb.mjs`: a thumb da Poki em 1256 e 628 px, a partir de `marketing/thumb/grok-*.jpg` (o prompt está em `docs/arte/thumb.md`).
+- `node tools/thumb-animada.mjs <opção>`: a thumb animada da Poki (MP4 1080×1080, 60 fps, 5,8 s), gravada do jogo quadro a quadro, começando e terminando na arte da opção. A vitrine das opções fica em `/marketing/thumb/vitrine.html`.
 - `npm run prints`: prints em `docs/prints/` (1031×580, 640×360, 390×844, fim, mapa e álbum) e os erros do console.
 - `npm run sdkcheck`: 5 cenários do SDK falso:
   - init, loading e start só com input;

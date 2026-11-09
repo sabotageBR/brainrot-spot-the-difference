@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitrine da capa</title>
+<style>
+  /* Vitrine local das 4 opcoes de capa: os tamanhos de bloco de um portal em grade (94, 204 e 314 px),
+     cantos arredondados como o portal aplica, e o video tocando ao passar o mouse (ou todos de uma vez). */
+  :root { --fundo: #eef1f7; --tinta: #2A2238; --suave: #6b6880; --cartao: #fff; }
+  @media (prefers-color-scheme: dark) { :root { --fundo: #17141f; --tinta: #f3f0fa; --suave: #a7a3b8; --cartao: #231f2e; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 20px 16px 40px; background: var(--fundo); color: var(--tinta); font: 15px/1.4 system-ui, sans-serif; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  p { margin: 0 0 16px; color: var(--suave); }
+  h2 { font-size: 15px; margin: 22px 0 10px; color: var(--suave); font-weight: 600; }
+  .linha { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+  figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  figcaption { font-weight: 700; font-size: 14px; }
+  .bloco { position: relative; overflow: hidden; background: #000; box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+  .bloco img, .bloco video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bloco video { opacity: 0; transition: opacity .15s; }
+  .bloco.toca video { opacity: 1; }
+  .g { width: 314px; height: 314px; border-radius: 16px; }
+  .m { width: 204px; height: 204px; border-radius: 14px; }
+  .p { width: 94px; height: 94px; border-radius: 10px; }
+  label { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>Capa da Poki: as 4 opções</h1>
+<p>Passe o mouse sobre um bloco grande ou médio para ver a capa animada, como no portal. <label><input type="checkbox" id="todos"> tocar todos</label></p>
+<h2>Grande (314 px)</h2>
+<div class="linha" id="g"></div>
+<h2>Média (204 px)</h2>
+<div class="linha" id="m"></div>
+<h2>Pequena (94 px)</h2>
+<div class="linha" id="p"></div>
+<script>
+  const OPCOES = [1, 2, 3, 4];
+  for (const tam of ['g', 'm', 'p']) {
+    const linha = document.getElementById(tam);
+    for (const n of OPCOES) {
+      const fig = document.createElement('figure');
+      const bloco = document.createElement('div');
+      bloco.className = `bloco ${tam}`;
+      const img = document.createElement('img');
+      img.src = `grok-${n}-${tam === 'g' ? 1256 : 628}.png`;
+      img.alt = `opção ${n}`;
+      bloco.appendChild(img);
+      if (tam !== 'p') {
+        const v = document.createElement('video');
+        v.src = `grok-${n}-animada-1080.mp4`;
+        v.muted = true;
+        v.loop = true;
+        v.playsInline = true;
+        v.preload = 'auto';
+        bloco.appendChild(v);
+        bloco.addEventListener('mouseenter', () => tocar(bloco, true));
+        bloco.addEventListener('mouseleave', () => { if (!document.getElementById('todos').checked) tocar(bloco, false); });
+      }
+      const cap = document.createElement('figcaption');
+      cap.textContent = `Opção ${n}`;
+      fig.append(bloco, cap);
+      linha.appendChild(fig);
+    }
+  }
+  function tocar(bloco, sim) {
+    const v = bloco.querySelector('video');
+    if (!v) return;
+    bloco.classList.toggle('toca', sim);
+    if (sim) { v.currentTime = 0; v.play().catch(() => {}); } else v.pause();
+  }
+  document.getElementById('todos').addEventListener('change', (e) => {
+    for (const b of document.querySelectorAll('.bloco')) tocar(b, e.target.checked);
+  });
+</script>
+</body>
+</html>
