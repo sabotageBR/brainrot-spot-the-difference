@@ -920,7 +920,7 @@
    "notas": "Logado como 'Evandro Moura'. Geração: ~25 s para as 4 imagens. Edição: <10 s cada (pronta no primeiro screenshot após 10 s). Nenhuma mensagem de limite de uso. Nas 4 candidatas o Tralalero tem 2 pernas, não 3. Candidatas 1 e 3 tinham um logo tipo 'swoosh' da Nike nos tênis (descartadas por marca registrada); a 4 tinha golfinho verde; escolhida a 2 (sem logo, Bananita fiel, detalhe espalhado). A edição re-renderiza a imagem inteira: mesmo enquadramento e paleta, sem deslocamento, mas com leve 'fantasma' em todos os contornos (diferença média de luminância 7,5 a 11 em 255 contra A); fora das mudanças pedidas o olho não nota diferença, mas uma diferença por pixel não serve para achar as regiões. A UI tem um painel 'Segmentos' que detecta objetos automaticamente e ferramentas 'Edição Precisa', 'Cores', 'Recortar', 'Desenhar' (não usadas). Pedidos de remoção e de contagem são os menos confiáveis: no v1 a 1ª tentativa removeu um personagem; no v3 a gaivota não sumiu. O nome do arquivo baixado é grok-image-<id>.jpg (JPEG 1600x1200)."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-10",
    "tam": [
     1024,
     768
@@ -933,13 +933,13 @@
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 1
+     "fonte": "v1",
+     "vis": 0.895
     },
     {
      "id": "d3",
-     "fonte": "v3",
-     "vis": 0.86
+     "fonte": "v2",
+     "vis": 0.7
     }
    ],
    "alinhamentos": [
@@ -1199,7 +1199,7 @@
    "notas": "Rodada 1: candidata 3 tinha texto legivel (placas) e foi descartada; a 4 tinha a Lirili sem corpo de cacto; a 1 tinha o terco de baixo quase vazio (so piso com papeis). Escolhida a 2: os 5 personagens reconheciveis, detalhe espalhado (caixote, balde, pa, bola, vasos nos cantos de baixo). Ha DOIS gatos-peixe: um laranja atras do carrinho de sorvete (vendendo, com rabo de peixe) e um branco com corpo de peixe laranja e 4 patas de gato na frente do carrinho; a caixa 'trulimero' e a do da frente (corpo inteiro, mais fiel a descricao). Ha uma pessoa pequena ao fundo numa barraca (centro-direita, chapeu de palha). O taco do Tung Tung esta no roteiro. As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-10",
    "tam": [
     1024,
     768
@@ -1222,13 +1222,8 @@
     },
     {
      "id": "d4",
-     "fonte": "v2",
-     "vis": 0.898
-    },
-    {
-     "id": "d5",
      "fonte": "v1",
-     "vis": 0.883
+     "vis": 0.88
     }
    ],
    "alinhamentos": [
@@ -1342,7 +1337,7 @@
    "notas": "Rodada 1: candidata 1 tinha um polvo extra no ceu; a 2 tinha um personagem-xicara extra; a 3 tinha dois bebes-xicara extras. Escolhida a 4: os 5 personagens fieis (Blueberrini com coroa de mirtilo, Bombardiro no aviao com pompons, Saturnita com pes humanos, Ballerina com cesta, Patapim com nariz comprido, musgo, pes descalcos e ukulele), sem tubarao, sem cena submarina. Ha figurantes humanos de desenho: o juiz na cadeira (alto a esquerda) e uma plateia pequena ao fundo a direita. O centro da areia tem so confete. As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-10",
    "tam": [
     1024,
     768
@@ -1366,22 +1361,12 @@
     {
      "id": "d4",
      "fonte": "v2",
-     "vis": 0.93
+     "vis": 0.918
     },
     {
      "id": "d5",
-     "fonte": "v1",
-     "vis": 0.892
-    },
-    {
-     "id": "d6",
      "fonte": "v2",
      "vis": 0.836
-    },
-    {
-     "id": "d7",
-     "fonte": "v1",
-     "vis": 0.689
     }
    ],
    "alinhamentos": [
@@ -1495,7 +1480,7 @@
    "notas": "Rodada 1: as 4 candidatas tinham os 5 personagens; a 4 tinha a Trippa Troppa mais urso que peixe. Escolhida a 1: os 5 fieis (Cappuccino Assassino com 2 colheres, sem faca, empinando a pipa; Boneca Ambalabu sentada num pneu), farol, escada, cerca, banco, luneta e casa de porta azul. O mar aparece so a esquerda, ao fundo (sem tubarao, sem cena submarina). As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-10",
    "tam": [
     1024,
     768
@@ -1504,37 +1489,32 @@
     {
      "id": "d1",
      "fonte": "v1",
-     "vis": 1
+     "vis": 0.982
     },
     {
      "id": "d2",
-     "fonte": "v1",
-     "vis": 1
-    },
-    {
-     "id": "d3",
-     "fonte": "v1",
-     "vis": 1
-    },
-    {
-     "id": "d4",
      "fonte": "v2",
      "vis": 0.902
     },
     {
-     "id": "d5",
+     "id": "d3",
      "fonte": "v2",
      "vis": 0.865
     },
     {
-     "id": "d6",
+     "id": "d4",
      "fonte": "v1",
      "vis": 0.862
     },
     {
-     "id": "d7",
+     "id": "d5",
      "fonte": "v1",
-     "vis": 0.697
+     "vis": 0.832
+    },
+    {
+     "id": "d6",
+     "fonte": "v1",
+     "vis": 0.786
     }
    ],
    "alinhamentos": [

@@ -4,15 +4,17 @@
 // Estado em J. J.fase: carregando -> jogando -> fim -> (anuncio) -> carregando...
 // J.gen sobe a cada iniciarCena: todo callback assincrono guarda a geracao e desiste se mudou.
 // Abre direto na cena da vez (sem menu): a primeira de todas tem a mao do tutorial.
+// Ajuda automatica (PFT da 0.2.0): parado sem achar nada, o botao pulsa, depois um holofote
+// mostra a regiao de um erro e por fim a mao aponta (limiares em REGRAS.ajuda).
 
 import { portal } from './core/portal.js';
 import { criarRelogio } from './core/relogio.js';
 import { criarAudio } from './core/audio.js';
 import { criarArmazem } from './core/armazenamento.js';
 import { lerDepuracao } from './core/depuracao.js';
-import { REGRAS } from './jogo/regras.js';
+import { REGRAS, AJUDA } from './jogo/regras.js';
 import { toleranciaImg } from './jogo/cena.js';
-import { criarPartida, tocar, usarDica, usarPisca, estrelas, resumo, lugarEscondido, tocarEscondido } from './jogo/partida.js';
+import { criarPartida, tocar, usarDica, usarPisca, estrelas, resumo, lugarEscondido, tocarEscondido, estagio, alvoDaAjuda } from './jogo/partida.js';
 import { proximaCena, mapaDoJogo, ganharFigurinha, presenteDoDia, numeroDoNivel } from './jogo/progresso.js';
 import { brainrot, mundo, vogaisDoCanto } from './jogo/catalogo.js';
 import { CENAS } from './arte/cenas/manifesto.js';
@@ -28,6 +30,12 @@ const NIVEIS_SEM_INTERVALO = 3;
 /** O pisca-poder troca A e B neste passo. */
 const PISCA_PASSO = 380;
 const COR_PRESENTE = '#5b3df5';
+/** O painel do fim da cena passa sozinho: figurinha nova (da tempo de olhar) e repetida. */
+const PASSA_NOVA_MS = 4500;
+const PASSA_REPETIDA_MS = 3000;
+/** Marcos (min de jogo, sem anuncio) da medida tempo/N/min. */
+const MARCOS_MIN = [1, 2, 3, 4, 5, 7, 10, 15, 20];
+const NOME_AJUDA = ['', 'pulso', 'zona', 'mao'];
 
 /** @typedef {import('./jogo/cena.js').Cena} Cena */
 
@@ -95,6 +103,13 @@ const J = {
   contador: 0,
   /** presente do dia para mostrar quando a primeira cena abrir */
   presente: 0,
+  /** estagio da ajuda automatica em tela (AJUDA.nada..AJUDA.mao) */
+  ajuda: 0,
+  /** @type {string|null} erro da mao do tutorial (primeira cena da vida, ate o 1o acerto) */
+  maoTutorial: null,
+  /** instante (relogio do jogo) do primeiro gameplayStart, para tempo/N/min; -1 antes */
+  tempoIni: -1,
+  tempoProx: 0,
 };
 
 const pasta = (/** @type {string} */ id) => `src/arte/cenas/${id}/`;
@@ -149,6 +164,8 @@ async function iniciarCena(cena) {
     return;
   }
   J.cena = cena;
+  J.maoTutorial = null;
+  limparAjuda(agora());
   let imgs;
   try {
     imgs = await carregar(cena);
@@ -167,6 +184,7 @@ async function iniciarCena(cena) {
   // tutorial: a mao aponta o erro mais facil na primeira cena de todas
   if (primeiraVez && !autoMs) {
     const facil = [...cena.erros].sort((a, b) => b.vis - a.vis)[0];
+    J.maoTutorial = facil.id;
     palco.mao(facil.id);
   }
   if (dep.revelar) palco.revelar();
@@ -181,6 +199,8 @@ async function iniciarCena(cena) {
     portal.gameLoadingFinished();
   }
   anunciar(cena, primeiraVez);
+  // a primeira cena da vida diz o que fazer (nada explicava; as bolinhas pareciam alvos)
+  if (primeiraVez && !autoMs) hud.aviso(comN(tx.acheN, cena.erros.length));
   portal.measure('level', String(numeroDoNivel(cena)), 'start');
   // a proxima cena ja vem baixando; o resto sai da memoria
   const prox = seguinteDe(cena);
@@ -271,10 +291,52 @@ function statusHtml(t) {
   return '';
 }
 
+// ---------- ajuda automatica ----------
+const nivelTexto = () => (J.cena ? String(numeroDoNivel(J.cena)) : '0');
+
+/** Tira a ajuda da tela (cena nova, fim da cena). @param {number} t */
+function limparAjuda(t) {
+  J.ajuda = AJUDA.nada;
+  hud.classe('bDica', 'pulsar', false);
+  hud.classe('bPisca', 'pulsar', false);
+  palco.zona(null, t);
+  palco.mao(J.maoTutorial);
+}
+
+/** Acompanha o ocio e mostra o estagio da ajuda quando ele muda. @param {number} t */
+function ajudar(t) {
+  const p = J.p;
+  if (!p || !J.cena || J.fase !== 'jogando' || p.fim || autoMs) return;
+  const e = estagio(p, t, numeroDoNivel(J.cena));
+  if (e === J.ajuda) return;
+  const subiu = e > J.ajuda;
+  J.ajuda = e;
+  // pulso: o botao da dica; o do pisca so quando ele e o unico com carga gratis
+  const dicaGratis = p.dicasLivres + save.banco > 0;
+  const pulsoPisca = e >= AJUDA.pulso && !dicaGratis && p.piscasLivres > 0;
+  hud.classe('bDica', 'pulsar', e >= AJUDA.pulso && !pulsoPisca);
+  hud.classe('bPisca', 'pulsar', pulsoPisca);
+  const alvo = e >= AJUDA.zona ? alvoDaAjuda(p) : null;
+  palco.zona(alvo ? alvo.id : null, t);
+  palco.mao(e >= AJUDA.mao && alvo ? alvo.id : J.maoTutorial);
+  if (subiu) portal.measure('ajuda', nivelTexto(), NOME_AJUDA[e]);
+}
+
+/** tempo/N/min: minutos de jogo (o relogio para no anuncio) desde o primeiro gameplayStart. @param {number} t */
+function medirTempo(t) {
+  if (J.tempoIni < 0 || J.tempoProx >= MARCOS_MIN.length) return;
+  const m = MARCOS_MIN[J.tempoProx];
+  if (t - J.tempoIni < m * 60000) return;
+  portal.measure('tempo', String(m), 'min');
+  J.tempoProx += 1;
+}
+
 // ---------- loop ----------
 function quadro() {
   const t = agora();
   const p = J.p;
+  ajudar(t);
+  medirTempo(t);
   if (p && J.fase === 'jogando' && J.piscaAte) {
     // pisca-poder: alterna A e B sozinho por alguns segundos
     if (t >= J.piscaAte) {
@@ -291,7 +353,10 @@ function quadro() {
 // ---------- jogar ----------
 function primeiroToque() {
   audio.iniciar();
-  if (J.fase === 'jogando' && !portal.jogando) portal.gameplayStart();
+  if (J.fase === 'jogando' && !portal.jogando) {
+    portal.gameplayStart();
+    if (J.tempoIni < 0) J.tempoIni = agora();
+  }
 }
 
 /** @param {number} x @param {number} y */
@@ -318,7 +383,9 @@ function aoToque(x, y) {
     hud.progresso(p);
     if (!save.tutorial) {
       save.tutorial = true;
+      J.maoTutorial = null;
       palco.mao(null);
+      hud.aviso('');
       gravar();
     }
     if (ev.fim === 'vitoria') vencer();
@@ -328,6 +395,7 @@ function aoToque(x, y) {
     if (ev.antispam) {
       palco.travar(t, p.travadoAte, tx.calma);
       audio.tonto();
+      portal.measure('trava', nivelTexto(), 'show');
     }
   } else if (ev.tipo === 'ja') audio.toc();
 }
@@ -337,19 +405,23 @@ async function pedirDica() {
   const p = J.p;
   if (J.fase !== 'jogando' || !p || p.fim) return;
   let id = null;
+  let origem = 'gratis';
   if (p.dicasLivres > 0) id = usarDica(p, agora());
   else if (save.banco > 0) {
     save.banco -= 1;
     gravar();
+    origem = 'banco';
     id = usarDica(p, agora(), true);
   } else {
     portal.measure('button', 'hint', 'interact');
     const g = J.gen;
     const ok = await video();
     if (g !== J.gen || !ok || !J.p || J.p.fim) return;
+    origem = 'video';
     id = usarDica(J.p, agora(), true);
   }
   if (!id || !J.p) return;
+  portal.measure('dica', nivelTexto(), origem);
   palco.marcar(id, agora(), true);
   audio.dica();
   hud.progresso(J.p);
@@ -370,12 +442,15 @@ async function pedirPisca() {
   primeiroToque();
   const p = J.p;
   if (J.fase !== 'jogando' || !p || p.fim || J.piscaAte) return;
-  if (!usarPisca(p)) {
+  let origem = 'gratis';
+  if (!usarPisca(p, agora())) {
     portal.measure('button', 'blink', 'interact');
     const g = J.gen;
     const ok = await video();
-    if (g !== J.gen || !ok || !J.p || J.p.fim || !usarPisca(J.p, true)) return;
+    if (g !== J.gen || !ok || !J.p || J.p.fim || !usarPisca(J.p, agora(), true)) return;
+    origem = 'video';
   }
+  portal.measure('pisca', nivelTexto(), origem);
   J.piscaAte = agora() + REGRAS.piscaMs;
   audio.pisca();
   atualizarBotoes();
@@ -388,6 +463,8 @@ function vencer() {
   if (!p || !cena) return;
   J.fase = 'fim';
   const t = agora();
+  J.maoTutorial = null;
+  limparAjuda(t);
   portal.gameplayStop();
   portal.measure('level', String(numeroDoNivel(cena)), 'complete');
   J.piscaAte = 0;
@@ -412,30 +489,48 @@ function vencer() {
   const r = resumo(p, t);
   /** @type {[string, string][]} */
   const dados = [[tx.tempoGasto, relogioTexto(r.gastoMs)], [tx.erros, String(r.erros)], [tx.dourado.replace(/[!¡]/g, ''), p.achouEscondido ? '✨' : '?']];
+  // o proximo brainrot (a cena seguinte ja veio pre-carregada): motivo para seguir
+  const prox = proximaCena(LISTA, save.feitas);
+  /** @type {{ id: string, img: CanvasImageSource, caixa: any, conhecida: boolean }|null} */
+  let proxima = null;
+  const pr = prox && prox.id !== cena.id ? J.precarga.get(prox.id) : null;
+  if (prox && pr) {
+    pr.then((i) => {
+      const pp = (prox.personagens || []).find((x) => x.id === prox.prot);
+      if (pp) proxima = { id: prox.prot, img: i.a, caixa: pp.caixa, conhecida: !!save.colecao[prox.prot] };
+    }).catch(() => {});
+  }
   depois(900, () => {
     audio.figurinha();
     const b = brainrot(figura.id);
     if (b) depois(450, () => audio.cantar(vogaisDoCanto(b.canto)));
-    // figurinha repetida: passa sozinho em 3 s; a nova espera o jogador olhar
-    const passa = !figura.nova || !!autoMs;
+    // o painel passa sozinho (a parada sem prazo perdia 8% dos jogadores no PFT da 0.2.0);
+    // a figurinha nova da mais tempo, e tocar na carta para o contador
+    const espera = autoMs ? 600 : figura.nova ? PASSA_NOVA_MS : PASSA_REPETIDA_MS;
+    const c = ++J.contador;
     hud.painel({
       titulo: g.virouDourada && !g.nova ? tx.virouDourada : tx.vitoria,
       estrelas: n,
       dados,
       figura,
-      botoes: [{ texto: tx.proximo, icone: '▶', acao: () => proximo(), barra: passa }],
+      proxima,
+      aoTocarCarta: () => {
+        if (c !== J.contador) return;
+        J.contador += 1;
+        hud.pararBarra();
+      },
+      botoes: [{ texto: tx.proximo, icone: '▶', acao: () => proximo('toque'), barra: espera }],
     });
-    if (passa) {
-      const c = ++J.contador;
-      depois(autoMs ? 600 : 3000, () => {
-        if (c === J.contador && J.fase === 'fim') proximo();
-      });
-    }
+    depois(espera, () => {
+      if (c === J.contador && J.fase === 'fim') proximo('auto');
+    });
   });
 }
 
-async function proximo() {
+/** @param {'auto'|'toque'} [origem] como o painel do fim avancou */
+async function proximo(origem = 'toque') {
   if (J.fase !== 'fim' || !J.cena) return;
+  portal.measure('painel', nivelTexto(), origem);
   J.contador += 1;
   J.fase = 'anuncio';
   hud.fecharPainel();
@@ -589,7 +684,7 @@ if (dep.ganchos) {
     auto(ms) {
       autoMs = ms;
       if (J.fase === 'jogando') depois(ms, autoJogar);
-      else if (J.fase === 'fim') proximo();
+      else if (J.fase === 'fim') proximo('auto');
     },
     /** @param {string} id */
     irPara(id) {
@@ -600,6 +695,8 @@ if (dep.ganchos) {
 }
 
 const inicial = (dep.cena && LISTA.find((c) => c.id === dep.cena)) || proximaCena(LISTA, save.feitas);
+// as imagens da primeira cena baixam junto com o init do SDK (antes era um depois do outro)
+if (inicial) carregar(inicial).catch(() => {});
 portal.init().then(() => {
   atualizarBotoes();
   if (!LISTA.length) hud.aviso(tx.semCena);

@@ -32,8 +32,9 @@ test('varios personagens por cena, sem repetir, com o protagonista no meio', () 
 });
 
 test('curva de erros e candidatas suficientes; prompts objetivos', () => {
-  assert.equal(errosDaCena(CENAS_ROTEIRO[0]), 3);
-  assert.equal(errosDaCena(CENAS_ROTEIRO[1]), 5);
+  assert.deepEqual(CENAS_ROTEIRO.slice(0, 5).map(errosDaCena), [3, 4, 5, 6, 7]);
+  assert.equal(errosDaCena(CENAS_ROTEIRO[9]), 10);
+  assert.equal(errosDaCena(CENAS_ROTEIRO[11]), 7);
   for (const c of CENAS_ROTEIRO) {
     assert.ok(edicoesDaCena(c) * mudancasPorEdicao(c) >= errosDaCena(c) + 4, c.id);
     assert.ok(promptDaCena(c).length <= 1500, `${c.id}: prompt com ${promptDaCena(c).length}`);

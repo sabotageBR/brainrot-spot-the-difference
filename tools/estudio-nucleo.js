@@ -296,15 +296,22 @@ export function componentes(m, d, w, h, rgbaA = null, rgbaV = null) {
   return { rot, manchas };
 }
 
+/** Mudanca de cor media (|delta|) a partir da qual a troca salta aos olhos. */
+const COR_CHEIA = 120;
+
 /**
- * Visibilidade 0..1: contraste medio x tamanho. Uma troca de cor forte num objeto de
- * 8% da largura vale perto de 1; um detalhe palido e pequeno, perto de 0.
+ * Visibilidade 0..1: contraste medio x tamanho x troca de cor. Uma troca de cor forte num
+ * objeto de 8% da largura vale perto de 1; um detalhe palido e pequeno, perto de 0.
+ * A troca de cor pesa porque o contraste por pixel engana: o guarda-sol de arco-iris que vira
+ * listrado (praia-01) muda muito pixel a pixel, mas a cor media quase nao muda, e o jogador
+ * nao ve (PFT da 0.2.0). Sem delta (remendo manual), a cor nao pesa.
  * @param {Mancha} m @param {number} W @param {number} H
  */
 export function visibilidade(m, W, H) {
   const contraste = Math.min(1, (m.media / 255) * 2.2);
   const tamanho = Math.min(1, Math.sqrt(m.area / (W * H)) / 0.07);
-  return Math.round(contraste * tamanho * 1000) / 1000;
+  const cor = m.delta ? Math.min(1, Math.sqrt(Math.hypot(...m.delta) / COR_CHEIA)) : 1;
+  return Math.round(contraste * tamanho * cor * 1000) / 1000;
 }
 
 /**
@@ -415,10 +422,14 @@ export function elipseDe(/** @type {Caixa} */ c) {
 /**
  * Escolha automatica: as melhores candidatas que nao se sobrepoem, nao encostam na borda,
  * nao sao gigantes e ficam espalhadas (penalidade para duas no mesmo terco da imagem).
+ * Modo facil (as primeiras cenas do jogo): sem o bonus de personagem, que puxa acessorios
+ * sutis (chapeu, bone, bermuda); a mudanca encostada na moldura perde muito; e o tamanho
+ * da mudanca conta a favor.
  * @param {(Mancha & { fonte?: number })[]} cands @param {number} n @param {number} W @param {number} H
  * @param {Caixa[]} [personagens] caixas dos brainrots: mudanca neles vale mais (e o que o publico reconhece)
+ * @param {{ facil?: boolean }} [o]
  */
-export function escolherAuto(cands, n, W, H, personagens = []) {
+export function escolherAuto(cands, n, W, H, personagens = [], { facil = false } = {}) {
   const noPersonagem = (/** @type {Mancha} */ c) => personagens.some((p) => {
     const cx = c.x + c.w / 2;
     const cy = c.y + c.h / 2;
@@ -449,7 +460,14 @@ export function escolherAuto(cands, n, W, H, personagens = []) {
       });
       if (bate) return;
       const celula = `${Math.min(2, Math.floor((3 * e.cx) / W))},${Math.min(2, Math.floor((3 * e.cy) / H))}`;
-      const nota = c.vis - 0.18 * (ocupado.get(celula) || 0) + (noPersonagem(c) ? 0.2 : 0);
+      let nota = c.vis - 0.18 * (ocupado.get(celula) || 0);
+      if (!facil) nota += noPersonagem(c) ? 0.2 : 0;
+      else {
+        nota += 0.15 * Math.min(1, c.area / (0.01 * W * H));
+        // a mudanca cortada pela moldura (o guarda-sol da praia-01 comecava em x=0) quase some
+        const b = 0.01 * W;
+        if (c.x < b || c.y < b || c.x + c.w > W - b || c.y + c.h > H - b) nota -= 0.5;
+      }
       if (nota > melhorNota) {
         melhorNota = nota;
         melhorI = i;

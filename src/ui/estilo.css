@@ -26,7 +26,7 @@ body{background:radial-gradient(120% 90% at 50% 0%,color-mix(in srgb,var(--cor) 
 .btn[hidden]{display:none}
 .btn[disabled]{opacity:.45;cursor:default}
 .btn.ativo{background:#2A2238;color:#7df9ff}
-.btn.pulsar{animation:pulsar .75s ease-in-out infinite}
+.btn.pulsar{animation:pulsar .75s ease-in-out infinite;box-shadow:0 0 0 4px #ffc21a,var(--sombra)}
 .btn.pop{animation:pop .45s cubic-bezier(.3,1.6,.5,1)}
 #bSom.mudo .ligado{display:none}
 #bSom:not(.mudo) .desligado{display:none}
@@ -76,6 +76,13 @@ body{background:radial-gradient(120% 90% at 50% 0%,color-mix(in srgb,var(--cor) 
 .acao.secundaria{background:#2A2238}
 .acao.video{background:#5b3df5}
 .acao .barra{position:absolute;left:0;bottom:0;height:5px;background:rgba(255,255,255,.75);width:100%;transform-origin:left;animation:esvazia 3s linear forwards}
+/* o proximo brainrot, ao lado do botao */
+.proxima{display:flex;flex-direction:column;align-items:center;gap:3px;font-weight:700;font-size:12px;line-height:1.1;max-width:96px}
+.proxima canvas{width:52px;height:52px;border-radius:12px;box-shadow:0 3px 0 rgba(0,0,0,.15);background:#2A2238;animation:espia 1.6s ease-in-out infinite}
+.proxima small{opacity:.7}
+@keyframes espia{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) scale(1.05)}}
+.botoes{align-items:center}
+.figura .carta{cursor:pointer}
 @keyframes esvazia{to{transform:scaleX(0)}}
 @keyframes estrela{0%{transform:scale(0) rotate(-40deg)}100%{transform:scale(1)}}
 @keyframes entra{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
@@ -142,5 +149,5 @@ body.pausado *,body.pausado *::before,body.pausado *::after{animation-play-state
 
 @media (max-height:420px){:root{--btn:42px}.placa{font-size:15px;padding:4px 10px}.progresso i{width:11px;height:11px}.status .chip{font-size:14px;padding:4px 8px}}
 @media (max-width:420px){.placa span{display:none}.status .chip{font-size:15px;padding:4px 8px}}
-@media (prefers-reduced-motion:reduce){.btn.pulsar,.status .chip.alerta,.mundo .nos i.atual{animation:none}.faixa{animation-name:faixaParada}}
+@media (prefers-reduced-motion:reduce){.btn.pulsar,.status .chip.alerta,.mundo .nos i.atual,.proxima canvas{animation:none}.faixa{animation-name:faixaParada}}
 @keyframes faixaParada{0%,100%{transform:none}}

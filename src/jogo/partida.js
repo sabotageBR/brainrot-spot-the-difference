@@ -3,9 +3,11 @@
 // Eventos de tocar(): acerto, ja (erro ja achado: nao pune), erro, travado (antispam) e fim.
 // Antispam: ERROS_SPAM toques errados em JANELA_SPAM ms travam o toque por TRAVA_MS.
 // Nao ha derrota (modelo zen): a cena so acaba quando todos os erros foram achados.
+// Ajuda automatica: conta o tempo sem progresso (ociosoDesde); acerto e dica zeram, o pisca
+// empurra para o fim dele e a trava poe o piso na zona (ajudaMin).
 
 import { acertar } from './cena.js';
-import { REGRAS, estrelasDe } from './regras.js';
+import { REGRAS, AJUDA, estrelasDe, estagioAjuda } from './regras.js';
 import { criarRng, hashTexto } from '../core/rng.js';
 
 export const ERROS_SPAM = 3;
@@ -29,6 +31,8 @@ export const TRAVA_MS = 1500;
  * @property {number} piscasLivres
  * @property {number} piscas       vezes que o pisca foi usado
  * @property {boolean} achouEscondido
+ * @property {number} ociosoDesde  instante do ultimo progresso (ajuda automatica)
+ * @property {number} ajudaMin     piso do estagio da ajuda ate o proximo progresso
  * @property {null|'vitoria'} fim
  * @property {number} fimEm
  */
@@ -49,9 +53,17 @@ export function criarPartida(cena, t) {
     piscasLivres: REGRAS.piscasGratis,
     piscas: 0,
     achouEscondido: false,
+    ociosoDesde: t,
+    ajudaMin: 0,
     fim: null,
     fimEm: 0,
   };
+}
+
+/** @param {Partida} p @param {number} t */
+function progrediu(p, t) {
+  p.ociosoDesde = t;
+  p.ajudaMin = 0;
 }
 
 /** @param {Partida} p @param {number} t */
@@ -83,6 +95,7 @@ export function tocar(p, x, y, tol, t) {
     p.combo = t - p.ultimoAcerto <= REGRAS.janelaCombo ? p.combo + 1 : 1;
     p.ultimoAcerto = t;
     p.errosRecentes = [];
+    progrediu(p, t);
     conferirFim(p, t);
     return { tipo: /** @type {const} */ ('acerto'), id, combo: p.combo, fim: p.fim };
   }
@@ -95,6 +108,8 @@ export function tocar(p, x, y, tol, t) {
     antispam = true;
     p.travadoAte = t + TRAVA_MS;
     p.errosRecentes = [];
+    // quem toca a esmo esta perdido: a ajuda pula para a zona
+    p.ajudaMin = Math.max(p.ajudaMin, AJUDA.zona);
   }
   return { tipo: /** @type {const} */ ('erro'), antispam };
 }
@@ -127,21 +142,36 @@ export function usarDica(p, t, pago = false) {
   p.dicas += 1;
   p.combo = 0;
   p.achados.set(alvo.id, { t, porDica: true });
+  progrediu(p, t);
   conferirFim(p, t);
   return alvo.id;
 }
 
+/** O erro que a ajuda automatica mostra: o mesmo que a dica revelaria. */
+export const alvoDaAjuda = alvoDaDica;
+
 /**
- * Usa o pisca: a carga gratis da cena, ou uma paga pelo video.
- * @param {Partida} p @param {boolean} [pago] @returns {boolean}
+ * Estagio da ajuda automatica (0 nada, 1 pulso, 2 zona, 3 mao) no instante t.
+ * @param {Partida} p @param {number} t @param {number} nivel
  */
-export function usarPisca(p, pago = false) {
+export function estagio(p, t, nivel) {
+  if (p.fim) return AJUDA.nada;
+  return estagioAjuda(nivel, Math.max(0, t - p.ociosoDesde), p.ajudaMin);
+}
+
+/**
+ * Usa o pisca: a carga gratis da cena, ou uma paga pelo video. O ocio volta a contar
+ * so quando o pisca acaba.
+ * @param {Partida} p @param {number} t @param {boolean} [pago] @returns {boolean}
+ */
+export function usarPisca(p, t, pago = false) {
   if (p.fim) return false;
   if (!pago) {
     if (p.piscasLivres <= 0) return false;
     p.piscasLivres -= 1;
   }
   p.piscas += 1;
+  p.ociosoDesde = Math.max(p.ociosoDesde, t + REGRAS.piscaMs);
   return true;
 }
 

@@ -31,36 +31,36 @@ export const CENAS = [
    {
     "id": "d2",
     "elipse": {
-     "cx": 115,
-     "cy": 288,
-     "rx": 132,
-     "ry": 70
+     "cx": 53,
+     "cy": 454,
+     "rx": 52,
+     "ry": 56
     },
     "remendo": {
      "arq": "d2.webp",
      "x": 0,
-     "y": 218,
-     "w": 241,
-     "h": 140
+     "y": 397,
+     "w": 106,
+     "h": 114
     },
-    "vis": 1
+    "vis": 0.895
    },
    {
     "id": "d3",
     "elipse": {
-     "cx": 672,
-     "cy": 413,
-     "rx": 67,
-     "ry": 41
+     "cx": 748,
+     "cy": 221,
+     "rx": 58,
+     "ry": 24
     },
     "remendo": {
      "arq": "d3.webp",
-     "x": 605,
-     "y": 369,
-     "w": 134,
-     "h": 87
+     "x": 689,
+     "y": 193,
+     "w": 118,
+     "h": 56
     },
-    "vis": 0.86
+    "vis": 0.7
    }
   ],
   "personagens": [
@@ -158,36 +158,19 @@ export const CENAS = [
    {
     "id": "d4",
     "elipse": {
-     "cx": 481,
-     "cy": 390,
-     "rx": 53,
-     "ry": 55
-    },
-    "remendo": {
-     "arq": "d4.webp",
-     "x": 426,
-     "y": 333,
-     "w": 110,
-     "h": 113
-    },
-    "vis": 0.898
-   },
-   {
-    "id": "d5",
-    "elipse": {
      "cx": 848,
      "cy": 595,
      "rx": 47,
      "ry": 48
     },
     "remendo": {
-     "arq": "d5.webp",
+     "arq": "d4.webp",
      "x": 798,
      "y": 544,
      "w": 99,
      "h": 101
     },
-    "vis": 0.883
+    "vis": 0.88
    }
   ],
   "personagens": [
@@ -315,27 +298,10 @@ export const CENAS = [
      "w": 105,
      "h": 102
     },
-    "vis": 0.93
+    "vis": 0.918
    },
    {
     "id": "d5",
-    "elipse": {
-     "cx": 401,
-     "cy": 67,
-     "rx": 41,
-     "ry": 49
-    },
-    "remendo": {
-     "arq": "d5.webp",
-     "x": 357,
-     "y": 16,
-     "w": 88,
-     "h": 102
-    },
-    "vis": 0.892
-   },
-   {
-    "id": "d6",
     "elipse": {
      "cx": 100,
      "cy": 361,
@@ -343,30 +309,13 @@ export const CENAS = [
      "ry": 43
     },
     "remendo": {
-     "arq": "d6.webp",
+     "arq": "d5.webp",
      "x": 21,
      "y": 315,
      "w": 158,
      "h": 92
     },
     "vis": 0.836
-   },
-   {
-    "id": "d7",
-    "elipse": {
-     "cx": 358,
-     "cy": 360,
-     "rx": 60,
-     "ry": 34
-    },
-    "remendo": {
-     "arq": "d7.webp",
-     "x": 297,
-     "y": 323,
-     "w": 122,
-     "h": 74
-    },
-    "vis": 0.689
    }
   ],
   "personagens": [
@@ -431,56 +380,22 @@ export const CENAS = [
    {
     "id": "d1",
     "elipse": {
-     "cx": 530,
-     "cy": 73,
-     "rx": 59,
-     "ry": 58
-    },
-    "remendo": {
-     "arq": "d1.webp",
-     "x": 470,
-     "y": 14,
-     "w": 120,
-     "h": 118
-    },
-    "vis": 1
-   },
-   {
-    "id": "d2",
-    "elipse": {
      "cx": 235,
      "cy": 368,
      "rx": 81,
      "ry": 77
     },
     "remendo": {
-     "arq": "d2.webp",
+     "arq": "d1.webp",
      "x": 155,
      "y": 291,
      "w": 160,
      "h": 153
     },
-    "vis": 1
+    "vis": 0.982
    },
    {
-    "id": "d3",
-    "elipse": {
-     "cx": 289,
-     "cy": 533,
-     "rx": 63,
-     "ry": 49
-    },
-    "remendo": {
-     "arq": "d3.webp",
-     "x": 225,
-     "y": 481,
-     "w": 128,
-     "h": 103
-    },
-    "vis": 1
-   },
-   {
-    "id": "d4",
+    "id": "d2",
     "elipse": {
      "cx": 677,
      "cy": 560,
@@ -488,7 +403,7 @@ export const CENAS = [
      "ry": 43
     },
     "remendo": {
-     "arq": "d4.webp",
+     "arq": "d2.webp",
      "x": 605,
      "y": 514,
      "w": 144,
@@ -497,7 +412,7 @@ export const CENAS = [
     "vis": 0.902
    },
    {
-    "id": "d5",
+    "id": "d3",
     "elipse": {
      "cx": 117,
      "cy": 85,
@@ -505,7 +420,7 @@ export const CENAS = [
      "ry": 68
     },
     "remendo": {
-     "arq": "d5.webp",
+     "arq": "d3.webp",
      "x": 55,
      "y": 16,
      "w": 124,
@@ -514,7 +429,7 @@ export const CENAS = [
     "vis": 0.865
    },
    {
-    "id": "d6",
+    "id": "d4",
     "elipse": {
      "cx": 858,
      "cy": 308,
@@ -522,7 +437,7 @@ export const CENAS = [
      "ry": 53
     },
     "remendo": {
-     "arq": "d6.webp",
+     "arq": "d4.webp",
      "x": 826,
      "y": 253,
      "w": 63,
@@ -531,21 +446,38 @@ export const CENAS = [
     "vis": 0.862
    },
    {
-    "id": "d7",
+    "id": "d5",
     "elipse": {
-     "cx": 860,
-     "cy": 487,
+     "cx": 530,
+     "cy": 73,
      "rx": 59,
-     "ry": 36
+     "ry": 58
     },
     "remendo": {
-     "arq": "d7.webp",
-     "x": 800,
-     "y": 448,
+     "arq": "d5.webp",
+     "x": 470,
+     "y": 14,
      "w": 120,
-     "h": 78
+     "h": 118
     },
-    "vis": 0.697
+    "vis": 0.832
+   },
+   {
+    "id": "d6",
+    "elipse": {
+     "cx": 289,
+     "cy": 533,
+     "rx": 63,
+     "ry": 49
+    },
+    "remendo": {
+     "arq": "d6.webp",
+     "x": 225,
+     "y": 481,
+     "w": 128,
+     "h": 103
+    },
+    "vis": 0.786
    }
   ],
   "personagens": [

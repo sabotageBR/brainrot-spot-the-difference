@@ -3,11 +3,12 @@
 // suave e grava pelo POST /__estudio (tools/estudio.mjs).
 //
 // Modo automatico para o terminal: ?id=praia-02&auto=1 analisa, escolhe os erros e salva; o titulo
-// da pagina vira "OK ..." ou "ERRO ..." (tools/estudio-auto.mjs le o titulo).
-// Quantos erros: o roteiro manda (3 e 5 nas duas primeiras cenas, 10 no chefe, 7 no resto).
+// da pagina vira "OK ..." ou "ERRO ..." (tools/estudio-auto.mjs le o titulo). Com &seco, so lista
+// as candidatas no titulo, sem gravar (ensaio da escolha).
+// Quantos erros: o roteiro manda (rampa 3-4-5-6 no comeco do mundo 1, 10 no chefe, 7 no resto).
 import * as N from './estudio-nucleo.js';
 import { BRAINROTS } from '../src/jogo/catalogo.js';
-import { cenaRoteiro, errosDaCena } from '../arte/roteiro.js';
+import { cenaRoteiro, errosDaCena, cenaFacil } from '../arte/roteiro.js';
 
 const W = 1024;
 const H = 768;
@@ -169,7 +170,8 @@ async function analisar() {
 
 function auto() {
   const livres = E.cands.filter((c) => !E.evitar.some(([x, y]) => x >= c.x && x <= c.x + c.w && y >= c.y && y <= c.y + c.h));
-  const esc = N.escolherAuto(livres, alvo(), W, H, E.pers.map((p) => p.caixa));
+  const c = cenaRoteiro(E.id);
+  const esc = N.escolherAuto(livres, alvo(), W, H, E.pers.map((p) => p.caixa), { facil: !!c && cenaFacil(c) });
   E.esc = new Set(esc.map((c) => c.chave));
   montarB();
   desenharListas();
@@ -475,8 +477,18 @@ if (inicial) {
     if (q.has('auto')) {
       await analisar();
       auto();
-      const r = await salvar();
-      document.title = r.ok ? `OK ${escolhidas().length} ${E.cands.length}` : `ERRO ${r.erros.join('; ')}`;
+      if (q.has('seco')) {
+        // ensaio: so lista as candidatas (escolhidas com *), sem gravar nada
+        const linhas = E.cands.map((c) => {
+          const e = N.elipseDe(c);
+          const cor = c.delta ? Math.round(Math.hypot(...c.delta)) : '-';
+          return `${E.esc.has(c.chave) ? '*' : ' '} ${E.vars[c.fonte].nome} caixa ${c.x},${c.y} ${c.w}x${c.h} elipse ${e.cx},${e.cy} ${e.rx}x${e.ry} area ${((100 * c.area) / (W * H)).toFixed(2)}% vis ${c.vis.toFixed(3)} cor ${cor}`;
+        });
+        document.title = `OK SECO\n${linhas.join('\n')}`;
+      } else {
+        const r = await salvar();
+        document.title = r.ok ? `OK ${escolhidas().length} ${E.cands.length}` : `ERRO ${r.erros.join('; ')}`;
+      }
     }
   } catch (e) {
     estado(`ERRO: ${/** @type {Error} */ (e).message}`);

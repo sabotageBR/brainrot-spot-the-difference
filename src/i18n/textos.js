@@ -11,6 +11,7 @@ const T = {
     presente: 'Daily gift', diaN: 'Day {n} in a row', dicasGanhas: '+{n} hints', pegar: 'Collect',
     fim: 'You found them all!', fimSub: 'New scenes are on the way. Replay scenes on the map to find the golden brainrots.',
     semCena: 'Could not load the scene', tenteDeNovo: 'Try again', escondidoDica: 'A golden brainrot hides in every scene!',
+    acheN: 'Find the {n} differences!', proximaFig: 'Next brainrot',
   },
   pt: {
     idioma: 'pt',
@@ -20,6 +21,7 @@ const T = {
     presente: 'Presente do dia', diaN: '{n}º dia seguido', dicasGanhas: '+{n} dicas', pegar: 'Pegar',
     fim: 'Você achou tudo!', fimSub: 'Novas cenas estão chegando. Jogue as cenas de novo no mapa para achar os brainrots dourados.',
     semCena: 'Não deu para carregar a cena', tenteDeNovo: 'Tentar de novo', escondidoDica: 'Toda cena esconde um brainrot dourado!',
+    acheN: 'Ache as {n} diferenças!', proximaFig: 'Próximo brainrot',
   },
   es: {
     idioma: 'es',
@@ -29,6 +31,7 @@ const T = {
     presente: 'Regalo del día', diaN: '{n}.º día seguido', dicasGanhas: '+{n} pistas', pegar: 'Recoger',
     fim: '¡Lo encontraste todo!', fimSub: 'Llegan escenas nuevas. Repite escenas en el mapa para encontrar los brainrots dorados.',
     semCena: 'No se pudo cargar la escena', tenteDeNovo: 'Reintentar', escondidoDica: '¡Cada escena esconde un brainrot dorado!',
+    acheN: '¡Encuentra las {n} diferencias!', proximaFig: 'Siguiente brainrot',
   },
 };
 

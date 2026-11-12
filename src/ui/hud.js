@@ -45,6 +45,37 @@ export function pintarFigura(cv, img, caixa) {
   c.drawImage(img, cx - lado / 2, cy - lado / 2, lado, lado, 0, 0, t, t);
 }
 
+/**
+ * O proximo brainrot, ainda nao ganho: o recorte em mosaico grosso e escurecido, com um "?".
+ * Mosaico em vez de silhueta: o recorte e um retangulo da cena (sem mascara do personagem).
+ * @param {HTMLCanvasElement} cv @param {CanvasImageSource} img
+ * @param {{ x: number, y: number, w: number, h: number }} caixa
+ */
+export function pintarMisterio(cv, img, caixa) {
+  const t = 120;
+  const n = 14;
+  cv.width = t;
+  cv.height = t;
+  const c = cv.getContext('2d');
+  if (!c) return;
+  const m = document.createElement('canvas');
+  m.width = n;
+  m.height = n;
+  pintarFigura(m, img, caixa);
+  c.imageSmoothingEnabled = false;
+  c.drawImage(m, 0, 0, n, n, 0, 0, t, t);
+  c.fillStyle = 'rgba(30,16,60,0.3)';
+  c.fillRect(0, 0, t, t);
+  c.font = '700 70px Fredoka, sans-serif';
+  c.textAlign = 'center';
+  c.textBaseline = 'middle';
+  c.lineWidth = 8;
+  c.strokeStyle = '#2a1050';
+  c.strokeText('?', t / 2, t / 2 + 4);
+  c.fillStyle = '#fff';
+  c.fillText('?', t / 2, t / 2 + 4);
+}
+
 /** @param {import('../i18n/textos.js').Textos} tx */
 export function criarHud(tx) {
   const progresso = $('progresso');
@@ -155,8 +186,10 @@ export function criarHud(tx) {
      * @param {{
      *   titulo: string, estrelas: number, dados: [string, string][], texto?: string,
      *   figura?: { id: string, img: CanvasImageSource|null, caixa: any, nova: boolean, dourada: boolean, vezes?: number } | null,
-     *   botoes: { texto: string, classe?: string, icone?: string, acao: () => void, barra?: boolean }[]
-     * }} o
+     *   proxima?: { id: string, img: CanvasImageSource, caixa: any, conhecida: boolean } | null,
+     *   aoTocarCarta?: () => void,
+     *   botoes: { texto: string, classe?: string, icone?: string, acao: () => void, barra?: number }[]
+     * }} o barra: ms do contador que esvazia no botao
      */
     painel(o) {
       $('painelTitulo').textContent = o.titulo;
@@ -186,15 +219,33 @@ export function criarHud(tx) {
         const nome = document.createElement('b');
         nome.textContent = b ? b.nome : o.figura.id;
         carta.appendChild(nome);
+        const toque = o.aoTocarCarta;
+        if (toque) carta.addEventListener('click', () => toque());
         fig.appendChild(carta);
       }
       const bt = $('painelBotoes');
       bt.innerHTML = '';
+      if (o.proxima) {
+        // o proximo brainrot (mosaico com "?" se ainda nao e do jogador): motivo para seguir
+        const px = o.proxima;
+        const d = document.createElement('div');
+        d.className = 'proxima';
+        const cv = document.createElement('canvas');
+        if (px.conhecida) pintarFigura(cv, px.img, px.caixa);
+        else pintarMisterio(cv, px.img, px.caixa);
+        const rot = document.createElement('small');
+        const b = brainrot(px.id);
+        rot.textContent = px.conhecida && b ? `${tx.proximaFig}: ${b.nome}` : tx.proximaFig;
+        d.append(cv, rot);
+        bt.appendChild(d);
+      }
       for (const b of o.botoes) {
         const el = document.createElement('button');
         el.className = `acao ${b.classe || ''}`;
         el.innerHTML = `${b.icone || ''}<span></span>${b.barra ? '<i class="barra"></i>' : ''}`;
         /** @type {HTMLElement} */ (el.querySelector('span')).textContent = b.texto;
+        const barra = /** @type {HTMLElement|null} */ (el.querySelector('.barra'));
+        if (barra && b.barra) barra.style.animationDuration = `${b.barra}ms`;
         el.addEventListener('click', b.acao);
         bt.appendChild(el);
       }

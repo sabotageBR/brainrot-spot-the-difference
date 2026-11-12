@@ -1,7 +1,7 @@
 // Nucleo do estudio com imagens sinteticas: o fantasma fino some, a mancha solida fica.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { detectar, alinhar, cinza, transformar, escolherAuto, fundir, elipseDe } from '../tools/estudio-nucleo.js';
+import { detectar, alinhar, cinza, transformar, escolherAuto, fundir, elipseDe, visibilidade } from '../tools/estudio-nucleo.js';
 
 const W = 256;
 const H = 192;
@@ -72,4 +72,30 @@ test('escolha automatica nao poe duas no mesmo lugar e respeita o limite', () =>
   const e = escolherAuto(cands, 7, 1024, 768);
   assert.equal(e.length, 3);
   for (const x of e) assert.ok(elipseDe(x).rx > 15);
+});
+
+test('troca de cor parecida pesa menos na visibilidade (o guarda-sol da praia-01)', () => {
+  const m = (delta) => ({ id: 1, ids: [1], x: 0, y: 0, w: 80, h: 60, area: 4000, media: 150, vis: 0, delta });
+  const forte = visibilidade(m([170, -20, -150]), 1024, 768);
+  const parecida = visibilidade(m([30, 20, -15]), 1024, 768);
+  const semDelta = visibilidade(m(undefined), 1024, 768);
+  assert.equal(forte, semDelta);
+  assert.ok(parecida < forte * 0.65, `${parecida} x ${forte}`);
+});
+
+test('modo facil: foge da borda e nao prefere acessorio de personagem', () => {
+  const c = (x, y, w, h, vis) => ({ id: x, ids: [x], x, y, w, h, area: w * h, media: 120, vis });
+  const borda = c(2, 300, 120, 90, 0.95);
+  const meio = c(450, 330, 110, 80, 0.9);
+  // sem o modo facil a da borda (centro longe o bastante) ganha pela visibilidade
+  assert.equal(escolherAuto([borda, meio], 1, 1024, 768)[0], borda);
+  assert.equal(escolherAuto([borda, meio], 1, 1024, 768, [], { facil: true })[0], meio);
+  // acessorio pequeno no personagem x mudanca grande fora dele
+  const chapeu = c(600, 200, 40, 30, 0.85);
+  const grande = c(200, 500, 120, 100, 0.8);
+  const pers = [{ x: 560, y: 150, w: 200, h: 300 }];
+  assert.equal(escolherAuto([chapeu, grande], 1, 1024, 768, pers)[0], chapeu);
+  assert.equal(escolherAuto([chapeu, grande], 1, 1024, 768, pers, { facil: true })[0], grande);
+  // o modo facil ainda completa a conta com a da borda se faltar candidata
+  assert.equal(escolherAuto([borda, meio], 2, 1024, 768, [], { facil: true }).length, 2);
 });

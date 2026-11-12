@@ -304,15 +304,24 @@ function escolherGente(cenas) {
 /** Todas as cenas na ordem de jogo. @type {CenaRoteiro[]} */
 export const CENAS_ROTEIRO = escolherGente(MUNDOS_ROTEIRO.flatMap((lista, i) => lista.map((c, j) => ({ ...c, mundo: i + 1, k: j + 1 }))));
 
+/** Rampa do comeco do jogo (mundo 1, fases 1 a 4): 3, 4, 5 e 6 erros; depois 7 (PFT da 0.2.0). */
+const RAMPA = [3, 4, 5, 6];
+
 /**
- * Quantos erros a cena tem: as duas primeiras do jogo ensinam (3 e 5), o chefe do mundo tem 10.
+ * Quantos erros a cena tem: a rampa no comeco do mundo 1, o chefe do mundo tem 10, o resto 7.
  * @param {CenaRoteiro} c
  */
 export function errosDaCena(c) {
-  if (c.mundo === 1 && c.k === 1) return 3;
-  if (c.mundo === 1 && c.k === 2) return 5;
+  if (c.mundo === 1 && c.k <= RAMPA.length) return RAMPA[c.k - 1];
   return c.k === 10 ? 10 : 7;
 }
+
+/**
+ * Cena facil: as da rampa. O estudio escolhe nelas as mudancas maiores e de cor mais
+ * diferente, longe da borda e sem preferir acessorio de personagem.
+ * @param {CenaRoteiro} c
+ */
+export const cenaFacil = (c) => c.mundo === 1 && c.k <= RAMPA.length;
 
 /**
  * Edicoes pedidas ao Grok, todas a partir de A. O Grok do dono tem limite de uso: poucas edicoes
