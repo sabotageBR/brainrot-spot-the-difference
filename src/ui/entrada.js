@@ -4,7 +4,7 @@
 // O tempo do gesto vem do proprio evento (timeStamp), nao do relogio do jogo.
 
 const MOVE_TOQUE = 10;
-const TOQUE_MAX_MS = 650;
+const TOQUE_MAX_MS = 1000;
 
 /**
  * @param {HTMLElement} alvo

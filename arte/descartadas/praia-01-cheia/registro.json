@@ -1,0 +1,73 @@
+{
+  "cena": "praia",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Geração: modo 'Imagem', opção 'Qualidade 2.0' (a outra é 'Velocidade'), ×4 imagens, proporção 4:3 'Apresentação'. Edições: caixa 'Descreva sua edição' na página da imagem A (proporção 'Automático'); a UI não mostra nome de modelo.",
+  "data": "2026-11-07",
+  "prompt": "a sunny tropical beach: Tralalero Tralala, a blue shark standing on three muscular legs wearing blue sneakers, dancing on the sand; Trippi Troppi, a creature with an orange cat head and a pink shrimp body, building a sandcastle; Bananita Dolphinita, a dolphin wearing a yellow banana peel, jumping out of the turquoise sea; a striped beach umbrella, beach balls, buckets and shovels, seashells, starfish, little crabs, palm trees with coconuts, sailboats, seagulls, fluffy clouds and an ice cream cart, wide establishing shot, busy detailed scene with many small distinct objects spread across the whole picture, every area of the image has something to look at, no large empty areas, everything in sharp focus with no blur and no depth of field, characters medium size and fully visible, 4:3, no text, no letters, no numbers, no watermark, no logo, no signature, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "268cf65d-8885-4689-820d-115cb3384d34",
+    "escolhida_de": "2ª de 4 imagens da rodada 1"
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "203ba790-6084-406f-8be1-a0574eb7edc6",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Change the blue shark's blue sneakers to bright red sneakers. 2) There are two small sailboats on the horizon: remove only the right one, keep the left sailboat; keep the banana dolphin exactly as it is. 3) The leftmost beach ball (pink-and-white, at the far left edge) becomes green-and-white; the blue-and-white beach ball next to it stays blue-and-white. 4) Remove the small red crab on the sand next to the wheel of the ice cream cart. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "tênis do tubarão (Tralalero) azul -> vermelho",
+        "2 veleiros -> 1 veleiro (o Grok apagou os dois e desenhou um só no meio, entre as posições antigas)",
+        "bola de praia mais à esquerda rosa/branca -> verde/branca",
+        "caranguejinho ao lado da roda do carrinho de sorvete removido"
+      ],
+      "tentativas": 2,
+      "tentativa_descartada": {
+        "grok_id": "4052a13e-03f2-4a75-81e1-72af74dbda62",
+        "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Change the blue shark's blue sneakers to bright red sneakers. 2) Remove the sailboat on the right (the one closer to the dolphin), leaving only one sailboat on the sea. 3) Change the pink-and-white beach ball on the far left into a green-and-white beach ball. 4) Remove the small red crab on the sand next to the wheel of the ice cream cart. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+        "motivo": "apagou a Bananita Dolphinita inteira junto com os veleiros (ficou 1 veleiro maior e deslocado) e trocou a bola errada (a azul/branca virou verde); o resto foi feito (tênis vermelho, caranguejo removido)"
+      }
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "f66fcf22-5a2a-4aaa-a0f2-76490a003c07",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a pair of black sunglasses on the banana dolphin's eyes. 2) On the palm tree in the top-left corner, the cluster of three coconuts becomes only two coconuts. 3) The colorful beach umbrella on the left becomes a red-and-white striped umbrella. 4) Add one small green sea turtle on the sand in the bottom-right area, between the pink seashells and the red crab. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "óculos escuros pretos na Bananita Dolphinita",
+        "coqueiro do canto superior esquerdo: cacho de 4 cocos -> 2 (efeito colateral: o 2º coqueiro também perdeu cocos, ficou com ~1)",
+        "guarda-sol colorido da esquerda -> listrado vermelho e branco",
+        "tartaruga verde pequena acrescentada (caiu no centro-baixo, à frente da pá roxa, não no canto direito; a concha rosa ao lado mudou um pouco de lugar)"
+      ]
+    },
+    {
+      "arquivo": "v3.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "3fd20ca0-40f9-4bd6-a2da-30671cb8dafb",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw sun hat on the orange cat's head. 2) The blue bucket next to the sandcastle becomes a green bucket. 3) Remove the seagull flying highest on the right side of the sky, so there are three seagulls instead of four. 4) Flip the yellow toy shovel in the bottom-right corner horizontally, so its handle points to the left instead of to the right. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "chapéu de palha amarelo no gato (Trippi Troppi)",
+        "balde azul ao lado do castelo -> verde",
+        "NÃO FEITO: as 4 gaivotas continuam lá",
+        "pá amarela do canto inferior direito virada (cabo agora aponta para a esquerda/baixo; não é espelho exato, foi redesenhada deitada)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visível (cantos conferidos em tamanho real em a, v1, v2, v3). Há metadado EXIF: ImageDescription='Signature: <base64>' (assinatura de proveniência) e Artist=<id da imagem no Grok>; recomenda-se remover o EXIF no pipeline.",
+  "notas": "Logado como 'Evandro Moura'. Geração: ~25 s para as 4 imagens. Edição: <10 s cada (pronta no primeiro screenshot após 10 s). Nenhuma mensagem de limite de uso. Nas 4 candidatas o Tralalero tem 2 pernas, não 3. Candidatas 1 e 3 tinham um logo tipo 'swoosh' da Nike nos tênis (descartadas por marca registrada); a 4 tinha golfinho verde; escolhida a 2 (sem logo, Bananita fiel, detalhe espalhado). A edição re-renderiza a imagem inteira: mesmo enquadramento e paleta, sem deslocamento, mas com leve 'fantasma' em todos os contornos (diferença média de luminância 7,5 a 11 em 255 contra A); fora das mudanças pedidas o olho não nota diferença, mas uma diferença por pixel não serve para achar as regiões. A UI tem um painel 'Segmentos' que detecta objetos automaticamente e ferramentas 'Edição Precisa', 'Cores', 'Recortar', 'Desenhar' (não usadas). Pedidos de remoção e de contagem são os menos confiáveis: no v1 a 1ª tentativa removeu um personagem; no v3 a gaivota não sumiu. O nome do arquivo baixado é grok-image-<id>.jpg (JPEG 1600x1200)."
+}

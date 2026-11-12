@@ -4,7 +4,7 @@ Jogo dos sete erros com brainrots, para a Poki. É feito **só com HTML + JavaSc
 
 O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettle.md`.
 
-## Estado (2026-11-08)
+## Estado (2026-11-12)
 - **Etapa 1 (laboratório): encerrada.** O dono escolheu **M2 Coleção zen + o pisca como poder, no estilo E2 (cartoon 2D)**.
   - A escolha está em `docs/decisao.md`.
   - `modelos/laboratorio.html` ficou congelado como registro, com as bases em `modelos/estilos/` e os prints em `modelos/prints/`.
@@ -16,6 +16,28 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
     - A produção parou em 52% da cota semanal do Grok do dono, que reinicia em 2026-11-12 01:29. Cada fase gasta cerca de 3,2 pedidos, e as 50 restantes levariam a cota a perto de 100%.
     - Instruções fixas do lote: `docs/arte/lote.md`.
     - Capa: 4 opções em `marketing/thumb/` (`opcoes.png` lado a lado), cada uma com a estática em 1256 e 628 px e a animada em MP4 (`vitrine.html` compara). **O dono escolheu a opção 1 em 2026-11-09**: ela foi copiada para `distribuicao/brainrot-spot-the-difference/poki/` (`thumb-1256x1256.png`, `thumb-628x628.png` e `thumb-animada-1080x1080.mp4`), junto com o zip da build.
+- **Player Fit Test da 0.2.0 (2026-11-09): passou raspando.**
+  - Média de 3m04s e 31% de engajados.
+  - 36% não completaram a fase 1, e cerca de 20% saíram em cada fase de 2 a 7.
+  - As gravações mostram o jogador empacado no último erro, sem pedir dica.
+  - **A 0.3.0 responde a isso** (plano em `~/.claude/plans/analise-a-performance-do-flickering-meadow.md`): ajuda automática, rampa 3-4-5-6 com as trocas mais visíveis, painel que passa sozinho, o próximo brainrot no painel e telemetria nova.
+  - Metas do próximo PFT:
+    - fase 1 completa ≥ 85%;
+    - começam a fase 4 ≥ 45%;
+    - média ≥ 4m30s.
+- **PFT da 0.3.0 (9 e 10/11/2026): 2m50s e 3m15s** (só a 2ª passou). A Poki já oferece o Web Fit Test, mas a meta da casa para ele é 5 min.
+  - O funil subiu: fase 1 completa de 64% para 80%, e quem começa a fase 4 de 24% para 40%. O tempo não subiu: as fases ficaram mais curtas e, da fase 3 em diante, ~25% saem a cada fase, como na 0.2.0.
+  - Ninguém mais empaca: a mão só foi necessária para 7%. Nas 9 gravações, quem sai está avançando, quase sempre no começo de uma cena nova.
+  - O desktop é pior: completam a fase 1 71%, contra 84% no celular.
+  - **A 0.4.0 dá motivo para seguir** (aprovada pelo dono em 2026-11-12): carta-prêmio no topo, os famosos primeiro e o baú a cada 3 fases. Prints em `docs/prints/proposta-0.4.0/` (`folha.png`).
+    - O zip está em `dist-poki/` e em `../distribuicao/brainrot-spot-the-difference/poki/`. Falta subir na Poki e pedir o PFT.
+    - Metas do PFT: começam a fase 4 ≥ 45%; da fase 3 em diante, menos de 20% de saída por fase (hoje ~25%); média ≥ 4 min; 3 min ou mais ≥ 35%.
+  - **O mundo 1 foi refeito com arte simples** (pedido do dono em 2026-11-12: os desenhos estavam complexos para o público da Poki).
+    - As 10 fases da praia usam `COMPOSICAO_SIMPLES` (`cenaSimples`, em `arte/roteiro.js`): poucos objetos grandes, fundo limpo e personagens grandes na frente. O dono viu a primeira e quis as 10 assim.
+    - Os outros mundos seguem com a composição cheia.
+    - O custo foi de 31 pedidos ao Grok.
+    - A poluição visual (fração de bordas fortes) caiu de 0,19–0,30 para 0,09–0,18.
+    - A arte antiga foi para `arte/descartadas/praia-NN-cheia/`. O antes e depois está em `docs/prints/mundo1-simples/antes-depois.png`.
 
 ## Repositório
 - **GitHub:** `sabotageBR/brainrot-spot-the-difference` (público), branch `main`.
@@ -26,11 +48,18 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
 
 ## Regra do jogo
 - **A cena:** a imagem A (do Grok) e a B, que é A com os remendos. **B não existe em arquivo:** `render/compor.js` monta B em tempo de execução, então B só difere de A dentro das elipses dos erros.
-- **Erros por fase:** 3 na fase 1, 5 na fase 2, 7 nas outras e 10 no chefe (a 10ª de cada mundo).
+- **Erros por fase:** rampa de 3, 4, 5 e 6 nas fases 1 a 4 do mundo 1 (`errosDaCena`, decisão do dono em 2026-11-09, depois do PFT da 0.2.0), 7 nas outras e 10 no chefe (a 10ª de cada mundo).
 - **O toque:** acerta a elipse dilatada pela tolerância `toleranciaImg` (dedo de 22 px CSS, entre 2% e 7% da largura).
   - Toque num erro já achado não pune.
   - Arrastar, fazer pinça ou usar a roda nunca conta como palpite (`ui/entrada.js`).
-- **Antispam:** 3 erros em 2 s travam o toque por 1,5 s ("Calma!").
+- **Antispam:** 3 erros em 2 s travam o toque por 1,5 s ("Calma!"), e a ajuda automática pula para a zona.
+- **Ajuda automática** (`REGRAS.ajuda`, `estagioAjuda`; `estagio` em `partida.js`): conta o tempo sem progresso. Acerto e dica zeram o contador, e o pisca o empurra até acabar. Os estágios são:
+  1. o botão da dica pulsa (o do pisca, se ele for o único com carga grátis);
+  2. zona: um holofote sobre a região do erro, com o centro deslocado;
+  3. a mão aponta o erro.
+  - Os limiares são 5/10/18 s nas fases 1–3, 10/20/35 s nas fases 4–10 e 15/30/50 s depois.
+  - O alvo é o mesmo da dica (`alvoDaDica`, o menor `vis` que falta).
+  - A ajuda não custa estrela.
 - **Combo:** acertos a até 4 s um do outro sobem a nota sem fim (`notaSemFim`).
 - **Zen:** não há prazo nem derrota. Errar e usar dica só tiram estrela (`jogo/regras.js`, `estrelasDe`; o chefe tem folga).
 - **Dica:**
@@ -42,20 +71,37 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
   - cada cena esconde um brainrot dourado (`lugarEscondido`, com semente pelo id);
   - ele só vale antes do último erro;
   - deixa a figurinha dourada para sempre.
-- **Figurinha:** é o protagonista da cena (`cena.prot`), recortado da caixa dele em A (`cena.personagens`). Repetida, mostra "x2" e a fase passa sozinha em 3 s; nova, espera o jogador.
+- **Figurinha:** é o protagonista da cena (`cena.prot`), recortado da caixa dele em A (`cena.personagens`). Repetida, mostra "x2".
+  - O painel passa sozinho: em 4,5 s com figurinha nova e em 3 s com repetida (decisão do dono em 2026-11-09). Tocar na carta para o contador.
+  - Ao lado do "Próximo", o painel mostra o próximo brainrot em mosaico com "?" (`pintarMisterio`).
+  - **Carta-prêmio** (0.4.0): no topo, o protagonista fica coberto por N peças roxas, uma por erro (`pecasDoPremio`). Cada acerto abre uma, de baixo para cima, e a última mostra o brainrot inteiro.
+  - **Os famosos primeiro** (0.4.0): o campo `figurinha` do roteiro troca o protagonista de uma cena já gerada por outro do elenco dela. A fase 2 dá o Tung Tung e a 3 a Ballerina. As 6 trocas fecham um ciclo entre cenas geradas, então as cenas futuras não mudam. `node tools/figurinhas.mjs` grava o `prot` nas cenas sem tocar na arte.
+- **Baú** (0.4.0, `jogo/progresso.js`): cada fase vencida enche uma marca (`save.bau`), e a 3ª abre. Ele dá +1 dica no banco e uma figurinha bônus (`figurinhaDoBau`): um coadjuvante das cenas do ciclo que o jogador ainda não tem. Vêm primeiro os que só viram prêmio a 20+ fases (ou nunca), e entre eles o mais famoso. O painel mostra as marcas e, aberto, as duas cartas.
+- **Tutorial:** na primeira cena da vida, o aviso "Ache as N diferenças!" e a mão no erro mais fácil, até o 1º acerto.
 - **Progresso** (`jogo/progresso.js`):
   - a próxima fase é a primeira não feita, na ordem do roteiro;
   - no mapa, a fase feita e a atual abrem; a que ainda não tem arte aparece "em breve";
   - o número da fase é `(mundo-1)*10+k`.
 - **Presente do dia:** só para quem já jogou. Dá dicas pela sequência de dias seguidos (1, 1, 2, 2, 2, 2, 3...).
 - **Intervalo comercial:** entre fases, a partir da 4ª fase da sessão.
+- **Telemetria** (`portal.measure`, só no `main.js`; os nomes ficam fixos depois de publicados):
+  - `level/N/start|complete`;
+  - `golden/N/found`;
+  - `tempo/N/min` (1, 2, 3, 4, 5, 7, 10, 15 e 20 min de relógio do jogo, desde o 1º `gameplayStart`);
+  - `ajuda/<nível>/pulso|zona|mao`;
+  - `dica/<nível>/gratis|banco|video`;
+  - `pisca/<nível>/gratis|video`;
+  - `trava/<nível>/show`;
+  - `painel/<nível>/auto|toque`;
+  - `bau/<nível>/abre`;
+  - `button/hint|blink/interact` (antes do vídeo).
 
 ## Estrutura
 - **`src/jogo/`, lógica pura** (sem DOM, relógio nem `Math.random`):
   - `cena.js`: formato, acerto e validação;
   - `partida.js`: estado da cena, dica, pisca, estrelas e escondido;
   - `regras.js`: os números do modo zen;
-  - `progresso.js`: próxima fase, mapa, figurinha e presente do dia;
+  - `progresso.js`: próxima fase, mapa, figurinha, baú e presente do dia;
   - `catalogo.js`: os 54 brainrots, os mundos e o canto.
 - **`src/render/`:**
   - `layout.js`: geometria pura; empilha ou põe lado a lado, o que der a maior imagem;
@@ -81,7 +127,7 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
    - Por cena: a base A e 2 edições a partir de A, com 6 mudanças cada. O chefe tem 3 × 5.
    - O registro traz as `caixas` dos personagens, de onde sai a figurinha.
    - Cenas recusadas vão para `arte/descartadas/`.
-   - **Efeito colateral feio** (um personagem inteiro recolorido, por exemplo): o registro ganha `"evitar": [[x, y], ...]`, em px de `a.jpg`, e a escolha automática do estúdio pula a mancha que contém o ponto (vila-05 e vila-09).
+   - **Efeito colateral feio** (um personagem inteiro recolorido, por exemplo): o registro ganha `"evitar": [[x, y], ...]`, em px de `a.jpg`, e a escolha automática do estúdio pula a mancha que contém o ponto (vila-05 e vila-09). Vale também para duas mudanças que se encostam e viram um erro só. Na praia-08, o chapéu de festa colado nos barcos não contava como diferença própria. A revisão de 2026-11-12 achou e tirou mais casos: na deserto-03, na deserto-05 e, depois da arte nova do mundo 1, na praia-05 e na praia-08.
    - **Retoque à mão:** só em último caso, como o copo âmbar da cafe-07, que virou suco. Ele vale para A e para as variantes, fica anotado no registro (`retoque`), e os originais vão para `arte/descartadas/`.
    - **Nada de álcool, narguilé ou bar:** o roteiro usa sorveteria, loja de vitaminas e chá em xícara.
    - Os arquivos ficam em `arte/bruto/<cena>-<estilo>/` (`a.jpg`, `v1..v3.jpg`, `registro.json` com o prompt exato e as mudanças pedidas, e `personagens.json` com as caixas das figurinhas em px de 1024×768).
@@ -96,6 +142,11 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
    4. limiar mais abertura, que apaga o fantasma;
    5. componentes, fundidos se ficarem a até 70 px, sem inchar a caixa mais de 2,5×, com no máximo 20% da largura e com a mesma troca de cor.
    - A escolha automática pega quantas o roteiro pedir (`errosDaCena`), bem espalhadas, sem sobreposição, e dá bônus a mudanças nos personagens. A base sai em WebP 0,75, cerca de 145 KB.
+   - A `visibilidade` pesa a troca de cor média (‖delta‖). Troca de cor parecida, como o guarda-sol de arco-íris que virou listrado na praia-01, engana o contraste por pixel, e o jogador não vê.
+   - **Modo fácil** (`cenaFacil`, as cenas da rampa):
+     - sem o bônus de personagem, que puxa acessórios sutis;
+     - a mudança encostada na moldura perde 0,5;
+     - o tamanho conta a favor.
    - À mão: clicar alterna a candidata, há o remendo manual por retângulo e as caixas dos personagens.
    - **Gravar** (`POST /__estudio` → `tools/estudio.mjs`): valida com `validarCena` e escreve a cena, o manifesto, `docs/cenas/<id>.png` (folha A | B com os erros numerados, para conferir) e `arte/origem.json` (a prova de "editado, não cru" para a Poki).
 3. **Sem tela:** `node tools/estudio-auto.mjs [ids]` faz o mesmo no Chrome headless.
@@ -134,7 +185,8 @@ O plano aprovado está em `~/.claude/plans/quero-desenvolver-um-jogo-fuzzy-kettl
     - `?dia=AAAA-MM-DD` (finge o dia, para o presente).
   - **Páginas:** `/tools/estudio.html?id=<cena>` e o laboratório congelado em `/modelos/laboratorio.html`.
 - `node tools/roteiro.mjs <id> | falta [mundo] | retrato <id>`: os prompts e o que falta.
-- `node tools/estudio-auto.mjs [ids]`: processa as cenas sem tela.
+- `node tools/figurinhas.mjs [--seco]`: alinha o `prot` das cenas geradas com o roteiro (o campo `figurinha`) e regera o manifesto. Só muda o protagonista.
+- `node tools/estudio-auto.mjs [--seco] [ids]`: processa as cenas sem tela. Com `--seco`, só lista as candidatas (escolhidas com `*`, mais vis, área e ‖Δcor‖), sem gravar.
 - `node tools/thumb.mjs`: a thumb da Poki em 1256 e 628 px, a partir de `marketing/thumb/grok-*.jpg` (o prompt está em `docs/arte/thumb.md`).
 - `node tools/thumb-animada.mjs <opção>`: a thumb animada da Poki (MP4 1080×1080, 60 fps, 5,8 s), gravada do jogo quadro a quadro, começando e terminando na arte da opção. A vitrine das opções fica em `/marketing/thumb/vitrine.html`.
 - `npm run prints`: prints em `docs/prints/` (1031×580, 640×360, 390×844, fim, mapa e álbum) e os erros do console.

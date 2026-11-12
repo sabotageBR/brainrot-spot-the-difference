@@ -1,6 +1,8 @@
 // Progresso do jogador entre as cenas: qual e a proxima, o mapa dos mundos, a figurinha
 // ganha e o presente do dia. Logica pura: o save e o dia de hoje vem de fora.
 
+import { brainrot } from './catalogo.js';
+
 /** Cenas por mundo no jogo completo (10 mundos x 10). */
 export const POR_MUNDO = 10;
 export const MUNDOS_NO_MAPA = 10;
@@ -71,6 +73,66 @@ export function ganharFigurinha(colecao, cena, achouDourado) {
     vezes: ((antes && antes.vezes) || 0) + 1,
   };
   return { colecao: { ...colecao, [id]: f }, id, nova: !antes, dourada, virouDourada: dourada && !(antes && antes.dourada) };
+}
+
+/** Fases vencidas para abrir o bau (PFT da 0.3.0: uma meta curta para os primeiros minutos). */
+export const FASES_POR_BAU = 3;
+
+/**
+ * Uma fase vencida enche uma marca do bau; a ultima abre e as marcas voltam a zero.
+ * @param {number} marcas @returns {{ marcas: number, abre: boolean }}
+ */
+export function encherBau(marcas) {
+  const m = Math.max(0, marcas) + 1;
+  return m >= FASES_POR_BAU ? { marcas: 0, abre: true } : { marcas: m, abre: false };
+}
+
+/** Fases de distancia para o bonus nao gastar a figurinha nova de uma fase proxima. */
+export const BONUS_LONGE = 20;
+const PESO_RAR = { S: 2, A: 1, B: 0 };
+
+/**
+ * A figurinha bonus do bau: um coadjuvante (com caixa de figurinha) das cenas jogadas que o
+ * jogador ainda nao tem. Primeiro os que so viram premio a BONUS_LONGE fases ou mais (ou
+ * nunca), para nao gastar as figurinhas novas logo adiante; entre eles, o mais famoso (o bonus
+ * tem de empolgar); empate, o premio mais distante. Sem nenhum, null.
+ * @param {Record<string, Figurinha>} colecao @param {Cena[]} jogadas @param {Cena[]} lista
+ * @returns {{ id: string, cena: string }|null}
+ */
+export function figurinhaDoBau(colecao, jogadas, lista) {
+  const pos = (/** @type {string} */ cid) => lista.findIndex((c) => c.id === cid);
+  const agora = Math.max(-1, ...jogadas.map((c) => pos(c.id)));
+  const quando = (/** @type {string} */ id) => {
+    const i = lista.findIndex((c) => c.prot === id);
+    return i < 0 ? Infinity : i;
+  };
+  /** @type {{ id: string, cena: string, nota: number[] }|null} */
+  let melhor = null;
+  for (const c of jogadas) {
+    for (const p of c.personagens || []) {
+      if (colecao[p.id] || p.id === c.prot) continue;
+      const q = quando(p.id);
+      const b = brainrot(p.id);
+      const nota = [q - agora >= BONUS_LONGE ? 1 : 0, b ? PESO_RAR[b.raridade] : 0, q === Infinity ? 1e9 : q];
+      if (!melhor || maior(nota, melhor.nota)) melhor = { id: p.id, cena: c.id, nota };
+    }
+  }
+  return melhor ? { id: melhor.id, cena: melhor.cena } : null;
+}
+
+/** Comparacao lexicografica. @param {number[]} a @param {number[]} b */
+function maior(a, b) {
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] > b[i];
+  return false;
+}
+
+/**
+ * Guarda a figurinha bonus na colecao (o recorte sai da cena onde ela apareceu).
+ * @param {Record<string, Figurinha>} colecao @param {{ id: string, cena: string }} b
+ */
+export function ganharBonus(colecao, b) {
+  if (colecao[b.id]) return colecao;
+  return { ...colecao, [b.id]: { cena: b.cena, dourada: false, vezes: 1 } };
 }
 
 /** Dias desde 1970 de uma data 'AAAA-MM-DD' (sem fuso: so o calendario). @param {string} d */

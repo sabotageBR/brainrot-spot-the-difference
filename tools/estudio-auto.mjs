@@ -1,6 +1,7 @@
 // Roda o estudio sem tela: para cada entrada de arte/bruto/, abre tools/estudio.html?id=<id>&auto=1
 // num Chrome headless, espera o titulo virar "OK ..." ou "ERRO ..." e relata.
-// Uso: node tools/estudio-auto.mjs [id ...]   (sem ids: todas as entradas com variantes)
+// Uso: node tools/estudio-auto.mjs [--seco] [id ...]   (sem ids: todas as entradas com variantes;
+// --seco so lista as candidatas, sem gravar)
 import { spawn } from 'node:child_process';
 import { mkdtempSync, rmSync, readdirSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -13,7 +14,10 @@ const PORTA_DEP = 9409;
 const todos = readdirSync(join(RAIZ, 'arte/bruto'), { withFileTypes: true })
   .filter((d) => d.isDirectory() && readdirSync(join(RAIZ, 'arte/bruto', d.name)).some((f) => /^v\d/.test(f)))
   .map((d) => d.name);
-const ids = process.argv.slice(2).length ? process.argv.slice(2) : todos;
+// --seco: ensaio, lista as candidatas de cada cena (escolhidas com *) sem gravar nada
+const seco = process.argv.includes('--seco');
+const args = process.argv.slice(2).filter((a) => a !== '--seco');
+const ids = args.length ? args : todos;
 
 const fechar = await servir(PORTA);
 const perfil = mkdtempSync(join(tmpdir(), 'b7-estudio-'));
@@ -54,7 +58,7 @@ for (const id of ids) {
     falhas++;
     continue;
   }
-  await cdp('Page.navigate', { url: `http://127.0.0.1:${PORTA}/tools/estudio.html?id=${id}&auto=1` });
+  await cdp('Page.navigate', { url: `http://127.0.0.1:${PORTA}/tools/estudio.html?id=${id}&auto=1${seco ? '&seco' : ''}` });
   let titulo = '';
   for (let i = 0; i < 300; i++) {
     await espera(400);

@@ -1,6 +1,6 @@
 // O palco: desenha as vistas das imagens A e B no canvas, com a camera compartilhada
 // (zoom e arrasto valem nas duas), as marcas de caneta, os X do erro, as particulas,
-// o pisca, o brainrot dourado escondido e a mao do tutorial.
+// o pisca, o brainrot dourado escondido, a zona (holofote da ajuda) e a mao.
 // O tempo vem de fora (relogio do jogo): nada aqui le o relogio.
 
 import { calcularLayout, prenderCamera, telaParaImagem, imagemParaTela, dentro, zoomEm, escalaBase } from './layout.js';
@@ -48,6 +48,8 @@ export function criarPalco(canvas) {
   let escondido = null;
   /** @type {string|null} */
   let maoEm = null;
+  /** @type {{ id: string, t0: number }|null} holofote da ajuda automatica */
+  let zonaEm = null;
   let textoTrava = 'Easy!';
   let seguro = { topo: 0, base: 0 };
 
@@ -240,16 +242,62 @@ export function criarPalco(canvas) {
     const c = imagemParaTela(v, cam, W(), H(), e.elipse.cx, e.elipse.cy);
     const k = (t % 1100) / 1100;
     const anel = Math.max(e.elipse.rx, e.elipse.ry) * escala(v) + 6 + 18 * k;
-    ctx.strokeStyle = `rgba(255,255,255,${0.9 * (1 - k)})`;
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.arc(c.x, c.y, anel, 0, Math.PI * 2);
-    ctx.stroke();
+    // anel com contorno escuro: aparece na areia e no ceu
+    for (const [cor, lw] of [[`rgba(40,20,70,${0.5 * (1 - k)})`, 8], [`rgba(255,255,255,${0.95 * (1 - k)})`, 4]]) {
+      ctx.strokeStyle = /** @type {string} */ (cor);
+      ctx.lineWidth = /** @type {number} */ (lw);
+      ctx.beginPath();
+      ctx.arc(c.x, c.y, anel, 0, Math.PI * 2);
+      ctx.stroke();
+    }
     const bob = Math.sin((t / 1100) * Math.PI * 2) * 6;
-    ctx.font = `${Math.round(Math.max(30, v.w * 0.075))}px sans-serif`;
+    ctx.save();
+    ctx.shadowColor = 'rgba(20,10,40,0.6)';
+    ctx.shadowBlur = 8;
+    ctx.shadowOffsetY = 2;
+    ctx.font = `${Math.round(Math.max(40, v.w * 0.1))}px sans-serif`;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
-    ctx.fillText('\u{1F446}', c.x - 10, c.y + 8 + bob);
+    ctx.fillText('\u{1F446}', c.x - 12, c.y + 8 + bob);
+    ctx.restore();
+  }
+
+  /**
+   * Zona da ajuda automatica: um holofote sobre a regiao do erro, com o resto da vista
+   * escurecido. O centro sai deslocado (semente pelo id) para o jogador ainda procurar.
+   * @param {Ret} v @param {number} t
+   */
+  function desenharZona(v, t) {
+    if (!cena || !zonaEm) return;
+    const z = zonaEm;
+    const e = cena.erros.find((x) => x.id === z.id);
+    if (!e) return;
+    const maior = Math.max(e.elipse.rx, e.elipse.ry);
+    const r = Math.max(1.9 * maior, 0.09 * W());
+    let sem = 7;
+    for (const ch of `${cena.id}:${e.id}`) sem = (sem * 31 + ch.charCodeAt(0)) >>> 0;
+    const ang = ((sem % 360) * Math.PI) / 180;
+    // ate 35% do raio: a elipse (no maximo 53% do raio) continua dentro do circulo
+    const desl = 0.35 * r * (((sem >>> 9) % 100) / 100);
+    const c = imagemParaTela(v, cam, W(), H(), e.elipse.cx + Math.cos(ang) * desl, e.elipse.cy + Math.sin(ang) * desl);
+    const k = Math.min(1, (t - z.t0) / 300);
+    const rr = r * escala(v) * (1 + 0.04 * Math.sin(t / 260));
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(v.x, v.y, v.w, v.h);
+    ctx.arc(c.x, c.y, rr, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(20,10,40,${0.3 * k})`;
+    ctx.fill('evenodd');
+    ctx.setLineDash([12, 9]);
+    ctx.lineDashOffset = -t / 40;
+    for (const [cor, lw] of [[`rgba(40,20,70,${0.45 * k})`, 6], [`rgba(255,255,255,${0.95 * k})`, 3]]) {
+      ctx.strokeStyle = /** @type {string} */ (cor);
+      ctx.lineWidth = /** @type {number} */ (lw);
+      ctx.beginPath();
+      ctx.arc(c.x, c.y, rr, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.restore();
   }
 
   /** @param {number} t */
@@ -320,6 +368,7 @@ export function criarPalco(canvas) {
       desenharImagem(v, normal);
       if (fracPisca > 0) desenharImagem(v, trocada, fracPisca);
       desenharDourado(v, t);
+      desenharZona(v, t);
       desenharMarcas(v, t);
       desenharXis(v, i, t);
       if (i === lay.vistas.length - 1) desenharMao(v, t);
@@ -386,6 +435,7 @@ export function criarPalco(canvas) {
       piscaT0 = -1e9;
       escondido = null;
       maoEm = null;
+      zonaEm = null;
       revelarTudo = false;
       refazerLayout();
     },
@@ -476,6 +526,11 @@ export function criarPalco(canvas) {
     /** @param {string|null} id */
     mao(id) {
       maoEm = id;
+    },
+    /** Holofote da ajuda automatica sobre o erro id (null tira). @param {string|null} id @param {number} t */
+    zona(id, t) {
+      if (!id) zonaEm = null;
+      else if (!zonaEm || zonaEm.id !== id) zonaEm = { id, t0: t };
     },
     revelar() {
       revelarTudo = true;

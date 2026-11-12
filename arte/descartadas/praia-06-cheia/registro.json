@@ -1,0 +1,90 @@
+{
+  "cena": "praia-06",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a cozy beach ice cream parlor with 5 characters: Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) scooping ice cream behind the counter; Ta Ta Ta Ta Sahur (brown teapot with big eyes, thin arms and legs) eating a giant sundae; Tigrrullini Watermellini (tiger with a round watermelon body) playing with a ball; Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) juggling; Frigo Camelo (camel with a white fridge body, brown boots) jumping with joy. Around them: a long counter with tubs of colorful ice cream, sundae glasses, stacks of cones, jars of sprinkles, a jukebox, round stools, seashell decorations on the walls, a fishing net with starfish, a surfboard on the wall and potted palms. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "f9fc8f7c-ad49-4122-90f6-86969d51940e",
+    "escolhida_de": "1a de 4 da rodada 1"
+  },
+  "caixas": {
+    "tung-tung": [
+      165,
+      135,
+      300,
+      375
+    ],
+    "ta-ta-sahur": [
+      635,
+      415,
+      225,
+      270
+    ],
+    "tigrrullini": [
+      750,
+      515,
+      340,
+      430
+    ],
+    "cacto-hipopotamo": [
+      1030,
+      450,
+      305,
+      490
+    ],
+    "frigo-camelo": [
+      1300,
+      350,
+      295,
+      570
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "14d305a1-33ce-44de-a262-6332c04c771d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on top of the brown teapot character sitting on the stool. 2) Make the green sandals of the gray hippo with the cactus red. 3) Replace the pink seashell inside the picture frame at the top center with a yellow fish. 4) Make the yellow and blue surfboard leaning on the wall at the far right red. 5) Make the blue bowl on the floor at the bottom center yellow. 6) Make the yellow seat of the round stool at the far left edge blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "laco vermelho na tampa do Ta Ta Ta Ta Sahur (bule)",
+        "sandalias verdes do Il Cacto Hipopotamo -> vermelhas",
+        "quadro: o peixe amarelo entrou no quadro da DIREITA (moldura escura, concha azul -> peixe amarelo); o quadro rosa pedido continua com a concha rosa",
+        "prancha de surfe amarela e azul (direita) -> vermelha",
+        "tigela azul no chao (centro-baixo) -> amarela",
+        "assento amarelo do banquinho da extrema esquerda -> azul (efeito colateral: os assentos dos outros 2 banquinhos, o do meio e o do bule, tambem ficaram azuis)",
+        "efeito colateral: os doces da bandeja na mesinha (canto inferior direito) foram redesenhados com pequenas diferencas de forma"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "046bc110-1644-448c-a671-210af8f0e155",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the tiger with the watermelon body. 2) Make the brown boots of the camel with the fridge body red. 3) Put a small blue cap on top of the wooden log character behind the counter on the left. 4) Make the terracotta pot of the palm plant just left of the jukebox blue. 5) Make the pink bowl of candies on the small table at the bottom right green. 6) Make the pink ring in the middle of the round rug at the bottom left green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Tigrrullini Watermellini",
+        "botas marrons do Frigo Camelo -> vermelhas",
+        "bone azul no topo do Tung Tung Tung Sahur (tronco)",
+        "vaso de barro da palmeira a esquerda da jukebox -> azul",
+        "tigela rosa de doces na mesinha (canto inferior direito) -> verde (os outros doces da bandeja levemente redesenhados)",
+        "tapete redondo (esquerda-baixo): o anel rosa do meio E o anel azul ficaram verdes (o tapete inteiro mudou de cor, nao so o anel pedido)",
+        "efeito colateral: a tigela azul no chao (centro-baixo) tambem ficou verde; e o mesmo objeto que o v1 deixou amarelo (o estudio deve usar so uma das duas)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Antes desta cena houve 1 geracao (x4) com o prompt antigo da praia-06 (acampamento na praia), descartada sem baixar quando o roteiro trocou os lugares para interiores. Rodada 1 do prompt da sorveteria: a 2 tinha texto legivel (WATERMELLIN) no balcao; a 3 tinha o cacto na cabeca do hipopotamo e muito chao de ladrilho; a 4 tinha muito chao vazio no centro-baixo. Escolhida a 1: os 5 personagens fieis (tronco com taco e colher de sorvete atras do balcao, bule sentado no banquinho ao lado de um sundae, tigre-melancia com bola de praia, hipopotamo com cacto nas costas e sandalias fazendo malabares, camelo com corpo de geladeira aberta e botas). Sorveteria com janela para o mar, quadros de conchas, redes com estrelas, jukebox, prancha, potes de doces, tapete redondo e mesinha de doces. Sem texto, sem logo, sem arma. As duas edicoes mantiveram o enquadramento e todos os personagens."
+}

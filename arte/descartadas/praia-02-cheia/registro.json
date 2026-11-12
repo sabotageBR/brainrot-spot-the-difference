@@ -1,0 +1,88 @@
+{
+  "cena": "praia-02",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "a lively beach boardwalk with shops and stalls with 5 characters: Trulimero Trulicina (orange fish body with a cat head and four cat legs) selling ice cream from a cart; Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) trying on sunglasses; Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) dancing; Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) laughing; U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) carrying a basket. Around them: striped awnings, an ice cream cart, sunglasses on a rack, straw hats, beach towels hanging, a surfboard shop, balloons, palm trees in pots, bicycles, a popcorn stand and seagulls. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "106b3a09-7127-4cfc-b0df-dd993630faaa",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "trulimero": [
+      165,
+      780,
+      280,
+      240
+    ],
+    "tung-tung": [
+      430,
+      290,
+      230,
+      490
+    ],
+    "chimpanzini": [
+      590,
+      538,
+      310,
+      490
+    ],
+    "lirili": [
+      850,
+      415,
+      345,
+      425
+    ],
+    "u-din-din": [
+      1145,
+      595,
+      385,
+      525
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "e03e4bc3-f895-4b48-be75-5b1055d663a4",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the black sunglasses on the wooden log character red. 2) Make the blue shorts of the muscular orange character green. 3) Replace the striped beach ball on the floor at the bottom center-left with a yellow rubber duck of the same size. 4) Make the blue-and-white striped awning at the top left, above the straw hats, green-and-white. 5) Make the striped surfboard standing upright in the upper center of the picture solid red. 6) Make the orange balloon in the balloon bunch at the top center purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos do Tung Tung Tung Sahur: armacao preta -> vermelha (lentes continuam pretas)",
+        "short do U Din Din Din Dun azul -> verde",
+        "bola de praia listrada no chao (centro-esquerda, embaixo) -> patinho de borracha amarelo",
+        "toldo listrado azul/branco do alto a esquerda (sobre os chapeus de palha) -> verde/branco",
+        "prancha de surf listrada em pe no alto do centro -> vermelha lisa",
+        "balao de cima do cacho (era laranja) -> roxo; efeito colateral: o cacho trocou outras cores (o azul virou laranja, o verde virou azul)"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "b709fb4b-0c0f-498c-80e6-5f5cf495ed3f",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red sandals of the cactus elephant blue. 2) Put a small red cap on the head of the green monkey in the banana. 3) Make the blue alarm clock on the floor at the bottom center red. 4) Make the blue bucket on the floor at the bottom left yellow. 5) Make the blue-and-white striped towel hanging on the far right red-and-white. 6) Make the terracotta pot with a green plant in the bottom-right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "sandalias da Lirili Larila vermelhas -> azuis",
+        "bone vermelho na cabeca do Chimpanzini Bananini (efeito colateral: a ponta da casca de banana acima da cabeca sumiu sob o bone)",
+        "despertador do chao (centro-baixo) azul -> vermelho",
+        "balde azul no chao (canto inferior esquerdo) -> amarelo",
+        "toalha listrada azul/branca pendurada na extrema direita -> vermelha/branca",
+        "vaso de terracota com planta no canto inferior direito -> azul"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: candidata 3 tinha texto legivel (placas) e foi descartada; a 4 tinha a Lirili sem corpo de cacto; a 1 tinha o terco de baixo quase vazio (so piso com papeis). Escolhida a 2: os 5 personagens reconheciveis, detalhe espalhado (caixote, balde, pa, bola, vasos nos cantos de baixo). Ha DOIS gatos-peixe: um laranja atras do carrinho de sorvete (vendendo, com rabo de peixe) e um branco com corpo de peixe laranja e 4 patas de gato na frente do carrinho; a caixa 'trulimero' e a do da frente (corpo inteiro, mais fiel a descricao). Ha uma pessoa pequena ao fundo numa barraca (centro-direita, chapeu de palha). O taco do Tung Tung esta no roteiro. As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
+}

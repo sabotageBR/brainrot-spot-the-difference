@@ -3,8 +3,8 @@
   "estilo": "e2",
   "ferramenta": "Grok Imagine (grok.com, navegador)",
   "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-  "data": "2026-11-08",
-  "prompt": "a seaside amusement park with a Ferris wheel and a carousel with 5 characters: Trippi Troppi (orange cat head on a pink shrimp body) riding the carousel; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) eating cotton candy; Burbaloni Luliloli (brown capybara inside half a coconut) playing a guitar; Cocofanto Elefanto (small brown elephant with a coconut head) playing with a ball; Espressona Signora (old lady in a flowered dress with an espresso cup head) juggling. Around them: a Ferris wheel, a carousel with horses, a cotton candy stand, balloons, game booths with prizes, a little roller coaster, a popcorn cart, string lights, palm trees and seagulls. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "data": "2026-11-12",
+  "prompt": "a seaside amusement park with a Ferris wheel and a carousel with 5 characters: Trippi Troppi (orange cat head on a pink shrimp body) riding the carousel; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) eating cotton candy; Burbaloni Luliloli (brown capybara inside half a coconut) playing a guitar; Cocofanto Elefanto (small brown elephant with a coconut head) playing with a ball; Espressona Signora (old lady in a flowered dress with an espresso cup head) juggling. Around them: a Ferris wheel, a small carousel with two horses, a cotton candy stand, a bunch of balloons, a popcorn cart and one palm tree. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
   "iteracoes": 1,
   "base": {
     "arquivo": "a.jpg",
@@ -12,39 +12,39 @@
       1600,
       1200
     ],
-    "grok_id": "01728623-e4ee-4106-b623-0adf60b81b55",
+    "grok_id": "fb02f708-895c-4188-8855-aaa621a33f71",
     "escolhida_de": "3a de 4 da rodada 1"
   },
   "caixas": {
     "trippi-troppi": [
-      50,
-      670,
-      235,
-      365
-    ],
-    "orangutini": [
-      375,
-      440,
-      280,
-      545
-    ],
-    "burbaloni": [
-      585,
-      735,
-      345,
+      90,
+      705,
+      350,
       360
     ],
+    "orangutini": [
+      425,
+      450,
+      275,
+      470
+    ],
+    "burbaloni": [
+      645,
+      615,
+      310,
+      390
+    ],
     "cocofanto": [
-      895,
-      555,
-      220,
-      310
+      925,
+      760,
+      270,
+      325
     ],
     "espressona": [
-      1110,
-      698,
-      345,
-      460
+      1115,
+      600,
+      360,
+      440
     ]
   },
   "edicoes": [
@@ -54,15 +54,15 @@
         1600,
         1200
       ],
-      "grok_id": "fd6e44bf-8cbb-4f0d-aea9-c7ab36076ba4",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the orange cat riding the horse at the bottom left. 2) Make the yellow ukulele played by the capybara in the coconut red. 3) Make the pink cotton candy held by the orangutan blue. 4) Make the red-and-white striped awning of the cotton candy stand in the center green-and-white. 5) Make the red roller coaster car with riders at the top center blue. 6) Make the red popcorn cart on the right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "grok_id": "c7a6b77f-a527-4474-be1f-2733559bd9c5",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the pink and white canopy of the carousel blue and white. 2) Put a red cap on the capybara in the coconut. 3) Make the pink cotton candy stand blue. 4) Make the striped beach ball at the bottom solid red. 5) Put black sunglasses on the pink cat. 6) Add a small yellow crab on the sand in the bottom right corner. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
       "mudancas": [
-        "laco vermelho na cabeca do Trippi Troppi (orelha esquerda)",
-        "ukulele amarelo do Burbaloni Luliloli -> vermelho",
-        "algodao-doce rosa do Orangutini Ananassini -> azul",
-        "toldo listrado vermelho/branco da barraca de algodao-doce (centro) -> verde/branco, e o painel listrado de baixo da barraca tambem; efeito colateral: o toldo vermelho/branco da barraca de premios da esquerda (centro-direita, ~x 1080 y 380) tambem ficou verde/branco",
-        "carrinho da montanha-russa (alto, centro) vermelho -> azul; efeito colateral: os trilhos vermelhos da montanha-russa tambem ficaram azuis",
-        "carrinho de pipoca vermelho (direita) -> azul (teto azul e amarelo)"
+        "cobertura rosa e branca do carrossel -> azul e branca (a base tambem)",
+        "bone vermelho no Burbaloni",
+        "barraca rosa de algodao-doce -> azul",
+        "bola de praia listrada -> vermelha lisa",
+        "oculos escuros no Trippi Troppi",
+        "caranguejo amarelo na areia (direita-baixo)"
       ]
     },
     {
@@ -71,18 +71,25 @@
         1600,
         1200
       ],
-      "grok_id": "cf852c6d-37b1-480b-b669-cfabfbe3a959",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the purple flowered dress of the old lady with the coffee cup head green. 2) Put a small blue cap on the coconut head of the brown elephant playing with the ball. 3) Make the blue carousel horse at the right end of the carousel brown. 4) Make the pink flag on top of the carousel blue. 5) Add a small yellow rubber duck on the ground at the bottom center, in front of the coconut. 6) Make the tall red-and-white striped tent roof at the top right, behind the balloons, blue-and-white. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "grok_id": "66e7ebf2-796d-4e77-b120-ee9fc59ccfdf",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange orangutan. 2) Make the purple flowered dress of the old lady with the cup head green. 3) Make all the balloons in the bunch red. 4) Add a small white seagull flying in the sky at the top middle. 5) Add a red starfish on the sand in the bottom left corner. 6) Make the white horse on the carousel brown. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
       "mudancas": [
-        "vestido florido roxo da Espressona Signora -> verde (flores mantidas)",
-        "NAO FEITO no Cocofanto Elefanto: o bone azul caiu na cabeca do Burbaloni Luliloli (capivara), nao no elefante",
-        "cavalo azul da ponta direita do carrossel -> marrom",
-        "bandeira rosa no topo do carrossel -> azul; efeito colateral: o teto listrado rosa/branco do carrossel tambem ficou azul/branco",
-        "patinho de borracha amarelo acrescentado no chao, em baixo, a direita do coco",
-        "teto alto listrado vermelho/branco da barraca de premios do alto a direita (atras dos baloes) -> azul/branco"
+        "oculos escuros no Orangutini",
+        "vestido roxo florido da Espressona -> verde",
+        "todos os baloes do cacho -> vermelhos (a bolinha rosa de malabares tambem)",
+        "gaivota branca no ceu, no alto ao meio",
+        "estrela-do-mar vermelha (esquerda-baixo)",
+        "cavalo branco do carrossel -> marrom"
       ]
     }
   ],
   "marca_dagua": "nenhuma visivel",
-  "notas": "Rodada 1: a candidata 2 tinha texto legivel em placas; a 1 tinha o Trippi Troppi mais gato que camarao; a 4 tinha um bicho roxo extra (narval) no chao. Escolhida a 3: os 5 personagens fieis (Trippi Troppi com corpo de camarao montado num cavalinho de carrossel solto, Orangutini com corpo de abacaxi e algodao-doce, Burbaloni na metade do coco com ukulele, Cocofanto com cabeca de coco e bola, Espressona fazendo malabares). Figurantes humanos minusculos no carrinho da montanha-russa. O chao do centro-baixo e quase so areia com pedrinhas (por isso o patinho acrescentado no v2). Nenhum tubarao, nenhuma cena submarina. Os efeitos colaterais (trilhos da montanha-russa no v1, teto do carrossel no v2) sao diferencas grandes nao pedidas: o estudio deve detecta-las como candidatas."
+  "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 3: os 5 fieis (Trippi Troppi gato em corpo de camarao rosa; Orangutini abacaxi com algodao-doce; Burbaloni capivara no coco com violao; Cocofanto elefantinho; Espressona senhora de xicara fazendo malabares), roda-gigante, carrossel com dois cavalos, barraca de algodao-doce, baloes, carrinho de pipoca e coqueiro. As 12 mudancas aconteceram. A arte cheia anterior foi para arte/descartadas/praia-05-cheia/.",
+  "evitar": [
+    [
+      294,
+      823
+    ]
+  ],
+  "nota_evitar": "Claude, 2026-11-12: os oculos do Trippi Troppi (v1) encostam no carrossel que ficou azul (v1) e viraram uma mancha so (dois objetos num erro, o defeito da fase 8); o estudio nao usa essa mancha."
 }

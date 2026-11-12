@@ -3,8 +3,8 @@
   "estilo": "e2",
   "ferramenta": "Grok Imagine (grok.com, navegador)",
   "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-  "data": "2026-11-08",
-  "prompt": "a grassy cliff top with a red and white lighthouse with 5 characters: Trippa Troppa (green fish head on a chubby brown bear body) having a picnic on the grass; Cappuccino Assassino (striped coffee cup with a black ninja mask, little arms and legs in sneakers, holding two spoons, no knives) flying a kite; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) carrying a basket; Boneca Ambalabu (green frog head on a black tire with two human legs) playing a guitar; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing with a ball. Around them: a checkered picnic blanket with sandwiches and fruit, a wooden staircase, flowers on the cliff, a kite in the sky, a small house with a blue door, a wooden fence, a bench, a telescope and fluffy clouds. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "data": "2026-11-12",
+  "prompt": "a grassy cliff top with a red and white lighthouse with 5 characters: Trippa Troppa (green fish head on a chubby brown bear body) having a picnic on the grass; Cappuccino Assassino (striped coffee cup with a black ninja mask, little arms and legs in sneakers, holding two spoons, no knives) flying a kite; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) carrying a basket; Boneca Ambalabu (green frog head on a black tire with two human legs) playing a guitar; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing with a ball. Around them: a checkered picnic blanket with a fruit basket, a kite in the sky, a small house with a blue door, a wooden fence, a bench and a few big flowers. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
   "iteracoes": 1,
   "base": {
     "arquivo": "a.jpg",
@@ -12,38 +12,38 @@
       1600,
       1200
     ],
-    "grok_id": "8315bbe9-ac11-49a5-a6e9-7650397d8c3e",
-    "escolhida_de": "1a de 4 da rodada 1"
+    "grok_id": "26b8ad74-c8b4-4ae9-9939-b4fd786ffd92",
+    "escolhida_de": "2a de 4 da rodada 1"
   },
   "caixas": {
     "trippa-troppa": [
-      525,
-      515,
-      300,
+      180,
+      605,
+      275,
       355
     ],
     "cappuccino-assassino": [
-      288,
-      438,
-      275,
-      300
+      505,
+      520,
+      325,
+      275
     ],
     "girafa-celestre": [
-      800,
-      305,
-      250,
-      380
+      875,
+      290,
+      260,
+      440
     ],
     "boneca-ambalabu": [
-      918,
-      615,
-      350,
-      405
+      855,
+      680,
+      360,
+      360
     ],
     "bobrito": [
       1195,
-      728,
-      350,
+      705,
+      255,
       345
     ]
   },
@@ -54,15 +54,15 @@
         1600,
         1200
       ],
-      "grok_id": "32f84a2e-a28c-464a-81a1-017ac72ca21a",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the black ninja mask of the striped coffee cup character on the left red. 2) Make the brown fedora hat of the beaver on the right blue. 3) Make the blue door of the small house on the right red. 4) Make the multicolored kite at the top center solid pink. 5) Replace the bunch of purple grapes at the left corner of the picnic blanket with a slice of watermelon of the same size. 6) Replace the large grey rock in the grass at the bottom center with an orange pumpkin of the same size. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "grok_id": "7a3eb067-37c3-45c2-b79c-42bf91286097",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the green fish head of the bear on the picnic blanket. 2) Make the kite in the sky red. 3) Make the red roof of the small house blue. 4) Make the black fedora of the beaver red. 5) Make the blue flower on the bottom right red. 6) Make the pink flower on the bottom left yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
       "mudancas": [
-        "mascara ninja do Cappuccino Assassino preta -> vermelha (efeito colateral: ganhou tambem uma capa vermelha nas costas, a esquerda do corpo)",
-        "chapeu fedora do Bobrito Bandito marrom -> azul",
-        "porta azul da casinha (direita) -> vermelha",
-        "pipa colorida do alto (centro) -> rosa lisa (o rabo de lacos continua colorido)",
-        "cacho de uvas no canto esquerdo da toalha de piquenique -> fatia de melancia (um pouco maior que as uvas)",
-        "pedra cinza grande no capim (centro-baixo) -> abobora laranja"
+        "bone vermelho na Trippa Troppa",
+        "pipa colorida -> vermelha",
+        "telhado vermelho da casinha -> azul",
+        "chapeu preto do Bobrito -> vermelho",
+        "a flor que mudou foi a amarela da direita (-> vermelha); a azul continua azul",
+        "flor rosa da esquerda-baixo -> amarela"
       ]
     },
     {
@@ -71,18 +71,19 @@
         1600,
         1200
       ],
-      "grok_id": "7b544b28-7529-4d0b-b2df-1fa400ba173a",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow party hat on the head of the green fish sitting on the picnic blanket. 2) Make the blue pants of the frog sitting on the tire yellow. 3) Make the brown boots of the giraffe with the watermelon body red. 4) Make the red dome roof on top of the lighthouse on the left green. 5) Make the black telescope on the tripod near the house red. 6) Make the brown wooden bench in front of the house on the right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "grok_id": "2b1734d8-7e59-4b3e-8bbe-92452611f8bf",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red and white checkered picnic blanket blue and white. 2) Put a red bow on the head of the giraffe. 3) Make the purple sneakers of the frog character orange. 4) Make the red stripes of the lighthouse blue. 5) Make the wooden bench on the right red. 6) Add a small yellow bird sitting on the wooden fence on the left. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
       "mudancas": [
-        "chapeu de festa amarelo com bolinhas na cabeca da Trippa Troppa",
-        "calca azul da Boneca Ambalabu -> amarela",
-        "botas marrons da Girafa Celestre -> vermelhas",
-        "cupula vermelha do farol -> verde (a faixa da varanda logo abaixo tambem ficou verde)",
-        "luneta preta no tripe perto da casa -> tubo vermelho",
-        "banco de madeira marrom em frente a casa -> azul"
+        "toalha xadrez vermelha e branca -> azul e branca",
+        "laco vermelho na cabeca da Girafa Celestre",
+        "tenis roxos da Boneca Ambalabu -> laranja",
+        "listras vermelhas do farol -> azuis (o topo tambem)",
+        "banco de madeira da direita -> vermelho",
+        "passarinho amarelo na cerca da esquerda",
+        "efeito colateral: o telhado da casinha tambem ficou azul (o mesmo objeto mudou no v1)"
       ]
     }
   ],
   "marca_dagua": "nenhuma visivel",
-  "notas": "Rodada 1: as 4 candidatas tinham os 5 personagens; a 4 tinha a Trippa Troppa mais urso que peixe. Escolhida a 1: os 5 fieis (Cappuccino Assassino com 2 colheres, sem faca, empinando a pipa; Boneca Ambalabu sentada num pneu), farol, escada, cerca, banco, luneta e casa de porta azul. O mar aparece so a esquerda, ao fundo (sem tubarao, sem cena submarina). As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
+  "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 2 (a 1 nao tinha o farol e desenhou o Cappuccino Assassino como gente): os 5 fieis (Trippa Troppa cabeca de peixe em corpo de urso na toalha; Cappuccino Assassino copo listrado de mascara ninja com duas colheres, sem faca; Girafa Celestre melancia com cabeca de girafa e cesta; Boneca Ambalabu sapo no pneu com violao; Bobrito castor de terno listrado e chapeu, sem arma), farol, casinha, cerca, banco, pipa, flores e nuvens. As 12 mudancas aconteceram (uma flor trocada foi outra). A arte cheia anterior foi para arte/descartadas/praia-04-cheia/."
 }
