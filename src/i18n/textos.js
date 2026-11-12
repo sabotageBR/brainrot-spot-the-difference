@@ -12,6 +12,7 @@ const T = {
     fim: 'You found them all!', fimSub: 'New scenes are on the way. Replay scenes on the map to find the golden brainrots.',
     semCena: 'Could not load the scene', tenteDeNovo: 'Try again', escondidoDica: 'A golden brainrot hides in every scene!',
     acheN: 'Find the {n} differences!', proximaFig: 'Next brainrot',
+    bauAberto: 'Chest opened!', bonus: 'Bonus', dicaGanha: '+1 hint',
   },
   pt: {
     idioma: 'pt',
@@ -22,6 +23,7 @@ const T = {
     fim: 'Você achou tudo!', fimSub: 'Novas cenas estão chegando. Jogue as cenas de novo no mapa para achar os brainrots dourados.',
     semCena: 'Não deu para carregar a cena', tenteDeNovo: 'Tentar de novo', escondidoDica: 'Toda cena esconde um brainrot dourado!',
     acheN: 'Ache as {n} diferenças!', proximaFig: 'Próximo brainrot',
+    bauAberto: 'Baú aberto!', bonus: 'Bônus', dicaGanha: '+1 dica',
   },
   es: {
     idioma: 'es',
@@ -32,6 +34,7 @@ const T = {
     fim: '¡Lo encontraste todo!', fimSub: 'Llegan escenas nuevas. Repite escenas en el mapa para encontrar los brainrots dorados.',
     semCena: 'No se pudo cargar la escena', tenteDeNovo: 'Reintentar', escondidoDica: '¡Cada escena esconde un brainrot dorado!',
     acheN: '¡Encuentra las {n} diferencias!', proximaFig: 'Siguiente brainrot',
+    bauAberto: '¡Cofre abierto!', bonus: 'Bonus', dicaGanha: '+1 pista',
   },
 };
 

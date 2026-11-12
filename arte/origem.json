@@ -847,12 +847,12 @@
  },
  "praia-01": {
   "grok": {
-   "cena": "praia",
+   "cena": "praia-01",
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
-   "modelo_ou_modo": "Geração: modo 'Imagem', opção 'Qualidade 2.0' (a outra é 'Velocidade'), ×4 imagens, proporção 4:3 'Apresentação'. Edições: caixa 'Descreva sua edição' na página da imagem A (proporção 'Automático'); a UI não mostra nome de modelo.",
-   "data": "2026-11-07",
-   "prompt": "a sunny tropical beach: Tralalero Tralala, a blue shark standing on three muscular legs wearing blue sneakers, dancing on the sand; Trippi Troppi, a creature with an orange cat head and a pink shrimp body, building a sandcastle; Bananita Dolphinita, a dolphin wearing a yellow banana peel, jumping out of the turquoise sea; a striped beach umbrella, beach balls, buckets and shovels, seashells, starfish, little crabs, palm trees with coconuts, sailboats, seagulls, fluffy clouds and an ice cream cart, wide establishing shot, busy detailed scene with many small distinct objects spread across the whole picture, every area of the image has something to look at, no large empty areas, everything in sharp focus with no blur and no depth of field, characters medium size and fully visible, 4:3, no text, no letters, no numbers, no watermark, no logo, no signature, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+   "data": "2026-11-12",
+   "prompt": "a sunny tropical beach with 3 characters: Tralalero Tralala (blue shark on three legs, plain blue sneakers) dancing on the sand; Trippi Troppi (orange cat head on a pink shrimp body) building a sandcastle; Bananita Dolphinita (gray dolphin inside a peeled banana skin) jumping out of the turquoise sea. Around them: a big striped beach umbrella, a red bucket with a yellow shovel, a beach ball, a big starfish, one palm tree, a small sailboat on the sea and two fluffy clouds. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -860,8 +860,28 @@
      1600,
      1200
     ],
-    "grok_id": "268cf65d-8885-4689-820d-115cb3384d34",
-    "escolhida_de": "2ª de 4 imagens da rodada 1"
+    "grok_id": "e4bc581f-90e8-46b2-8ce6-ee9d68e8f0e7",
+    "escolhida_de": "1a de 4 da rodada 1"
+   },
+   "caixas": {
+    "tralalero": [
+     130,
+     560,
+     430,
+     470
+    ],
+    "trippi-troppi": [
+     550,
+     600,
+     330,
+     350
+    ],
+    "bananita": [
+     980,
+     320,
+     360,
+     420
+    ]
    },
    "edicoes": [
     {
@@ -870,20 +890,16 @@
       1600,
       1200
      ],
-     "grok_id": "203ba790-6084-406f-8be1-a0574eb7edc6",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Change the blue shark's blue sneakers to bright red sneakers. 2) There are two small sailboats on the horizon: remove only the right one, keep the left sailboat; keep the banana dolphin exactly as it is. 3) The leftmost beach ball (pink-and-white, at the far left edge) becomes green-and-white; the blue-and-white beach ball next to it stays blue-and-white. 4) Remove the small red crab on the sand next to the wheel of the ice cream cart. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "8cb4b469-94f4-49ef-a35f-acfdb0a47135",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red and yellow beach umbrella on the left blue and white. 2) Make the blue sneakers of the blue shark red. 3) Put a small red bow on the head of the orange cat. 4) Put black sunglasses on the gray dolphin. 5) Make the red stripes on the sail of the sailboat on the right blue. 6) Make the striped beach ball at the bottom solid green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "tênis do tubarão (Tralalero) azul -> vermelho",
-      "2 veleiros -> 1 veleiro (o Grok apagou os dois e desenhou um só no meio, entre as posições antigas)",
-      "bola de praia mais à esquerda rosa/branca -> verde/branca",
-      "caranguejinho ao lado da roda do carrinho de sorvete removido"
-     ],
-     "tentativas": 2,
-     "tentativa_descartada": {
-      "grok_id": "4052a13e-03f2-4a75-81e1-72af74dbda62",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Change the blue shark's blue sneakers to bright red sneakers. 2) Remove the sailboat on the right (the one closer to the dolphin), leaving only one sailboat on the sea. 3) Change the pink-and-white beach ball on the far left into a green-and-white beach ball. 4) Remove the small red crab on the sand next to the wheel of the ice cream cart. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
-      "motivo": "apagou a Bananita Dolphinita inteira junto com os veleiros (ficou 1 veleiro maior e deslocado) e trocou a bola errada (a azul/branca virou verde); o resto foi feito (tênis vermelho, caranguejo removido)"
-     }
+      "guarda-sol vermelho e amarelo -> azul e branco",
+      "tenis azuis do Tralalero -> vermelhos",
+      "laco vermelho na cabeca do Trippi Troppi",
+      "oculos escuros na Bananita",
+      "listras vermelhas da vela do barco -> azuis",
+      "bola de praia listrada -> verde lisa"
+     ]
     },
     {
      "arquivo": "v2.jpg",
@@ -891,36 +907,23 @@
       1600,
       1200
      ],
-     "grok_id": "f66fcf22-5a2a-4aaa-a0f2-76490a003c07",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a pair of black sunglasses on the banana dolphin's eyes. 2) On the palm tree in the top-left corner, the cluster of three coconuts becomes only two coconuts. 3) The colorful beach umbrella on the left becomes a red-and-white striped umbrella. 4) Add one small green sea turtle on the sand in the bottom-right area, between the pink seashells and the red crab. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "4727021d-250c-4aac-9f03-54297dafff26",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the head of the blue shark. 2) Put a small blue scarf around the neck of the orange cat. 3) Make the green leaves of the palm tree in the top left orange. 4) Make the orange starfish on the bottom right purple. 5) Add a small yellow crab on the sand in the bottom left corner. 6) Add a white seagull flying in the sky between the two clouds. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "óculos escuros pretos na Bananita Dolphinita",
-      "coqueiro do canto superior esquerdo: cacho de 4 cocos -> 2 (efeito colateral: o 2º coqueiro também perdeu cocos, ficou com ~1)",
-      "guarda-sol colorido da esquerda -> listrado vermelho e branco",
-      "tartaruga verde pequena acrescentada (caiu no centro-baixo, à frente da pá roxa, não no canto direito; a concha rosa ao lado mudou um pouco de lugar)"
-     ]
-    },
-    {
-     "arquivo": "v3.jpg",
-     "tam": [
-      1600,
-      1200
-     ],
-     "grok_id": "3fd20ca0-40f9-4bd6-a2da-30671cb8dafb",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow straw sun hat on the orange cat's head. 2) The blue bucket next to the sandcastle becomes a green bucket. 3) Remove the seagull flying highest on the right side of the sky, so there are three seagulls instead of four. 4) Flip the yellow toy shovel in the bottom-right corner horizontally, so its handle points to the left instead of to the right. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
-     "mudancas": [
-      "chapéu de palha amarelo no gato (Trippi Troppi)",
-      "balde azul ao lado do castelo -> verde",
-      "NÃO FEITO: as 4 gaivotas continuam lá",
-      "pá amarela do canto inferior direito virada (cabo agora aponta para a esquerda/baixo; não é espelho exato, foi redesenhada deitada)"
+      "bone vermelho no Tralalero",
+      "cachecol azul no Trippi Troppi",
+      "folhas do coqueiro -> laranja",
+      "estrela-do-mar laranja -> roxa",
+      "caranguejo amarelo na areia (esquerda-baixo)",
+      "gaivota branca no ceu entre as nuvens"
      ]
     }
    ],
-   "marca_dagua": "nenhuma visível (cantos conferidos em tamanho real em a, v1, v2, v3). Há metadado EXIF: ImageDescription='Signature: <base64>' (assinatura de proveniência) e Artist=<id da imagem no Grok>; recomenda-se remover o EXIF no pipeline.",
-   "notas": "Logado como 'Evandro Moura'. Geração: ~25 s para as 4 imagens. Edição: <10 s cada (pronta no primeiro screenshot após 10 s). Nenhuma mensagem de limite de uso. Nas 4 candidatas o Tralalero tem 2 pernas, não 3. Candidatas 1 e 3 tinham um logo tipo 'swoosh' da Nike nos tênis (descartadas por marca registrada); a 4 tinha golfinho verde; escolhida a 2 (sem logo, Bananita fiel, detalhe espalhado). A edição re-renderiza a imagem inteira: mesmo enquadramento e paleta, sem deslocamento, mas com leve 'fantasma' em todos os contornos (diferença média de luminância 7,5 a 11 em 255 contra A); fora das mudanças pedidas o olho não nota diferença, mas uma diferença por pixel não serve para achar as regiões. A UI tem um painel 'Segmentos' que detecta objetos automaticamente e ferramentas 'Edição Precisa', 'Cores', 'Recortar', 'Desenhar' (não usadas). Pedidos de remoção e de contagem são os menos confiáveis: no v1 a 1ª tentativa removeu um personagem; no v3 a gaivota não sumiu. O nome do arquivo baixado é grok-image-<id>.jpg (JPEG 1600x1200)."
+   "marca_dagua": "nenhuma visivel",
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: o publico da Poki achou os desenhos complexos; COMPOSICAO_SIMPLES). O dono viu as 4 e aprovou o nivel de simplicidade para as 10 fases. Escolhida a 1: os 3 fieis (Tralalero de tenis azuis, 2 pernas como sempre; Trippi Troppi gato laranja em corpo de camarao rosa fazendo castelo; Bananita golfinho na banana pulando do mar), guarda-sol, coqueiro, barco, bola, balde, estrela-do-mar e duas nuvens. As 12 mudancas aconteceram, sem efeito colateral visivel. A arte cheia anterior foi para arte/descartadas/praia-01-cheia/."
   },
   "estudio": {
-   "data": "2026-11-10",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -928,44 +931,37 @@
    "remendos": [
     {
      "id": "d1",
-     "fonte": "v1",
+     "fonte": "v2",
      "vis": 1
     },
     {
      "id": "d2",
-     "fonte": "v1",
-     "vis": 0.895
+     "fonte": "v2",
+     "vis": 1
     },
     {
      "id": "d3",
      "fonte": "v2",
-     "vis": 0.7
+     "vis": 1
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": 0,
-     "s": 1,
-     "erro": 4.8070068509220745
+     "dy": -1,
+     "s": 0.998,
+     "erro": 4.487440505877618
     },
     {
      "variante": "v2",
      "dx": 0,
-     "dy": -0.5,
+     "dy": -1,
      "s": 1,
-     "erro": 6.916278702972315
-    },
-    {
-     "variante": "v3",
-     "dx": 0,
-     "dy": 0,
-     "s": 1,
-     "erro": 6.222773114034441
+     "erro": 4.563183805665881
     }
    ],
-   "candidatas": 11,
+   "candidatas": 13,
    "pedidas": 12,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
@@ -1115,8 +1111,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "a lively beach boardwalk with shops and stalls with 5 characters: Trulimero Trulicina (orange fish body with a cat head and four cat legs) selling ice cream from a cart; Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) trying on sunglasses; Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) dancing; Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) laughing; U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) carrying a basket. Around them: striped awnings, an ice cream cart, sunglasses on a rack, straw hats, beach towels hanging, a surfboard shop, balloons, palm trees in pots, bicycles, a popcorn stand and seagulls. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "a calm beach boardwalk with two small shops with 5 characters: Trulimero Trulicina (orange fish body with a cat head and four cat legs) selling ice cream from a cart; Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) trying on sunglasses; Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) dancing; Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) laughing; U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) carrying a basket. Around them: an ice cream cart with an umbrella, a rack of sunglasses, a striped awning, a surfboard leaning on a wall, a bicycle, a potted palm tree and three balloons. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -1124,39 +1120,39 @@
      1600,
      1200
     ],
-    "grok_id": "106b3a09-7127-4cfc-b0df-dd993630faaa",
-    "escolhida_de": "2a de 4 da rodada 1"
+    "grok_id": "1cfddd74-8b4a-43a3-a08a-306e4997aa11",
+    "escolhida_de": "3a de 4 da rodada 1 (a 4a nao carregou)"
    },
    "caixas": {
-    "trulimero": [
-     165,
-     780,
-     280,
-     240
-    ],
     "tung-tung": [
-     430,
-     290,
-     230,
-     490
+     385,
+     420,
+     320,
+     510
+    ],
+    "trulimero": [
+     55,
+     500,
+     300,
+     200
     ],
     "chimpanzini": [
-     590,
-     538,
+     645,
+     505,
      310,
-     490
+     440
     ],
     "lirili": [
-     850,
-     415,
-     345,
-     425
+     925,
+     500,
+     300,
+     440
     ],
     "u-din-din": [
-     1145,
-     595,
-     385,
-     525
+     1235,
+     585,
+     330,
+     430
     ]
    },
    "edicoes": [
@@ -1166,15 +1162,15 @@
       1600,
       1200
      ],
-     "grok_id": "e03e4bc3-f895-4b48-be75-5b1055d663a4",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the black sunglasses on the wooden log character red. 2) Make the blue shorts of the muscular orange character green. 3) Replace the striped beach ball on the floor at the bottom center-left with a yellow rubber duck of the same size. 4) Make the blue-and-white striped awning at the top left, above the straw hats, green-and-white. 5) Make the striped surfboard standing upright in the upper center of the picture solid red. 6) Make the orange balloon in the balloon bunch at the top center purple. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "5db4c439-8c33-4848-be9a-9266621400de",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the orange and white umbrella on the top left green and white. 2) Make the blue shorts of the muscular orange fruit character red. 3) Put a red bow tie on the wooden log character. 4) Make the purple balloon on the right red. 5) Make the big orange wheel of the ice cream cart blue. 6) Add a small white seagull flying in the sky at the top middle. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "oculos do Tung Tung Tung Sahur: armacao preta -> vermelha (lentes continuam pretas)",
-      "short do U Din Din Din Dun azul -> verde",
-      "bola de praia listrada no chao (centro-esquerda, embaixo) -> patinho de borracha amarelo",
-      "toldo listrado azul/branco do alto a esquerda (sobre os chapeus de palha) -> verde/branco",
-      "prancha de surf listrada em pe no alto do centro -> vermelha lisa",
-      "balao de cima do cacho (era laranja) -> roxo; efeito colateral: o cacho trocou outras cores (o azul virou laranja, o verde virou azul)"
+      "guarda-sol laranja e branco -> verde e branco",
+      "NAO FEITO: short azul do U Din Din Din Dun continua azul",
+      "gravata borboleta vermelha no Tung Tung Tung Sahur",
+      "o balao que mudou foi o laranja de cima (-> vermelho); o roxo continua roxo",
+      "roda laranja do carrinho de sorvete -> azul (com detalhes do carrinho)",
+      "gaivota branca no ceu, no alto ao meio"
      ]
     },
     {
@@ -1183,23 +1179,31 @@
       1600,
       1200
      ],
-     "grok_id": "b709fb4b-0c0f-498c-80e6-5f5cf495ed3f",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red sandals of the cactus elephant blue. 2) Put a small red cap on the head of the green monkey in the banana. 3) Make the blue alarm clock on the floor at the bottom center red. 4) Make the blue bucket on the floor at the bottom left yellow. 5) Make the blue-and-white striped towel hanging on the far right red-and-white. 6) Make the terracotta pot with a green plant in the bottom-right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "b673cc28-323f-4b51-93a9-d906570858f6",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small straw hat on the green chimpanzee. 2) Make the green sandals of the cactus elephant red. 3) Make the red and white striped awning blue and white. 4) Make the white and yellow surfboard purple. 5) Make the terracotta pot of the palm tree on the right blue. 6) Add a small red crab on the wooden boardwalk at the bottom middle. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "sandalias da Lirili Larila vermelhas -> azuis",
-      "bone vermelho na cabeca do Chimpanzini Bananini (efeito colateral: a ponta da casca de banana acima da cabeca sumiu sob o bone)",
-      "despertador do chao (centro-baixo) azul -> vermelho",
-      "balde azul no chao (canto inferior esquerdo) -> amarelo",
-      "toalha listrada azul/branca pendurada na extrema direita -> vermelha/branca",
-      "vaso de terracota com planta no canto inferior direito -> azul"
+      "chapeu de palha no Chimpanzini Bananini",
+      "sandalias do Lirili Larila -> vermelhas; efeito colateral grande: o corpo de cacto inteiro ficou vermelho (evitar)",
+      "toldo listrado vermelho e branco -> azul e branco",
+      "prancha branca e amarela -> roxa",
+      "vaso de barro do coqueiro -> azul",
+      "caranguejo vermelho no deque, embaixo ao meio",
+      "efeito colateral: o guarda-sol laranja e branco tambem ficou azul e branco (o mesmo objeto mudou no v1)"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: candidata 3 tinha texto legivel (placas) e foi descartada; a 4 tinha a Lirili sem corpo de cacto; a 1 tinha o terco de baixo quase vazio (so piso com papeis). Escolhida a 2: os 5 personagens reconheciveis, detalhe espalhado (caixote, balde, pa, bola, vasos nos cantos de baixo). Ha DOIS gatos-peixe: um laranja atras do carrinho de sorvete (vendendo, com rabo de peixe) e um branco com corpo de peixe laranja e 4 patas de gato na frente do carrinho; a caixa 'trulimero' e a do da frente (corpo inteiro, mais fiel a descricao). Ha uma pessoa pequena ao fundo numa barraca (centro-direita, chapeu de palha). O taco do Tung Tung esta no roteiro. As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 3: os 5 fieis (Trulimero gato laranja de corpo de peixe no carrinho de sorvete; Tung Tung de oculos escuros e taco; Chimpanzini na banana dancando; Lirili cacto de sandalias com o despertador (o despertador tem numeros, como o da arte anterior); U Din Din com cesta de frutas), duas casinhas, toldo, expositor de oculos, prancha, baloes, bicicleta e coqueiro. 10 das 12 mudancas aconteceram (o short nao; o balao trocado foi outro). A arte cheia anterior foi para arte/descartadas/praia-02-cheia/.",
+   "evitar": [
+    [
+     1051,
+     778
+    ]
+   ],
+   "nota_evitar": "Claude, 2026-11-12: o v2 deixou o Lirili Larila inteiro vermelho (efeito colateral das sandalias); o estudio nao usa essa mancha."
   },
   "estudio": {
-   "data": "2026-11-10",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -1207,7 +1211,7 @@
    "remendos": [
     {
      "id": "d1",
-     "fonte": "v1",
+     "fonte": "v2",
      "vis": 1
     },
     {
@@ -1217,13 +1221,13 @@
     },
     {
      "id": "d3",
-     "fonte": "v2",
-     "vis": 0.968
+     "fonte": "v1",
+     "vis": 0.977
     },
     {
      "id": "d4",
-     "fonte": "v1",
-     "vis": 0.88
+     "fonte": "v2",
+     "vis": 0.91
     }
    ],
    "alinhamentos": [
@@ -1232,18 +1236,18 @@
      "dx": 0,
      "dy": 0,
      "s": 1,
-     "erro": 7.218749974626873
+     "erro": 4.701951955922551
     },
     {
      "variante": "v2",
      "dx": 0,
-     "dy": -0.5,
+     "dy": 0,
      "s": 1,
-     "erro": 7.460015493267392
+     "erro": 4.984101822207321
     }
    ],
-   "candidatas": 12,
-   "pedidas": 12,
+   "candidatas": 13,
+   "pedidas": 13,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
  },
@@ -1253,8 +1257,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "a beach volleyball match on the sand in the golden afternoon with 5 characters: Blueberrini Octopusini (cute round purple blueberry octopus with big eyes) jumping to hit the volleyball; Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) cheering with pom-poms; La Vaca Saturno Saturnita (planet Saturn with a cow face and two big human feet) laughing; Ballerina Cappuccina (ballerina in a pink tutu with a cappuccino cup head) carrying a basket; Brr Brr Patapim (tree trunk with a mossy head, a long nose and huge bare feet) playing a guitar. Around them: a volleyball net, a striped volleyball, a referee chair, beach towels, sunglasses, coolers, a smoothie stand, palm trees, kites in the sky and beach umbrellas. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "a beach volleyball game on the sand in the golden afternoon with 5 characters: Blueberrini Octopusini (cute round purple blueberry octopus with big eyes) jumping to hit the volleyball; Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) cheering with pom-poms; La Vaca Saturno Saturnita (planet Saturn with a cow face and two big human feet) laughing; Ballerina Cappuccina (ballerina in a pink tutu with a cappuccino cup head) carrying a basket; Brr Brr Patapim (tree trunk with a mossy head, a long nose and huge bare feet) playing a guitar. Around them: a volleyball net, a big striped volleyball, a tall referee chair, a beach towel, a cooler, one palm tree and one kite in the sky. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -1262,39 +1266,39 @@
      1600,
      1200
     ],
-    "grok_id": "46a87c6a-b037-43fe-ad80-3a8885914f97",
-    "escolhida_de": "4a de 4 da rodada 1"
+    "grok_id": "a8dc4990-47f0-4e9f-9439-2944d567dae9",
+    "escolhida_de": "2a de 4 da rodada 1"
    },
    "caixas": {
+    "ballerina": [
+     915,
+     315,
+     330,
+     600
+    ],
     "blueberrini": [
-     365,
-     455,
-     360,
+     330,
+     205,
+     390,
      385
     ],
     "bombardiro": [
-     755,
-     400,
-     410,
-     310
+     15,
+     555,
+     500,
+     420
     ],
     "saturnita": [
-     1110,
-     268,
-     340,
-     330
-    ],
-    "ballerina": [
-     905,
-     650,
-     355,
-     440
+     480,
+     505,
+     520,
+     460
     ],
     "patapim": [
-     1255,
-     450,
-     345,
-     665
+     1195,
+     335,
+     400,
+     625
     ]
    },
    "edicoes": [
@@ -1304,15 +1308,15 @@
       1600,
       1200
      ],
-     "grok_id": "2e038b39-c3bc-41da-be02-66bd2ea42d61",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round black sunglasses on the eyes of the purple octopus. 2) Make the two pink pom-poms held by the crocodile in the airplane yellow. 3) Make the pink kite at the top left green. 4) Make the purple cooler on the sand at the bottom left red. 5) Make the green cooler box on the sand at the bottom center orange. 6) Make the brown ukulele played by the tree trunk character on the right bright red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "82754bba-3c6d-4163-98f2-6ff47b41b8d7",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the pink and yellow striped beach towel on the bottom right blue and white. 2) Put black sunglasses on the purple octopus. 3) Make the blue referee chair on the left red. 4) Make the kite in the sky green and yellow. 5) Make the pink tutu of the ballerina blue. 6) Make the blue cooler at the bottom red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "oculos escuros redondos pretos no Blueberrini Octopusini",
-      "os dois pompons do Bombardiro Crocodilo rosa -> amarelos",
-      "pipa rosa do alto a esquerda -> verde (rabo de fitas tambem verde)",
-      "caixa termica roxa no canto inferior esquerdo -> vermelha",
-      "caixa termica verde pequena no centro-baixo -> laranja",
-      "ukulele marrom do Brr Brr Patapim -> vermelho"
+      "toalha listrada rosa e amarela -> azul e branca",
+      "oculos escuros no Blueberrini",
+      "cadeira do juiz azul -> vermelha",
+      "pipa -> verde e amarela",
+      "tutu rosa da Ballerina -> azul (as sapatilhas tambem ficaram azuis)",
+      "caixa termica azul -> vermelha"
      ]
     },
     {
@@ -1321,23 +1325,23 @@
       1600,
       1200
      ],
-     "grok_id": "98f72687-c719-473d-b162-3669fba761e3",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the pink tutu of the ballerina with the coffee cup head light blue. 2) Put a small straw hat on the head of the cow-faced planet at the top right. 3) Make the blue-and-white volleyball flying at the top center red-and-white. 4) Make the pink starfish on the sand in the bottom-left corner yellow. 5) Make the purple sunglasses lying on the sand at the bottom center orange. 6) Make the pink-and-white striped awning of the drink stand on the left green-and-white. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "fc772d6a-b685-4ea5-aed1-1bfc2029d8b8",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the green crocodile. 2) Make the striped volleyball at the top solid green. 3) Put a small yellow bird on the top of the palm tree on the right. 4) Put a red flower on the head of the Saturn cow. 5) Put black sunglasses on the tree trunk character with the guitar. 6) Add a small red crab on the sand in the bottom left corner. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "roupa da Ballerina Cappuccina rosa -> azul-claro (efeito colateral: corpete e sapatilhas tambem ficaram azuis, nao so o tutu)",
-      "chapeu de palha pequeno na La Vaca Saturno Saturnita, entre os chifres",
-      "bola de volei no ar (alto, centro) azul/branca -> vermelha/branca",
-      "estrela-do-mar rosa no canto inferior esquerdo -> amarela",
-      "oculos roxos na areia (centro-baixo) -> armacao laranja",
-      "toldo listrado rosa/branco da barraca de sucos a esquerda -> verde/branco"
+      "bone vermelho no Bombardiro",
+      "bola de volei listrada -> verde lisa",
+      "passarinho amarelo no alto do coqueiro",
+      "flor vermelha na cabeca da Saturnita",
+      "oculos escuros no Patapim",
+      "caranguejo vermelho na areia (esquerda-baixo)"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: candidata 1 tinha um polvo extra no ceu; a 2 tinha um personagem-xicara extra; a 3 tinha dois bebes-xicara extras. Escolhida a 4: os 5 personagens fieis (Blueberrini com coroa de mirtilo, Bombardiro no aviao com pompons, Saturnita com pes humanos, Ballerina com cesta, Patapim com nariz comprido, musgo, pes descalcos e ukulele), sem tubarao, sem cena submarina. Ha figurantes humanos de desenho: o juiz na cadeira (alto a esquerda) e uma plateia pequena ao fundo a direita. O centro da areia tem so confete. As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 2: os 5 fieis (Blueberrini polvo roxo pulando; Bombardiro crocodilo num aviao azul e branco com pompons; Saturnita planeta-vaca com pes; Ballerina de tutu rosa com cesta; Patapim tronco de musgo com violao), rede, cadeira do juiz, bola, pipa, coqueiro, caixa termica e toalha. Confete em volta do polvo (pedido no visual do Bombardiro). As 12 mudancas aconteceram. A arte cheia anterior foi para arte/descartadas/praia-03-cheia/."
   },
   "estudio": {
-   "data": "2026-11-10",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -1346,46 +1350,46 @@
     {
      "id": "d1",
      "fonte": "v1",
-     "vis": 0.992
+     "vis": 1
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 0.963
+     "fonte": "v1",
+     "vis": 1
     },
     {
      "id": "d3",
-     "fonte": "v1",
-     "vis": 0.944
+     "fonte": "v2",
+     "vis": 1
     },
     {
      "id": "d4",
-     "fonte": "v2",
-     "vis": 0.918
+     "fonte": "v1",
+     "vis": 0.998
     },
     {
      "id": "d5",
-     "fonte": "v2",
-     "vis": 0.836
+     "fonte": "v1",
+     "vis": 0.989
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": -0.5,
+     "dy": 0,
      "s": 1,
-     "erro": 6.7942283740744145
+     "erro": 6.626485676526801
     },
     {
      "variante": "v2",
      "dx": 0,
-     "dy": -0.5,
+     "dy": 0,
      "s": 1,
-     "erro": 6.611048619579285
+     "erro": 4.879591619156799
     }
    ],
-   "candidatas": 12,
+   "candidatas": 13,
    "pedidas": 12,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
@@ -1396,8 +1400,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "a grassy cliff top with a red and white lighthouse with 5 characters: Trippa Troppa (green fish head on a chubby brown bear body) having a picnic on the grass; Cappuccino Assassino (striped coffee cup with a black ninja mask, little arms and legs in sneakers, holding two spoons, no knives) flying a kite; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) carrying a basket; Boneca Ambalabu (green frog head on a black tire with two human legs) playing a guitar; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing with a ball. Around them: a checkered picnic blanket with sandwiches and fruit, a wooden staircase, flowers on the cliff, a kite in the sky, a small house with a blue door, a wooden fence, a bench, a telescope and fluffy clouds. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "a grassy cliff top with a red and white lighthouse with 5 characters: Trippa Troppa (green fish head on a chubby brown bear body) having a picnic on the grass; Cappuccino Assassino (striped coffee cup with a black ninja mask, little arms and legs in sneakers, holding two spoons, no knives) flying a kite; Girafa Celestre (round watermelon body with a small giraffe head and legs in brown boots) carrying a basket; Boneca Ambalabu (green frog head on a black tire with two human legs) playing a guitar; Bobrito Bandito (beaver in a striped suit and fedora, no weapons) playing with a ball. Around them: a checkered picnic blanket with a fruit basket, a kite in the sky, a small house with a blue door, a wooden fence, a bench and a few big flowers. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -1405,38 +1409,38 @@
      1600,
      1200
     ],
-    "grok_id": "8315bbe9-ac11-49a5-a6e9-7650397d8c3e",
-    "escolhida_de": "1a de 4 da rodada 1"
+    "grok_id": "26b8ad74-c8b4-4ae9-9939-b4fd786ffd92",
+    "escolhida_de": "2a de 4 da rodada 1"
    },
    "caixas": {
     "trippa-troppa": [
-     525,
-     515,
-     300,
+     180,
+     605,
+     275,
      355
     ],
     "cappuccino-assassino": [
-     288,
-     438,
-     275,
-     300
+     505,
+     520,
+     325,
+     275
     ],
     "girafa-celestre": [
-     800,
-     305,
-     250,
-     380
+     875,
+     290,
+     260,
+     440
     ],
     "boneca-ambalabu": [
-     918,
-     615,
-     350,
-     405
+     855,
+     680,
+     360,
+     360
     ],
     "bobrito": [
      1195,
-     728,
-     350,
+     705,
+     255,
      345
     ]
    },
@@ -1447,15 +1451,15 @@
       1600,
       1200
      ],
-     "grok_id": "32f84a2e-a28c-464a-81a1-017ac72ca21a",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the black ninja mask of the striped coffee cup character on the left red. 2) Make the brown fedora hat of the beaver on the right blue. 3) Make the blue door of the small house on the right red. 4) Make the multicolored kite at the top center solid pink. 5) Replace the bunch of purple grapes at the left corner of the picnic blanket with a slice of watermelon of the same size. 6) Replace the large grey rock in the grass at the bottom center with an orange pumpkin of the same size. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "7a3eb067-37c3-45c2-b79c-42bf91286097",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the green fish head of the bear on the picnic blanket. 2) Make the kite in the sky red. 3) Make the red roof of the small house blue. 4) Make the black fedora of the beaver red. 5) Make the blue flower on the bottom right red. 6) Make the pink flower on the bottom left yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "mascara ninja do Cappuccino Assassino preta -> vermelha (efeito colateral: ganhou tambem uma capa vermelha nas costas, a esquerda do corpo)",
-      "chapeu fedora do Bobrito Bandito marrom -> azul",
-      "porta azul da casinha (direita) -> vermelha",
-      "pipa colorida do alto (centro) -> rosa lisa (o rabo de lacos continua colorido)",
-      "cacho de uvas no canto esquerdo da toalha de piquenique -> fatia de melancia (um pouco maior que as uvas)",
-      "pedra cinza grande no capim (centro-baixo) -> abobora laranja"
+      "bone vermelho na Trippa Troppa",
+      "pipa colorida -> vermelha",
+      "telhado vermelho da casinha -> azul",
+      "chapeu preto do Bobrito -> vermelho",
+      "a flor que mudou foi a amarela da direita (-> vermelha); a azul continua azul",
+      "flor rosa da esquerda-baixo -> amarela"
      ]
     },
     {
@@ -1464,23 +1468,24 @@
       1600,
       1200
      ],
-     "grok_id": "7b544b28-7529-4d0b-b2df-1fa400ba173a",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small yellow party hat on the head of the green fish sitting on the picnic blanket. 2) Make the blue pants of the frog sitting on the tire yellow. 3) Make the brown boots of the giraffe with the watermelon body red. 4) Make the red dome roof on top of the lighthouse on the left green. 5) Make the black telescope on the tripod near the house red. 6) Make the brown wooden bench in front of the house on the right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "2b1734d8-7e59-4b3e-8bbe-92452611f8bf",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red and white checkered picnic blanket blue and white. 2) Put a red bow on the head of the giraffe. 3) Make the purple sneakers of the frog character orange. 4) Make the red stripes of the lighthouse blue. 5) Make the wooden bench on the right red. 6) Add a small yellow bird sitting on the wooden fence on the left. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "chapeu de festa amarelo com bolinhas na cabeca da Trippa Troppa",
-      "calca azul da Boneca Ambalabu -> amarela",
-      "botas marrons da Girafa Celestre -> vermelhas",
-      "cupula vermelha do farol -> verde (a faixa da varanda logo abaixo tambem ficou verde)",
-      "luneta preta no tripe perto da casa -> tubo vermelho",
-      "banco de madeira marrom em frente a casa -> azul"
+      "toalha xadrez vermelha e branca -> azul e branca",
+      "laco vermelho na cabeca da Girafa Celestre",
+      "tenis roxos da Boneca Ambalabu -> laranja",
+      "listras vermelhas do farol -> azuis (o topo tambem)",
+      "banco de madeira da direita -> vermelho",
+      "passarinho amarelo na cerca da esquerda",
+      "efeito colateral: o telhado da casinha tambem ficou azul (o mesmo objeto mudou no v1)"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: as 4 candidatas tinham os 5 personagens; a 4 tinha a Trippa Troppa mais urso que peixe. Escolhida a 1: os 5 fieis (Cappuccino Assassino com 2 colheres, sem faca, empinando a pipa; Boneca Ambalabu sentada num pneu), farol, escada, cerca, banco, luneta e casa de porta azul. O mar aparece so a esquerda, ao fundo (sem tubarao, sem cena submarina). As duas edicoes fizeram as 6 mudancas, sem deslocar o enquadramento."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 2 (a 1 nao tinha o farol e desenhou o Cappuccino Assassino como gente): os 5 fieis (Trippa Troppa cabeca de peixe em corpo de urso na toalha; Cappuccino Assassino copo listrado de mascara ninja com duas colheres, sem faca; Girafa Celestre melancia com cabeca de girafa e cesta; Boneca Ambalabu sapo no pneu com violao; Bobrito castor de terno listrado e chapeu, sem arma), farol, casinha, cerca, banco, pipa, flores e nuvens. As 12 mudancas aconteceram (uma flor trocada foi outra). A arte cheia anterior foi para arte/descartadas/praia-04-cheia/."
   },
   "estudio": {
-   "data": "2026-11-10",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -1489,52 +1494,52 @@
     {
      "id": "d1",
      "fonte": "v1",
-     "vis": 0.982
+     "vis": 1
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 0.902
+     "fonte": "v1",
+     "vis": 1
     },
     {
      "id": "d3",
      "fonte": "v2",
-     "vis": 0.865
+     "vis": 1
     },
     {
      "id": "d4",
-     "fonte": "v1",
-     "vis": 0.862
+     "fonte": "v2",
+     "vis": 1
     },
     {
      "id": "d5",
      "fonte": "v1",
-     "vis": 0.832
+     "vis": 0.935
     },
     {
      "id": "d6",
-     "fonte": "v1",
-     "vis": 0.786
+     "fonte": "v2",
+     "vis": 0.445
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": -1,
+     "dy": 0,
      "s": 1,
-     "erro": 7.784132006908014
+     "erro": 3.6309663519656796
     },
     {
      "variante": "v2",
      "dx": 0,
      "dy": 0,
      "s": 1,
-     "erro": 7.558582863796146
+     "erro": 3.626138945118427
     }
    ],
-   "candidatas": 11,
-   "pedidas": 12,
+   "candidatas": 12,
+   "pedidas": 13,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
  },
@@ -1544,8 +1549,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "a seaside amusement park with a Ferris wheel and a carousel with 5 characters: Trippi Troppi (orange cat head on a pink shrimp body) riding the carousel; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) eating cotton candy; Burbaloni Luliloli (brown capybara inside half a coconut) playing a guitar; Cocofanto Elefanto (small brown elephant with a coconut head) playing with a ball; Espressona Signora (old lady in a flowered dress with an espresso cup head) juggling. Around them: a Ferris wheel, a carousel with horses, a cotton candy stand, balloons, game booths with prizes, a little roller coaster, a popcorn cart, string lights, palm trees and seagulls. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "a seaside amusement park with a Ferris wheel and a carousel with 5 characters: Trippi Troppi (orange cat head on a pink shrimp body) riding the carousel; Orangutini Ananassini (orange orangutan with a pineapple body and leaves on its head) eating cotton candy; Burbaloni Luliloli (brown capybara inside half a coconut) playing a guitar; Cocofanto Elefanto (small brown elephant with a coconut head) playing with a ball; Espressona Signora (old lady in a flowered dress with an espresso cup head) juggling. Around them: a Ferris wheel, a small carousel with two horses, a cotton candy stand, a bunch of balloons, a popcorn cart and one palm tree. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -1553,39 +1558,39 @@
      1600,
      1200
     ],
-    "grok_id": "01728623-e4ee-4106-b623-0adf60b81b55",
+    "grok_id": "fb02f708-895c-4188-8855-aaa621a33f71",
     "escolhida_de": "3a de 4 da rodada 1"
    },
    "caixas": {
     "trippi-troppi": [
-     50,
-     670,
-     235,
-     365
-    ],
-    "orangutini": [
-     375,
-     440,
-     280,
-     545
-    ],
-    "burbaloni": [
-     585,
-     735,
-     345,
+     90,
+     705,
+     350,
      360
     ],
+    "orangutini": [
+     425,
+     450,
+     275,
+     470
+    ],
+    "burbaloni": [
+     645,
+     615,
+     310,
+     390
+    ],
     "cocofanto": [
-     895,
-     555,
-     220,
-     310
+     925,
+     760,
+     270,
+     325
     ],
     "espressona": [
-     1110,
-     698,
-     345,
-     460
+     1115,
+     600,
+     360,
+     440
     ]
    },
    "edicoes": [
@@ -1595,15 +1600,15 @@
       1600,
       1200
      ],
-     "grok_id": "fd6e44bf-8cbb-4f0d-aea9-c7ab36076ba4",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the orange cat riding the horse at the bottom left. 2) Make the yellow ukulele played by the capybara in the coconut red. 3) Make the pink cotton candy held by the orangutan blue. 4) Make the red-and-white striped awning of the cotton candy stand in the center green-and-white. 5) Make the red roller coaster car with riders at the top center blue. 6) Make the red popcorn cart on the right blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "c7a6b77f-a527-4474-be1f-2733559bd9c5",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the pink and white canopy of the carousel blue and white. 2) Put a red cap on the capybara in the coconut. 3) Make the pink cotton candy stand blue. 4) Make the striped beach ball at the bottom solid red. 5) Put black sunglasses on the pink cat. 6) Add a small yellow crab on the sand in the bottom right corner. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "laco vermelho na cabeca do Trippi Troppi (orelha esquerda)",
-      "ukulele amarelo do Burbaloni Luliloli -> vermelho",
-      "algodao-doce rosa do Orangutini Ananassini -> azul",
-      "toldo listrado vermelho/branco da barraca de algodao-doce (centro) -> verde/branco, e o painel listrado de baixo da barraca tambem; efeito colateral: o toldo vermelho/branco da barraca de premios da esquerda (centro-direita, ~x 1080 y 380) tambem ficou verde/branco",
-      "carrinho da montanha-russa (alto, centro) vermelho -> azul; efeito colateral: os trilhos vermelhos da montanha-russa tambem ficaram azuis",
-      "carrinho de pipoca vermelho (direita) -> azul (teto azul e amarelo)"
+      "cobertura rosa e branca do carrossel -> azul e branca (a base tambem)",
+      "bone vermelho no Burbaloni",
+      "barraca rosa de algodao-doce -> azul",
+      "bola de praia listrada -> vermelha lisa",
+      "oculos escuros no Trippi Troppi",
+      "caranguejo amarelo na areia (direita-baixo)"
      ]
     },
     {
@@ -1612,23 +1617,30 @@
       1600,
       1200
      ],
-     "grok_id": "cf852c6d-37b1-480b-b669-cfabfbe3a959",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the purple flowered dress of the old lady with the coffee cup head green. 2) Put a small blue cap on the coconut head of the brown elephant playing with the ball. 3) Make the blue carousel horse at the right end of the carousel brown. 4) Make the pink flag on top of the carousel blue. 5) Add a small yellow rubber duck on the ground at the bottom center, in front of the coconut. 6) Make the tall red-and-white striped tent roof at the top right, behind the balloons, blue-and-white. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "66e7ebf2-796d-4e77-b120-ee9fc59ccfdf",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the orange orangutan. 2) Make the purple flowered dress of the old lady with the cup head green. 3) Make all the balloons in the bunch red. 4) Add a small white seagull flying in the sky at the top middle. 5) Add a red starfish on the sand in the bottom left corner. 6) Make the white horse on the carousel brown. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "vestido florido roxo da Espressona Signora -> verde (flores mantidas)",
-      "NAO FEITO no Cocofanto Elefanto: o bone azul caiu na cabeca do Burbaloni Luliloli (capivara), nao no elefante",
-      "cavalo azul da ponta direita do carrossel -> marrom",
-      "bandeira rosa no topo do carrossel -> azul; efeito colateral: o teto listrado rosa/branco do carrossel tambem ficou azul/branco",
-      "patinho de borracha amarelo acrescentado no chao, em baixo, a direita do coco",
-      "teto alto listrado vermelho/branco da barraca de premios do alto a direita (atras dos baloes) -> azul/branco"
+      "oculos escuros no Orangutini",
+      "vestido roxo florido da Espressona -> verde",
+      "todos os baloes do cacho -> vermelhos (a bolinha rosa de malabares tambem)",
+      "gaivota branca no ceu, no alto ao meio",
+      "estrela-do-mar vermelha (esquerda-baixo)",
+      "cavalo branco do carrossel -> marrom"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: a candidata 2 tinha texto legivel em placas; a 1 tinha o Trippi Troppi mais gato que camarao; a 4 tinha um bicho roxo extra (narval) no chao. Escolhida a 3: os 5 personagens fieis (Trippi Troppi com corpo de camarao montado num cavalinho de carrossel solto, Orangutini com corpo de abacaxi e algodao-doce, Burbaloni na metade do coco com ukulele, Cocofanto com cabeca de coco e bola, Espressona fazendo malabares). Figurantes humanos minusculos no carrinho da montanha-russa. O chao do centro-baixo e quase so areia com pedrinhas (por isso o patinho acrescentado no v2). Nenhum tubarao, nenhuma cena submarina. Os efeitos colaterais (trilhos da montanha-russa no v1, teto do carrossel no v2) sao diferencas grandes nao pedidas: o estudio deve detecta-las como candidatas."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 3: os 5 fieis (Trippi Troppi gato em corpo de camarao rosa; Orangutini abacaxi com algodao-doce; Burbaloni capivara no coco com violao; Cocofanto elefantinho; Espressona senhora de xicara fazendo malabares), roda-gigante, carrossel com dois cavalos, barraca de algodao-doce, baloes, carrinho de pipoca e coqueiro. As 12 mudancas aconteceram. A arte cheia anterior foi para arte/descartadas/praia-05-cheia/.",
+   "evitar": [
+    [
+     294,
+     823
+    ]
+   ],
+   "nota_evitar": "Claude, 2026-11-12: os oculos do Trippi Troppi (v1) encostam no carrossel que ficou azul (v1) e viraram uma mancha so (dois objetos num erro, o defeito da fase 8); o estudio nao usa essa mancha."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -1641,52 +1653,52 @@
     },
     {
      "id": "d2",
-     "fonte": "v2",
+     "fonte": "v1",
      "vis": 1
     },
     {
      "id": "d3",
      "fonte": "v2",
-     "vis": 0.946
+     "vis": 1
     },
     {
      "id": "d4",
      "fonte": "v2",
-     "vis": 0.843
+     "vis": 0.884
     },
     {
      "id": "d5",
      "fonte": "v1",
-     "vis": 0.619
+     "vis": 0.834
     },
     {
      "id": "d6",
-     "fonte": "v2",
-     "vis": 0.601
+     "fonte": "v1",
+     "vis": 0.623
     },
     {
      "id": "d7",
      "fonte": "v2",
-     "vis": 0.593
+     "vis": 0.518
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": 0,
+     "dy": -0.5,
      "s": 1,
-     "erro": 7.703035785201504
+     "erro": 6.090416637598583
     },
     {
      "variante": "v2",
      "dx": 0,
      "dy": -0.5,
      "s": 1,
-     "erro": 8.302058963338405
+     "erro": 7.089867315918711
     }
    ],
-   "candidatas": 11,
+   "candidatas": 12,
    "pedidas": 12,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
@@ -1697,8 +1709,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "inside a cozy beach ice cream parlor with 5 characters: Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) scooping ice cream behind the counter; Ta Ta Ta Ta Sahur (brown teapot with big eyes, thin arms and legs) eating a giant sundae; Tigrrullini Watermellini (tiger with a round watermelon body) playing with a ball; Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) juggling; Frigo Camelo (camel with a white fridge body, brown boots) jumping with joy. Around them: a long counter with tubs of colorful ice cream, sundae glasses, stacks of cones, jars of sprinkles, a jukebox, round stools, seashell decorations on the walls, a fishing net with starfish, a surfboard on the wall and potted palms. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "inside a bright and tidy beach ice cream parlor with 5 characters: Tung Tung Tung Sahur (tall wooden log with big eyes, thin arms and legs, wooden bat) scooping ice cream behind the counter; Ta Ta Ta Ta Sahur (brown teapot with big eyes, thin arms and legs) eating a giant sundae; Tigrrullini Watermellini (tiger with a round watermelon body) playing with a ball; Il Cacto Hipopotamo (gray hippo with a cactus on its back, sandals) juggling; Frigo Camelo (camel with a white fridge body, brown boots) jumping with joy. Around them: a counter with four tubs of colorful ice cream, a stack of cones, a jukebox, two round stools, a surfboard on the wall and a big window with the sea. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -1706,39 +1718,39 @@
      1600,
      1200
     ],
-    "grok_id": "f9fc8f7c-ad49-4122-90f6-86969d51940e",
-    "escolhida_de": "1a de 4 da rodada 1"
+    "grok_id": "422d268b-451d-4667-966b-0b7bc72d5fcf",
+    "escolhida_de": "3a de 4 da rodada 1"
    },
    "caixas": {
+    "tigrrullini": [
+     665,
+     520,
+     290,
+     410
+    ],
     "tung-tung": [
-     165,
-     135,
-     300,
-     375
+     155,
+     280,
+     290,
+     330
     ],
     "ta-ta-sahur": [
-     635,
-     415,
+     400,
+     430,
      225,
      270
     ],
-    "tigrrullini": [
-     750,
-     515,
-     340,
-     430
-    ],
     "cacto-hipopotamo": [
-     1030,
-     450,
-     305,
-     490
+     950,
+     480,
+     335,
+     500
     ],
     "frigo-camelo": [
-     1300,
-     350,
-     295,
-     570
+     1270,
+     460,
+     325,
+     510
     ]
    },
    "edicoes": [
@@ -1748,16 +1760,15 @@
       1600,
       1200
      ],
-     "grok_id": "14d305a1-33ce-44de-a262-6332c04c771d",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on top of the brown teapot character sitting on the stool. 2) Make the green sandals of the gray hippo with the cactus red. 3) Replace the pink seashell inside the picture frame at the top center with a yellow fish. 4) Make the yellow and blue surfboard leaning on the wall at the far right red. 5) Make the blue bowl on the floor at the bottom center yellow. 6) Make the yellow seat of the round stool at the far left edge blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "6383e00d-a05c-4c32-9748-8a77102f31b3",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the yellow and blue surfboard on the left wall red and white. 2) Put black sunglasses on the tiger. 3) Make the brown boots of the camel red. 4) Make the purple ice cream in the tub on the right of the counter orange. 5) Make the pink jukebox on the right blue. 6) Add a small sailboat on the sea in the big window. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "laco vermelho na tampa do Ta Ta Ta Ta Sahur (bule)",
-      "sandalias verdes do Il Cacto Hipopotamo -> vermelhas",
-      "quadro: o peixe amarelo entrou no quadro da DIREITA (moldura escura, concha azul -> peixe amarelo); o quadro rosa pedido continua com a concha rosa",
-      "prancha de surfe amarela e azul (direita) -> vermelha",
-      "tigela azul no chao (centro-baixo) -> amarela",
-      "assento amarelo do banquinho da extrema esquerda -> azul (efeito colateral: os assentos dos outros 2 banquinhos, o do meio e o do bule, tambem ficaram azuis)",
-      "efeito colateral: os doces da bandeja na mesinha (canto inferior direito) foram redesenhados com pequenas diferencas de forma"
+      "prancha amarela e azul -> vermelha e branca",
+      "oculos escuros no Tigrrullini",
+      "botas marrons do Frigo Camelo -> vermelhas",
+      "sorvete roxo da cuba da direita -> laranja",
+      "jukebox rosa -> azul",
+      "veleiro no mar da janela"
      ]
     },
     {
@@ -1766,24 +1777,23 @@
       1600,
       1200
      ],
-     "grok_id": "046bc110-1644-448c-a671-210af8f0e155",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the tiger with the watermelon body. 2) Make the brown boots of the camel with the fridge body red. 3) Put a small blue cap on top of the wooden log character behind the counter on the left. 4) Make the terracotta pot of the palm plant just left of the jukebox blue. 5) Make the pink bowl of candies on the small table at the bottom right green. 6) Make the pink ring in the middle of the round rug at the bottom left green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "9037ab8c-be30-412f-9e66-7807d839e103",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the wooden log character behind the counter. 2) Make the mint green ice cream counter yellow. 3) Put a small blue bow on the lid of the teapot character. 4) Make the pink sandals of the hippo blue. 5) Make the striped beach ball solid red. 6) Add a white seagull flying in the sky in the big window. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "oculos escuros pretos no Tigrrullini Watermellini",
-      "botas marrons do Frigo Camelo -> vermelhas",
-      "bone azul no topo do Tung Tung Tung Sahur (tronco)",
-      "vaso de barro da palmeira a esquerda da jukebox -> azul",
-      "tigela rosa de doces na mesinha (canto inferior direito) -> verde (os outros doces da bandeja levemente redesenhados)",
-      "tapete redondo (esquerda-baixo): o anel rosa do meio E o anel azul ficaram verdes (o tapete inteiro mudou de cor, nao so o anel pedido)",
-      "efeito colateral: a tigela azul no chao (centro-baixo) tambem ficou verde; e o mesmo objeto que o v1 deixou amarelo (o estudio deve usar so uma das duas)"
+      "bone vermelho no Tung Tung Tung Sahur",
+      "balcao verde-menta -> amarelo",
+      "laco azul na tampa do Ta Ta Ta Ta Sahur",
+      "sandalias rosa do Cacto Hipopotamo -> azuis",
+      "bola de praia listrada -> vermelha lisa",
+      "gaivota branca no ceu da janela"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Antes desta cena houve 1 geracao (x4) com o prompt antigo da praia-06 (acampamento na praia), descartada sem baixar quando o roteiro trocou os lugares para interiores. Rodada 1 do prompt da sorveteria: a 2 tinha texto legivel (WATERMELLIN) no balcao; a 3 tinha o cacto na cabeca do hipopotamo e muito chao de ladrilho; a 4 tinha muito chao vazio no centro-baixo. Escolhida a 1: os 5 personagens fieis (tronco com taco e colher de sorvete atras do balcao, bule sentado no banquinho ao lado de um sundae, tigre-melancia com bola de praia, hipopotamo com cacto nas costas e sandalias fazendo malabares, camelo com corpo de geladeira aberta e botas). Sorveteria com janela para o mar, quadros de conchas, redes com estrelas, jukebox, prancha, potes de doces, tapete redondo e mesinha de doces. Sem texto, sem logo, sem arma. As duas edicoes mantiveram o enquadramento e todos os personagens."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 3 (a 1 tinha bichos estranhos a mais): os 5 fieis (Tung Tung atras do balcao com a colher de sorvete e o taco; Ta Ta Ta Ta Sahur bule com sundae; Tigrrullini tigre de melancia; Cacto Hipopotamo com cacto nas costas e sandalias; Frigo Camelo de geladeira e botas), balcao com 4 cubas, prancha, janela com o mar, banquinhos, jukebox e bola. Faixa lisa bege embaixo (chao). As 12 mudancas aconteceram. A arte cheia anterior foi para arte/descartadas/praia-06-cheia/."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -1792,57 +1802,57 @@
     {
      "id": "d1",
      "fonte": "v1",
-     "vis": 1
+     "vis": 0.967
     },
     {
      "id": "d2",
-     "fonte": "v1",
-     "vis": 1
+     "fonte": "v2",
+     "vis": 0.947
     },
     {
      "id": "d3",
-     "fonte": "v2",
-     "vis": 0.876
+     "fonte": "v1",
+     "vis": 0.854
     },
     {
      "id": "d4",
-     "fonte": "v1",
-     "vis": 0.836
-    },
-    {
-     "id": "d5",
      "fonte": "v2",
      "vis": 0.787
     },
     {
-     "id": "d6",
+     "id": "d5",
      "fonte": "v2",
-     "vis": 0.728
+     "vis": 0.776
+    },
+    {
+     "id": "d6",
+     "fonte": "v1",
+     "vis": 0.75
     },
     {
      "id": "d7",
      "fonte": "v2",
-     "vis": 0.701
+     "vis": 0.546
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": -0.5,
-     "s": 0.998,
-     "erro": 8.1787087050027
+     "dy": -1,
+     "s": 1,
+     "erro": 5.397721276758002
     },
     {
      "variante": "v2",
      "dx": 0,
      "dy": -0.5,
-     "s": 1,
-     "erro": 7.389635384869853
+     "s": 0.998,
+     "erro": 4.888835675914609
     }
    ],
    "candidatas": 12,
-   "pedidas": 14,
+   "pedidas": 12,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
  },
@@ -1852,8 +1862,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "inside a lighthouse keeper's cozy round room with 5 characters: Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) polishing the big brass lamp; Rhino Toasterino (rhino with a silver toaster body and toast popping out) reading a map at the table; Bombombini Gusini (white goose jet plane) juggling; Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) jumping with joy; Meowl (round fluffy half cat half owl with huge eyes) waving hello. Around them: a spiral staircase, a big brass lamp, round windows, a ship wheel on the wall, coiled ropes, lanterns, a telescope, a globe, a kettle on a stove, a sleeping cat, books without titles and a model ship. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "inside a lighthouse keeper's bright round room with 5 characters: Chimpanzini Bananini (green chimpanzee with a pink face popping out of a peeled banana) polishing the big brass lamp; Rhino Toasterino (rhino with a silver toaster body and toast popping out) reading a map at the table; Bombombini Gusini (white goose jet plane) juggling; Shpioniro Golubiro (pigeon spy in a trench coat and sunglasses) jumping with joy; Meowl (round fluffy half cat half owl with huge eyes) waving hello. Around them: a big brass lamp, a round window with the sea, a ship wheel on the wall, a coiled rope, a telescope, a globe, a kettle on a small stove and a sleeping cat. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -1861,39 +1871,39 @@
      1600,
      1200
     ],
-    "grok_id": "6830dd1d-a457-4a62-898e-d881c86d77ff",
-    "escolhida_de": "4a de 4 da rodada 1"
+    "grok_id": "46f431d1-882a-462e-a034-d1c2342c781c",
+    "escolhida_de": "2a de 4 da rodada 1"
    },
    "caixas": {
     "chimpanzini": [
-     430,
-     175,
-     330,
-     390
+     390,
+     500,
+     350,
+     480
     ],
     "rhino-toasterino": [
-     285,
-     585,
-     455,
-     340
+     675,
+     380,
+     375,
+     365
     ],
     "bombombini": [
-     990,
-     90,
-     330,
-     345
+     965,
+     80,
+     365,
+     355
     ],
     "golubiro": [
-     1055,
-     420,
-     355,
-     350
+     1005,
+     410,
+     335,
+     400
     ],
     "meowl": [
-     800,
-     635,
-     335,
-     300
+     930,
+     740,
+     355,
+     350
     ]
    },
    "edicoes": [
@@ -1903,15 +1913,16 @@
       1600,
       1200
      ],
-     "grok_id": "a10bd0ee-b729-437c-9dd7-4e57bbda64a2",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red cap on the head of the green chimpanzee in the banana. 2) Make the beige trench coat of the pigeon with sunglasses green. 3) Make the brass kettle on the black stove at the left blue. 4) Make the red mug with a heart on the table yellow. 5) Make the white sails of the model ship on the right red. 6) Make the brass lantern hanging in the top right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "f63060be-c6a4-4e6a-861a-2c0eaa3abee0",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the brown ship wheel on the top left wall red. 2) Put a red cap on the green chimpanzee. 3) Make the blue cushion under the sleeping orange cat red. 4) Make the brown hat of the pigeon spy green. 5) Make the globe on the right orange. 6) Add a small sailboat on the sea in the round window. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "bone vermelho na cabeca do Chimpanzini Bananini",
-      "sobretudo bege do Shpioniro Golubiro -> verde",
-      "chaleira dourada no fogao preto (esquerda) -> azul",
-      "caneca vermelha com coracao na mesa -> amarela (o coracao continua)",
-      "velas brancas do navio em miniatura (direita) -> vermelhas",
-      "lanterna dourada pendurada no canto superior direito -> azul"
+      "timao marrom da parede -> vermelho",
+      "bone vermelho no Chimpanzini",
+      "almofada azul do gato -> vermelha",
+      "chapeu marrom do Golubiro -> verde",
+      "globo -> laranja",
+      "veleiro no mar da janela redonda",
+      "efeito colateral: o gorro de aviador do Bombombini tambem ficou verde"
      ]
     },
     {
@@ -1920,24 +1931,23 @@
       1600,
       1200
      ],
-     "grok_id": "725a87cf-b12a-41ce-982e-5a205a7cd3bb",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round red glasses on the brown owl in the center. 2) Put a small yellow party hat on the head of the gray rhino. 3) Make the blue oceans of the globe at the bottom right purple. 4) Make the blue cushion under the sleeping cat at the bottom left red. 5) Make the brass dome on top of the big lamp in the center red. 6) Make the red book on top of the stack of books next to the owl blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "199fc834-7aaf-4d52-acea-ba9b8ee3dd07",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the gray rhino. 2) Put a small pink bow on the head of the fluffy owl. 3) Make the black stove on the right red. 4) Make the coiled rope on the left blue. 5) Make the flame in the brass lamp blue. 6) Add a small red crab on the wooden floor at the bottom middle. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "oculos redondos vermelhos na Meowl",
-      "chapeu de festa amarelo na cabeca do Rhino Toasterino",
-      "oceanos azuis do globo (canto inferior direito) -> roxos",
-      "almofada azul sob o gato dormindo (canto inferior esquerdo) -> vermelha",
-      "farol grande do centro: pediu-se so a cupula, mas a lampada INTEIRA (cupula, lanterna e pedestal) ficou vermelha; diferenca grande, ~325 px de largura",
-      "livro vermelho no topo da pilha ao lado da coruja -> azul",
-      "efeito colateral pequeno: bussola na mesa levemente redesenhada"
+      "oculos escuros no Rhino Toasterino",
+      "laco rosa na cabeca do Meowl",
+      "fogao preto -> vermelho",
+      "corda enrolada -> azul",
+      "chama do lampiao -> azul (o vidro tambem azulado)",
+      "caranguejo vermelho no chao, embaixo ao meio"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: a 1 tinha o ganso sem aviao (so oculos de aviador) e o rinoceronte so usando uma torradeira; a 2 tinha chao vazio no centro-baixo; a 3 tinha o rinoceronte com a torradeira de mochila. Escolhida a 4: os 5 personagens reconheciveis (Chimpanzini na banana polindo a lampada em cima de uma escadinha, Rhino Toasterino com corpo de torradeira e torradas saltando lendo o mapa na mesa, Bombombini ganso-aviao fazendo malabares, Golubiro de sobretudo e oculos escuros pulando, Meowl redonda e fofa de olhos enormes acenando, mais coruja que gato). Sala redonda de pedra com escada em caracol, lampada de latao, escotilhas, timao, cordas, lanternas, luneta, globo, chaleira no fogao, gato dormindo, livros sem titulo e navio em miniatura. Sem texto (a caneca tem um coracao), sem logo, sem arma. As duas edicoes mantiveram o enquadramento e os personagens."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 2 (a 1 tinha texto no mapa, a 3 e a 4 tinham objetos estranhos no meio): Chimpanzini polindo o lampiao de latao; Rhino Toasterino com mapa sem texto; Golubiro de sobretudo e oculos; Meowl acenando; o Bombombini saiu como ganso de gorro de aviador (sem o corpo de jato, 4 dos 5 fieis). Timao, janela redonda com o mar, corda, telescopio, globo, chaleira no fogao e gato dormindo. As 12 mudancas aconteceram. A arte cheia anterior foi para arte/descartadas/praia-07-cheia/."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -1946,56 +1956,56 @@
     {
      "id": "d1",
      "fonte": "v1",
-     "vis": 0.771
+     "vis": 1
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 0.752
+     "fonte": "v1",
+     "vis": 0.992
     },
     {
      "id": "d3",
      "fonte": "v1",
-     "vis": 0.731
+     "vis": 0.878
     },
     {
      "id": "d4",
-     "fonte": "v1",
-     "vis": 0.676
+     "fonte": "v2",
+     "vis": 0.74
     },
     {
      "id": "d5",
-     "fonte": "v1",
-     "vis": 0.594
+     "fonte": "v2",
+     "vis": 0.719
     },
     {
      "id": "d6",
-     "fonte": "v2",
-     "vis": 0.489
+     "fonte": "v1",
+     "vis": 0.669
     },
     {
      "id": "d7",
      "fonte": "v2",
-     "vis": 0.476
+     "vis": 0.613
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": -0.5,
+     "dy": -1,
      "s": 1,
-     "erro": 6.947354341698032
+     "erro": 5.336316426968594
     },
     {
      "variante": "v2",
      "dx": 0,
      "dy": -0.5,
      "s": 1,
-     "erro": 8.41012753281155
+     "erro": 6.143220637921054
     }
    ],
-   "candidatas": 12,
+   "candidatas": 10,
    "pedidas": 13,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
@@ -2006,8 +2016,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "inside a crowded beach souvenir shop with 5 characters: Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) trying on a straw hat; Strawberry Elephant (pink strawberry elephant with green leaves) shaking a snow globe; Glorbo Fruttodrillo (crocodile with a watermelon body) jumping with joy; Dragon Cannelloni (friendly dragon made of cannelloni pasta) waving hello; Chef Crabracadabra (red crab with a chef hat and a star magic wand) taking a photo. Around them: shelves of snow globes, shell necklaces, straw hats, colorful t-shirts without letters, flip-flops, toy boats, a cash register, a bin of beach balls, wind chimes, kites hanging from the ceiling and sunglasses on a stand. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "inside a small and tidy beach souvenir shop with 5 characters: Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) trying on a straw hat; Strawberry Elephant (pink strawberry elephant with green leaves) shaking a snow globe; Glorbo Fruttodrillo (crocodile with a watermelon body) jumping with joy; Dragon Cannelloni (friendly dragon made of cannelloni pasta) waving hello; Chef Crabracadabra (red crab with a chef hat and a star magic wand) taking a photo. Around them: one shelf with three snow globes, a rack of straw hats, three colorful t-shirts without letters, a cash register, a bin of beach balls and a kite hanging from the ceiling. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -2015,39 +2025,39 @@
      1600,
      1200
     ],
-    "grok_id": "157a53b6-2344-42d4-acf6-96d9f1d96d3b",
+    "grok_id": "d2a5096b-c69e-42aa-9a43-60381130f9c5",
     "escolhida_de": "2a de 4 da rodada 1"
    },
    "caixas": {
     "lirili": [
-     65,
-     310,
-     340,
-     560
+     10,
+     410,
+     360,
+     520
     ],
     "strawberry-elephant": [
-     425,
-     325,
-     285,
-     500
+     345,
+     415,
+     330,
+     520
     ],
     "glorbo": [
-     615,
-     395,
-     400,
-     460
+     620,
+     380,
+     340,
+     520
     ],
     "dragon-cannelloni": [
-     950,
-     295,
-     300,
-     515
+     935,
+     385,
+     380,
+     560
     ],
     "crabracadabra": [
-     1245,
-     295,
-     350,
-     365
+     1255,
+     445,
+     345,
+     450
     ]
    },
    "edicoes": [
@@ -2057,15 +2067,15 @@
       1600,
       1200
      ],
-     "grok_id": "83e32f52-a68a-4bfb-bacf-7070a08df660",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the yellow sandals of the cactus elephant red. 2) Make the black and white checkered scarf of the red crab blue. 3) Make the red alarm clock on the floor at the left green. 4) Make the kite hanging in the top right corner solid orange. 5) Make the orange flowered shirt, second from the left on the top rack, purple. 6) Make the gray stand holding the sunglasses at the bottom right red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "019860bf-c72e-4aa6-bbea-ce315ff01505",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the yellow t-shirt on the left of the rack red. 2) Make the yellow alarm clock on the floor at the bottom left blue. 3) Put black sunglasses on the green crocodile. 4) Make the kite in the top middle orange. 5) Make the wooden bin of beach balls at the bottom right green. 6) Make the snow globe with the palm tree on the left of the shelf red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "sandalias amarelas do Lirili Larila -> vermelhas",
-      "NAO FEITO: lenco xadrez preto e branco do Chef Crabracadabra continua igual",
-      "despertador vermelho no chao (esquerda) -> verde",
-      "pipa do canto superior direito -> laranja (com o desenho de estrela)",
-      "camisa florida laranja, segunda da esquerda na arara de cima -> roxa",
-      "coluna cinza do expositor de oculos (direita-baixo) -> vermelha"
+      "camiseta amarela da arara -> vermelha",
+      "despertador amarelo -> azul",
+      "oculos escuros no Glorbo",
+      "pipa -> laranja",
+      "cesto de madeira das bolas -> verde",
+      "globo de neve do coqueiro -> base vermelha"
      ]
     },
     {
@@ -2074,24 +2084,30 @@
       1600,
       1200
      ],
-     "grok_id": "ff554e2b-374d-426c-8bf2-ea782604a07d",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the pink strawberry elephant. 2) Make the red and white striped sleeves of the crocodile blue and white. 3) Put a small red party hat on the head of the yellow pasta dragon. 4) Make the straw hat on the left of the top shelf, above the shirts, blue. 5) Make the white sails of the leftmost toy sailboat on the high shelf at the right yellow. 6) Make the beach ball in the top left corner of the wooden bin at the bottom left solid green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "772664c6-bd00-440a-b19e-a4e076fef079",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the pink strawberry elephant. 2) Make the white chef hat of the red crab blue. 3) Make the pink t-shirt on the right of the rack green. 4) Make the yellow sandals of the cactus elephant red. 5) Make the orange wings of the pasta dragon purple. 6) Make the black cash register on the counter red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "oculos escuros pretos no Strawberry Elephant",
-      "mangas listradas vermelhas e brancas do Glorbo Fruttodrillo -> azuis e brancas",
-      "chapeu de festa vermelho na cabeca do Dragon Cannelloni",
-      "chapeu de palha da esquerda na prateleira de cima (acima das camisas) -> azul",
-      "velas brancas dos barquinhos na prateleira alta da direita -> amarelas: pediu-se so o da esquerda, mas os 4 barquinhos mudaram",
-      "bola de praia do canto superior esquerdo do caixote (esquerda-baixo) -> verde lisa; efeito colateral: a bola logo abaixo dela tambem ficou verde",
-      "efeito colateral pequeno: chinelos das prateleiras da direita levemente redesenhados (tiras com pequenas trocas)"
+      "laco vermelho na cabeca do Strawberry Elephant",
+      "touca branca do Crabracadabra -> azul",
+      "camiseta rosa da arara -> verde",
+      "sandalias amarelas do Lirili -> vermelhas",
+      "asas laranja do Dragon Cannelloni -> roxas",
+      "caixa registradora preta -> vermelha"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: a 1 tinha um dragao laranja comum (nao de canelone); a 3 tinha o Lirili de pijama listrado verde (sem cacto); a 4 tinha o dragao com rodelas de calabresa e o caranguejo com celular. Escolhida a 2: os 5 personagens fieis (Lirili de corpo de cacto, sandalias, chapeu de palha e o despertador ao lado; Strawberry Elephant rosa com folhas e globo de neve; Glorbo crocodilo de corpo de melancia pulando; Dragon Cannelloni amarelo feito de tubos de massa acenando; Chef Crabracadabra de touca, varinha de estrela e camera). Loja cheia: colares de conchas, globos de neve, camisas havaianas sem letras, chapeus de palha, sinos de vento, pipas, barquinhos, caixa registradora, expositor de oculos, chinelos e caixote de bolas. Sem texto, sem logo, sem arma. As duas edicoes mantiveram o enquadramento e os personagens."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 2: os 5 fieis (Lirili cacto de sandalias com chapeu de palha e o despertador; Strawberry Elephant com globo de neve; Glorbo crocodilo de melancia pulando; Dragon Cannelloni de tubos de massa acenando; Crabracadabra de touca, varinha e camera), prateleira com 3 globos de neve, cabideiro de chapeus, 3 camisetas sem letras, pipa, cesto de bolas e caixa registradora. Mudancas pedidas longe umas das outras (licao da fase 8). As 12 aconteceram. A arte cheia anterior foi para arte/descartadas/praia-08-cheia/.",
+   "evitar": [
+    [
+     1530,
+     520
+    ]
+   ],
+   "nota_evitar": "Claude, 2026-11-12: a touca azul do Crabracadabra (v2) encosta na camiseta que ficou verde (v2) e viraram uma mancha so (dois objetos num erro, o defeito da fase 8); o estudio nao usa essa mancha."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -2099,58 +2115,58 @@
    "remendos": [
     {
      "id": "d1",
-     "fonte": "v2",
+     "fonte": "v1",
      "vis": 1
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 0.893
+     "fonte": "v1",
+     "vis": 0.975
     },
     {
      "id": "d3",
      "fonte": "v2",
-     "vis": 0.88
+     "vis": 0.811
     },
     {
      "id": "d4",
      "fonte": "v2",
-     "vis": 0.834
+     "vis": 0.777
     },
     {
      "id": "d5",
      "fonte": "v1",
-     "vis": 0.616
+     "vis": 0.558
     },
     {
      "id": "d6",
-     "fonte": "v1",
-     "vis": 0.614
+     "fonte": "v2",
+     "vis": 0.555
     },
     {
      "id": "d7",
      "fonte": "v2",
-     "vis": 0.596
+     "vis": 0.526
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": -0.5,
+     "dy": -1,
      "s": 1,
-     "erro": 9.193920779778841
+     "erro": 5.043613117030215
     },
     {
      "variante": "v2",
-     "dx": -0.5,
+     "dx": 0,
      "dy": -0.5,
-     "s": 0.998,
-     "erro": 10.659109286293942
+     "s": 1,
+     "erro": 4.305440136389634
     }
    ],
-   "candidatas": 11,
-   "pedidas": 13,
+   "candidatas": 12,
+   "pedidas": 12,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
  },
@@ -2160,8 +2176,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "inside a surf shop with a smoothie bar with 5 characters: U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) making smoothies; Pandaccini Bananini (panda sitting in a peeled banana) waxing a surfboard; Piccione Macchina (pigeon with a small red car body) waving hello; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) taking a photo; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) eating an ice cream. Around them: surfboards of many colors on wall racks, a smoothie counter with fruit, blenders, colorful cups, wetsuits on hangers, flip-flops, a sunglasses display, a parrot on a perch, string lights and a ceiling fan. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "inside a bright surf shop with a smoothie bar with 5 characters: U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) making smoothies; Pandaccini Bananini (panda sitting in a peeled banana) waxing a surfboard; Piccione Macchina (pigeon with a small red car body) waving hello; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) taking a photo; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) eating an ice cream. Around them: three surfboards on a wall rack, a smoothie counter with a blender and fruit, two colorful cups, a wetsuit on a hanger, a sunglasses stand and a parrot on a perch. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -2169,39 +2185,39 @@
      1600,
      1200
     ],
-    "grok_id": "6e3a25aa-ec38-4374-bbbd-62a27a8a39a3",
-    "escolhida_de": "2a de 4 da rodada 1"
+    "grok_id": "96540124-5b8a-443e-9a7f-727cd45f3ff0",
+    "escolhida_de": "1a de 4 da rodada 1"
    },
    "caixas": {
     "u-din-din": [
-     235,
-     135,
-     300,
-     415
+     10,
+     190,
+     440,
+     620
     ],
     "pandaccini": [
-     145,
-     650,
-     620,
-     515
+     455,
+     555,
+     350,
+     580
     ],
     "piccione-macchina": [
-     700,
-     485,
-     350,
-     385
+     840,
+     580,
+     320,
+     340
     ],
     "trenostruzzo": [
-     1065,
-     215,
-     530,
-     590
+     1015,
+     420,
+     585,
+     430
     ],
     "tortuginni": [
-     1010,
-     745,
+     1205,
+     740,
      370,
-     385
+     320
     ]
    },
    "edicoes": [
@@ -2211,15 +2227,15 @@
       1600,
       1200
      ],
-     "grok_id": "bbcae47c-30b3-4136-bb63-4817911f737f",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red shorts of the orange fruit character blue. 2) Put a small green cap on the gray pigeon in the red car. 3) Make the orange surfboard with yellow stripes standing at the far left, behind the bananas, purple. 4) Make the brown blades of the ceiling fan at the top center red. 5) Make the white and blue surfboard leaning in the bottom right corner pink. 6) Make the orange wetsuit hanging on the rack at the top right yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "960418d2-2d51-4dc7-8445-b39992f1f24d",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the yellow and orange surfboard on the left of the wall green. 2) Put black sunglasses on the panda. 3) Make the dark blue wetsuit on the hanger red. 4) Make the red parrot on the top right blue. 5) Make the blue counter of the smoothie bar purple. 6) Put a small red bow on the head of the turtle. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "short vermelho do U Din Din Din Dun -> azul",
-      "bone verde na cabeca do Piccione Macchina",
-      "prancha laranja de listras amarelas em pe na extrema esquerda -> roxa (efeito colateral: a prancha amarela logo abaixo dela tambem ficou roxa)",
-      "pas marrons do ventilador de teto (centro-alto) -> vermelhas",
-      "prancha branca e azul encostada no canto inferior direito -> rosa",
-      "macacao de surfe: o laranja continua laranja; quem ficou amarelo foi o macacao azul-marinho da ponta direita da arara (mudanca no objeto vizinho)"
+      "prancha amarela e laranja -> verde",
+      "oculos escuros no Pandaccini",
+      "roupa de mergulho azul-escura -> vermelha",
+      "papagaio vermelho -> azul",
+      "balcao azul do bar -> roxo",
+      "laco vermelho na cabeca da Tortuginni"
      ]
     },
     {
@@ -2228,23 +2244,23 @@
       1600,
       1200
      ],
-     "grok_id": "28642111-3d86-4c2e-8b01-0c8876ae425a",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the green t-shirt of the panda in the banana red. 2) Put a small yellow straw hat on the turtle eating the ice cream. 3) Make the green and orange parrot on the wooden perch blue. 4) Make the pink smoothie in the left blender on the counter green. 5) Replace the halved coconut at the front of the fruit crate at the bottom center with a slice of watermelon. 6) Make the purple surfboard on the wall rack at the top right, below the turquoise one, orange. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "c839df57-7cde-4f0f-92cb-ccd2eb5595bb",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the head of the orange fruit character at the counter. 2) Make the red toy car body of the pigeon blue. 3) Make the pink surfboard on the right of the wall orange. 4) Make the black camera of the ostrich red. 5) Make the yellow juice cup at the bottom left green. 6) Add a small red crab on the wooden floor in the bottom left corner. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "camiseta verde do Pandaccini Bananini -> vermelha",
-      "chapeu de palha amarelo na Tortuginni Dragonfruitini (efeito colateral: o Piccione Macchina tambem ganhou um chapeu de palha)",
-      "papagaio verde e laranja no poleiro -> azul",
-      "vitamina rosa do liquidificador da esquerda no balcao -> verde",
-      "meio coco na frente do caixote de frutas (centro-baixo) -> fatia grande de melancia (cobre tambem 2 laranjas da frente)",
-      "prancha roxa da parede (direita-alto) -> laranja; efeito colateral: uma prancha laranja NOVA apareceu em pe na frente da arara de macacoes, cobrindo o primeiro macacao"
+      "bone vermelho no U Din Din Din Dun",
+      "carro vermelho do Piccione Macchina -> azul",
+      "prancha rosa -> laranja",
+      "camera preta do Trenostruzzo -> vermelha",
+      "o copo amarelo continua amarelo; apareceu um copo verde novo no balcao, ao lado do liquidificador",
+      "caranguejo vermelho no chao (esquerda-baixo)"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1: a 3 tinha texto legivel (placa com 'U Din Din Din Dun'); a 1 tinha o pombo so dentro de um carrinho e o avestruz ao lado de um trem (sem corpo de trem); a 4 tinha macacoes com marquinhas brancas no peito e o avestruz ao lado do trem. Escolhida a 2: os 5 personagens fieis (U Din Din Din Dun laranja musculoso de folha, short e tenis fazendo vitamina; Pandaccini panda de camiseta verde sentado na banana encerando a prancha; Piccione Macchina pombo com corpo de carrinho vermelho acenando; Trenostruzzo avestruz com corpo de trem-bala branco e camera; Tortuginni tartaruga de casco de pitaia com sorvete). Loja de surfe com pranchas nas paredes, balcao de vitaminas, liquidificadores, copos, chinelos, oculos, macacoes, papagaio no poleiro, luzinhas e ventilador. As pranchas tem rabiscos brancos de onda/gaivota (decoracao generica, nao marca); o macacao azul-marinho da ponta direita tem uma marquinha branca minuscula no peito. Sem texto, sem arma. As duas edicoes mantiveram o enquadramento e os personagens."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 1: os 5 fieis (U Din Din laranja musculoso no liquidificador; Pandaccini panda na banana encerando a prancha; Piccione Macchina pombo de carro vermelho; Trenostruzzo avestruz de trem-bala com camera; Tortuginni tartaruga de pitaia com sorvete), 3 pranchas, roupa de mergulho, papagaio, expositor de oculos, frutas e 2 copos. As 12 mudancas aconteceram (o copo verde saiu como copo novo). A arte cheia anterior foi para arte/descartadas/praia-09-cheia/."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -2262,47 +2278,47 @@
     },
     {
      "id": "d3",
-     "fonte": "v2",
+     "fonte": "v1",
      "vis": 1
     },
     {
      "id": "d4",
-     "fonte": "v1",
-     "vis": 0.992
+     "fonte": "v2",
+     "vis": 1
     },
     {
      "id": "d5",
-     "fonte": "v1",
-     "vis": 0.895
+     "fonte": "v2",
+     "vis": 1
     },
     {
      "id": "d6",
      "fonte": "v2",
-     "vis": 0.882
+     "vis": 0.949
     },
     {
      "id": "d7",
      "fonte": "v2",
-     "vis": 0.878
+     "vis": 0.74
     }
    ],
    "alinhamentos": [
     {
      "variante": "v1",
      "dx": 0,
-     "dy": 0,
+     "dy": -0.5,
      "s": 1,
-     "erro": 8.477229729535411
+     "erro": 6.279500204856792
     },
     {
      "variante": "v2",
      "dx": 0,
      "dy": -0.5,
      "s": 1,
-     "erro": 8.244430021381289
+     "erro": 6.760796501807353
     }
    ],
-   "candidatas": 13,
+   "candidatas": 12,
    "pedidas": 12,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
@@ -2313,8 +2329,8 @@
    "estilo": "e2",
    "ferramenta": "Grok Imagine (grok.com, navegador)",
    "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-   "data": "2026-11-08",
-   "prompt": "a giant party inside a huge tiki hall with a bamboo roof with 7 characters: Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) dancing in the center; Crocodilo Fromagioso (crocodile made of yellow cheese with holes) dancing; Tigrulli Grapefrutunni (tiger with a round pink grapefruit body) playing drums; Vulpegatto (half fox half cat sitting in a coconut shell) serving drinks; Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) waving maracas; Bambini Crossini (baby deer with a croissant body) juggling beach balls; Gattino Bananino (orange kitten inside a peeled banana) taking photos. Around them: a stage with speakers, strings of colored lights, balloons, inflatable toys, food tables, tiki masks on the walls, beach balls, a fruit punch bowl, potted palms, confetti and a disco ball. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+   "data": "2026-11-12",
+   "prompt": "a party inside a big tiki hall with a bamboo roof with 7 characters: Bombardiro Crocodilo (crocodile head on a propeller airplane body, dropping confetti) dancing in the center; Crocodilo Fromagioso (crocodile made of yellow cheese with holes) dancing; Tigrulli Grapefrutunni (tiger with a round pink grapefruit body) playing drums; Vulpegatto (half fox half cat sitting in a coconut shell) serving drinks; Ecco Cavallo Virtuoso (brown horse head on a little red grand piano body) waving maracas; Bambini Crossini (baby deer with a croissant body) juggling beach balls; Gattino Bananino (orange kitten inside a peeled banana) taking photos. Around them: a small stage with two speakers, a disco ball, a string of colorful lights, a bunch of balloons, a drum, a table with a cake and a big tiki mask on the wall. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
    "iteracoes": 1,
    "base": {
     "arquivo": "a.jpg",
@@ -2322,51 +2338,51 @@
      1600,
      1200
     ],
-    "grok_id": "0c5e124f-f192-4834-9386-b6a4f0a5dce9",
-    "escolhida_de": "1a de 4 da rodada 1"
+    "grok_id": "c1a73c0e-173d-4d13-af69-c29ab66bf704",
+    "escolhida_de": "3a de 4 da rodada 1"
    },
    "caixas": {
     "bombardiro": [
-     598,
-     252,
-     435,
-     368
+     540,
+     170,
+     520,
+     430
     ],
     "crocodilo-fromagioso": [
-     270,
-     388,
-     312,
-     305
+     5,
+     580,
+     350,
+     440
     ],
     "tigrulli": [
-     1068,
-     362,
-     315,
-     305
-    ],
-    "vulpegatto": [
-     10,
-     570,
-     385,
-     345
-    ],
-    "ecco-cavallo": [
-     805,
-     620,
-     405,
-     472
-    ],
-    "bambini-crossini": [
-     470,
-     700,
-     262,
+     330,
+     425,
+     330,
      400
     ],
+    "vulpegatto": [
+     365,
+     720,
+     320,
+     445
+    ],
+    "ecco-cavallo": [
+     860,
+     415,
+     380,
+     370
+    ],
+    "bambini-crossini": [
+     945,
+     750,
+     340,
+     445
+    ],
     "gattino-bananino": [
-     1222,
-     772,
-     282,
-     316
+     1300,
+     600,
+     270,
+     420
     ]
    },
    "edicoes": [
@@ -2376,14 +2392,14 @@
       1600,
       1200
      ],
-     "grok_id": "2ce8f7f8-120f-4481-9c0d-29b0a6427ab0",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red party hat on the head of the yellow cheese crocodile on the left. 2) Put a small yellow straw hat on the brown horse playing the red piano at the bottom center. 3) Make the pink inflatable flamingo on the left, behind the yellow duck ring, green. 4) Make the purple balloon in the bunch of balloons at the top left orange. 5) Make the orange tiki mask in the top right corner blue. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "94adb645-c78e-40f4-9d12-fa5d41fc1191",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the silver disco ball at the top gold. 2) Put a red cap on the yellow cheese crocodile on the left. 3) Make the purple tablecloth under the cake on the right blue. 4) Make the red piano of the horse green. 5) Make the pink balloon on the far left, below the speaker, yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "chapeu de festa vermelho (com estrela) na cabeca do Crocodilo Fromagioso",
-      "chapeu de palha amarelo na cabeca do Ecco Cavallo Virtuoso",
-      "boia de flamingo rosa (esquerda, atras do patinho) -> verde",
-      "balao roxo do cacho da esquerda (alto) -> laranja",
-      "mascara tiki do canto superior direito -> azul"
+      "globo de espelhos prateado -> dourado",
+      "bone vermelho no Crocodilo Fromagioso",
+      "toalha roxa da mesa do bolo -> azul",
+      "piano vermelho do Ecco Cavallo -> verde",
+      "balao rosa da esquerda (embaixo da caixa de som) -> amarelo"
      ]
     },
     {
@@ -2392,14 +2408,14 @@
       1600,
       1200
      ],
-     "grok_id": "1196f550-76f2-46eb-827e-0c7a6313bc44",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the tiger playing the bongo drums on the right. 2) Put a small blue bow tie on the neck of the baby deer juggling beach balls at the bottom left of center. 3) Make the yellow rubber duck ring on the far left blue. 4) Make the disco ball at the top center gold. 5) Make the blue inflatable dolphin on the right pink. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "d9cb6809-2e1f-4059-9a03-c78eaf0aa58b",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the blue wings of the crocodile airplane in the center red. 2) Put black sunglasses on the tiger playing the drum. 3) Make the big tiki mask on the right wall blue. 4) Put a small blue bow tie on the orange kitten with the camera. 5) Make the orange balloon at the top left green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "oculos escuros pretos no Tigrulli Grapefrutunni",
-      "gravata borboleta azul no pescoco do Bambini Crossini (pequena, ~5% da largura)",
-      "boia de patinho amarela (extrema esquerda) -> azul; efeito colateral: a boia de flamingo rosa logo atras tambem ficou azul (mesmo objeto mudado em v1, para verde)",
-      "globo de espelhos (alto, centro) -> dourado",
-      "boia de golfinho azul (direita) -> rosa; efeito colateral: a boia verde de crocodilo logo abaixo tambem ficou rosa"
+      "asas azuis do aviao do Bombardiro -> vermelhas (a cauda tambem)",
+      "oculos escuros no Tigrulli",
+      "mascara tiki -> azul",
+      "gravata borboleta azul no Gattino Bananino",
+      "balao laranja do alto a esquerda -> verde"
      ]
     },
     {
@@ -2408,22 +2424,22 @@
       1600,
       1200
      ],
-     "grok_id": "b2021721-dd82-447b-9d11-0db975b10c9d",
-     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put round aviator goggles on the head of the green crocodile in the airplane in the center. 2) Make the black camera held by the orange kitten in the banana at the bottom right red. 3) Put a small yellow flower crown on the head of the fox sitting in the coconut shell on the left. 4) Make the large black speaker on the right side of the stage white. 5) Make only the beach ball lying on the floor at the bottom left, just right of the fruit table, solid red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+     "grok_id": "f980159a-712a-43fc-8920-069e8e3934e4",
+     "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a small red bow on the head of the fox cat in the coconut at the bottom. 2) Put a green party hat on the brown horse. 3) Make the black speaker on the far left red. 4) Make the white propeller blades on top of the airplane yellow. 5) Put a blue bow tie on the baby deer at the bottom right. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
      "mudancas": [
-      "capacete de aviador marrom com oculos azuis na cabeca do Bombardiro Crocodilo (cobre os olhos)",
-      "camera preta do Gattino Bananino -> vermelha; efeito colateral: os oculos pretos do gatinho sumiram (olho a mostra)",
-      "flores amarelas (meia coroa, perto da orelha) na cabeca do Vulpegatto; efeito colateral: o sorriso virou boca aberta",
-      "caixa de som grande preta a direita do palco -> branca",
-      "bola de praia no chao (esquerda-baixo, ao lado da mesa de frutas) -> vermelha lisa; as outras bolas ficaram iguais"
+      "laco vermelho na cabeca do Vulpegatto",
+      "chapeu de festa verde no Ecco Cavallo",
+      "caixa de som preta da esquerda -> vermelha",
+      "helice de cima do aviao -> amarela (a da frente tambem)",
+      "gravata borboleta azul no Bambini Crossini"
      ]
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Cena de chefe (7 personagens, 3 edicoes x 5). Rodada 1: a 2 tinha o cavalo sentado ao piano (nao feito de piano), o Bombardiro com aviao verde pouco reconhecivel e um arabesco dourado no piano parecendo letra; a 3 tinha o cervo malhado comum (sem corpo de croissant); a 4 tinha o cavalo atras do piano e o tigre pequeno no canto. Escolhida a 1: os 7 fieis (Bombardiro com cabeca de crocodilo num aviao de helice creme e vermelho; Crocodilo Fromagioso amarelo de queijo com furos; Tigrulli tigre com barriga de toranja rosa tocando bongos; Vulpegatto raposa-gato numa casca de coco servindo drinques; Ecco Cavallo cavalo saindo de um piano de cauda vermelho com maracas; Bambini Crossini cervo de corpo de croissant com bolas; Gattino Bananino gatinho laranja numa banana descascada fotografando). Salao tiki com globo de espelhos, luzinhas, baloes, mascaras tiki, caixas de som, bateria, boias (patinho, flamingo, golfinho, crocodilo), poncheira, mesas de comida e confete no chao todo. Sem texto, sem logo, sem arma. Atras do flamingo ha uma boia azul em forma de 'mm' (inflavel, nao e letra). As 3 edicoes mantiveram o enquadramento e os 7 personagens; as 15 mudancas aconteceram."
+   "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Chefe do mundo 1. Escolhida a 3 (menos confete que as outras; o confete vem do visual do Bombardiro): os 7 fieis (Bombardiro crocodilo-aviao no centro; Crocodilo Fromagioso de queijo; Tigrulli tigre de toranja no tambor; Vulpegatto raposa-gato no coco com bebida; Ecco Cavallo cavalo no piano vermelho com maracas; Bambini Crossini cervo de croissant com bolas; Gattino Bananino gato na banana com camera), globo de espelhos, varal de luzes, baloes, caixas de som, palco com bolo e mascara tiki. As 15 mudancas aconteceram, cada uma num objeto separado. A arte cheia anterior foi para arte/descartadas/praia-10-cheia/."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -2442,42 +2458,42 @@
     {
      "id": "d3",
      "fonte": "v2",
-     "vis": 1
+     "vis": 0.989
     },
     {
      "id": "d4",
-     "fonte": "v3",
-     "vis": 1
+     "fonte": "v1",
+     "vis": 0.939
     },
     {
      "id": "d5",
-     "fonte": "v3",
-     "vis": 1
+     "fonte": "v2",
+     "vis": 0.808
     },
     {
      "id": "d6",
      "fonte": "v1",
-     "vis": 0.764
+     "vis": 0.64
     },
     {
      "id": "d7",
-     "fonte": "v1",
-     "vis": 0.741
+     "fonte": "v2",
+     "vis": 0.639
     },
     {
      "id": "d8",
      "fonte": "v1",
-     "vis": 0.716
+     "vis": 0.631
     },
     {
      "id": "d9",
      "fonte": "v3",
-     "vis": 0.59
+     "vis": 0.53
     },
     {
      "id": "d10",
-     "fonte": "v2",
-     "vis": 0.528
+     "fonte": "v3",
+     "vis": 0.495
     }
    ],
    "alinhamentos": [
@@ -2486,24 +2502,24 @@
      "dx": 0,
      "dy": -0.5,
      "s": 1,
-     "erro": 8.049264981820654
+     "erro": 5.363528344317801
     },
     {
      "variante": "v2",
      "dx": 0,
-     "dy": -1,
+     "dy": -0.5,
      "s": 1,
-     "erro": 8.674290194565362
+     "erro": 6.416698385913482
     },
     {
      "variante": "v3",
      "dx": 0,
      "dy": -0.5,
      "s": 1,
-     "erro": 9.777670186813411
+     "erro": 4.984436442140906
     }
    ],
-   "candidatas": 14,
+   "candidatas": 15,
    "pedidas": 15,
    "edicoes": "base reduzida para 1024x768 e recodificada em WebP (sem EXIF); B montada com remendos de borda suave recortados das variantes alinhadas"
   }
@@ -7506,10 +7522,17 @@
     }
    ],
    "marca_dagua": "nenhuma visivel",
-   "notas": "Rodada 1 (as nao escolhidas foram vistas so em miniatura ou zoom rapido): a 1 tinha o Trulimero como gato laranja com rabo de peixe pouco claro e algo parecido com uma plaquinha na borda direita (nao conferido de perto); a 3 tinha a Saturnita como vaca malhada comum dentro de um anel; a 4 tinha a Saturnita como cabeca de vaca num anel com pernas de vaca. Escolhida a 2: os 5 fieis (Chef Crabracadabra caranguejo vermelho de touca e dolma com varinha de estrela regando um cacto; Bombardiro cabeca de crocodilo num aviao de helice cinza, com rotor no alto, entre confetes; Saturnita planeta com cara de vaca, chifres, anel roxo e dois pes humanos de meia malhada, rindo; Ballerina Cappuccina de tutu rosa e cabeca de xicara com arte de leite, com um cesto; Trulimero gato laranja com corpo de peixe de escamas e rabo, tocando violao). Estufa de vidro cheia de cactos em vasos, prateleiras, lagartos, borboletas, sacos de sementes so com desenho (sem letras), carrinho de mao, pazinha e ancinhos de jardim (nenhuma tesoura nem faca). Sem bebida alem da xicara-cabeca da bailarina (cafe), sem texto, sem logo. Edicao 2 refeita uma vez: a 1a tentativa (grok_id e4c247eb-ff99-416d-9156-0d67292278f4) trocou a Saturnita por uma segunda bailarina; a refeita, com o item 2 mais preciso e a frase 'Keep all five characters, including the laughing cow planet in the center, exactly as they are.', manteve os 5. Total da cena: 4 pedidos (1 geracao + 3 edicoes)."
+   "notas": "Rodada 1 (as nao escolhidas foram vistas so em miniatura ou zoom rapido): a 1 tinha o Trulimero como gato laranja com rabo de peixe pouco claro e algo parecido com uma plaquinha na borda direita (nao conferido de perto); a 3 tinha a Saturnita como vaca malhada comum dentro de um anel; a 4 tinha a Saturnita como cabeca de vaca num anel com pernas de vaca. Escolhida a 2: os 5 fieis (Chef Crabracadabra caranguejo vermelho de touca e dolma com varinha de estrela regando um cacto; Bombardiro cabeca de crocodilo num aviao de helice cinza, com rotor no alto, entre confetes; Saturnita planeta com cara de vaca, chifres, anel roxo e dois pes humanos de meia malhada, rindo; Ballerina Cappuccina de tutu rosa e cabeca de xicara com arte de leite, com um cesto; Trulimero gato laranja com corpo de peixe de escamas e rabo, tocando violao). Estufa de vidro cheia de cactos em vasos, prateleiras, lagartos, borboletas, sacos de sementes so com desenho (sem letras), carrinho de mao, pazinha e ancinhos de jardim (nenhuma tesoura nem faca). Sem bebida alem da xicara-cabeca da bailarina (cafe), sem texto, sem logo. Edicao 2 refeita uma vez: a 1a tentativa (grok_id e4c247eb-ff99-416d-9156-0d67292278f4) trocou a Saturnita por uma segunda bailarina; a refeita, com o item 2 mais preciso e a frase 'Keep all five characters, including the laughing cow planet in the center, exactly as they are.', manteve os 5. Total da cena: 4 pedidos (1 geracao + 3 edicoes).",
+   "evitar": [
+    [
+     1500,
+     683
+    ]
+   ],
+   "nota_evitar": "Claude, 2026-11-12: no v2 o laco azul do gato e o vaso que ficou azul viraram uma mancha so (dois objetos num erro, o defeito da fase 8); o estudio nao usa essa mancha."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -7522,33 +7545,33 @@
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 0.977
+     "fonte": "v1",
+     "vis": 0.931
     },
     {
      "id": "d3",
      "fonte": "v1",
-     "vis": 0.937
+     "vis": 0.736
     },
     {
      "id": "d4",
      "fonte": "v1",
-     "vis": 0.76
+     "vis": 0.663
     },
     {
      "id": "d5",
      "fonte": "v1",
-     "vis": 0.668
+     "vis": 0.566
     },
     {
      "id": "d6",
      "fonte": "v1",
-     "vis": 0.62
+     "vis": 0.408
     },
     {
      "id": "d7",
-     "fonte": "v1",
-     "vis": 0.448
+     "fonte": "v2",
+     "vis": 0.401
     }
    ],
    "alinhamentos": [
@@ -7817,12 +7840,16 @@
     [
      583,
      523
+    ],
+    [
+     227,
+     878
     ]
    ],
-   "nota_evitar": "Claude, 2026-11-08: o v2 redesenhou a Girafa Celestre inteira (efeito colateral do lenco); o estudio nao usa essa mancha."
+   "nota_evitar": "Claude, 2026-11-08: o v2 redesenhou a Girafa Celestre inteira (efeito colateral do lenco); o estudio nao usa essa mancha. Claude, 2026-11-12: no v1 a mochila e o saco de dormir ficaram vermelhos juntos (dois objetos num erro, o defeito da fase 8); o estudio nao usa essa mancha."
   },
   "estudio": {
-   "data": "2026-11-08",
+   "data": "2026-11-12",
    "tam": [
     1024,
     768
@@ -7830,38 +7857,38 @@
    "remendos": [
     {
      "id": "d1",
-     "fonte": "v1",
+     "fonte": "v2",
      "vis": 1
     },
     {
      "id": "d2",
-     "fonte": "v2",
-     "vis": 1
+     "fonte": "v1",
+     "vis": 0.956
     },
     {
      "id": "d3",
      "fonte": "v1",
-     "vis": 0.948
+     "vis": 0.851
     },
     {
      "id": "d4",
-     "fonte": "v1",
-     "vis": 0.796
+     "fonte": "v2",
+     "vis": 0.613
     },
     {
      "id": "d5",
-     "fonte": "v2",
-     "vis": 0.698
+     "fonte": "v1",
+     "vis": 0.603
     },
     {
      "id": "d6",
      "fonte": "v2",
-     "vis": 0.492
+     "vis": 0.392
     },
     {
      "id": "d7",
      "fonte": "v2",
-     "vis": 0.462
+     "vis": 0.39
     }
    ],
    "alinhamentos": [

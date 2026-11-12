@@ -3,8 +3,8 @@
   "estilo": "e2",
   "ferramenta": "Grok Imagine (grok.com, navegador)",
   "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
-  "data": "2026-11-08",
-  "prompt": "inside a surf shop with a smoothie bar with 5 characters: U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) making smoothies; Pandaccini Bananini (panda sitting in a peeled banana) waxing a surfboard; Piccione Macchina (pigeon with a small red car body) waving hello; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) taking a photo; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) eating an ice cream. Around them: surfboards of many colors on wall racks, a smoothie counter with fruit, blenders, colorful cups, wetsuits on hangers, flip-flops, a sunglasses display, a parrot on a perch, string lights and a ceiling fan. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "data": "2026-11-12",
+  "prompt": "inside a bright surf shop with a smoothie bar with 5 characters: U Din Din Din Dun (muscular orange fruit with a leaf on top, shorts and sneakers) making smoothies; Pandaccini Bananini (panda sitting in a peeled banana) waxing a surfboard; Piccione Macchina (pigeon with a small red car body) waving hello; Trenostruzzo Turbo 3000 (ostrich with a white bullet train body) taking a photo; Tortuginni Dragonfruitini (turtle with a pink dragon fruit shell) eating an ice cream. Around them: three surfboards on a wall rack, a smoothie counter with a blender and fruit, two colorful cups, a wetsuit on a hanger, a sunglasses stand and a parrot on a perch. wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
   "iteracoes": 1,
   "base": {
     "arquivo": "a.jpg",
@@ -12,39 +12,39 @@
       1600,
       1200
     ],
-    "grok_id": "6e3a25aa-ec38-4374-bbbd-62a27a8a39a3",
-    "escolhida_de": "2a de 4 da rodada 1"
+    "grok_id": "96540124-5b8a-443e-9a7f-727cd45f3ff0",
+    "escolhida_de": "1a de 4 da rodada 1"
   },
   "caixas": {
     "u-din-din": [
-      235,
-      135,
-      300,
-      415
+      10,
+      190,
+      440,
+      620
     ],
     "pandaccini": [
-      145,
-      650,
-      620,
-      515
+      455,
+      555,
+      350,
+      580
     ],
     "piccione-macchina": [
-      700,
-      485,
-      350,
-      385
+      840,
+      580,
+      320,
+      340
     ],
     "trenostruzzo": [
-      1065,
-      215,
-      530,
-      590
+      1015,
+      420,
+      585,
+      430
     ],
     "tortuginni": [
-      1010,
-      745,
+      1205,
+      740,
       370,
-      385
+      320
     ]
   },
   "edicoes": [
@@ -54,15 +54,15 @@
         1600,
         1200
       ],
-      "grok_id": "bbcae47c-30b3-4136-bb63-4817911f737f",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the red shorts of the orange fruit character blue. 2) Put a small green cap on the gray pigeon in the red car. 3) Make the orange surfboard with yellow stripes standing at the far left, behind the bananas, purple. 4) Make the brown blades of the ceiling fan at the top center red. 5) Make the white and blue surfboard leaning in the bottom right corner pink. 6) Make the orange wetsuit hanging on the rack at the top right yellow. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "grok_id": "960418d2-2d51-4dc7-8445-b39992f1f24d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the yellow and orange surfboard on the left of the wall green. 2) Put black sunglasses on the panda. 3) Make the dark blue wetsuit on the hanger red. 4) Make the red parrot on the top right blue. 5) Make the blue counter of the smoothie bar purple. 6) Put a small red bow on the head of the turtle. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
       "mudancas": [
-        "short vermelho do U Din Din Din Dun -> azul",
-        "bone verde na cabeca do Piccione Macchina",
-        "prancha laranja de listras amarelas em pe na extrema esquerda -> roxa (efeito colateral: a prancha amarela logo abaixo dela tambem ficou roxa)",
-        "pas marrons do ventilador de teto (centro-alto) -> vermelhas",
-        "prancha branca e azul encostada no canto inferior direito -> rosa",
-        "macacao de surfe: o laranja continua laranja; quem ficou amarelo foi o macacao azul-marinho da ponta direita da arara (mudanca no objeto vizinho)"
+        "prancha amarela e laranja -> verde",
+        "oculos escuros no Pandaccini",
+        "roupa de mergulho azul-escura -> vermelha",
+        "papagaio vermelho -> azul",
+        "balcao azul do bar -> roxo",
+        "laco vermelho na cabeca da Tortuginni"
       ]
     },
     {
@@ -71,18 +71,18 @@
         1600,
         1200
       ],
-      "grok_id": "28642111-3d86-4c2e-8b01-0c8876ae425a",
-      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the green t-shirt of the panda in the banana red. 2) Put a small yellow straw hat on the turtle eating the ice cream. 3) Make the green and orange parrot on the wooden perch blue. 4) Make the pink smoothie in the left blender on the counter green. 5) Replace the halved coconut at the front of the fruit crate at the bottom center with a slice of watermelon. 6) Make the purple surfboard on the wall rack at the top right, below the turquoise one, orange. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "grok_id": "c839df57-7cde-4f0f-92cb-ccd2eb5595bb",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put a red cap on the head of the orange fruit character at the counter. 2) Make the red toy car body of the pigeon blue. 3) Make the pink surfboard on the right of the wall orange. 4) Make the black camera of the ostrich red. 5) Make the yellow juice cup at the bottom left green. 6) Add a small red crab on the wooden floor in the bottom left corner. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
       "mudancas": [
-        "camiseta verde do Pandaccini Bananini -> vermelha",
-        "chapeu de palha amarelo na Tortuginni Dragonfruitini (efeito colateral: o Piccione Macchina tambem ganhou um chapeu de palha)",
-        "papagaio verde e laranja no poleiro -> azul",
-        "vitamina rosa do liquidificador da esquerda no balcao -> verde",
-        "meio coco na frente do caixote de frutas (centro-baixo) -> fatia grande de melancia (cobre tambem 2 laranjas da frente)",
-        "prancha roxa da parede (direita-alto) -> laranja; efeito colateral: uma prancha laranja NOVA apareceu em pe na frente da arara de macacoes, cobrindo o primeiro macacao"
+        "bone vermelho no U Din Din Din Dun",
+        "carro vermelho do Piccione Macchina -> azul",
+        "prancha rosa -> laranja",
+        "camera preta do Trenostruzzo -> vermelha",
+        "o copo amarelo continua amarelo; apareceu um copo verde novo no balcao, ao lado do liquidificador",
+        "caranguejo vermelho no chao (esquerda-baixo)"
       ]
     }
   ],
   "marca_dagua": "nenhuma visivel",
-  "notas": "Rodada 1: a 3 tinha texto legivel (placa com 'U Din Din Din Dun'); a 1 tinha o pombo so dentro de um carrinho e o avestruz ao lado de um trem (sem corpo de trem); a 4 tinha macacoes com marquinhas brancas no peito e o avestruz ao lado do trem. Escolhida a 2: os 5 personagens fieis (U Din Din Din Dun laranja musculoso de folha, short e tenis fazendo vitamina; Pandaccini panda de camiseta verde sentado na banana encerando a prancha; Piccione Macchina pombo com corpo de carrinho vermelho acenando; Trenostruzzo avestruz com corpo de trem-bala branco e camera; Tortuginni tartaruga de casco de pitaia com sorvete). Loja de surfe com pranchas nas paredes, balcao de vitaminas, liquidificadores, copos, chinelos, oculos, macacoes, papagaio no poleiro, luzinhas e ventilador. As pranchas tem rabiscos brancos de onda/gaivota (decoracao generica, nao marca); o macacao azul-marinho da ponta direita tem uma marquinha branca minuscula no peito. Sem texto, sem arma. As duas edicoes mantiveram o enquadramento e os personagens."
+  "notas": "Arte simples do mundo 1 (pedido do dono em 2026-11-12: os desenhos estavam complexos para o publico da Poki; COMPOSICAO_SIMPLES). Escolhida a 1: os 5 fieis (U Din Din laranja musculoso no liquidificador; Pandaccini panda na banana encerando a prancha; Piccione Macchina pombo de carro vermelho; Trenostruzzo avestruz de trem-bala com camera; Tortuginni tartaruga de pitaia com sorvete), 3 pranchas, roupa de mergulho, papagaio, expositor de oculos, frutas e 2 copos. As 12 mudancas aconteceram (o copo verde saiu como copo novo). A arte cheia anterior foi para arte/descartadas/praia-09-cheia/."
 }

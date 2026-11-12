@@ -2,7 +2,7 @@
 // varios personagens em toda cena (pedido do dono) e prompts curtos (o Grok tem limite).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { CENAS_ROTEIRO, APARENCIA, GENTE_MIN, ELENCO_DO_DONO, errosDaCena, edicoesDaCena, mudancasPorEdicao, promptDaCena } from '../arte/roteiro.js';
+import { CENAS_ROTEIRO, APARENCIA, GENTE_MIN, ELENCO_DO_DONO, COMPOSICAO, COMPOSICAO_SIMPLES, errosDaCena, edicoesDaCena, mudancasPorEdicao, promptDaCena } from '../arte/roteiro.js';
 import { BRAINROTS, MUNDOS } from '../src/jogo/catalogo.js';
 
 test('10 mundos x 10 cenas, ids unicos no formato <mundo>-<nn>', () => {
@@ -78,4 +78,13 @@ test('lugares variados: a maioria em ambiente fechado, no maximo 3 ao ar livre s
     }
   }
   assert.ok(livre <= 40, `${livre} cenas ao ar livre`);
+});
+
+test('o mundo 1 sai simples (poucos objetos grandes); os outros, cheios', () => {
+  for (const c of CENAS_ROTEIRO) {
+    const p = promptDaCena(c);
+    assert.ok(p.includes(c.mundo === 1 ? COMPOSICAO_SIMPLES : COMPOSICAO), c.id);
+    // lista curta de objetos no mundo 1: no maximo 8 itens
+    if (c.mundo === 1) assert.ok(c.objetos.split(/, | and /).length <= 8, `${c.id}: ${c.objetos}`);
+  }
 });

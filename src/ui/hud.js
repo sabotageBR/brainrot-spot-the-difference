@@ -29,6 +29,15 @@ export function pintarFigura(cv, img, caixa) {
   cv.height = t;
   const c = cv.getContext('2d');
   if (!c) return;
+  recorte(c, img, caixa, t);
+}
+
+/**
+ * O recorte quadrado do personagem (ou o "?" cinza sem imagem) em t x t.
+ * @param {CanvasRenderingContext2D} c @param {CanvasImageSource|null} img
+ * @param {{ x: number, y: number, w: number, h: number }|null} caixa @param {number} t
+ */
+function recorte(c, img, caixa, t) {
   if (!img || !caixa) {
     c.fillStyle = '#d5d8e2';
     c.fillRect(0, 0, t, t);
@@ -76,27 +85,106 @@ export function pintarMisterio(cv, img, caixa) {
   c.fillText('?', t / 2, t / 2 + 4);
 }
 
+/**
+ * As pecas da carta-premio, uma por diferenca, em fracoes do lado (0..1). Linhas de cima com
+ * mais pecas (menores): a cabeca costuma ficar em cima e e a ultima a aparecer.
+ * @param {number} n
+ * @returns {{ x: number, y: number, w: number, h: number }[]}
+ */
+export function pecasDoPremio(n) {
+  const linhas = Math.max(1, Math.round(Math.sqrt(n)));
+  const base = Math.floor(n / linhas);
+  const extra = n % linhas;
+  const r = [];
+  for (let l = 0; l < linhas; l++) {
+    const k = base + (l < extra ? 1 : 0);
+    for (let j = 0; j < k; j++) r.push({ x: j / k, y: l / linhas, w: 1 / k, h: 1 / linhas });
+  }
+  return r;
+}
+
+/**
+ * A carta-premio do topo: o protagonista da cena coberto por n pecas roxas com "?"; cada
+ * diferenca achada abre uma, de baixo para cima (a ultima peca e a de cima, a esquerda).
+ * @param {HTMLCanvasElement} cv @param {CanvasImageSource|null} img
+ * @param {{ x: number, y: number, w: number, h: number }|null} caixa
+ * @param {number} n pecas @param {number} abertas
+ */
+export function pintarPremio(cv, img, caixa, n, abertas) {
+  const t = 132;
+  cv.width = t;
+  cv.height = t;
+  const c = cv.getContext('2d');
+  if (!c) return;
+  recorte(c, img, caixa, t);
+  const pecas = pecasDoPremio(n);
+  c.textAlign = 'center';
+  c.textBaseline = 'middle';
+  pecas.forEach((p, i) => {
+    const x = Math.round(p.x * t);
+    const y = Math.round(p.y * t);
+    const w = Math.round((p.x + p.w) * t) - x;
+    const h = Math.round((p.y + p.h) * t) - y;
+    if (n - 1 - i < abertas) return;
+    const g = c.createLinearGradient(x, y, x + w, y + h);
+    g.addColorStop(0, '#7a5cff');
+    g.addColorStop(1, '#4a2bc9');
+    c.fillStyle = g;
+    c.fillRect(x, y, w, h);
+    const lado = Math.min(w, h);
+    if (lado >= 28) {
+      c.font = `700 ${Math.round(lado * 0.62)}px Fredoka, sans-serif`;
+      c.fillStyle = 'rgba(255,255,255,.92)';
+      c.fillText('?', x + w / 2, y + h / 2 + lado * 0.04);
+    }
+  });
+  // as juntas entre as pecas
+  c.strokeStyle = 'rgba(255,255,255,.95)';
+  c.lineWidth = 3;
+  for (const p of pecas) c.strokeRect(Math.round(p.x * t), Math.round(p.y * t), Math.round(p.w * t), Math.round(p.h * t));
+}
+
 /** @param {import('../i18n/textos.js').Textos} tx */
 export function criarHud(tx) {
   const progresso = $('progresso');
   const status = $('status');
   const painel = $('painel');
+  const premio = $('premio');
+  const premioCv = /** @type {HTMLCanvasElement} */ (premio.querySelector('canvas'));
   $('placaRotulo').textContent = tx.nivel;
 
   /** @type {string} */
   let ultimoStatus = '';
+  /** a carta-premio da cena: o protagonista que se revela a cada acerto */
+  /** @type {{ img: CanvasImageSource, caixa: any, n: number, abertas: number }|null} */
+  let pr = null;
+
+  /** Reinicia a animacao de uma classe. @param {HTMLElement} el @param {string} cls */
+  const reanimar = (el, cls) => {
+    el.classList.remove(cls);
+    void el.offsetWidth;
+    el.classList.add(cls);
+  };
 
   return {
     /**
      * @param {number} nivel @param {number} total @param {string} cor
      * @param {boolean} [ouro] ha brainrot dourado escondido @param {boolean} [chefe] fase chefe
+     * @param {{ img: CanvasImageSource, caixa: any }|null} [carta] o premio da cena (o protagonista)
      */
-    iniciarCena(nivel, total, cor, ouro = false, chefe = false) {
+    iniciarCena(nivel, total, cor, ouro = false, chefe = false, carta = null) {
       $('placaNum').textContent = String(nivel);
       $('placa').classList.toggle('chefe', chefe);
       progresso.innerHTML = '<i></i>'.repeat(total) + (ouro ? '<i class="vaga-ouro" title="?"></i>' : '');
       document.documentElement.style.setProperty('--cor', cor);
       ultimoStatus = '';
+      pr = carta ? { img: carta.img, caixa: carta.caixa, n: total, abertas: 0 } : null;
+      premio.hidden = !pr;
+      premio.classList.remove('abre', 'completa');
+      if (pr) {
+        pintarPremio(premioCv, pr.img, pr.caixa, pr.n, 0);
+        reanimar(premio, 'entra');
+      }
     },
     /**
      * Faixa que atravessa a tela (mundo novo, chefe). Some sozinha no fim da animacao.
@@ -138,6 +226,14 @@ export function criarHud(tx) {
       });
       const ouro = /** @type {HTMLElement|null} */ (progresso.querySelector('.vaga-ouro, .ouro'));
       if (ouro) ouro.className = p.achouEscondido ? 'ouro' : 'vaga-ouro';
+      // a carta-premio abre uma peca por diferenca achada; a ultima mostra o brainrot inteiro
+      const k = p.achados.size;
+      if (pr && k !== pr.abertas) {
+        pr.abertas = k;
+        pintarPremio(premioCv, pr.img, pr.caixa, pr.n, k);
+        if (k >= pr.n) reanimar(premio, 'completa');
+        else reanimar(premio, 'abre');
+      }
     },
     /** @param {string} html */
     status(html) {
@@ -187,9 +283,11 @@ export function criarHud(tx) {
      *   titulo: string, estrelas: number, dados: [string, string][], texto?: string,
      *   figura?: { id: string, img: CanvasImageSource|null, caixa: any, nova: boolean, dourada: boolean, vezes?: number } | null,
      *   proxima?: { id: string, img: CanvasImageSource, caixa: any, conhecida: boolean } | null,
+     *   bonus?: { id: string, img: CanvasImageSource|null, caixa: any } | null,
+     *   bau?: { marcas: number, total: number, abriu: boolean } | null,
      *   aoTocarCarta?: () => void,
      *   botoes: { texto: string, classe?: string, icone?: string, acao: () => void, barra?: number }[]
-     * }} o barra: ms do contador que esvazia no botao
+     * }} o barra: ms do contador que esvazia no botao; bonus: a figurinha extra do bau aberto
      */
     painel(o) {
       $('painelTitulo').textContent = o.titulo;
@@ -222,6 +320,32 @@ export function criarHud(tx) {
         const toque = o.aoTocarCarta;
         if (toque) carta.addEventListener('click', () => toque());
         fig.appendChild(carta);
+      }
+      // o bau aberto: uma figurinha extra (coadjuvante das cenas jogadas) ao lado da da fase
+      fig.classList.toggle('duas', !!(o.figura && o.bonus));
+      if (o.figura && o.bonus) {
+        const b = brainrot(o.bonus.id);
+        const carta = document.createElement('div');
+        carta.className = 'carta bonus';
+        carta.style.setProperty('--rar', COR_RAR[b ? b.raridade : 'B']);
+        const cv = document.createElement('canvas');
+        pintarFigura(cv, o.bonus.img, o.bonus.caixa);
+        carta.innerHTML = `<i class="rar">\u{1F381} ${tx.bonus}</i>`;
+        carta.prepend(cv);
+        const nome = document.createElement('b');
+        nome.textContent = b ? b.nome : o.bonus.id;
+        carta.appendChild(nome);
+        const toque = o.aoTocarCarta;
+        if (toque) carta.addEventListener('click', () => toque());
+        fig.appendChild(carta);
+      }
+      // as marcas do bau: uma por fase vencida; cheio, ele abre (+1 dica e o bonus)
+      const bau = $('painelBau');
+      bau.hidden = !o.bau;
+      if (o.bau) {
+        const marcas = o.bau.abriu ? o.bau.total : o.bau.marcas;
+        bau.className = `bau${o.bau.abriu ? ' aberto' : ''}`;
+        bau.innerHTML = `${Array.from({ length: o.bau.total }, (_, i) => `<i class="${i < marcas ? 'cheia' : ''}"></i>`).join('')}<b>\u{1F381}</b>${o.bau.abriu ? `<span>${tx.dicaGanha}</span>` : ''}`;
       }
       const bt = $('painelBotoes');
       bt.innerHTML = '';

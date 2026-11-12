@@ -15,7 +15,7 @@ import { lerDepuracao } from './core/depuracao.js';
 import { REGRAS, AJUDA } from './jogo/regras.js';
 import { toleranciaImg } from './jogo/cena.js';
 import { criarPartida, tocar, usarDica, usarPisca, estrelas, resumo, lugarEscondido, tocarEscondido, estagio, alvoDaAjuda } from './jogo/partida.js';
-import { proximaCena, mapaDoJogo, ganharFigurinha, presenteDoDia, numeroDoNivel } from './jogo/progresso.js';
+import { proximaCena, mapaDoJogo, ganharFigurinha, presenteDoDia, numeroDoNivel, encherBau, figurinhaDoBau, ganharBonus, FASES_POR_BAU } from './jogo/progresso.js';
 import { brainrot, mundo, vogaisDoCanto } from './jogo/catalogo.js';
 import { CENAS } from './arte/cenas/manifesto.js';
 import { montarCena, carregarImagem } from './render/compor.js';
@@ -33,6 +33,8 @@ const COR_PRESENTE = '#5b3df5';
 /** O painel do fim da cena passa sozinho: figurinha nova (da tempo de olhar) e repetida. */
 const PASSA_NOVA_MS = 4500;
 const PASSA_REPETIDA_MS = 3000;
+/** Com o bau aberto o painel fica mais: sao duas figurinhas. */
+const PASSA_BAU_MS = 6000;
 /** Marcos (min de jogo, sem anuncio) da medida tempo/N/min. */
 const MARCOS_MIN = [1, 2, 3, 4, 5, 7, 10, 15, 20];
 const NOME_AJUDA = ['', 'pulso', 'zona', 'mao'];
@@ -71,6 +73,10 @@ const saveVazio = () => ({
   banco: 0,
   /** @type {number[]} mundos cuja faixa de entrada ja passou */
   mundosVistos: [],
+  /** marcas do bau (fases vencidas desde o ultimo aberto) */
+  bau: 0,
+  /** @type {string[]} cenas vencidas desde o ultimo bau (o bonus sai delas) */
+  bauCenas: [],
   tutorial: false,
   mudo: false,
 });
@@ -189,7 +195,9 @@ async function iniciarCena(cena) {
   }
   if (dep.revelar) palco.revelar();
   const m = mundo(cena.mundo);
-  hud.iniciarCena(numeroDoNivel(cena), cena.erros.length, m.cor, true, cena.k === 10);
+  // a carta-premio: o protagonista da cena se revela a cada acerto (motivo para seguir na fase)
+  const pp = (cena.personagens || []).find((x) => x.id === cena.prot);
+  hud.iniciarCena(numeroDoNivel(cena), cena.erros.length, m.cor, true, cena.k === 10, pp ? { img: imgs.a, caixa: pp.caixa } : null);
   hud.progresso(J.p);
   J.piscaAte = 0;
   atualizarBotoes();
@@ -476,6 +484,26 @@ function vencer() {
   if (p.achouEscondido && !save.douradas.includes(cena.id)) save.douradas = [...save.douradas, cena.id];
   const g = ganharFigurinha(save.colecao, cena, p.achouEscondido);
   save.colecao = g.colecao;
+  // o bau: cada fase vencida enche uma marca; a terceira abre (+1 dica e uma figurinha bonus)
+  save.bauCenas = [...save.bauCenas.filter((id) => id !== cena.id), cena.id].slice(-FASES_POR_BAU);
+  const bau = encherBau(save.bau);
+  save.bau = bau.marcas;
+  /** @type {{ id: string, img: CanvasImageSource|null, caixa: any }|null} */
+  let bonus = null;
+  if (bau.abre) {
+    save.banco += 1;
+    // o recorte do bonus sai de uma cena desta sessao (a imagem A ja esta na memoria)
+    const jogadas = save.bauCenas.map((id) => LISTA.find((c) => c.id === id)).filter((c) => !!c && J.cacheA.has(c.id));
+    const fb = figurinhaDoBau(save.colecao, /** @type {Cena[]} */ (jogadas), LISTA);
+    if (fb) {
+      save.colecao = ganharBonus(save.colecao, fb);
+      const cb = LISTA.find((c) => c.id === fb.cena);
+      const f = cb && (cb.personagens || []).find((x) => x.id === fb.id);
+      bonus = { id: fb.id, img: J.cacheA.get(fb.cena) || null, caixa: f ? f.caixa : null };
+    }
+    save.bauCenas = [];
+    portal.measure('bau', String(numeroDoNivel(cena)), 'abre');
+  }
   gravar();
   const pf = (cena.personagens || []).find((x) => x.id === g.id);
   const figura = {
@@ -504,16 +532,19 @@ function vencer() {
     audio.figurinha();
     const b = brainrot(figura.id);
     if (b) depois(450, () => audio.cantar(vogaisDoCanto(b.canto)));
+    if (bau.abre) depois(1500, () => audio.dourado());
     // o painel passa sozinho (a parada sem prazo perdia 8% dos jogadores no PFT da 0.2.0);
     // a figurinha nova da mais tempo, e tocar na carta para o contador
-    const espera = autoMs ? 600 : figura.nova ? PASSA_NOVA_MS : PASSA_REPETIDA_MS;
+    const espera = autoMs ? 600 : bau.abre ? PASSA_BAU_MS : figura.nova ? PASSA_NOVA_MS : PASSA_REPETIDA_MS;
     const c = ++J.contador;
     hud.painel({
-      titulo: g.virouDourada && !g.nova ? tx.virouDourada : tx.vitoria,
+      titulo: g.virouDourada && !g.nova ? tx.virouDourada : bau.abre ? tx.bauAberto : tx.vitoria,
       estrelas: n,
       dados,
       figura,
       proxima,
+      bonus,
+      bau: { marcas: bau.marcas, total: FASES_POR_BAU, abriu: bau.abre },
       aoTocarCarta: () => {
         if (c !== J.contador) return;
         J.contador += 1;

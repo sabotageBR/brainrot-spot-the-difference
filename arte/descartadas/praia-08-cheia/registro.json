@@ -1,0 +1,96 @@
+{
+  "cena": "praia-08",
+  "estilo": "e2",
+  "ferramenta": "Grok Imagine (grok.com, navegador)",
+  "modelo_ou_modo": "Imagem, Qualidade 2.0, x4, 4:3; edicoes pela caixa 'Descreva sua edicao'",
+  "data": "2026-11-08",
+  "prompt": "inside a crowded beach souvenir shop with 5 characters: Lirili Larila (elephant with a green cactus body, wearing sandals, next to an alarm clock) trying on a straw hat; Strawberry Elephant (pink strawberry elephant with green leaves) shaking a snow globe; Glorbo Fruttodrillo (crocodile with a watermelon body) jumping with joy; Dragon Cannelloni (friendly dragon made of cannelloni pasta) waving hello; Chef Crabracadabra (red crab with a chef hat and a star magic wand) taking a photo. Around them: shelves of snow globes, shell necklaces, straw hats, colorful t-shirts without letters, flip-flops, toy boats, a cash register, a bin of beach balls, wind chimes, kites hanging from the ceiling and sunglasses on a stand. wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no text, no logo, no watermark, 4:3, flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children's comic book style, crisp clear shapes",
+  "iteracoes": 1,
+  "base": {
+    "arquivo": "a.jpg",
+    "tam": [
+      1600,
+      1200
+    ],
+    "grok_id": "157a53b6-2344-42d4-acf6-96d9f1d96d3b",
+    "escolhida_de": "2a de 4 da rodada 1"
+  },
+  "caixas": {
+    "lirili": [
+      65,
+      310,
+      340,
+      560
+    ],
+    "strawberry-elephant": [
+      425,
+      325,
+      285,
+      500
+    ],
+    "glorbo": [
+      615,
+      395,
+      400,
+      460
+    ],
+    "dragon-cannelloni": [
+      950,
+      295,
+      300,
+      515
+    ],
+    "crabracadabra": [
+      1245,
+      295,
+      350,
+      365
+    ]
+  },
+  "edicoes": [
+    {
+      "arquivo": "v1.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "83e32f52-a68a-4bfb-bacf-7070a08df660",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Make the yellow sandals of the cactus elephant red. 2) Make the black and white checkered scarf of the red crab blue. 3) Make the red alarm clock on the floor at the left green. 4) Make the kite hanging in the top right corner solid orange. 5) Make the orange flowered shirt, second from the left on the top rack, purple. 6) Make the gray stand holding the sunglasses at the bottom right red. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "sandalias amarelas do Lirili Larila -> vermelhas",
+        "NAO FEITO: lenco xadrez preto e branco do Chef Crabracadabra continua igual",
+        "despertador vermelho no chao (esquerda) -> verde",
+        "pipa do canto superior direito -> laranja (com o desenho de estrela)",
+        "camisa florida laranja, segunda da esquerda na arara de cima -> roxa",
+        "coluna cinza do expositor de oculos (direita-baixo) -> vermelha"
+      ]
+    },
+    {
+      "arquivo": "v2.jpg",
+      "tam": [
+        1600,
+        1200
+      ],
+      "grok_id": "ff554e2b-374d-426c-8bf2-ea782604a07d",
+      "prompt": "Edit this image. Make exactly these changes and nothing else: 1) Put black sunglasses on the pink strawberry elephant. 2) Make the red and white striped sleeves of the crocodile blue and white. 3) Put a small red party hat on the head of the yellow pasta dragon. 4) Make the straw hat on the left of the top shelf, above the shirts, blue. 5) Make the white sails of the leftmost toy sailboat on the high shelf at the right yellow. 6) Make the beach ball in the top left corner of the wooden bin at the bottom left solid green. Keep the composition, camera, style, colors, lighting and every other detail exactly the same.",
+      "mudancas": [
+        "oculos escuros pretos no Strawberry Elephant",
+        "mangas listradas vermelhas e brancas do Glorbo Fruttodrillo -> azuis e brancas",
+        "chapeu de festa vermelho na cabeca do Dragon Cannelloni",
+        "chapeu de palha da esquerda na prateleira de cima (acima das camisas) -> azul",
+        "velas brancas dos barquinhos na prateleira alta da direita -> amarelas: pediu-se so o da esquerda, mas os 4 barquinhos mudaram",
+        "bola de praia do canto superior esquerdo do caixote (esquerda-baixo) -> verde lisa; efeito colateral: a bola logo abaixo dela tambem ficou verde",
+        "efeito colateral pequeno: chinelos das prateleiras da direita levemente redesenhados (tiras com pequenas trocas)"
+      ]
+    }
+  ],
+  "marca_dagua": "nenhuma visivel",
+  "notas": "Rodada 1: a 1 tinha um dragao laranja comum (nao de canelone); a 3 tinha o Lirili de pijama listrado verde (sem cacto); a 4 tinha o dragao com rodelas de calabresa e o caranguejo com celular. Escolhida a 2: os 5 personagens fieis (Lirili de corpo de cacto, sandalias, chapeu de palha e o despertador ao lado; Strawberry Elephant rosa com folhas e globo de neve; Glorbo crocodilo de corpo de melancia pulando; Dragon Cannelloni amarelo feito de tubos de massa acenando; Chef Crabracadabra de touca, varinha de estrela e camera). Loja cheia: colares de conchas, globos de neve, camisas havaianas sem letras, chapeus de palha, sinos de vento, pipas, barquinhos, caixa registradora, expositor de oculos, chinelos e caixote de bolas. Sem texto, sem logo, sem arma. As duas edicoes mantiveram o enquadramento e os personagens.",
+  "evitar": [
+    [
+      1138,
+      305
+    ]
+  ],
+  "nota_evitar": "Claude, 2026-11-12: no v2 o chapeu de festa do Dragon Cannelloni encosta nos barquinhos de vela amarela e virou uma mancha so; quem achava os barcos via o chapeu diferente e o toque nele nao contava (relato do dono na fase 8). O estudio nao usa essa mancha."
+}

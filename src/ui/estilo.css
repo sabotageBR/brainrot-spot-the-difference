@@ -17,7 +17,16 @@ body{background:radial-gradient(120% 90% at 50% 0%,color-mix(in srgb,var(--cor) 
 .base{bottom:0;height:var(--base-h);padding-bottom:env(safe-area-inset-bottom,0px);justify-content:center;gap:16px}
 .grupo{display:flex;gap:8px;align-items:center;min-width:0}
 .grupo.direita{justify-content:flex-end}
-.centro{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.centro{display:flex;align-items:center;gap:8px;min-width:0}
+.pilha{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+/* carta-premio: o protagonista da cena, coberto por pecas que abrem a cada acerto */
+.premio{--lado:min(calc(var(--topo-h) - 10px),60px);position:relative;width:var(--lado);height:var(--lado);flex:none;border-radius:12px;background:#fff;box-shadow:0 0 0 3px #fff,var(--sombra)}
+.premio[hidden]{display:none}
+.premio canvas{width:100%;height:100%;display:block;border-radius:12px}
+.premio.entra{animation:pop .45s cubic-bezier(.3,1.6,.5,1)}
+.premio.abre{animation:abre .45s cubic-bezier(.3,1.6,.5,1)}
+.premio.completa{box-shadow:0 0 0 3px #ffc21a,0 0 18px 5px rgba(255,194,26,.8),var(--sombra);animation:canta .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes abre{0%{transform:scale(1)}40%{transform:scale(1.22) rotate(-5deg)}100%{transform:scale(1)}}
 
 .btn{position:relative;width:var(--btn);height:var(--btn);border:0;border-radius:50%;padding:0;cursor:pointer;color:var(--tinta);background:var(--pilula);box-shadow:var(--sombra);display:grid;place-items:center;transition:transform .1s ease,opacity .2s;text-decoration:none}
 .btn svg{width:56%;height:56%;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
@@ -98,6 +107,19 @@ body{background:radial-gradient(120% 90% at 50% 0%,color-mix(in srgb,var(--cor) 
 .carta .rar{position:absolute;top:-9px;left:50%;transform:translateX(-50%);padding:3px 9px;border-radius:999px;background:#fff;color:var(--tinta);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;box-shadow:var(--sombra)}
 .carta.dourada{background:linear-gradient(135deg,#fff3b0,#ffcc33 45%,#b8760e)}
 .carta .novo{position:absolute;top:-10px;right:-10px;padding:3px 8px;border-radius:999px;background:#FF3B6B;color:#fff;font-size:12px;font-weight:700;box-shadow:0 0 0 2px #fff;transform:rotate(10deg)}
+/* bau aberto: a figurinha bonus ao lado da da fase */
+.figura.duas{flex-direction:row;justify-content:center;align-items:flex-end;gap:12px}
+.figura.duas .carta{width:146px}
+.figura .carta.bonus{width:120px;animation-delay:.45s}
+.carta.bonus .rar{white-space:nowrap}
+/* as marcas do bau: uma por fase vencida */
+.bau{display:flex;align-items:center;justify-content:center;gap:6px;margin:-6px 0 12px;font-weight:700;font-size:15px}
+.bau[hidden]{display:none}
+.bau i{width:13px;height:13px;border-radius:50%;background:#e4e1ec;box-shadow:inset 0 0 0 2px #cfcbd9}
+.bau i.cheia{background:#ffc21a;box-shadow:inset 0 0 0 2px #c98a00;animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+.bau b{font-size:24px;line-height:1;margin-left:2px}
+.bau.aberto b{animation:canta .8s cubic-bezier(.3,1.6,.5,1) .5s both}
+.bau span{color:#5b3df5}
 @keyframes vira{0%{transform:perspective(600px) rotateY(90deg) scale(.6)}100%{transform:perspective(600px) rotateY(0) scale(1)}}
 
 /* album e mapa */
@@ -148,6 +170,15 @@ body.sem-anuncio .anuncio{display:none}
 body.pausado *,body.pausado *::before,body.pausado *::after{animation-play-state:paused!important}
 
 @media (max-height:420px){:root{--btn:42px}.placa{font-size:15px;padding:4px 10px}.progresso i{width:11px;height:11px}.status .chip{font-size:14px;padding:4px 8px}}
+/* tela baixa (celular deitado, 640x360): o painel em duas colunas, a figurinha a esquerda */
+@media (max-height:420px) and (min-aspect-ratio:4/3){
+.cartao{width:min(600px,100%);display:grid;grid-template-columns:auto 1fr;grid-template-areas:"fig tit" "fig est" "fig dad" "fig bau" "fig bot";column-gap:18px;align-items:center;padding:12px 16px 14px}
+#painelTitulo{grid-area:tit;font-size:22px;margin:0}
+.estrelas{grid-area:est;margin:6px 0 2px}.estrelas svg{width:34px;height:34px}.estrelas svg:nth-child(2){width:40px;height:40px;transform:translateY(-6px)}
+.figura{grid-area:fig;margin:0}.dados{grid-area:dad;margin:2px 0 8px;font-size:13px;gap:12px}.dados b{font-size:16px}
+.bau{grid-area:bau;margin:0 0 8px}.botoes{grid-area:bot}
+.carta{width:132px}.figura.duas .carta{width:118px}.figura .carta.bonus{width:100px}.carta b{font-size:13px}
+.acao{height:46px;font-size:17px;min-width:120px}.proxima canvas{width:44px;height:44px}}
 @media (max-width:420px){.placa span{display:none}.status .chip{font-size:15px;padding:4px 8px}}
-@media (prefers-reduced-motion:reduce){.btn.pulsar,.status .chip.alerta,.mundo .nos i.atual,.proxima canvas{animation:none}.faixa{animation-name:faixaParada}}
+@media (prefers-reduced-motion:reduce){.premio.abre,.premio.completa,.premio.entra,.btn.pulsar,.status .chip.alerta,.mundo .nos i.atual,.proxima canvas{animation:none}.faixa{animation-name:faixaParada}}
 @keyframes faixaParada{0%,100%{transform:none}}

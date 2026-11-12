@@ -2,7 +2,8 @@
 // So dados. Quem le: tools/roteiro.mjs (prompts para o Grok), o estudio (quantos erros, protagonista)
 // e test/roteiro.test.js (cobertura do catalogo). O estilo escolhido pelo dono e o E2 (cartoon 2D).
 //
-// Prompt da cena = `${lugar} with N characters: ${Nome (aparencia) acao; ...}. Around them: ${objetos}. ${COMPOSICAO}, ${ESTILO}`.
+// Prompt da cena = `${lugar} with N characters: ${Nome (aparencia) acao; ...}. Around them: ${objetos}. ${COMPOSICAO}, ${ESTILO}`
+// (COMPOSICAO_SIMPLES no mundo 1).
 // Curto de proposito: o Grok do dono tem limite de uso e o pedido tem que ser objetivo.
 
 import { BRAINROTS } from '../src/jogo/catalogo.js';
@@ -10,6 +11,9 @@ import { BRAINROTS } from '../src/jogo/catalogo.js';
 export const ESTILO = 'flat 2D cartoon illustration, thick clean black outlines, flat bright colors with simple cel shading, children\'s comic book style, crisp clear shapes';
 
 export const COMPOSICAO = 'wide shot, busy scene packed with small distinct objects over the whole picture, no empty areas, everything in sharp focus, all characters medium size and fully visible, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3';
+
+/** O mundo 1 e mais simples (pedido do dono em 2026-11-12: o publico da Poki achou os desenhos complexos). */
+export const COMPOSICAO_SIMPLES = 'wide shot, simple uncluttered scene with only a few big objects, clean background with large areas of flat color, all characters big and fully visible in the front, everything in sharp focus, cute, no weapons, no alcohol, no text, no logo, no watermark, 4:3';
 
 /** Aparencia fixa e curta de cada brainrot: o mesmo texto em toda cena, para o Grok desenhar igual. */
 export const APARENCIA = {
@@ -85,32 +89,34 @@ const ACOES_EXTRA = ['waving hello', 'taking a photo', 'eating an ice cream', 'd
  * @property {[string, string][]} gente   [id do brainrot, o que ele faz]
  * @property {string} lugar
  * @property {string} objetos
- * @property {string} [bruto]    pasta de arte/bruto ja pronta (as cenas do laboratorio)
+ * @property {string} [bruto]    a cena nasceu no laboratorio (elenco proprio, fora da regra dos 5)
  * @property {string[]} [elenco] elenco congelado: a cena ja foi gerada (ou esta sendo) com ele
  * @property {string[]} [acoes]  o que cada vaga faz (a primeira e a do protagonista)
+ * @property {string} [figurinha] troca o protagonista de uma cena ja gerada por outro do elenco
+ *   (PFT da 0.3.0: os brainrots mais famosos viram premio nas primeiras fases)
  */
 
 /** @type {Omit<CenaRoteiro, 'mundo' | 'k'>[][]} um array por mundo, na ordem do catalogo */
 const MUNDOS_ROTEIRO = [
   // 1 praia
   [
-    { id: 'praia-01', prot: 'tralalero', bruto: 'praia-e2', gente: [['tralalero', 'dancing on the sand'], ['trippi-troppi', 'building a sandcastle'], ['bananita', 'jumping out of the turquoise sea']], lugar: 'a sunny tropical beach', objetos: 'a striped beach umbrella, beach balls, buckets and shovels, seashells, starfish, little crabs, palm trees with coconuts, sailboats, seagulls, fluffy clouds and an ice cream cart' },
-    { id: 'praia-02', elenco: ['trulimero', 'tung-tung', 'chimpanzini', 'lirili', 'u-din-din'], acoes: ['selling ice cream from a cart', 'trying on sunglasses'], lugar: 'a lively beach boardwalk with shops and stalls', objetos: 'striped awnings, an ice cream cart, sunglasses on a rack, straw hats, beach towels hanging, a surfboard shop, balloons, palm trees in pots, bicycles, a popcorn stand and seagulls' },
-    { id: 'praia-03', elenco: ['blueberrini', 'bombardiro', 'saturnita', 'ballerina', 'patapim'], acoes: ['jumping to hit the volleyball', 'cheering with pom-poms'], lugar: 'a beach volleyball match on the sand in the golden afternoon', objetos: 'a volleyball net, a striped volleyball, a referee chair, beach towels, sunglasses, coolers, a smoothie stand, palm trees, kites in the sky and beach umbrellas' },
-    { id: 'praia-04', elenco: ['trippa-troppa', 'cappuccino-assassino', 'girafa-celestre', 'boneca-ambalabu', 'bobrito'], acoes: ['having a picnic on the grass', 'flying a kite'], lugar: 'a grassy cliff top with a red and white lighthouse', objetos: 'a checkered picnic blanket with sandwiches and fruit, a wooden staircase, flowers on the cliff, a kite in the sky, a small house with a blue door, a wooden fence, a bench, a telescope and fluffy clouds' },
-    { id: 'praia-05', elenco: ['trippi-troppi', 'orangutini', 'burbaloni', 'cocofanto', 'espressona'], acoes: ['riding the carousel', 'eating cotton candy'], lugar: 'a seaside amusement park with a Ferris wheel and a carousel', objetos: 'a Ferris wheel, a carousel with horses, a cotton candy stand, balloons, game booths with prizes, a little roller coaster, a popcorn cart, string lights, palm trees and seagulls' },
-    { id: 'praia-06', elenco: ['tung-tung', 'ta-ta-sahur', 'tigrrullini', 'cacto-hipopotamo', 'frigo-camelo'], acoes: ['scooping ice cream behind the counter', 'eating a giant sundae'], lugar: 'inside a cozy beach ice cream parlor', objetos: 'a long counter with tubs of colorful ice cream, sundae glasses, stacks of cones, jars of sprinkles, a jukebox, round stools, seashell decorations on the walls, a fishing net with starfish, a surfboard on the wall and potted palms' },
-    { id: 'praia-07', elenco: ['chimpanzini', 'rhino-toasterino', 'bombombini', 'golubiro', 'meowl'], acoes: ['polishing the big brass lamp', 'reading a map at the table'], lugar: 'inside a lighthouse keeper\'s cozy round room', objetos: 'a spiral staircase, a big brass lamp, round windows, a ship wheel on the wall, coiled ropes, lanterns, a telescope, a globe, a kettle on a stove, a sleeping cat, books without titles and a model ship' },
-    { id: 'praia-08', elenco: ['lirili', 'strawberry-elephant', 'glorbo', 'dragon-cannelloni', 'crabracadabra'], acoes: ['trying on a straw hat', 'shaking a snow globe'], lugar: 'inside a crowded beach souvenir shop', objetos: 'shelves of snow globes, shell necklaces, straw hats, colorful t-shirts without letters, flip-flops, toy boats, a cash register, a bin of beach balls, wind chimes, kites hanging from the ceiling and sunglasses on a stand' },
-    { id: 'praia-09', elenco: ['u-din-din', 'pandaccini', 'piccione-macchina', 'trenostruzzo', 'tortuginni'], acoes: ['making smoothies', 'waxing a surfboard'], lugar: 'inside a surf shop with a smoothie bar', objetos: 'surfboards of many colors on wall racks, a smoothie counter with fruit, blenders, colorful cups, wetsuits on hangers, flip-flops, a sunglasses display, a parrot on a perch, string lights and a ceiling fan' },
-    { id: 'praia-10', elenco: ['bombardiro', 'crocodilo-fromagioso', 'tigrulli', 'vulpegatto', 'ecco-cavallo', 'bambini-crossini', 'gattino-bananino'], acoes: ['dancing in the center', 'dancing', 'playing drums', 'serving drinks', 'waving maracas', 'juggling beach balls', 'taking photos'], lugar: 'a giant party inside a huge tiki hall with a bamboo roof', objetos: 'a stage with speakers, strings of colored lights, balloons, inflatable toys, food tables, tiki masks on the walls, beach balls, a fruit punch bowl, potted palms, confetti and a disco ball' },
+    { id: 'praia-01', prot: 'tralalero', bruto: 'praia-e2', gente: [['tralalero', 'dancing on the sand'], ['trippi-troppi', 'building a sandcastle'], ['bananita', 'jumping out of the turquoise sea']], lugar: 'a sunny tropical beach', objetos: 'a big striped beach umbrella, a red bucket with a yellow shovel, a beach ball, a big starfish, one palm tree, a small sailboat on the sea and two fluffy clouds' },
+    { id: 'praia-02', figurinha: 'tung-tung', elenco: ['trulimero', 'tung-tung', 'chimpanzini', 'lirili', 'u-din-din'], acoes: ['selling ice cream from a cart', 'trying on sunglasses'], lugar: 'a calm beach boardwalk with two small shops', objetos: 'an ice cream cart with an umbrella, a rack of sunglasses, a striped awning, a surfboard leaning on a wall, a bicycle, a potted palm tree and three balloons' },
+    { id: 'praia-03', figurinha: 'ballerina', elenco: ['blueberrini', 'bombardiro', 'saturnita', 'ballerina', 'patapim'], acoes: ['jumping to hit the volleyball', 'cheering with pom-poms'], lugar: 'a beach volleyball game on the sand in the golden afternoon', objetos: 'a volleyball net, a big striped volleyball, a tall referee chair, a beach towel, a cooler, one palm tree and one kite in the sky' },
+    { id: 'praia-04', elenco: ['trippa-troppa', 'cappuccino-assassino', 'girafa-celestre', 'boneca-ambalabu', 'bobrito'], acoes: ['having a picnic on the grass', 'flying a kite'], lugar: 'a grassy cliff top with a red and white lighthouse', objetos: 'a checkered picnic blanket with a fruit basket, a kite in the sky, a small house with a blue door, a wooden fence, a bench and a few big flowers' },
+    { id: 'praia-05', elenco: ['trippi-troppi', 'orangutini', 'burbaloni', 'cocofanto', 'espressona'], acoes: ['riding the carousel', 'eating cotton candy'], lugar: 'a seaside amusement park with a Ferris wheel and a carousel', objetos: 'a Ferris wheel, a small carousel with two horses, a cotton candy stand, a bunch of balloons, a popcorn cart and one palm tree' },
+    { id: 'praia-06', figurinha: 'tigrrullini', elenco: ['tung-tung', 'ta-ta-sahur', 'tigrrullini', 'cacto-hipopotamo', 'frigo-camelo'], acoes: ['scooping ice cream behind the counter', 'eating a giant sundae'], lugar: 'inside a bright and tidy beach ice cream parlor', objetos: 'a counter with four tubs of colorful ice cream, a stack of cones, a jukebox, two round stools, a surfboard on the wall and a big window with the sea' },
+    { id: 'praia-07', elenco: ['chimpanzini', 'rhino-toasterino', 'bombombini', 'golubiro', 'meowl'], acoes: ['polishing the big brass lamp', 'reading a map at the table'], lugar: 'inside a lighthouse keeper\'s bright round room', objetos: 'a big brass lamp, a round window with the sea, a ship wheel on the wall, a coiled rope, a telescope, a globe, a kettle on a small stove and a sleeping cat' },
+    { id: 'praia-08', elenco: ['lirili', 'strawberry-elephant', 'glorbo', 'dragon-cannelloni', 'crabracadabra'], acoes: ['trying on a straw hat', 'shaking a snow globe'], lugar: 'inside a small and tidy beach souvenir shop', objetos: 'one shelf with three snow globes, a rack of straw hats, three colorful t-shirts without letters, a cash register, a bin of beach balls and a kite hanging from the ceiling' },
+    { id: 'praia-09', elenco: ['u-din-din', 'pandaccini', 'piccione-macchina', 'trenostruzzo', 'tortuginni'], acoes: ['making smoothies', 'waxing a surfboard'], lugar: 'inside a bright surf shop with a smoothie bar', objetos: 'three surfboards on a wall rack, a smoothie counter with a blender and fruit, two colorful cups, a wetsuit on a hanger, a sunglasses stand and a parrot on a perch' },
+    { id: 'praia-10', elenco: ['bombardiro', 'crocodilo-fromagioso', 'tigrulli', 'vulpegatto', 'ecco-cavallo', 'bambini-crossini', 'gattino-bananino'], acoes: ['dancing in the center', 'dancing', 'playing drums', 'serving drinks', 'waving maracas', 'juggling beach balls', 'taking photos'], lugar: 'a party inside a big tiki hall with a bamboo roof', objetos: 'a small stage with two speakers, a disco ball, a string of colorful lights, a bunch of balloons, a drum, a table with a cake and a big tiki mask on the wall' },
   ],
   // 2 cafe
   [
-    { id: 'cafe-01', prot: 'ballerina', bruto: 'cafe-e2', gente: [['ballerina', 'dancing on a table'], ['cappuccino-assassino', 'sneaking behind the counter'], ['espressona', 'sitting at a table with a newspaper without writing']], lugar: 'a cozy Italian café interior', objetos: 'a counter with croissants, cakes and donuts, a shiny coffee machine, cups and saucers, hanging lamps, potted plants, framed pictures of coffee beans, a checkered floor, windows with a street view and a cat sleeping on a chair' },
+    { id: 'cafe-01', figurinha: 'cappuccino-assassino', prot: 'ballerina', bruto: 'cafe-e2', gente: [['ballerina', 'dancing on a table'], ['cappuccino-assassino', 'sneaking behind the counter'], ['espressona', 'sitting at a table with a newspaper without writing']], lugar: 'a cozy Italian café interior', objetos: 'a counter with croissants, cakes and donuts, a shiny coffee machine, cups and saucers, hanging lamps, potted plants, framed pictures of coffee beans, a checkered floor, windows with a street view and a cat sleeping on a chair' },
     { id: 'cafe-02', elenco: ['saturnita', 'frulli-frulla', 'uvanito', 'perochello', 'tractoro'], acoes: ['making cookies float with his magic wand', 'carrying a tray of cupcakes'], lugar: 'a busy pastry kitchen in a bakery', objetos: 'ovens, trays of cookies, flour sacks, rolling pins, eggs in a basket, whisks and bowls, a tall wedding cake, jars of sprinkles, hanging pans, a window with flowers and a mouse peeking from a hole' },
     { id: 'cafe-03', elenco: ['patapim', 'chicleteira', 'tartaruga-cisterna', 'pot-hotspot', 'talpa-di-fero'], acoes: ['carrying plates of spaghetti', 'eating a huge meatball'], lugar: 'inside a busy Italian restaurant dining room', objetos: 'tables with checkered tablecloths, plates of pasta, bread baskets, candles in glass jars, glasses of orange juice, hanging grapevines, framed paintings without text, a pizza oven in the back, a waiter tray, a violin player and potted lemon trees' },
-    { id: 'cafe-04', elenco: ['cappuccino-assassino', 'tralalero', 'trulimero', 'blueberrini', 'trippa-troppa'], acoes: ['pouring coffee beans into a machine', 'sniffing a cup of coffee'], lugar: 'inside a coffee roasting factory', objetos: 'big shiny roasting machines, burlap sacks of beans, conveyor belts, pipes and gauges, scales, stacked cups, wooden barrels, a forklift, hanging lamps and a cat on a sack' },
+    { id: 'cafe-04', figurinha: 'trulimero', elenco: ['cappuccino-assassino', 'tralalero', 'trulimero', 'blueberrini', 'trippa-troppa'], acoes: ['pouring coffee beans into a machine', 'sniffing a cup of coffee'], lugar: 'inside a coffee roasting factory', objetos: 'big shiny roasting machines, burlap sacks of beans, conveyor belts, pipes and gauges, scales, stacked cups, wooden barrels, a forklift, hanging lamps and a cat on a sack' },
     { id: 'cafe-05', elenco: ['girafa-celestre', 'boneca-ambalabu', 'bobrito', 'orangutini', 'burbaloni'], acoes: ['spinning while holding a giant ice cream cone', 'scooping gelato behind the counter'], lugar: 'a colorful Italian gelato shop', objetos: 'a long counter with many tubs of gelato of every color, stacks of cones, jars of sprinkles and candies, a plain menu board with only pictures, ceiling fans, round stools, a striped awning, balloons and a dog waiting at the door' },
     { id: 'cafe-06', elenco: ['cocofanto', 'crocodilo-fromagioso', 'ta-ta-sahur', 'tigrrullini', 'tigrulli'], acoes: ['tossing pizza dough in the air', 'sneaking a slice of pizza'], lugar: 'an Italian pizzeria kitchen', objetos: 'a brick pizza oven with fire, pizzas on wooden paddles, tomatoes, cheese wheels, basil pots, hanging garlic and peppers, jars of olives, copper pans, stacked plates, a checkered tablecloth and a cat on a shelf' },
     { id: 'cafe-07', elenco: ['espressona', 'cacto-hipopotamo', 'frigo-camelo', 'rhino-toasterino', 'bombombini'], acoes: ['feeding pigeons on a bench', 'dancing next to the fountain'], lugar: 'a sunny Italian piazza with a big stone fountain', objetos: 'a fountain with water jets, pigeons, a flower cart, a balloon seller, café tables, a man playing an accordion, scooters, colorful houses with balconies, potted lemon trees and string lights' },
@@ -124,7 +130,7 @@ const MUNDOS_ROTEIRO = [
     { id: 'vila-02', elenco: ['ta-ta-sahur', 'tractoro', 'chicleteira', 'tartaruga-cisterna', 'pot-hotspot'], acoes: ['hopping between the rice paddies', 'waving from a little hut'], lugar: 'green rice terraces in a sunny valley', objetos: 'farmers\' conical hats, ducks in the water, a scarecrow, a water buffalo, a wooden hut, palm trees, bamboo baskets, dragonflies, a little stream with a bridge and fluffy clouds' },
     { id: 'vila-03', elenco: ['tralaleritos', 'talpa-di-fero', 'tung-tung', 'chimpanzini', 'lirili'], acoes: ['pouring tea into cups', 'carrying a basket of rice'], lugar: 'a warm village kitchen', objetos: 'clay pots on a stove, steaming rice baskets, strings of chili peppers, coconuts, bunches of bananas, spice jars, a wooden table with bowls, hanging pans, a window with plants, a sleeping cat and chickens at the door' },
     { id: 'vila-04', elenco: ['crocodilo-fromagioso', 'u-din-din', 'bombardiro', 'saturnita', 'ballerina'], acoes: ['selling fruit from a stall', 'carrying a basket of fish'], lugar: 'inside a busy covered village market hall', objetos: 'stalls with fruit, vegetables, spices and flowers, woven baskets, conical hats, scales, hanging lanterns, wooden crates, chickens in a basket, umbrellas and a ceiling of palm leaves' },
-    { id: 'vila-05', elenco: ['tigrrullini', 'trulimero', 'blueberrini', 'patapim', 'trippa-troppa'], acoes: ['drawing on a blank chalkboard', 'reading a picture book'], lugar: 'inside a colorful village classroom', objetos: 'small wooden desks, a blank chalkboard, a globe, school bags, paper kites on the walls, a world map with no text, pencils in cups, potted plants, a clock without numbers and a fish tank' },
+    { id: 'vila-05', figurinha: 'blueberrini', elenco: ['tigrrullini', 'trulimero', 'blueberrini', 'patapim', 'trippa-troppa'], acoes: ['drawing on a blank chalkboard', 'reading a picture book'], lugar: 'inside a colorful village classroom', objetos: 'small wooden desks, a blank chalkboard, a globe, school bags, paper kites on the walls, a world map with no text, pencils in cups, potted plants, a clock without numbers and a fish tank' },
     { id: 'vila-06', elenco: ['tigrulli', 'girafa-celestre', 'trippi-troppi', 'cocofanto', 'cacto-hipopotamo'], acoes: ['crossing a rope bridge', 'climbing a bamboo stalk'], lugar: 'a bright green bamboo forest', objetos: 'tall bamboo stalks, a rope bridge, paper lanterns, butterflies, frogs, a small stream with stones, mushrooms, ferns, birds, a stone lantern and a little tea house' },
     { id: 'vila-07', elenco: ['frigo-camelo', 'rhino-toasterino', 'bombombini', 'golubiro', 'meowl'], acoes: ['drumming in the middle of the crowd', 'selling hot tea at a stall', 'eating a skewer'], lugar: 'a lively village evening market lit by hundreds of colorful lanterns, bright and colorful', objetos: 'food stalls with skewers, noodle bowls and fruit, paper lanterns of many colors, string lights, toys, balloons, baskets, a spinning wheel game and happy visitors' },
     { id: 'vila-08', elenco: ['strawberry-elephant', 'glorbo', 'vulpegatto', 'dragon-cannelloni', 'ecco-cavallo'], acoes: ['painting a wooden puppet', 'playing with a spinning top'], lugar: 'inside a village toy workshop', objetos: 'shelves of wooden toys, puppets on strings, spinning tops, painted masks, kites, paint pots and brushes, wood shavings, a workbench with tools, a rocking horse and hanging lanterns' },
@@ -252,6 +258,8 @@ const NATIVO = new Map(BRAINROTS.map((b) => [b.id, b.mundo]));
  * - no maximo 1 tubarao por cena, e so FOLGA_TUBARAO cenas depois do ultimo; Tralalita e
  *   Los Tralaleritos so aparecem na propria cena de protagonista.
  * A acao de cada vaga vem do roteiro da cena (a primeira e a do protagonista).
+ * Cena ja gerada com "figurinha": o protagonista passa a ser esse (os famosos primeiro);
+ * as trocas formam um ciclo entre cenas geradas, entao as cenas futuras nao mudam.
  * @param {any[]} cenas
  */
 function escolherGente(cenas) {
@@ -291,12 +299,14 @@ function escolherGente(cenas) {
       gente = elenco.map((id, k) => [id, acoes[k] || ACOES_EXTRA[(i + k) % ACOES_EXTRA.length]]);
     }
     const elenco = gente.map((/** @type {any} */ g) => g[0]);
+    // a figurinha trocada depois da arte vale se a pessoa estiver na cena
+    const prot = c.figurinha && elenco.includes(c.figurinha) ? c.figurinha : elenco[0];
     for (const id of elenco) vezes.set(id, (vezes.get(id) || 0) + 1);
-    prots.set(elenco[0], (prots.get(elenco[0]) || 0) + 1);
+    prots.set(prot, (prots.get(prot) || 0) + 1);
     if (elenco.some((id) => TUBAROES.has(id))) ultimoTubarao = i;
     elencos.push(elenco);
     c.gente = gente;
-    c.prot = elenco[0];
+    c.prot = prot;
   });
   return cenas;
 }
@@ -324,6 +334,13 @@ export function errosDaCena(c) {
 export const cenaFacil = (c) => c.mundo === 1 && c.k <= RAMPA.length;
 
 /**
+ * Cena simples: o mundo inteiro do comeco sai com poucos objetos grandes e fundo limpo
+ * (COMPOSICAO_SIMPLES). Pedido do dono em 2026-11-12.
+ * @param {CenaRoteiro} c
+ */
+export const cenaSimples = (c) => c.mundo === 1;
+
+/**
  * Edicoes pedidas ao Grok, todas a partir de A. O Grok do dono tem limite de uso: poucas edicoes
  * com mais mudancas cada (2 x 6 = 12 candidatas para 7 erros; o chefe, 3 x 5 = 15 para 10).
  * @param {CenaRoteiro} c
@@ -338,7 +355,7 @@ export const cenaRoteiro = (id) => CENAS_ROTEIRO.find((c) => c.id === id) || nul
 /** O prompt da imagem A. @param {CenaRoteiro} c */
 export function promptDaCena(c) {
   const gente = c.gente.map(([id, acao]) => `${APARENCIA[id]} ${acao}`).join('; ');
-  return `${c.lugar} with ${c.gente.length} characters: ${gente}. Around them: ${c.objetos}. ${COMPOSICAO}, ${ESTILO}`;
+  return `${c.lugar} with ${c.gente.length} characters: ${gente}. Around them: ${c.objetos}. ${cenaSimples(c) ? COMPOSICAO_SIMPLES : COMPOSICAO}, ${ESTILO}`;
 }
 
 /** O prompt do retrato da figurinha (1:1). @param {string} id */

@@ -91,4 +91,15 @@ Cada cena fica em `arte/bruto/<cena>-<estilo>/` (ex.: `praia-e2/`):
 - **Efeitos colaterais da edição:** o Grok recolore os vizinhos da mesma cor (todos os bancos, o trilho junto com o carrinho, a toldo vizinha).
   - Isso **não estraga a cena:** a B é montada só com os remendos escolhidos, então mudança que não foi escolhida não aparece no jogo.
   - O que estraga é o mesmo objeto mudado nas duas edições: o estúdio fica com uma só.
+  - Também estraga quando duas mudanças pedidas se encostam: viram uma mancha só, ou seja, um erro só com duas coisas diferentes. Na praia-08, o chapéu de festa do dragão encostou nos barquinhos de vela amarela. Quem achava os barcos via o chapéu ainda diferente, e o toque nele não contava. A saída foi o `evitar` no registro. No pedido, deixe cada mudança longe das outras (`producao.md`).
 - **Cota:** 3 pedidos por cena (4 no chefe), sem nenhuma geração repetida, em 7 lotes seguidos. Uma cena sai em cerca de 7 min.
+
+## O mundo 1 simples (2026-11-12)
+
+- **O pedido:** o dono achou os desenhos complexos para o público da Poki e quis que o jogo começasse fácil. O mundo 1 usa `COMPOSICAO_SIMPLES`, com uma lista de no máximo 8 objetos.
+- **Resultado:** as 10 cenas saíram de primeira, sem nenhuma geração repetida.
+  - Em todas, os personagens ficaram grandes, na frente, e o fundo veio liso.
+  - Das 123 mudanças pedidas, 122 aconteceram; só a do short ficou de fora. Em 3 delas o Grok mudou outro objeto parecido, e a do copo virou um copo novo. As edições acertam mais quando há poucos objetos.
+- **O Grok erra o objeto quando há dois parecidos:** pedimos o balão roxo e mudou o laranja; pedimos a flor azul e mudou a amarela. Diga a posição e a cor.
+- **Ainda colam:** acessório num personagem encostado num objeto que também mudou (óculos do gato no carrossel, touca do caranguejo na camiseta). Confira a folha e use o `evitar`.
+- **Confete:** no visual do Bombardiro, "dropping confetti" enche a cena. No chefe, escolha a imagem com menos confete.
